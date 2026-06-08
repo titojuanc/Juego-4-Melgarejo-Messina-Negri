@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://cqmfhpgi8nplq"]
+
+[ext_resource type="MeshLibrary" uid="uid://cg13x4y33ejhl" path="res://resources/tileMap.tres" id="1_uap1w"]
+
+[node name="TileMapa" type="GridMap" unique_id=1882625788]
+mesh_library = ExtResource("1_uap1w")
+cell_size = Vector3(32, 2, 32)
