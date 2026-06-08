@@ -793,8 +793,8 @@ height = 1.6448364
 [sub_resource type="BoxShape3D" id="BoxShape3D_u74oq"]
 size = Vector3(1, 1.512146, 1)
 
-[node name="Jugador" type="CharacterBody3D" unique_id=1729901145]
-collision_mask = 0
+[node name="Jugador" type="CharacterBody3D" unique_id=1729901145 groups=["Jugador"]]
+collision_mask = 12
 script = ExtResource("1_qo7ab")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1342047460]
@@ -811,7 +811,7 @@ shape = SubResource("CapsuleShape3D_2vo2l")
 [node name="AttackArea" type="Area3D" parent="." unique_id=1921144134]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.0693347, -0.3065554, 0)
 collision_layer = 2
-collision_mask = 0
+collision_mask = 8
 monitoring = false
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="AttackArea" unique_id=752455411]

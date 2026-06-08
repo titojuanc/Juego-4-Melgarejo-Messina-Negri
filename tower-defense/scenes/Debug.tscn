@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://bvt0oslje6j5y"]
 
 [ext_resource type="PackedScene" uid="uid://de6i45afb77td" path="res://scenes/Jugador.tscn" id="1_5spvt"]
+[ext_resource type="PackedScene" uid="uid://d10gpmbqw3wc3" path="res://scenes/Zombie.tscn" id="1_c2xgb"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_bn3w3"]
 size = Vector3(60, 2, 60)
@@ -13,6 +14,7 @@ size = Vector3(20, 2, 20)
 [node name="Piso" type="StaticBody3D" parent="." unique_id=1246585644]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, 0)
 collision_layer = 4
+collision_mask = 9
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Piso" unique_id=609989778]
 shape = SubResource("BoxShape3D_bn3w3")
@@ -24,10 +26,11 @@ mesh = SubResource("BoxMesh_pu1qo")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4, 0)
 shadow_enabled = true
 
+[node name="Zombie" parent="." unique_id=663786870 instance=ExtResource("1_c2xgb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.089162, 0.91994953, 0)
+
 [node name="Jugador" parent="." unique_id=1729901145 instance=ExtResource("1_5spvt")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5282798, 0)
-collision_mask = 4
-speed = 10
 
 [node name="Camera3D" type="Camera3D" parent="." unique_id=795778347]
 transform = Transform3D(1, 0, 0, 0, 0.8660254, 0.5, 0, -0.5, 0.8660254, 0, 1.9471371, 12.184032)
