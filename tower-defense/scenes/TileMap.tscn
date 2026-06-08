@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://cq112si4fu5fn"]
+
+[ext_resource type="MeshLibrary" uid="uid://cg13x4y33ejhl" path="res://resources/tileMap.tres" id="1_6dovd"]
+
+[node name="GridMap" type="GridMap" unique_id=1503455355]
+mesh_library = ExtResource("1_6dovd")
+cell_size = Vector3(32, 2, 32)
+collision_layer = 4
+collision_mask = 9

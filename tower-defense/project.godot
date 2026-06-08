@@ -47,6 +47,7 @@ click_izq={
 
 3d_physics/layer_1="Jugador"
 3d_physics/layer_2="AttackAreaJugador"
+3d_physics/layer_3="Piso"
 
 [physics]
 
