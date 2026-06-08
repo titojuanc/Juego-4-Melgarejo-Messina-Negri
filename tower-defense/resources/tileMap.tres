@@ -1,0 +1,45 @@
+[gd_resource type="MeshLibrary" format=3 uid="uid://cg13x4y33ejhl"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_jks6g"]
+albedo_color = Color(0, 0.5294118, 0, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_6u4j6"]
+material = SubResource("StandardMaterial3D_jks6g")
+size = Vector3(32, 2, 32)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_piedra"]
+albedo_color = Color(0.13725491, 0.15294118, 0.19215687, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_piedra"]
+material = SubResource("StandardMaterial3D_piedra")
+size = Vector3(32, 2, 32)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_tierra"]
+albedo_color = Color(0.21874788, 0.044000298, 0.0056144884, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_tierra"]
+material = SubResource("StandardMaterial3D_tierra")
+size = Vector3(32, 2, 32)
+
+[resource]
+item/0/name = "TileHierba"
+item/0/mesh = SubResource("BoxMesh_6u4j6")
+item/0/mesh_transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+item/0/mesh_cast_shadow = 1
+item/0/shapes = []
+item/0/navigation_mesh_transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+item/0/navigation_layers = 1
+item/1/name = "TilePiedra"
+item/1/mesh = SubResource("BoxMesh_piedra")
+item/1/mesh_transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+item/1/mesh_cast_shadow = 1
+item/1/shapes = []
+item/1/navigation_mesh_transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+item/1/navigation_layers = 1
+item/2/name = "TileTierra"
+item/2/mesh = SubResource("BoxMesh_tierra")
+item/2/mesh_transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+item/2/mesh_cast_shadow = 1
+item/2/shapes = []
+item/2/navigation_mesh_transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+item/2/navigation_layers = 1
