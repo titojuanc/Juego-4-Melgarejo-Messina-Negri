@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://de6i45afb77td"]
 
 [ext_resource type="Texture2D" uid="uid://cbpmye4v0dp8e" path="res://assets/jugador/Fighter sprites/Dash/fighter_dash_0033.png" id="1_old7g"]
+[ext_resource type="Script" uid="uid://dxaij2qx0qrek" path="res://scripts/jugador.gd" id="1_qo7ab"]
 [ext_resource type="Texture2D" uid="uid://3e5yjckfrnfr" path="res://assets/jugador/Fighter sprites/Dash/fighter_dash_0034.png" id="2_qo7ab"]
 [ext_resource type="Texture2D" uid="uid://dwhlk5l2bloob" path="res://assets/jugador/Fighter sprites/Dash/fighter_dash_0035.png" id="3_2vo2l"]
 [ext_resource type="Texture2D" uid="uid://b6ivmxcblj7ul" path="res://assets/jugador/Fighter sprites/Dash/fighter_dash_0036.png" id="4_u74oq"]
@@ -126,6 +127,43 @@
 [ext_resource type="Texture2D" uid="uid://mvn6br8binhh" path="res://assets/jugador/Sword sprites/Walk/sword_walk_0015.png" id="124_wauc0"]
 [ext_resource type="Texture2D" uid="uid://cc6o6jt58j12o" path="res://assets/jugador/Sword sprites/Walk/sword_walk_0016.png" id="125_kw8op"]
 
+[sub_resource type="Animation" id="Animation_2vo2l"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AttackArea:monitoring")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="Animation" id="Animation_qo7ab"]
+resource_name = "Sword-Combo"
+length = 1.375
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AttackArea:monitoring")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.375, 0.5, 0.75, 0.875, 1.125, 1.25),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [false, true, false, true, false, true, false]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_u74oq"]
+_data = {
+&"RESET": SubResource("Animation_2vo2l"),
+&"Sword-Combo": SubResource("Animation_qo7ab")
+}
+
 [sub_resource type="SpriteFrames" id="SpriteFrames_qqrc4"]
 animations = [{
 "frames": [{
@@ -147,9 +185,9 @@ animations = [{
 "duration": 1.0,
 "texture": ExtResource("6_1tv1m")
 }],
-"loop": true,
+"loop": false,
 "name": &"Normal-Dash",
-"speed": 5.0
+"speed": 8.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -184,7 +222,7 @@ animations = [{
 }],
 "loop": false,
 "name": &"Normal-Death",
-"speed": 5.0
+"speed": 8.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -199,9 +237,9 @@ animations = [{
 "duration": 1.0,
 "texture": ExtResource("20_uq4jn")
 }],
-"loop": true,
+"loop": false,
 "name": &"Normal-Hit",
-"speed": 5.0
+"speed": 8.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -230,7 +268,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"Normal-Idle",
-"speed": 5.0
+"speed": 8.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -259,7 +297,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"Normal-Run",
-"speed": 5.0
+"speed": 8.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -288,7 +326,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"Normal-Walk",
-"speed": 5.0
+"speed": 8.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -309,9 +347,9 @@ animations = [{
 "duration": 1.0,
 "texture": ExtResource("50_0xw82")
 }],
-"loop": true,
+"loop": false,
 "name": &"Pistol-Dash",
-"speed": 5.0
+"speed": 8.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -326,9 +364,9 @@ animations = [{
 "duration": 1.0,
 "texture": ExtResource("54_h37c5")
 }],
-"loop": true,
+"loop": false,
 "name": &"Pistol-Hit",
-"speed": 5.0
+"speed": 8.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -357,7 +395,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"Pistol-Idle",
-"speed": 5.0
+"speed": 8.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -386,7 +424,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"Pistol-Run",
-"speed": 5.0
+"speed": 8.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -397,7 +435,7 @@ animations = [{
 }],
 "loop": false,
 "name": &"Pistol-Shoot",
-"speed": 5.0
+"speed": 8.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -426,7 +464,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"Pistol-Walk",
-"speed": 5.0
+"speed": 8.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -464,7 +502,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"Sword-Combo",
-"speed": 5.0
+"speed": 8.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -485,9 +523,9 @@ animations = [{
 "duration": 1.0,
 "texture": ExtResource("97_gbgso")
 }],
-"loop": true,
+"loop": false,
 "name": &"Sword-Dash",
-"speed": 5.0
+"speed": 8.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -502,9 +540,9 @@ animations = [{
 "duration": 1.0,
 "texture": ExtResource("101_5pijr")
 }],
-"loop": true,
+"loop": false,
 "name": &"Sword-Hit",
-"speed": 5.0
+"speed": 8.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -533,7 +571,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"Sword-Idle",
-"speed": 5.0
+"speed": 8.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -562,7 +600,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"Sword-Run",
-"speed": 5.0
+"speed": 8.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -591,15 +629,38 @@ animations = [{
 }],
 "loop": true,
 "name": &"Sword-Walk",
-"speed": 5.0
+"speed": 8.0
 }]
 
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_2vo2l"]
+height = 1.6448364
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_u74oq"]
+size = Vector3(1, 1.512146, 1)
+
 [node name="Jugador" type="CharacterBody3D" unique_id=1729901145]
+collision_mask = 0
+script = ExtResource("1_qo7ab")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1342047460]
+libraries/ = SubResource("AnimationLibrary_u74oq")
 
 [node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="." unique_id=98325589]
 sprite_frames = SubResource("SpriteFrames_qqrc4")
-animation = &"Sword-Walk"
+animation = &"Sword-Combo"
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=2082091482]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.035762787, -0.37557983, 0)
+shape = SubResource("CapsuleShape3D_2vo2l")
 
-[node name="SpringArm3D" type="SpringArm3D" parent="." unique_id=415884948]
+[node name="Camera3D" type="Camera3D" parent="." unique_id=1489561156]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.9471371, 12.184032)
+
+[node name="AttackArea" type="Area3D" parent="." unique_id=1921144134]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.0693347, -0.3065554, 0)
+collision_layer = 2
+collision_mask = 0
+monitoring = false
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="AttackArea" unique_id=752455411]
+shape = SubResource("BoxShape3D_u74oq")
