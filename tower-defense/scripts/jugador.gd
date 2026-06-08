@@ -6,6 +6,8 @@ extends CharacterBody3D
 @onready var camara = get_viewport().get_camera_3d()
 
 @export var speed = 10
+@export var vida = 100
+@export var danio = 30
 
 const GRAVEDAD = 9.8
 
