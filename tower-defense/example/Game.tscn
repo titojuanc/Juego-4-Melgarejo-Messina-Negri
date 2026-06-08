@@ -120,6 +120,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, 0)
 shape = SubResource("BoxShape3D_6ubv3")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Piso" unique_id=232876176]
+visible = false
 mesh = SubResource("BoxMesh_wbfu4")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1194750592]
@@ -139,5 +140,5 @@ billboard = 2
 sprite_frames = SubResource("SpriteFrames_0yprl")
 autoplay = "default"
 
-[node name="Camera3D" type="Camera3D" parent="." unique_id=381916262]
+[node name="Camera3D" type="Camera3D" parent="CharacterBody3D" unique_id=381916262]
 transform = Transform3D(1, 1.0587912e-22, -1.5893256e-08, 1.123823e-08, 0.70710677, 0.7071068, 1.1238229e-08, -0.7071068, 0.70710677, -1, 22, 35)
