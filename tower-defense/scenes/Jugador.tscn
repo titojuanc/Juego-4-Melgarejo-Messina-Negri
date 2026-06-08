@@ -797,7 +797,7 @@ height = 1.6448364
 size = Vector3(1, 1.512146, 1)
 
 [node name="Jugador" type="CharacterBody3D" unique_id=1729901145]
-collision_mask = 0
+collision_mask = 4
 script = ExtResource("1_qo7ab")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1342047460]

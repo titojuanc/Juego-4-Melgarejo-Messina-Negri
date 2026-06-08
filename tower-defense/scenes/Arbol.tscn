@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://clh38nuj1qg4k"]
+
+[ext_resource type="ArrayMesh" uid="uid://ds1u5ctjosta2" path="res://assets/arboles/arbol1/Arbol1.obj" id="1_x72v4"]
+
+[node name="Arbol" type="Node3D" unique_id=1512533366]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=904620634]
+mesh = ExtResource("1_x72v4")
