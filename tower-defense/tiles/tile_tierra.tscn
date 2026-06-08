@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://cvdxj8q6ayckg"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_efqsb"]
+size = Vector3(32, 2, 32)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_jks6g"]
+albedo_color = Color(0.21874788, 0.044000298, 0.0056144884, 1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_efqsb"]
+size = Vector3(32, 2, 32)
+
+[node name="TileTierra" type="StaticBody3D" unique_id=1614939777]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1767341449]
+mesh = SubResource("BoxMesh_efqsb")
+surface_material_override/0 = SubResource("StandardMaterial3D_jks6g")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1913822713]
+shape = SubResource("BoxShape3D_efqsb")
