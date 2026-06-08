@@ -144,7 +144,7 @@ tracks/0/keys = {
 
 [sub_resource type="Animation" id="Animation_qo7ab"]
 resource_name = "Sword-Att1"
-length = 0.5
+length = 0.375
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -152,7 +152,7 @@ tracks/0/path = NodePath("AttackArea:monitoring")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.5),
+"times": PackedFloat32Array(0, 0.375),
 "transitions": PackedFloat32Array(1, 1),
 "update": 1,
 "values": [false, true]
@@ -182,7 +182,7 @@ tracks/0/path = NodePath("AttackArea:monitoring")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.5),
+"times": PackedFloat32Array(0, 0.375),
 "transitions": PackedFloat32Array(1, 1),
 "update": 1,
 "values": [false, true]
@@ -212,7 +212,7 @@ tracks/0/path = NodePath("AttackArea:monitoring")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.5),
+"times": PackedFloat32Array(0, 0.25),
 "transitions": PackedFloat32Array(1, 1),
 "update": 1,
 "values": [false, true]
@@ -583,7 +583,7 @@ animations = [{
 "duration": 1.0,
 "texture": ExtResource("83_5nev6")
 }],
-"loop": true,
+"loop": false,
 "name": &"Sword-Att1",
 "speed": 8.0
 }, {
@@ -600,7 +600,7 @@ animations = [{
 "duration": 1.0,
 "texture": ExtResource("87_gysfn")
 }],
-"loop": true,
+"loop": false,
 "name": &"Sword-Att2",
 "speed": 8.0
 }, {
@@ -617,7 +617,7 @@ animations = [{
 "duration": 1.0,
 "texture": ExtResource("91_nop3s")
 }],
-"loop": true,
+"loop": false,
 "name": &"Sword-Att3",
 "speed": 8.0
 }, {
@@ -802,7 +802,7 @@ libraries/ = SubResource("AnimationLibrary_u74oq")
 
 [node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="." unique_id=98325589]
 sprite_frames = SubResource("SpriteFrames_qqrc4")
-animation = &"Sword-Att3"
+animation = &"Sword-Att1"
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=2082091482]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.035762787, -0.37557983, 0)
