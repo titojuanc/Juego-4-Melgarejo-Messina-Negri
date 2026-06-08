@@ -143,6 +143,96 @@ tracks/0/keys = {
 }
 
 [sub_resource type="Animation" id="Animation_qo7ab"]
+resource_name = "Sword-Att1"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AttackArea:monitoring")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AnimatedSprite3D")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [&"Sword-Att1"],
+"method": &"play"
+}]
+}
+
+[sub_resource type="Animation" id="Animation_u74oq"]
+resource_name = "Sword-Att2"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AttackArea:monitoring")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AnimatedSprite3D")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [&"Sword-Att2"],
+"method": &"play"
+}]
+}
+
+[sub_resource type="Animation" id="Animation_u5p6s"]
+resource_name = "Sword-Att3"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AttackArea:monitoring")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AnimatedSprite3D")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [&"Sword-Att3"],
+"method": &"play"
+}]
+}
+
+[sub_resource type="Animation" id="Animation_1tv1m"]
 resource_name = "Sword-Combo"
 length = 1.375
 tracks/0/type = "value"
@@ -157,11 +247,28 @@ tracks/0/keys = {
 "update": 1,
 "values": [false, true, false, true, false, true, false]
 }
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AnimatedSprite3D")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [&"Sword-Combo"],
+"method": &"play"
+}]
+}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_u74oq"]
 _data = {
 &"RESET": SubResource("Animation_2vo2l"),
-&"Sword-Combo": SubResource("Animation_qo7ab")
+&"Sword-Att1": SubResource("Animation_qo7ab"),
+&"Sword-Att2": SubResource("Animation_u74oq"),
+&"Sword-Att3": SubResource("Animation_u5p6s"),
+&"Sword-Combo": SubResource("Animation_1tv1m")
 }
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_qqrc4"]
@@ -474,6 +581,57 @@ animations = [{
 "texture": ExtResource("82_yxxan")
 }, {
 "duration": 1.0,
+"texture": ExtResource("82_yxxan")
+}, {
+"duration": 1.0,
+"texture": ExtResource("83_5nev6")
+}],
+"loop": true,
+"name": &"Sword-Att1",
+"speed": 8.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("84_vlesp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("85_buee3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("86_dpc7x")
+}, {
+"duration": 1.0,
+"texture": ExtResource("87_gysfn")
+}],
+"loop": true,
+"name": &"Sword-Att2",
+"speed": 8.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("88_hbb8i")
+}, {
+"duration": 1.0,
+"texture": ExtResource("89_sqgx1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("90_i5lyx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("91_nop3s")
+}],
+"loop": true,
+"name": &"Sword-Att3",
+"speed": 8.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("81_yihqw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("82_yxxan")
+}, {
+"duration": 1.0,
 "texture": ExtResource("83_5nev6")
 }, {
 "duration": 1.0,
@@ -653,9 +811,6 @@ animation = &"Sword-Combo"
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.035762787, -0.37557983, 0)
 shape = SubResource("CapsuleShape3D_2vo2l")
 
-[node name="Camera3D" type="Camera3D" parent="." unique_id=1489561156]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.9471371, 12.184032)
-
 [node name="AttackArea" type="Area3D" parent="." unique_id=1921144134]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.0693347, -0.3065554, 0)
 collision_layer = 2
@@ -664,3 +819,5 @@ monitoring = false
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="AttackArea" unique_id=752455411]
 shape = SubResource("BoxShape3D_u74oq")
+
+[connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_animation_player_animation_finished"]

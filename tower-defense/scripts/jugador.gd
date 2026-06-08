@@ -3,12 +3,15 @@ extends CharacterBody3D
 @onready var attack_area = $AttackArea
 @onready var anim_player = $AnimationPlayer
 @onready var anim_sprite = $AnimatedSprite3D
+@onready var camara = get_viewport().get_camera_3d()
 
 @export var speed = 10
 
 const GRAVEDAD = 9.8
 
 var atacando = false
+var combo_step = 0
+var camara_offset = Vector3(0, 4, 8)
 
 #Animaciones del personaje normal
 func anim_normal_idle():
@@ -42,7 +45,13 @@ func anim_sword_correr():
 func anim_sword_hit():
 	anim_sprite.play("Sword-Hit")
 func anim_sword_combo():
-	anim_sprite.play("Sword-Combo")
+	anim_player.play("Sword-Combo")
+func amim_sword_att1():
+	anim_player.play("Sword-Att1")
+func anim_sword_att2():
+	anim_player.play("Sword-Att2")
+func anim_sword_att3():
+	anim_player.play("Sword-Att3")
 func anim_sword_dash():
 	anim_sprite.play("Sword-Dash")
 
@@ -50,33 +59,50 @@ func _ready() -> void:
 	pass
 	
 func _physics_process(delta: float) -> void:
+	if not is_on_floor():
+		velocity.y -= GRAVEDAD * delta
+	else:
+		velocity.y = 0
 	
-	velocity.y -= GRAVEDAD * delta
 	velocity.x = Input.get_axis("la_A", "la_D") * speed
 	velocity.z = Input.get_axis("la_W", "la_S") * speed
 	
 	var moviendo = Vector3(velocity.x, 0, velocity.z) != Vector3.ZERO
-	
-	if moviendo:
-		if atacando:
-			anim_sword_correr()
-		else:
+	if !atacando:
+		if moviendo:
 			anim_normal_correr()
-	else:
-		anim_normal_idle()
+		else:
+			anim_normal_idle()
 	
-	var dir = Vector3(velocity.x, 0, velocity.z)
-	if dir != Vector3.ZERO:
-		rotation.y = lerp_angle(rotation.y, atan2(dir.x, dir.z), 0.15)
-		
-	if Input.is_action_just_pressed("click_izq") and atacando:
+	if velocity.x > 0:
+		anim_sprite.flip_h = false
+	elif velocity.x < 0:
+		anim_sprite.flip_h = true
+	
+	if Input.is_action_just_pressed("click_izq") and !atacando:
 		atacar()
-	if Input.is_action_just_released("click_izq") and !atacando:
-		cancelar_atacar()
-
+	
+	move_and_slide()
+	
+	camara.global_position = global_position + camara_offset
+	
 func atacar():
 	atacando = true
-	anim_player.play("Sword-Combo")
+	combo_step += 1
+	if combo_step > 3:
+		combo_step = 1
+	match combo_step:
+		1: anim_player.play("Sword-Att1")
+		2: anim_player.play("Sword-Att2")
+		3: anim_player.play("Sword-Att3")
+
 func cancelar_atacar():
 	atacando = false
+	combo_step = 0
 	
+func _on_animation_player_animation_finished(anim_name: StringName) -> void:
+	if anim_name in ["Sword-Att1", "Sword-Att2", "Sword-Att3"]:
+		if Input.is_action_pressed("click_izq"):
+			atacar()
+		else:
+			cancelar_atacar()
