@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dt8r5strhdnsg"
-path.s3tc="res://.godot/imported/knight 3 idle.png-859406981a075887236a2e6a05559063.s3tc.ctex"
+uid="uid://ciwmgpfato7xi"
+path.s3tc="res://.godot/imported/fighter_Idle_0001.png-ebb7496a72d7e5a365b34617d57fab0f.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://example/knight 3 idle.png"
-dest_files=["res://.godot/imported/knight 3 idle.png-859406981a075887236a2e6a05559063.s3tc.ctex"]
+source_file="res://assets/jugador/Fighter sprites/Idle/fighter_Idle_0001.png"
+dest_files=["res://.godot/imported/fighter_Idle_0001.png-ebb7496a72d7e5a365b34617d57fab0f.s3tc.ctex"]
 
 [params]
 
