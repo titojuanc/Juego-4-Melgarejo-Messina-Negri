@@ -14,6 +14,7 @@ const GRAVEDAD = 9.8
 var atacando = false
 var combo_step = 0
 var camara_offset = Vector3(0, 4, 8)
+var enemigos_en_rango = []
 
 #Animaciones del personaje normal
 func anim_normal_idle():
@@ -120,3 +121,16 @@ func apuntar_con_mouse():
 			anim_sprite.flip_h = true
 		rotation.y = atan2(dir.x, dir.z) - PI / 2
 		anim_sprite.rotation.y = -rotation.y
+
+func _on_attack_area_body_entered(body: Node3D) -> void:
+	if body.is_in_group("Enemigo"):
+		enemigos_en_rango.append(body)
+
+func _on_attack_area_body_exited(body: Node3D) -> void:
+	if body.is_in_group("Enemigo"):
+		enemigos_en_rango.erase(body)
+
+func pegar():
+	for e in enemigos_en_rango:
+		e.vida -= danio
+		print("Pegué: " , danio, " a: ", e)
