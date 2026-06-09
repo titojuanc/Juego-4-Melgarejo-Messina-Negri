@@ -6,12 +6,15 @@ extends CharacterBody3D
 @onready var camara = get_viewport().get_camera_3d()
 
 @export var speed = 10
+@export var vida = 100
+@export var danio = 30
 
 const GRAVEDAD = 9.8
 
 var atacando = false
 var combo_step = 0
 var camara_offset = Vector3(0, 4, 8)
+var enemigos_en_rango = []
 
 #Animaciones del personaje normal
 func anim_normal_idle():
@@ -74,17 +77,12 @@ func _physics_process(delta: float) -> void:
 		else:
 			anim_normal_idle()
 	
-	if velocity.x > 0:
-		anim_sprite.flip_h = false
-	elif velocity.x < 0:
-		anim_sprite.flip_h = true
-	
 	if Input.is_action_just_pressed("click_izq") and !atacando:
 		atacar()
 	
 	move_and_slide()
-	
 	camara.global_position = global_position + camara_offset
+	apuntar_con_mouse()
 	
 func atacar():
 	atacando = true
@@ -106,3 +104,33 @@ func _on_animation_player_animation_finished(anim_name: StringName) -> void:
 			atacar()
 		else:
 			cancelar_atacar()
+
+func apuntar_con_mouse():
+	var mouse_pos = get_viewport().get_mouse_position()
+	var origen = camara.project_ray_origin(mouse_pos)
+	var direccion = camara.project_ray_normal(mouse_pos)
+	var plano = Plane(Vector3.UP, global_position.y)
+	var punto = plano.intersects_ray(origen, direccion)
+	
+	if punto:
+		var dir = (punto - global_position)
+		dir.y = 0
+		if dir.x > 0:
+			anim_sprite.flip_h = false
+		elif dir.x < 0:
+			anim_sprite.flip_h = true
+		rotation.y = atan2(dir.x, dir.z) - PI / 2
+		anim_sprite.rotation.y = -rotation.y
+
+func _on_attack_area_body_entered(body: Node3D) -> void:
+	if body.is_in_group("Enemigo"):
+		enemigos_en_rango.append(body)
+
+func _on_attack_area_body_exited(body: Node3D) -> void:
+	if body.is_in_group("Enemigo"):
+		enemigos_en_rango.erase(body)
+
+func pegar():
+	for e in enemigos_en_rango:
+		e.vida -= danio
+		print("Pegué: " , danio, " a: ", e)
