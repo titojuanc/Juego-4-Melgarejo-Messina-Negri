@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dt8r5strhdnsg"
-path.s3tc="res://.godot/imported/knight 3 idle.png-05ba60c43a88f9c6eb766c78e00bce72.s3tc.ctex"
+path.s3tc="res://.godot/imported/knight 3 idle.png-1f61bcff54c1233e379c4f9a8e383d6b.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://knight 3 idle.png"
-dest_files=["res://.godot/imported/knight 3 idle.png-05ba60c43a88f9c6eb766c78e00bce72.s3tc.ctex"]
+source_file="res://assets/knight 3 idle.png"
+dest_files=["res://.godot/imported/knight 3 idle.png-1f61bcff54c1233e379c4f9a8e383d6b.s3tc.ctex"]
 
 [params]
 

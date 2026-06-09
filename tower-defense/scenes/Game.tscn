@@ -1,8 +1,8 @@
 [gd_scene format=3 uid="uid://bka00kwm83sv3"]
 
-[ext_resource type="Script" uid="uid://cgpg2alcimw28" path="res://character_body_3d.gd" id="1_u44n3"]
-[ext_resource type="Texture2D" uid="uid://dt8r5strhdnsg" path="res://knight 3 idle.png" id="1_xkndl"]
-[ext_resource type="Texture2D" uid="uid://b8tvqerwivdst" path="res://knight walk animation.png" id="2_u44n3"]
+[ext_resource type="Script" uid="uid://cgpg2alcimw28" path="res://scripts/character_body_3d.gd" id="1_u44n3"]
+[ext_resource type="Texture2D" uid="uid://dt8r5strhdnsg" path="res://assets/knight 3 idle.png" id="1_xkndl"]
+[ext_resource type="Texture2D" uid="uid://b8tvqerwivdst" path="res://assets/knight walk animation.png" id="2_u44n3"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_6ubv3"]
 size = Vector3(60, 2, 60)
