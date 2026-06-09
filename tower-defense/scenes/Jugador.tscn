@@ -775,13 +775,8 @@ height = 1.6448364
 [sub_resource type="BoxShape3D" id="BoxShape3D_u74oq"]
 size = Vector3(1, 1.512146, 1)
 
-<<<<<<< HEAD
-[node name="Jugador" type="CharacterBody3D" unique_id=1729901145]
-collision_mask = 4
-=======
 [node name="Jugador" type="CharacterBody3D" unique_id=1729901145 groups=["Jugador"]]
 collision_mask = 12
->>>>>>> fran
 script = ExtResource("1_qo7ab")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1342047460]

@@ -1,7 +1,8 @@
-[gd_scene format=3 uid="uid://bvt0oslje6j5y"]
+[gd_scene format=3 uid="uid://debug00000001"]
 
 [ext_resource type="PackedScene" uid="uid://de6i45afb77td" path="res://scenes/Jugador.tscn" id="1_5spvt"]
 [ext_resource type="PackedScene" uid="uid://cq112si4fu5fn" path="res://scenes/TileMap.tscn" id="2_c2xgb"]
+[ext_resource type="PackedScene" uid="uid://d10gpmbqw3wc3" path="res://scenes/Zombie.tscn" id="3_zombie"]
 
 [node name="Mundo" type="Node3D" unique_id=1869897971]
 
@@ -9,8 +10,8 @@
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4, 0)
 shadow_enabled = true
 
-[node name="Zombie" parent="." unique_id=663786870 instance=ExtResource("1_c2xgb")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.089162, 0.91994953, 0)
+[node name="Zombie" parent="." unique_id=663786870 instance=ExtResource("3_zombie")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.089162, 3.1983976, 0)
 
 [node name="Jugador" parent="." unique_id=1729901145 instance=ExtResource("1_5spvt")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.600813, 0)
