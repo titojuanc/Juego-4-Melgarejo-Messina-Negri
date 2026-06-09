@@ -5,7 +5,7 @@ extends CharacterBody3D
 @onready var attack_area = $AttackArea
 @onready var radar_area = $RadarArea
 
-enum Estado {IDLE, CHASE, ATTACK, DEATH, STUN}
+enum Estado {IDLE, CHASE, ATTACK, DEATH}
 
 var atacando = false
 var jugador = null
@@ -15,6 +15,8 @@ var en_rango_ataque = false
 
 @export var speed: float = 3
 @export var danio: int = 10
+@export var vida: int = 50
+
 const GRAVEDAD = 9.8
 
 func _ready() -> void:
