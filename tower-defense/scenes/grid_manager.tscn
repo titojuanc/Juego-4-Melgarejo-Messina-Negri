@@ -1,0 +1,51 @@
+[gd_scene format=3 uid="uid://bgo5y6h868ypc"]
+
+[ext_resource type="Script" uid="uid://cd8eabnwtac7n" path="res://scripts/grid_manager.gd" id="1_asofv"]
+[ext_resource type="Script" uid="uid://36y8filjtjg4" path="res://scripts/cell_data.gd" id="1_l7jj3"]
+[ext_resource type="Script" uid="uid://d33wijxslsx4q" path="res://scripts/grid_visual.gd" id="2_k5l73"]
+[ext_resource type="Script" uid="uid://turnukjch2p7" path="res://scripts/building_manager.gd" id="2_kl8jp"]
+[ext_resource type="Script" uid="uid://clsfnmgtkjhfy" path="res://scripts/input_handler.gd" id="3_input"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_kl8jp"]
+shading_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_asofv"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_k5l73"]
+transparency = 1
+shading_mode = 0
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_xbg4y"]
+size = Vector2(0.95, 0.95)
+
+[node name="GridManager" type="Node3D" unique_id=1835741100]
+script = ExtResource("1_asofv")
+
+[node name="GridVisual" type="Node3D" parent="." unique_id=622096962]
+script = ExtResource("2_k5l73")
+
+[node name="GridLines" type="MeshInstance3D" parent="GridVisual" unique_id=1069298908]
+material_override = SubResource("StandardMaterial3D_kl8jp")
+mesh = SubResource("ArrayMesh_asofv")
+
+[node name="HoverCell" type="MeshInstance3D" parent="GridVisual" unique_id=1762371833]
+material_override = SubResource("StandardMaterial3D_k5l73")
+mesh = SubResource("PlaneMesh_xbg4y")
+
+[node name="CellData" type="Node" parent="." unique_id=885045950]
+script = ExtResource("1_l7jj3")
+
+[node name="BuildingManager" type="Node" parent="." unique_id=161528161]
+script = ExtResource("2_kl8jp")
+
+[node name="GhostBuilding" type="Node3D" parent="BuildingManager" unique_id=1375513368]
+
+[node name="PlacedBuildings" type="Node3D" parent="BuildingManager" unique_id=733583169]
+
+[node name="InputHandler" type="Node" parent="." unique_id=234978631]
+script = ExtResource("3_input")
+
+[node name="DebugCamera" type="Camera3D" parent="." unique_id=1832079461]
+transform = Transform3D(1, 0, 0, 0, 0.50000024, 0.8660253, 0, -0.8660253, 0.50000024, -31.155052, -88.27586, -142.37073)
+current = true
+fov = 179.0

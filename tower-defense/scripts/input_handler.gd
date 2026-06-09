@@ -1,0 +1,58 @@
+extends Node
+
+var _camera:Camera3D
+var _grid_visual:Node3D
+var _building_manager:Node
+var _cell_data:Node
+var _grid_width:int
+var _grid_height:int
+var _cell_size:float
+var current_cell:Vector2i=Vector2i(-1,-1)
+
+func _ready()->void:
+	var gm=get_parent()
+	_grid_visual=gm.get_node("GridVisual")
+	_building_manager=gm.get_node("BuildingManager")
+	_cell_data=gm.get_node("CellData")
+	_grid_width=gm.grid_width
+	_grid_height=gm.grid_height
+	_cell_size=gm.cell_size
+
+func _process(_delta:float)->void:
+	_camera=get_viewport().get_camera_3d()
+	if not _camera:
+		return
+	var cell=_get_cell_under_mouse()
+	if cell!=current_cell:
+		current_cell=cell
+		_on_cell_hovered(cell)
+
+func _unhandled_input(event:InputEvent)->void:
+	if event is InputEventMouseButton:
+		if event.button_index==MOUSE_BUTTON_LEFT and event.pressed:
+			if _is_valid_cell(current_cell):
+				_building_manager.confirm_placement(current_cell)
+		elif event.button_index==MOUSE_BUTTON_RIGHT and event.pressed:
+			_building_manager.cancel_placement()
+
+func _get_cell_under_mouse()->Vector2i:
+	var mouse_pos:Vector2=get_viewport().get_mouse_position()
+	var ray_origin:Vector3=_camera.project_ray_origin(mouse_pos)
+	var ray_dir:Vector3=_camera.project_ray_normal(mouse_pos)
+	if absf(ray_dir.y)<0.0001:
+		return Vector2i(-1,-1)
+	var t:float=-ray_origin.y/ray_dir.y
+	if t<0.0:	
+		return Vector2i(-1,-1)
+	var world_pos:Vector3=ray_origin+ray_dir*t
+	var cell:=Vector2i(int(floor(world_pos.x/_cell_size)),int(floor(world_pos.z/_cell_size)))
+	return cell
+
+func _is_valid_cell(cell:Vector2i)->bool:
+	return cell.x>=0 and cell.x<_grid_width and cell.y>=0 and cell.y<_grid_height
+
+func _on_cell_hovered(cell:Vector2i)->void:
+	if _is_valid_cell(cell):
+		_grid_visual.move_hover_cell(cell,_cell_size)
+		if _building_manager.is_placing:
+			_grid_visual.set_hover_color(not _cell_data.is_occupied(cell))
