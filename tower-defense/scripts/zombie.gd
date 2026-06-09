@@ -7,12 +7,14 @@ extends CharacterBody3D
 
 enum Estado {IDLE, CHASE, ATTACK, DEATH, STUN}
 
+var atacando = false
 var jugador = null
 var estado = Estado.IDLE
 var persiguiendo = false
 var en_rango_ataque = false
 
 @export var speed: float = 3
+@export var danio: int = 10
 const GRAVEDAD = 9.8
 
 func _ready() -> void:
@@ -43,19 +45,23 @@ func _physics_process(delta: float) -> void:
 	if estado == Estado.DEATH:
 		return 
 	
+	apuntar_attack_area()
 	match estado:
 		Estado.IDLE:
 			anim_idle()
 		Estado.CHASE:
 			perseguir()
 		Estado.ATTACK:
-			print("Hola")
+			if not atacando:
+				iniciar_ataque()
 	
 func _on_attack_area_body_entered(body: Node3D) -> void:
 	estado = Estado.ATTACK
 	
 func _on_attack_area_body_exited(body: Node3D) -> void:
 	estado = Estado.CHASE
+	atacando = false
+	anim_player.stop()
 	
 func _on_radar_area_body_entered(body: Node3D) -> void:
 	estado = Estado.CHASE
@@ -69,5 +75,28 @@ func perseguir():
 	dir = dir.normalized()
 	velocity.x = dir.x * speed
 	velocity.z = dir.z * speed
+	if dir.x < 0:
+		anim_sprite.flip_h = false  # derecha
+	elif dir.x > 0:
+		anim_sprite.flip_h = true   # izquierda
 	anim_caminar()
 	move_and_slide()
+
+func iniciar_ataque():
+	atacando = true
+	anim_atacar()
+	await anim_player.animation_finished
+	atacando = false
+
+func apuntar_attack_area():
+	if jugador == null:
+		return
+	var dir = (jugador.global_position - global_position)
+	dir.y = 0
+	rotation.y = atan2(dir.x, dir.z) + PI / 2
+	anim_sprite.global_rotation.y = 0
+
+func pegar():
+	if jugador != null:
+		jugador.vida -= danio
+		print(jugador.vida)
