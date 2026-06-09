@@ -10,25 +10,13 @@
 [sub_resource type="Animation" id="Animation_m83i4"]
 resource_name = "Attack"
 length = 0.625
-tracks/0/type = "value"
+tracks/0/type = "method"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("AttackArea:monitoring")
+tracks/0/path = NodePath("AnimatedSprite3D")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.36666667, 0.4),
-"transitions": PackedFloat32Array(1, 1, 1),
-"update": 1,
-"values": [false, true, false]
-}
-tracks/1/type = "method"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("AnimatedSprite3D")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "values": [{
@@ -36,21 +24,23 @@ tracks/1/keys = {
 "method": &"play"
 }]
 }
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.6),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"pegar"
+}]
+}
 
 [sub_resource type="Animation" id="Animation_v58xl"]
 length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("AttackArea:monitoring")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [false]
-}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_dta2r"]
 _data = {
@@ -325,7 +315,6 @@ shape = SubResource("CapsuleShape3D_elcfr")
 [node name="AttackArea" type="Area3D" parent="." unique_id=183993645]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.9583131, 0, 0)
 collision_layer = 16
-monitoring = false
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="AttackArea" unique_id=706878148]
 shape = SubResource("BoxShape3D_k6ivc")
