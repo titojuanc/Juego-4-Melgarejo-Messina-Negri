@@ -58,18 +58,22 @@ func _physics_process(delta: float) -> void:
 				iniciar_ataque()
 	
 func _on_attack_area_body_entered(body: Node3D) -> void:
-	estado = Estado.ATTACK
+	if body.is_in_group("Jugador"):
+		estado = Estado.ATTACK
 	
 func _on_attack_area_body_exited(body: Node3D) -> void:
-	estado = Estado.CHASE
-	atacando = false
-	anim_player.stop()
+	if body.is_in_group("Jugador"):
+		estado = Estado.CHASE
+		atacando = false
+		anim_player.stop()
 	
 func _on_radar_area_body_entered(body: Node3D) -> void:
-	estado = Estado.CHASE
+	if body.is_in_group("Jugador"):
+		estado = Estado.CHASE
 	
 func _on_radar_area_body_exited(body: Node3D) -> void:
-	estado = Estado.IDLE
+	if body.is_in_group("Jugador"):
+		estado = Estado.IDLE
 	
 func perseguir():
 	var dir = (jugador.global_position - global_position)

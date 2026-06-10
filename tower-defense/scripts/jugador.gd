@@ -6,6 +6,7 @@ extends CharacterBody3D
 @onready var camara = get_viewport().get_camera_3d()
 @onready var linea_area = $LineaApuntado
 @onready var linea_mesh = $LineaApuntado/MeshInstance3D
+@export var bala_scene: PackedScene
 
 @export var speed: float = 10
 @export var vida: int = 100
@@ -22,6 +23,7 @@ var recursos_en_rango = []
 var modo
 var mat_linea: StandardMaterial3D
 var enemigo_en_linea = false
+var cooldown_disparo = false
 
 #Animaciones del personaje normal
 func anim_normal_idle():
@@ -41,7 +43,7 @@ func anim_pistol_idle():
 func anim_pistol_correr():
 	anim_sprite.play("Pistol-Run")
 func anim_pistol_shoot():
-	anim_sprite.play("Pistol-Shoot")
+	anim_player.play("Pistol-Shoot")
 func anim_pistol_hit():
 	anim_sprite.play("Pistol-Hit")
 func anim_pistol_dash():
@@ -130,6 +132,8 @@ func _on_animation_player_animation_finished(anim_name: StringName) -> void:
 			atacar()
 		else:
 			cancelar_atacar()
+	elif anim_name == "Pistol-Shoot":
+		cooldown_disparo = false
 
 func apuntar_con_mouse():
 	var mouse_pos = get_viewport().get_mouse_position()
@@ -152,17 +156,12 @@ func apuntar_con_mouse():
 			linea_area.visible = true
 			var dir_xz = Vector3(dir.x, 0, dir.z)
 			var dir_norm = dir_xz.normalized()
-			const LARGO = 5.0
-
 			linea_area.global_rotation = Vector3(0, atan2(dir.x, dir.z), 0)
-			linea_area.global_position = global_position + dir_norm * LARGO / 2
-			linea_area.global_position.y = global_position.y + 0
-			linea_area.scale.z = LARGO
-
+			linea_area.global_position = global_position + dir_norm / 2
 			if enemigo_en_linea:
-				mat_linea.albedo_color = Color(1, 0, 0, 1)
+				mat_linea.albedo_color = Color(1, 0, 0, 0.3)
 			else:
-				mat_linea.albedo_color = Color(1, 1, 1, 1)
+				mat_linea.albedo_color = Color(1, 1, 1, 0.3)
 		else:
 			linea_area.visible = false
 
@@ -186,8 +185,22 @@ func pegar():
 		r.recibir_golpe()
 
 func disparar():
+	if cooldown_disparo:
+		return
+	cooldown_disparo = true
 	anim_player.play("Pistol-Shoot")
 	print("disparar hacia: ", get_punto_apuntado())
+
+func spawnear_bala():
+	var punto = get_punto_apuntado()
+	if punto == null:
+		return
+	var bala = bala_scene.instantiate()
+	get_tree().root.add_child(bala)
+	bala.global_position = linea_area.global_position
+	var dir = (punto - global_position)
+	dir.y = 0
+	bala.direccion = dir.normalized()
 
 func get_punto_apuntado():
 	var mouse_pos = get_viewport().get_mouse_position()
