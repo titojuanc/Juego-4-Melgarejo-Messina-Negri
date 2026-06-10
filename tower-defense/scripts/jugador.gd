@@ -151,17 +151,12 @@ func apuntar_con_mouse():
 			linea_area.visible = true
 			var dir_xz = Vector3(dir.x, 0, dir.z)
 			var dir_norm = dir_xz.normalized()
-			const LARGO = 5.0
-
 			linea_area.global_rotation = Vector3(0, atan2(dir.x, dir.z), 0)
-			linea_area.global_position = global_position + dir_norm * LARGO / 2
-			linea_area.global_position.y = global_position.y + 0
-			linea_area.scale.z = LARGO
-
+			linea_area.global_position = global_position + dir_norm / 2
 			if enemigo_en_linea:
-				mat_linea.albedo_color = Color(1, 0, 0, 1)
+				mat_linea.albedo_color = Color(1, 0, 0, 0.3)
 			else:
-				mat_linea.albedo_color = Color(1, 1, 1, 1)
+				mat_linea.albedo_color = Color(1, 1, 1, 0.3)
 		else:
 			linea_area.visible = false
 
