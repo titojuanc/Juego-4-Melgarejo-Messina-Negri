@@ -775,6 +775,15 @@ height = 1.6448364
 [sub_resource type="BoxShape3D" id="BoxShape3D_u74oq"]
 size = Vector3(1, 1.512146, 1)
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_qo7ab"]
+size = Vector3(0.05, 0.05, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_u74oq"]
+size = Vector3(0.05, 0.05, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qo7ab"]
+albedo_color = Color(1, 1, 1, 0.39215687)
+
 [node name="Jugador" type="CharacterBody3D" unique_id=1729901145 groups=["Jugador"]]
 collision_mask = 12
 script = ExtResource("1_qo7ab")
@@ -798,6 +807,19 @@ collision_mask = 8
 [node name="CollisionShape3D" type="CollisionShape3D" parent="AttackArea" unique_id=752455411]
 shape = SubResource("BoxShape3D_u74oq")
 
+[node name="LineaApuntado" type="Area3D" parent="." unique_id=400785349]
+collision_layer = 64
+collision_mask = 8
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="LineaApuntado" unique_id=828734539]
+shape = SubResource("BoxShape3D_qo7ab")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="LineaApuntado" unique_id=1848062939]
+mesh = SubResource("BoxMesh_u74oq")
+surface_material_override/0 = SubResource("StandardMaterial3D_qo7ab")
+
 [connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_animation_player_animation_finished"]
 [connection signal="body_entered" from="AttackArea" to="." method="_on_attack_area_body_entered"]
 [connection signal="body_exited" from="AttackArea" to="." method="_on_attack_area_body_exited"]
+[connection signal="body_entered" from="LineaApuntado" to="." method="_on_linea_apuntado_body_entered"]
+[connection signal="body_exited" from="LineaApuntado" to="." method="_on_linea_apuntado_body_exited"]

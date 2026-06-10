@@ -4,17 +4,23 @@ extends CharacterBody3D
 @onready var anim_player = $AnimationPlayer
 @onready var anim_sprite = $AnimatedSprite3D
 @onready var camara = get_viewport().get_camera_3d()
+@onready var linea_area = $LineaApuntado
+@onready var linea_mesh = $LineaApuntado/MeshInstance3D
 
-@export var speed = 10
-@export var vida = 100
-@export var danio = 30
+@export var speed: float = 10
+@export var vida: int = 100
+@export var danio: int = 30
 
+enum Modo {ESPADA, PISTOLA}
 const GRAVEDAD = 9.8
 
 var atacando = false
 var combo_step = 0
 var camara_offset = Vector3(0, 4, 8)
 var enemigos_en_rango = []
+var modo
+var mat_linea: StandardMaterial3D
+var enemigo_en_linea = false
 
 #Animaciones del personaje normal
 func anim_normal_idle():
@@ -59,7 +65,8 @@ func anim_sword_dash():
 	anim_sprite.play("Sword-Dash")
 
 func _ready() -> void:
-	pass
+	mat_linea = linea_mesh.get_surface_override_material(0)
+	print("material: ", mat_linea)
 	
 func _physics_process(delta: float) -> void:
 	if not is_on_floor():
@@ -70,15 +77,33 @@ func _physics_process(delta: float) -> void:
 	velocity.x = Input.get_axis("la_A", "la_D") * speed
 	velocity.z = Input.get_axis("la_W", "la_S") * speed
 	
+	if modo == Modo.ESPADA:
+		if Input.is_action_just_pressed("click_izq") and !atacando:
+			atacar()
+	elif modo == Modo.PISTOLA:
+		if Input.is_action_just_pressed("click_izq"):
+			disparar()
+	
+	if Input.is_action_pressed("click_der") and !atacando:
+		modo = Modo.PISTOLA
+		linea_area.monitoring = true
+	else:
+		modo = Modo.ESPADA
+		linea_area.monitoring = false
+	
 	var moviendo = Vector3(velocity.x, 0, velocity.z) != Vector3.ZERO
 	if !atacando:
-		if moviendo:
-			anim_normal_correr()
+		if modo == Modo.PISTOLA:
+			if moviendo:
+				anim_pistol_correr()
+			else:
+				anim_pistol_idle()
 		else:
-			anim_normal_idle()
-	
-	if Input.is_action_just_pressed("click_izq") and !atacando:
-		atacar()
+			if moviendo:
+				anim_normal_correr()
+			else:
+				anim_normal_idle()
+				
 	
 	move_and_slide()
 	camara.global_position = global_position + camara_offset
@@ -121,6 +146,24 @@ func apuntar_con_mouse():
 			anim_sprite.flip_h = true
 		rotation.y = atan2(dir.x, dir.z) - PI / 2
 		anim_sprite.rotation.y = -rotation.y
+		
+		if modo == Modo.PISTOLA:
+			linea_area.visible = true
+			var dir_xz = Vector3(dir.x, 0, dir.z)
+			var dir_norm = dir_xz.normalized()
+			const LARGO = 5.0
+
+			linea_area.global_rotation = Vector3(0, atan2(dir.x, dir.z), 0)
+			linea_area.global_position = global_position + dir_norm * LARGO / 2
+			linea_area.global_position.y = global_position.y + 0
+			linea_area.scale.z = LARGO
+
+			if enemigo_en_linea:
+				mat_linea.albedo_color = Color(1, 0, 0, 1)
+			else:
+				mat_linea.albedo_color = Color(1, 1, 1, 1)
+		else:
+			linea_area.visible = false
 
 func _on_attack_area_body_entered(body: Node3D) -> void:
 	if body.is_in_group("Enemigo"):
@@ -134,3 +177,24 @@ func pegar():
 	for e in enemigos_en_rango:
 		e.vida -= danio
 		print("Pegué: " , danio, " a: ", e)
+
+func disparar():
+	anim_player.play("Pistol-Shoot")
+	print("disparar hacia: ", get_punto_apuntado())
+
+func get_punto_apuntado():
+	var mouse_pos = get_viewport().get_mouse_position()
+	var origen = camara.project_ray_origin(mouse_pos)
+	var direccion = camara.project_ray_normal(mouse_pos)
+	var plano = Plane(Vector3.UP, global_position.y)
+	return plano.intersects_ray(origen, direccion)
+
+func _on_linea_apuntado_body_entered(body: Node3D) -> void:
+	print("linea detectó: ", body.name)
+	if body.is_in_group("Enemigo"):
+		enemigo_en_linea = true
+
+func _on_linea_apuntado_body_exited(body: Node3D) -> void:
+	print("linea detectó: ", body.name)
+	if body.is_in_group("Enemigo"):
+		enemigo_en_linea = false
