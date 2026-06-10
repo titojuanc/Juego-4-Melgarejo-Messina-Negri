@@ -1,5 +1,8 @@
 [gd_scene format=3 uid="uid://b7yptfxussmp2"]
 
+[ext_resource type="Script" path="res://scripts/tile_hierba.gd" id="1_a5eov"]
+[ext_resource type="PackedScene" uid="uid://clh38nuj1qg4k" path="res://scenes/Arbol.tscn" id="2_f4k1w"]
+
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_efqsb"]
 albedo_color = Color(0, 0.49803922, 0, 1)
 
@@ -11,6 +14,8 @@ size = Vector3(32, 2, 32)
 size = Vector3(32, 2, 32)
 
 [node name="TileHierba" type="MeshInstance3D" unique_id=168422585]
+script = ExtResource("1_a5eov")
+arbol_scene = ExtResource("2_f4k1w")
 mesh = SubResource("BoxMesh_efqsb")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=770022144]
