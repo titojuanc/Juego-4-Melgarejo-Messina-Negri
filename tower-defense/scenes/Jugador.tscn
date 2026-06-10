@@ -2,6 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://cbpmye4v0dp8e" path="res://assets/jugador/Fighter sprites/Dash/fighter_dash_0033.png" id="1_old7g"]
 [ext_resource type="Script" uid="uid://dxaij2qx0qrek" path="res://scripts/jugador.gd" id="1_qo7ab"]
+[ext_resource type="PackedScene" uid="uid://densmh3rtibg8" path="res://scenes/Bala.tscn" id="2_2vo2l"]
 [ext_resource type="Texture2D" uid="uid://3e5yjckfrnfr" path="res://assets/jugador/Fighter sprites/Dash/fighter_dash_0034.png" id="2_qo7ab"]
 [ext_resource type="Texture2D" uid="uid://dwhlk5l2bloob" path="res://assets/jugador/Fighter sprites/Dash/fighter_dash_0035.png" id="3_2vo2l"]
 [ext_resource type="Texture2D" uid="uid://b6ivmxcblj7ul" path="res://assets/jugador/Fighter sprites/Dash/fighter_dash_0036.png" id="4_u74oq"]
@@ -127,6 +128,24 @@
 [ext_resource type="Texture2D" uid="uid://mvn6br8binhh" path="res://assets/jugador/Sword sprites/Walk/sword_walk_0015.png" id="124_wauc0"]
 [ext_resource type="Texture2D" uid="uid://cc6o6jt58j12o" path="res://assets/jugador/Sword sprites/Walk/sword_walk_0016.png" id="125_kw8op"]
 
+[sub_resource type="Animation" id="Animation_ktms0"]
+resource_name = "Pistol-Shoot"
+length = 0.25
+tracks/0/type = "method"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.125),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"spawnear_bala"
+}]
+}
+
 [sub_resource type="Animation" id="Animation_2vo2l"]
 length = 0.001
 
@@ -246,6 +265,7 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_u74oq"]
 _data = {
+&"Pistol-Shoot": SubResource("Animation_ktms0"),
 &"RESET": SubResource("Animation_2vo2l"),
 &"Sword-Att1": SubResource("Animation_qo7ab"),
 &"Sword-Att2": SubResource("Animation_u74oq"),
@@ -787,13 +807,16 @@ albedo_color = Color(1, 1, 1, 0.39215687)
 [node name="Jugador" type="CharacterBody3D" unique_id=1729901145 groups=["Jugador"]]
 collision_mask = 12
 script = ExtResource("1_qo7ab")
+bala_scene = ExtResource("2_2vo2l")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1342047460]
 libraries/ = SubResource("AnimationLibrary_u74oq")
 
 [node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="." unique_id=98325589]
 sprite_frames = SubResource("SpriteFrames_qqrc4")
-animation = &"Sword-Att3"
+animation = &"Pistol-Shoot"
+frame = 1
+frame_progress = 1.0
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=2082091482]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.035762787, -0.37557983, 0)
