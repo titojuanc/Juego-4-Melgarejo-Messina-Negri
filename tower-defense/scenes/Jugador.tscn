@@ -802,7 +802,7 @@ shape = SubResource("CapsuleShape3D_2vo2l")
 [node name="AttackArea" type="Area3D" parent="." unique_id=1921144134]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.0693347, -0.3065554, 0)
 collision_layer = 2
-collision_mask = 8
+collision_mask = 136
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="AttackArea" unique_id=752455411]
 shape = SubResource("BoxShape3D_u74oq")
