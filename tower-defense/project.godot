@@ -11,9 +11,12 @@ config_version=5
 [application]
 
 config/name="TowerDefense"
-run/main_scene="uid://debug00000001"
+run/main_scene="uid://bvt0oslje6j5y"
 config/features=PackedStringArray("4.6", "Forward Plus")
-config/icon="res://icon.svg"
+
+[autoload]
+
+BuildingDB="*res://scripts/building_database.gd"
 
 [global_group]
 
