@@ -24,4 +24,7 @@ func recibir_golpe() -> void:
 		return
 	golpes_restantes -= 1
 	if golpes_restantes <= 0:
+		var jugador = get_tree().get_first_node_in_group("Jugador")
+		if jugador:
+			jugador.madera += randi_range(8, 13)
 		queue_free()
