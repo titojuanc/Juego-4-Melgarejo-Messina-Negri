@@ -20,7 +20,7 @@ const GRAVEDAD = 9.8
 
 var atacando = false
 var combo_step = 0
-var camara_offset = Vector3(0, 4, 8)
+var camara_offset = Vector3(0, 7, 8)
 var enemigos_en_rango = []
 var recursos_en_rango = []
 var modo
