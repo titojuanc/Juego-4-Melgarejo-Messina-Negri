@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://building00001"]
+
+[ext_resource type="Script" path="res://scripts/building.gd" id="1_bldg"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_placeholder"]
+size = Vector3(1, 1, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_placeholder"]
+albedo_color = Color(0.6, 0.4, 0.2, 1)
+
+[node name="Building" type="Node3D"]
+script = ExtResource("1_bldg")
+
+[node name="Model" type="Node3D" parent="."]
+
+[node name="Placeholder" type="MeshInstance3D" parent="Model"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
+material_override = SubResource("StandardMaterial3D_placeholder")
+mesh = SubResource("BoxMesh_placeholder")
+
+[node name="NPCSpawnPoint" type="Marker3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1.5)
+
+[node name="UIAnchor" type="Marker3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)

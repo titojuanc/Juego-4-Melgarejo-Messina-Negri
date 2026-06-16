@@ -14,6 +14,10 @@ config/name="TowerDefense"
 run/main_scene="uid://debug00000001"
 config/features=PackedStringArray("4.6", "Forward Plus")
 
+[autoload]
+
+BuildingDB="*res://scripts/building_database.gd"
+
 [global_group]
 
 Jugador=""
