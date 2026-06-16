@@ -20,6 +20,7 @@ size = Vector2(0.95, 0.95)
 
 [node name="GridManager" type="Node3D" unique_id=1835741100]
 script = ExtResource("1_asofv")
+cell_size = 8.0
 
 [node name="GridVisual" type="Node3D" parent="." unique_id=622096962]
 script = ExtResource("2_k5l73")
@@ -46,6 +47,5 @@ script = ExtResource("2_kl8jp")
 script = ExtResource("3_input")
 
 [node name="DebugCamera" type="Camera3D" parent="." unique_id=1832079461]
-transform = Transform3D(1, 0, 0, 0, 0.50000024, 0.8660253, 0, -0.8660253, 0.50000024, -31.155052, -88.27586, -142.37073)
+transform = Transform3D(1, 0, 0, 0, 0.5, 0.866025, 0, -0.866025, 0.5, 80, 150, 150)
 current = true
-fov = 179.0

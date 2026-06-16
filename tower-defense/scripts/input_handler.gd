@@ -56,3 +56,4 @@ func _on_cell_hovered(cell:Vector2i)->void:
 		_grid_visual.move_hover_cell(cell,_cell_size)
 		if _building_manager.is_placing:
 			_grid_visual.set_hover_color(not _cell_data.is_occupied(cell))
+			_building_manager.move_ghost(cell)

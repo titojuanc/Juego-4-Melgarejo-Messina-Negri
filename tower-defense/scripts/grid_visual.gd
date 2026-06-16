@@ -22,6 +22,10 @@ func draw_grid(width:int,height:int,cell_size:float)->void:
 	mesh.add_surface_from_arrays(Mesh.PRIMITIVE_LINES,arrays)
 	grid_lines.mesh=mesh
 
+	var hover_mesh=PlaneMesh.new()
+	hover_mesh.size=Vector2(cell_size*0.95,cell_size*0.95)
+	hover_cell.mesh=hover_mesh
+
 func move_hover_cell(cell:Vector2i,cell_size:float)->void:
 	var half=cell_size*0.5
 	hover_cell.position=Vector3(cell.x*cell_size+half,0.01,cell.y*cell_size+half)
