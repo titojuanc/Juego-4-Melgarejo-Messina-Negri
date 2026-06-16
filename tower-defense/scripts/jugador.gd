@@ -9,8 +9,11 @@ extends CharacterBody3D
 @export var bala_scene: PackedScene
 
 @export var speed: float = 10
-@export var vida: int = 100
+@export var vida_max: int = 100
+var vida: int
 @export var danio: int = 30
+var balas: int
+@export var balas_max: int = 100
 
 enum Modo {ESPADA, PISTOLA}
 const GRAVEDAD = 9.8
@@ -24,6 +27,9 @@ var modo
 var mat_linea: StandardMaterial3D
 var enemigo_en_linea = false
 var cooldown_disparo = false
+var madera: int = 0
+var piedra: int = 0
+var metal: int = 0
 
 #Animaciones del personaje normal
 func anim_normal_idle():
@@ -69,6 +75,8 @@ func anim_sword_dash():
 
 func _ready() -> void:
 	mat_linea = linea_mesh.get_surface_override_material(0)
+	vida = vida_max
+	balas = balas_max
 	print("material: ", mat_linea)
 	
 func _physics_process(delta: float) -> void:

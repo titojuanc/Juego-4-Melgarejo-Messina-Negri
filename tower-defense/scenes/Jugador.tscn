@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 [gd_scene format=3 uid="uid://de6i45afb77td"]
 
 [ext_resource type="Texture2D" uid="uid://cbpmye4v0dp8e" path="res://assets/jugador/Fighter sprites/Dash/fighter_dash_0033.png" id="1_old7g"]
@@ -127,6 +128,7 @@
 [ext_resource type="Texture2D" uid="uid://dphqa3hfuya8t" path="res://assets/jugador/Sword sprites/Walk/sword_walk_0014.png" id="123_63ucn"]
 [ext_resource type="Texture2D" uid="uid://mvn6br8binhh" path="res://assets/jugador/Sword sprites/Walk/sword_walk_0015.png" id="124_wauc0"]
 [ext_resource type="Texture2D" uid="uid://cc6o6jt58j12o" path="res://assets/jugador/Sword sprites/Walk/sword_walk_0016.png" id="125_kw8op"]
+[ext_resource type="PackedScene" uid="uid://ct8ja5lswk6ap" path="res://scenes/HUD.tscn" id="128_u74oq"]
 
 [sub_resource type="Animation" id="Animation_ktms0"]
 resource_name = "Pistol-Shoot"
@@ -843,8 +845,22 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 3.4892924)
 mesh = SubResource("BoxMesh_u74oq")
 surface_material_override/0 = SubResource("StandardMaterial3D_qo7ab")
 
+[node name="Hud" parent="." unique_id=753599168 instance=ExtResource("128_u74oq")]
+
 [connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_animation_player_animation_finished"]
 [connection signal="body_entered" from="AttackArea" to="." method="_on_attack_area_body_entered"]
 [connection signal="body_exited" from="AttackArea" to="." method="_on_attack_area_body_exited"]
 [connection signal="body_entered" from="LineaApuntado" to="." method="_on_linea_apuntado_body_entered"]
 [connection signal="body_exited" from="LineaApuntado" to="." method="_on_linea_apuntado_body_exited"]
+=======
+[gd_scene format=3 uid="uid://bqdgv35voj3w"]
+
+[ext_resource type="PackedScene" uid="uid://cjrmph8yrebqh" path="res://woody.glb" id="1_43k7d"]
+
+[node name="Jugador" type="CharacterBody3D" unique_id=1827714595]
+
+[node name="Pivote" type="Node3D" parent="." unique_id=978293637]
+
+[node name="woody" parent="Pivote" unique_id=2086101433 instance=ExtResource("1_43k7d")]
+transform = Transform3D(-4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0, 1, 0, 0, 0)
+>>>>>>> main

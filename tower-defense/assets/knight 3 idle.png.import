@@ -2,13 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-<<<<<<<< HEAD:tower-defense/assets/jugador/Pistol sprites/bullet.png.import
-uid="uid://fjspa1pm884v"
-path.s3tc="res://.godot/imported/bullet.png-c1558d2e61a242774c7d850929089d64.s3tc.ctex"
-========
-uid="uid://dt8r5strhdnsg"
+uid="uid://d4kprdo2vq36x"
 path.s3tc="res://.godot/imported/knight 3 idle.png-1f61bcff54c1233e379c4f9a8e383d6b.s3tc.ctex"
->>>>>>>> main:tower-defense/assets/knight 3 idle.png.import
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -16,13 +11,8 @@ metadata={
 
 [deps]
 
-<<<<<<<< HEAD:tower-defense/assets/jugador/Pistol sprites/bullet.png.import
-source_file="res://assets/jugador/Pistol sprites/bullet.png"
-dest_files=["res://.godot/imported/bullet.png-c1558d2e61a242774c7d850929089d64.s3tc.ctex"]
-========
 source_file="res://assets/knight 3 idle.png"
 dest_files=["res://.godot/imported/knight 3 idle.png-1f61bcff54c1233e379c4f9a8e383d6b.s3tc.ctex"]
->>>>>>>> main:tower-defense/assets/knight 3 idle.png.import
 
 [params]
 
