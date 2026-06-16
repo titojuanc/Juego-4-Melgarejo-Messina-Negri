@@ -1,8 +1,15 @@
 [gd_scene format=3 uid="uid://bvt0oslje6j5y"]
 
-[ext_resource type="PackedScene" uid="uid://de6i45afb77td" path="res://scenes/Jugador.tscn" id="1_5spvt"]
+[ext_resource type="PackedScene" path="res://scenes/Jugador.tscn" id="1_5spvt"]
 [ext_resource type="PackedScene" uid="uid://cq112si4fu5fn" path="res://scenes/TileMap.tscn" id="2_c2xgb"]
 [ext_resource type="PackedScene" uid="uid://d10gpmbqw3wc3" path="res://scenes/Zombie.tscn" id="3_zombie"]
+[ext_resource type="PackedScene" uid="uid://dist2nkvwuchk" path="res://scenes/NPC.tscn" id="4_2u27b"]
+
+[sub_resource type="NavigationMesh" id="NavigationMesh_b1f3y"]
+geometry_parsed_geometry_type = 0
+agent_height = 1.8
+agent_radius = 0.4
+filter_baking_aabb = AABB(-50, 0, -50, 100, 1, 100)
 
 [node name="Mundo" type="Node3D" unique_id=1869897971]
 
@@ -16,10 +23,7 @@ shadow_blur = 10.0
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.089162, 3.1983976, 0)
 
 [node name="Jugador" parent="." unique_id=1729901145 instance=ExtResource("1_5spvt")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.600813, 0)
-speed = 10.0
-vida = 100
-danio = 30
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.122181, 3.600813, 0)
 
 [node name="Camera3D" type="Camera3D" parent="." unique_id=795778347]
 transform = Transform3D(1, 0, 0, 0, 0.8660254, 0.5, 0, -0.5, 0.8660254, 0, 1.9471371, 12.184032)
@@ -28,3 +32,9 @@ transform = Transform3D(1, 0, 0, 0, 0.8660254, 0.5, 0, -0.5, 0.8660254, 0, 1.947
 data = {
 "cells": PackedInt32Array(65535, 65535, 2, 65535, 0, 2, 0, 0, 2, 0, 65535, 2, 65534, 0, 1, 65534, 65535, 1, 1, 65535, 1, 1, 0, 1, 65535, 1, 1, 0, 1, 1, 65535, 65534, 1, 0, 65534, 1, 1, 1, 0, 65534, 1, 0, 65534, 65534, 0, 1, 65534, 0)
 }
+
+[node name="NavigationRegion3D" type="NavigationRegion3D" parent="." unique_id=1138950390]
+navigation_mesh = SubResource("NavigationMesh_b1f3y")
+
+[node name="Npc" parent="." unique_id=617007490 instance=ExtResource("4_2u27b")]
+transform = Transform3D(1, 0, 0, 0, 0.97602326, 0.21766628, 0, -0.21766628, 0.97602326, -8.497, 2.7451727, -5.381)
