@@ -3,6 +3,10 @@
 [ext_resource type="PackedScene" uid="uid://d4bpre2lfieii" path="res://tiles/tile_piedra.tscn" id="1_5tig5"]
 [ext_resource type="PackedScene" uid="uid://b7yptfxussmp2" path="res://tiles/tile_hierba.tscn" id="2_fj0u1"]
 [ext_resource type="PackedScene" uid="uid://cvdxj8q6ayckg" path="res://tiles/tile_tierra.tscn" id="3_qjtto"]
+[ext_resource type="PackedScene" uid="uid://8jaypk1nhqx" path="res://tiles/tile_nieve.tscn" id="4_ycdu6"]
+[ext_resource type="PackedScene" uid="uid://du350hphqkoqx" path="res://tiles/tile_playa.tscn" id="5_h30j8"]
+[ext_resource type="PackedScene" uid="uid://dkemr452g7ceh" path="res://tiles/tile_ciudad.tscn" id="6_es48m"]
+[ext_resource type="PackedScene" uid="uid://c3wlyedes1lgp" path="res://tiles/tile_agua.tscn" id="7_h30j8"]
 
 [node name="TileMapa" type="Node3D" unique_id=1746059774]
 
@@ -13,3 +17,15 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -37.971855, 0, 0)
 
 [node name="TileTierra" parent="." unique_id=291673929 instance=ExtResource("3_qjtto")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 37.203426, 0, 0)
+
+[node name="TileNieve" parent="." unique_id=849296683 instance=ExtResource("4_ycdu6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 74.900986, 0, 0)
+
+[node name="TilePlaya" parent="." unique_id=204722924 instance=ExtResource("5_h30j8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -78.60273, 0, 0)
+
+[node name="TileCiudad" parent="." unique_id=1719749051 instance=ExtResource("6_es48m")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -118.55129, 0, 0)
+
+[node name="TileAgua" parent="." unique_id=1417586660 instance=ExtResource("7_h30j8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 113.57088, 0, 0)
