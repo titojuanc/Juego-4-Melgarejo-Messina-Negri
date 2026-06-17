@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://br0sgs0le1u3a"]
+
+[ext_resource type="Script" uid="uid://bhllodqmpjpad" path="res://scripts/hud_npc.gd" id="1_dosa4"]
+
+[node name="HudNpc" type="CanvasLayer" unique_id=809219891]
+offset = Vector2(0, -100)
+transform = Transform2D(1, 0, 0, 1, 0, -100)
+script = ExtResource("1_dosa4")
+
+[node name="Panel" type="PanelContainer" parent="." unique_id=1231860056]
+offset_right = 200.0
+offset_bottom = 100.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel" unique_id=165890760]
+layout_mode = 2
+
+[node name="TituloLabel" type="Label" parent="Panel/VBoxContainer" unique_id=572957641]
+layout_mode = 2
+text = "Hola, Test"
+
+[node name="OpcionesLabel" type="Label" parent="Panel/VBoxContainer" unique_id=237352559]
+layout_mode = 2
