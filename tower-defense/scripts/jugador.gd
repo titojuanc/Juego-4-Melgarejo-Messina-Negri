@@ -30,6 +30,7 @@ var cooldown_disparo = false
 var madera: int = 0
 var piedra: int = 0
 var metal: int = 0
+var movimiento_bloqueado = false
 
 #Animaciones del personaje normal
 func anim_normal_idle():
@@ -80,6 +81,11 @@ func _ready() -> void:
 	print("material: ", mat_linea)
 	
 func _physics_process(delta: float) -> void:
+	if movimiento_bloqueado:
+		velocity.x = 0
+		velocity.z = 0
+		move_and_slide()
+		return
 	if not is_on_floor():
 		velocity.y -= GRAVEDAD * delta
 	else:

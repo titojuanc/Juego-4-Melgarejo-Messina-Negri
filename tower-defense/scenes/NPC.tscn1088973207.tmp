@@ -383,7 +383,6 @@ radius = 3.947818
 collision_layer = 128
 collision_mask = 4
 script = ExtResource("1_6xvi5")
-nombre_npc = null
 
 [node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="." unique_id=21176124]
 transform = Transform3D(7, 0, 0, 0, 7, 0, 0, 0, 7, 0, 0, 0)
@@ -400,6 +399,13 @@ shape = SubResource("CapsuleShape3D_mhefn")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="InteractionArea" unique_id=2141422248]
 shape = SubResource("SphereShape3D_6xvi5")
+
+[node name="MenuInteraccion" type="Node3D" parent="." unique_id=386833173]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
+
+[node name="TituloLabel" type="Label3D" parent="MenuInteraccion" unique_id=2146368684]
+
+[node name="OpcionesLabel" type="Label3D" parent="MenuInteraccion" unique_id=1261504434]
 
 [connection signal="body_entered" from="InteractionArea" to="." method="_on_interaction_area_body_entered"]
 [connection signal="body_exited" from="InteractionArea" to="." method="_on_interaction_area_body_exited"]
