@@ -1,6 +1,6 @@
-[gd_scene format=3 uid="uid://clh38nuj1qg4k"]
+[gd_scene format=3 uid="uid://bfo7w4fv26fl1"]
 
-[ext_resource type="Script" uid="uid://cbuaidoi3gaij" path="res://scripts/arbol_random_mesh.gd" id="1_h8m2q"]
+[ext_resource type="Script" path="res://scripts/arbol_random_mesh.gd" id="1_h8m2q"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_x72v4"]
 size = Vector3(1.7158813, 5.671875, 1.7593994)
