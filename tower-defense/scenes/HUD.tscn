@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://ct8ja5lswk6ap"]
 
 [ext_resource type="Script" uid="uid://bmjd7vq4n5rnv" path="res://scripts/hud.gd" id="1_qpvh6"]
-[ext_resource type="Texture2D" uid="uid://fjspa1pm884v" path="res://assets/jugador/Pistol sprites/bullet.png" id="2_fls4u"]
+[ext_resource type="Texture2D" uid="uid://c2jm2cxwspaiv" path="res://assets/jugador/Pistol sprites/bullet.png" id="2_fls4u"]
 [ext_resource type="Texture2D" uid="uid://c2eu3ccapyn31" path="res://assets/materiales/Wood_-_Item_-_LEGO_Fortnite.png" id="3_nysna"]
 [ext_resource type="Texture2D" uid="uid://cdeo3quwfx1rm" path="res://assets/materiales/Icon_Stone.png" id="4_f6qnu"]
 [ext_resource type="Texture2D" uid="uid://btoavpoembq70" path="res://assets/materiales/Icon_IBeam.png" id="5_k4w17"]
@@ -94,6 +94,7 @@ stretch_mode = 5
 
 [node name="LabelMadera" type="Label" parent="Panel/VBoxContainer/HBoxContainer2/GridContainer/VBoxContainer" unique_id=1056015664]
 layout_mode = 2
+text = "9"
 
 [node name="VBoxContainer2" type="VBoxContainer" parent="Panel/VBoxContainer/HBoxContainer2/GridContainer" unique_id=1261480662]
 layout_mode = 2
@@ -107,6 +108,7 @@ stretch_mode = 5
 
 [node name="LabelPiedra" type="Label" parent="Panel/VBoxContainer/HBoxContainer2/GridContainer/VBoxContainer2" unique_id=97093591]
 layout_mode = 2
+text = "12"
 
 [node name="VBoxContainer3" type="VBoxContainer" parent="Panel/VBoxContainer/HBoxContainer2/GridContainer" unique_id=1323529978]
 layout_mode = 2
@@ -120,3 +122,4 @@ stretch_mode = 5
 
 [node name="LabelMetal" type="Label" parent="Panel/VBoxContainer/HBoxContainer2/GridContainer/VBoxContainer3" unique_id=2054985234]
 layout_mode = 2
+text = "18"

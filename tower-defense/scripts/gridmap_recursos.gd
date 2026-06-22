@@ -19,8 +19,8 @@ func _init() -> void:
 	var config_arbol = RecursoSpawnConfig.new()
 	config_arbol.escena = escena_arbol
 	config_arbol.nombre_tile = "TileHierba"
-	config_arbol.min_por_tile = 2
-	config_arbol.max_por_tile = 3
+	config_arbol.min_por_tile = 6
+	config_arbol.max_por_tile = 10
 	config_arbol.separacion_minima = 8.0
 	config_arbol.variacion_escala_min = 0.9
 	config_arbol.variacion_escala_max = 1.15
@@ -28,8 +28,8 @@ func _init() -> void:
 	var config_piedra = RecursoSpawnConfig.new()
 	config_piedra.escena = escena_piedra
 	config_piedra.nombre_tile = "TilePiedra"
-	config_piedra.min_por_tile = 1
-	config_piedra.max_por_tile = 2
+	config_piedra.min_por_tile = 7
+	config_piedra.max_por_tile = 14
 	config_piedra.separacion_minima = 5.0
 	config_piedra.variacion_escala_min = 0.85
 	config_piedra.variacion_escala_max = 1.2
