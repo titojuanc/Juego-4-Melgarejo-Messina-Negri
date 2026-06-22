@@ -13,6 +13,7 @@ config_version=5
 config/name="TowerDefense"
 run/main_scene="uid://d35uwtwanutf4"
 config/features=PackedStringArray("4.6", "Forward Plus")
+config/icon="res://icon.svg"
 
 [autoload]
 
