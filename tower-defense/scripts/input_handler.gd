@@ -8,6 +8,8 @@ var _grid_width:int
 var _grid_height:int
 var _cell_size:float
 var current_cell:Vector2i=Vector2i(-1,-1)
+var _dragging:bool=false
+var _drag_start:Vector2i=Vector2i(-1,-1)
 
 func _ready()->void:
 	var gm=get_parent()
@@ -26,14 +28,68 @@ func _process(_delta:float)->void:
 	if cell!=current_cell:
 		current_cell=cell
 		_on_cell_hovered(cell)
+		if _dragging and _is_valid_cell(cell):
+			_update_drag_preview()
 
 func _unhandled_input(event:InputEvent)->void:
 	if event is InputEventMouseButton:
-		if event.button_index==MOUSE_BUTTON_LEFT and event.pressed:
-			if _is_valid_cell(current_cell):
-				_building_manager.confirm_placement(current_cell)
+		if event.button_index==MOUSE_BUTTON_LEFT:
+			if event.pressed:
+				if _is_valid_cell(current_cell):
+					if _is_drag_mode():
+						_dragging=true
+						_drag_start=current_cell
+						_update_drag_preview()
+					else:
+						_click_action(current_cell)
+			else:
+				if _dragging:
+					_confirm_drag()
+					_dragging=false
+					_drag_start=Vector2i(-1,-1)
+					_grid_visual.hide_drag_area()
 		elif event.button_index==MOUSE_BUTTON_RIGHT and event.pressed:
+			_dragging=false
+			_drag_start=Vector2i(-1,-1)
+			_grid_visual.hide_drag_area()
 			_building_manager.cancel_placement()
+			_building_manager.cancel_remove()
+
+func _is_drag_mode()->bool:
+	if _building_manager.is_removing:
+		return true
+	if _building_manager.is_placing and _building_manager.current_type==BuildingDB.BuildingType.WALL:
+		return true
+	return false
+
+func _click_action(cell:Vector2i)->void:
+	if _building_manager.is_placing:
+		_building_manager.confirm_placement(cell)
+
+func _update_drag_preview()->void:
+	if not _is_valid_cell(current_cell):
+		return
+	var color:Color
+	if _building_manager.is_removing:
+		color=Color(1,0.2,0.2,0.35)
+	else:
+		color=Color(0.2,1,0.2,0.35)
+	_grid_visual.show_drag_area(_drag_start,current_cell,color)
+
+func _confirm_drag()->void:
+	var min_x=mini(_drag_start.x,current_cell.x)
+	var max_x=maxi(_drag_start.x,current_cell.x)
+	var min_y=mini(_drag_start.y,current_cell.y)
+	var max_y=maxi(_drag_start.y,current_cell.y)
+	for x in range(min_x,max_x+1):
+		for y in range(min_y,max_y+1):
+			var cell=Vector2i(x,y)
+			if not _is_valid_cell(cell):
+				continue
+			if _building_manager.is_removing:
+				_building_manager.remove_at(cell)
+			elif _building_manager.is_placing:
+				_building_manager.confirm_placement(cell)
 
 func _get_cell_under_mouse()->Vector2i:
 	var mouse_pos:Vector2=get_viewport().get_mouse_position()
@@ -42,7 +98,7 @@ func _get_cell_under_mouse()->Vector2i:
 	if absf(ray_dir.y)<0.0001:
 		return Vector2i(-1,-1)
 	var t:float=-ray_origin.y/ray_dir.y
-	if t<0.0:	
+	if t<0.0:
 		return Vector2i(-1,-1)
 	var world_pos:Vector3=ray_origin+ray_dir*t
 	var cell:=Vector2i(int(floor(world_pos.x/_cell_size)),int(floor(world_pos.z/_cell_size)))
