@@ -56,11 +56,8 @@ script = ExtResource("2_kl8jp")
 [node name="InputHandler" type="Node" parent="." unique_id=234978631]
 script = ExtResource("3_input")
 
-[node name="DebugCamera" type="Camera3D" parent="." unique_id=1832079461]
-transform = Transform3D(1, 0, 0, 0, 0.5, 0.866025, 0, -0.866025, 0.5, 80, 150, 150)
-current = true
-
 [node name="BuildingUI" type="CanvasLayer" parent="."]
+visible = false
 
 [node name="BuildingMenu" type="Control" parent="BuildingUI"]
 anchors_preset = 1

@@ -1,9 +1,11 @@
-[gd_scene format=3 uid="uid://bubsqm4705cyp"]
+[gd_scene format=3 uid="uid://dwdnnxpp1j7tg"]
 
 [ext_resource type="PackedScene" uid="uid://bqdgv35voj3w" path="res://scenes/Jugador.tscn" id="1_5spvt"]
 [ext_resource type="PackedScene" path="res://scenes/TileMap.tscn" id="2_c2xgb"]
 [ext_resource type="PackedScene" path="res://scenes/Zombie.tscn" id="3_zombie"]
-[ext_resource type="PackedScene" uid="uid://dist2nkvwuchk" path="res://scenes/NPC.tscn" id="4_2u27b"]
+[ext_resource type="PackedScene" path="res://scenes/NPC.tscn" id="4_2u27b"]
+[ext_resource type="PackedScene" uid="uid://bgo5y6h868ypc" path="res://scenes/grid_manager.tscn" id="5_grid"]
+[ext_resource type="Script" uid="uid://ca5llsyb6brvt" path="res://scripts/build_mode_controller.gd" id="6_bmc"]
 
 [node name="Mundo" type="Node3D" unique_id=1869897971]
 
@@ -30,3 +32,9 @@ data = {
 [node name="Npc" parent="." unique_id=617007490 instance=ExtResource("4_2u27b")]
 transform = Transform3D(1, 0, 0, 0, 0.97602326, 0.21766628, 0, -0.21766628, 0.97602326, -8.497, 2.7451727, -5.381)
 nombre_npc = "Sofia"
+
+[node name="GridManager" parent="." unique_id=1081772389 instance=ExtResource("5_grid")]
+world_gridmap_path = NodePath("../GridMap")
+
+[node name="BuildModeController" type="Node" parent="." unique_id=1438876136]
+script = ExtResource("6_bmc")

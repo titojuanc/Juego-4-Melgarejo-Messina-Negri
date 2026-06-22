@@ -7,6 +7,7 @@ var _cell_data:Node
 var _grid_width:int
 var _grid_height:int
 var _cell_size:float
+var _grid_origin:Vector3
 var current_cell:Vector2i=Vector2i(-1,-1)
 var _dragging:bool=false
 var _drag_start:Vector2i=Vector2i(-1,-1)
@@ -19,6 +20,7 @@ func _ready()->void:
 	_grid_width=gm.grid_width
 	_grid_height=gm.grid_height
 	_cell_size=gm.cell_size
+	_grid_origin=gm.global_position
 
 func _process(_delta:float)->void:
 	_camera=get_viewport().get_camera_3d()
@@ -97,11 +99,14 @@ func _get_cell_under_mouse()->Vector2i:
 	var ray_dir:Vector3=_camera.project_ray_normal(mouse_pos)
 	if absf(ray_dir.y)<0.0001:
 		return Vector2i(-1,-1)
-	var t:float=-ray_origin.y/ray_dir.y
+	var plane_y=_grid_origin.y
+	var t:float=(plane_y-ray_origin.y)/ray_dir.y
 	if t<0.0:
 		return Vector2i(-1,-1)
 	var world_pos:Vector3=ray_origin+ray_dir*t
-	var cell:=Vector2i(int(floor(world_pos.x/_cell_size)),int(floor(world_pos.z/_cell_size)))
+	var local_x=world_pos.x-_grid_origin.x
+	var local_z=world_pos.z-_grid_origin.z
+	var cell:=Vector2i(int(floor(local_x/_cell_size)),int(floor(local_z/_cell_size)))
 	return cell
 
 func _is_valid_cell(cell:Vector2i)->bool:
