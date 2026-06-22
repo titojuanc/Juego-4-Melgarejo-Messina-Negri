@@ -11,6 +11,7 @@ var _build_camera_offset:=Vector3(0,80,60)
 var _build_camera_target:Vector3
 var _lerp_speed:float=5.0
 var _transitioning:bool=false
+var _cam_speed:float=60.0
 
 func _ready()->void:
 	await get_tree().process_frame
@@ -60,6 +61,19 @@ func exit_build_mode()->void:
 	build_mode_exited.emit()
 
 func _process(delta:float)->void:
+	if active and not _transitioning:
+		var move_dir=Vector3.ZERO
+		if Input.is_action_pressed("la_W"):
+			move_dir.z-=1
+		if Input.is_action_pressed("la_S"):
+			move_dir.z+=1
+		if Input.is_action_pressed("la_A"):
+			move_dir.x-=1
+		if Input.is_action_pressed("la_D"):
+			move_dir.x+=1
+		if move_dir!=Vector3.ZERO:
+			_camera.global_position+=move_dir.normalized()*_cam_speed*delta
+		return
 	if not _transitioning:
 		return
 	if active:
