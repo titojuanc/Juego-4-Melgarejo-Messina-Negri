@@ -13,11 +13,13 @@ var grid_cells:Array=[]
 @onready var model=$Model
 @onready var npc_spawn_point=$NPCSpawnPoint
 
-func setup(type:int)->void:
+func setup(type:int,cell_size:float=8.0)->void:
 	building_type=type
 	var data=BuildingDB.get_data(type)
 	build_time=data["build_time"]
 	max_npcs=data["max_npcs"]
+	var gs:Vector2i=data["grid_size"]
+	model.scale=Vector3(gs.x*cell_size,cell_size,gs.y*cell_size)
 
 func start_construction()->void:
 	state=State.CONSTRUCTING
