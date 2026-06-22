@@ -1,0 +1,53 @@
+[gd_scene format=3 uid="uid://bp2egsgkowd5c"]
+
+[ext_resource type="PackedScene" uid="uid://cjyi17hir1tib" path="res://assets/jefe/Iron Oath Executioner.fbx" id="1_1lasx"]
+[ext_resource type="Texture2D" uid="uid://h00yic0eqf2m" path="res://assets/jefe/texture/garrote.png" id="2_0ytpo"]
+[ext_resource type="Texture2D" uid="uid://vxnmvnrao4x0" path="res://assets/jefe/texture/piel gigante.png" id="3_erkt0"]
+[ext_resource type="Texture2D" uid="uid://bshn12o3ircna" path="res://assets/jefe/texture/cuerpo ropa arriba.png" id="4_lbdq4"]
+[ext_resource type="Texture2D" uid="uid://dngglcp0xvdxn" path="res://assets/jefe/texture/cuerpo ropa baja.png" id="5_vafb4"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ylnq8"]
+albedo_texture = ExtResource("2_0ytpo")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ad123"]
+albedo_texture = ExtResource("3_erkt0")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_u7xyr"]
+albedo_texture = ExtResource("4_lbdq4")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_k4vff"]
+albedo_texture = ExtResource("5_vafb4")
+
+[node name="Iron Oath Executioner" unique_id=709953329 instance=ExtResource("1_1lasx")]
+
+[node name="mixamorig_LeftToe_End_end" parent="gagiant/Armature_015/Skeleton3D" parent_id_path=PackedInt32Array(1838501963) index="0" unique_id=1705122804]
+transform = Transform3D(-0.99848527, -0.03095576, 0.045497827, 0.047702577, -0.07466701, 0.9960675, -0.027436947, 0.9967282, 0.0760304, 33.421204, 0.2667566, 65.96705)
+bone_idx = 5
+
+[node name="mixamorig_RightToe_End_end" parent="gagiant/Armature_015/Skeleton3D" parent_id_path=PackedInt32Array(1838501963) index="1" unique_id=198508879]
+transform = Transform3D(-0.7737077, -0.6291157, -0.07475829, -0.042648878, -0.06601194, 0.99690694, -0.63210464, 0.7745033, 0.02424359, -56.80361, 0.32176578, -10.66556)
+bone_idx = 10
+
+[node name="mixamorig_LeftHandIndex4_end" parent="gagiant/Armature_015/Skeleton3D" parent_id_path=PackedInt32Array(1838501963) index="2" unique_id=948455153]
+transform = Transform3D(0.4727571, 0.76383185, 0.439388, -0.25295, 0.5952763, -0.7626677, -0.8441066, 0.24941348, 0.4746325, -10.700949, 82.97015, 97.668625)
+bone_idx = 21
+
+[node name="mixamorig_HeadTop_End_end" parent="gagiant/Armature_015/Skeleton3D" parent_id_path=PackedInt32Array(1838501963) index="3" unique_id=368711583]
+transform = Transform3D(0.999852, -0.017203491, -0.00015402587, 0.017013825, 0.99007756, -0.1394851, 0.0025524497, 0.13946192, 0.9902236, -8.687382, 269.5507, 71.606155)
+bone_idx = 24
+
+[node name="Cube" parent="gagiant/Armature_015/Skeleton3D" parent_id_path=PackedInt32Array(1838501963) index="4" unique_id=344868986]
+transform = Transform3D(0.1189277, 0.8021103, 0.5852134, 0.97905064, -0.19284111, 0.06534988, 0.16527128, 0.56518185, -0.8082409, -28.224968, 124.45188, 109.01061)
+bone_idx = 29
+
+[node name="Cube" parent="gagiant/Armature_015/Skeleton3D/Cube" index="0" unique_id=1282153419]
+surface_material_override/0 = SubResource("StandardMaterial3D_ylnq8")
+
+[node name="mixamorig_RightHandIndex4_end" parent="gagiant/Armature_015/Skeleton3D" parent_id_path=PackedInt32Array(1838501963) index="5" unique_id=311397401]
+transform = Transform3D(-0.08084733, -0.23878632, -0.96770054, 0.99636364, 0.006808318, -0.084922045, 0.026866892, -0.9710476, 0.23736736, -15.277607, 126.380455, 95.36726)
+bone_idx = 32
+
+[node name="Cube_017" parent="gagiant/Armature_015/Skeleton3D" parent_id_path=PackedInt32Array(1838501963) index="6" unique_id=1975759685]
+surface_material_override/0 = SubResource("StandardMaterial3D_ad123")
+surface_material_override/1 = SubResource("StandardMaterial3D_u7xyr")
+surface_material_override/2 = SubResource("StandardMaterial3D_k4vff")

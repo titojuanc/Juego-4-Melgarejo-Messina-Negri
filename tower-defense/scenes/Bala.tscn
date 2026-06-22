@@ -1,20 +1,21 @@
-[gd_scene format=3 uid="uid://densmh3rtibg8"]
+[gd_scene format=3 uid="uid://tpqfl8rhkuih"]
 
-[ext_resource type="Texture2D" uid="uid://fjspa1pm884v" path="res://assets/jugador/Pistol sprites/bullet.png" id="1_1pi62"]
-[ext_resource type="Script" uid="uid://dijhont7stu3c" path="res://scripts/bala.gd" id="1_7rck4"]
+[ext_resource type="Script" path="res://scripts/bala.gd" id="1_7rck4"]
+[ext_resource type="ArrayMesh" uid="uid://cignuah7puoou" path="res://assets/Bala/bullet.obj" id="2_7rck4"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_ewd8d"]
 radius = 0.052734375
-height = 0.3125
+height = 0.29467773
 
 [node name="Bala" type="CharacterBody3D" unique_id=715470232 groups=["Bala"]]
 collision_layer = 256
 collision_mask = 8
 script = ExtResource("1_7rck4")
 
-[node name="Sprite3D" type="Sprite3D" parent="." unique_id=2110366184]
-texture = ExtResource("1_1pi62")
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1305168120]
+transform = Transform3D(-4.371139e-09, 0, 0.1, 0, 0.1, 0, -0.1, 0, -4.371139e-09, 0, 0, 5.551115e-17)
+mesh = ExtResource("2_7rck4")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=963373299]
-transform = Transform3D(-4.371139e-08, -1, 0, -4.371139e-08, 1.9106855e-15, -1, 1, -4.371139e-08, -4.371139e-08, 0.0146484375, 0.020686, 6.4030353e-10)
+transform = Transform3D(-8.742278e-08, -2, 8.742278e-08, 0, -8.742278e-08, -2, 2, -8.742278e-08, 3.821371e-15, 0.04382503, 2.7106184e-09, 3.5856997e-09)
 shape = SubResource("CapsuleShape3D_ewd8d")
