@@ -3,9 +3,13 @@
 [ext_resource type="Script" uid="uid://7jjywunmmxs3" path="res://scripts/building.gd" id="1_bldg"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_placeholder"]
-albedo_color = Color(0.6, 0.4, 0.2, 1)
+transparency = 1
+albedo_color = Color(0.2, 0.8, 0.2, 0.5)
 
 [sub_resource type="BoxMesh" id="BoxMesh_placeholder"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_npcarea"]
+size = Vector3(1, 2, 1)
 
 [node name="Building" type="Node3D" unique_id=563302529]
 script = ExtResource("1_bldg")
@@ -15,7 +19,6 @@ script = ExtResource("1_bldg")
 [node name="Placeholder" type="MeshInstance3D" parent="Model" unique_id=1512763713]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
 material_override = SubResource("StandardMaterial3D_placeholder")
-transparency = 0.1
 mesh = SubResource("BoxMesh_placeholder")
 
 [node name="NPCSpawnPoint" type="Marker3D" parent="." unique_id=1462866066]
@@ -23,3 +26,13 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1.5)
 
 [node name="UIAnchor" type="Marker3D" parent="." unique_id=1146055194]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
+
+[node name="NPCDetectArea" type="Area3D" parent="."]
+monitoring = false
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="NPCDetectArea"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+shape = SubResource("BoxShape3D_npcarea")
+
+[connection signal="body_entered" from="NPCDetectArea" to="." method="_on_npc_entered"]
+[connection signal="body_exited" from="NPCDetectArea" to="." method="_on_npc_exited"]

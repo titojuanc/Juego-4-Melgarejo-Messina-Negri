@@ -12,6 +12,7 @@ var grid_cells:Array=[]
 
 @onready var model=$Model
 @onready var npc_spawn_point=$NPCSpawnPoint
+@onready var npc_detect_area=$NPCDetectArea
 
 func setup(type:int,cell_size:float=8.0)->void:
 	building_type=type
@@ -20,6 +21,12 @@ func setup(type:int,cell_size:float=8.0)->void:
 	max_npcs=data["max_npcs"]
 	var gs:Vector2i=data["grid_size"]
 	model.scale=Vector3(gs.x*cell_size,cell_size,gs.y*cell_size)
+	if max_npcs>0:
+		var shape=npc_detect_area.get_node("CollisionShape3D").shape as BoxShape3D
+		shape.size=Vector3(gs.x*cell_size*1.2,cell_size,gs.y*cell_size*1.2)
+	else:
+		npc_detect_area.monitoring=false
+		npc_detect_area.monitorable=false
 
 func start_construction()->void:
 	state=State.CONSTRUCTING
@@ -33,7 +40,8 @@ func _process(delta:float)->void:
 			_on_construction_complete()
 
 func _on_construction_complete()->void:
-	pass
+	if max_npcs>0:
+		npc_detect_area.monitoring=true
 
 func can_spawn_npc()->bool:
 	return state==State.ACTIVE and current_npcs.size()<max_npcs
@@ -46,3 +54,19 @@ func register_npc(npc:Node)->void:
 
 func unregister_npc(npc:Node)->void:
 	current_npcs.erase(npc)
+
+func _on_npc_entered(body:Node3D)->void:
+	if state!=State.ACTIVE:
+		return
+	if not body is CharacterBody3D:
+		return
+	if body.has_method("asignar_edificio"):
+		if can_spawn_npc():
+			register_npc(body)
+			body.asignar_edificio(self)
+
+func _on_npc_exited(body:Node3D)->void:
+	if body in current_npcs:
+		unregister_npc(body)
+		if body.has_method("desasignar_edificio"):
+			body.desasignar_edificio()
