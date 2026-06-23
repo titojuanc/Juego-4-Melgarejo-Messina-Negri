@@ -14,10 +14,12 @@ var _transitioning:bool=false
 var _cam_speed:float=60.0
 
 func _ready()->void:
+	process_mode=Node.PROCESS_MODE_ALWAYS
 	await get_tree().process_frame
 	await get_tree().process_frame
 	_player=get_tree().get_first_node_in_group("Jugador")
 	_grid_manager=get_parent().get_node("GridManager")
+	_grid_manager.process_mode=Node.PROCESS_MODE_ALWAYS
 	_camera=get_viewport().get_camera_3d()
 	_grid_manager.get_node("GridVisual").visible=false
 	_grid_manager.get_node("BuildingUI").layer=128
@@ -43,6 +45,7 @@ func enter_build_mode()->void:
 	_grid_manager.get_node("BuildingUI").visible=true
 	_grid_manager.get_node("InputHandler").set_process(true)
 	_grid_manager.get_node("InputHandler").set_process_unhandled_input(true)
+	get_tree().paused=true
 	build_mode_entered.emit()
 
 func exit_build_mode()->void:
@@ -59,6 +62,7 @@ func exit_build_mode()->void:
 	_player.movimiento_bloqueado=false
 	_camera.global_position=_player.global_position+_player.camara_offset
 	_camera.rotation.x=-0.5
+	get_tree().paused=false
 	build_mode_exited.emit()
 
 func _process(delta:float)->void:
