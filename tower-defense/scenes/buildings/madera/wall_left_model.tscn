@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://vvuqv4yih6ad"]
+
+[ext_resource type="PackedScene" uid="uid://cktadvkuwy0bi" path="res://assets/Medieval Village MegaKit[Standard]/glTF/Roof_Wooden_2x1_Middle.gltf" id="1_w3rpu"]
+[ext_resource type="PackedScene" uid="uid://c1qam3alugqpi" path="res://assets/Medieval Village MegaKit[Standard]/glTF/Wall_Plaster_Straight_Base.gltf" id="2_rbskf"]
+[ext_resource type="PackedScene" uid="uid://bbu3nxjtwmsj4" path="res://assets/Medieval Village MegaKit[Standard]/glTF/Corner_ExteriorWide_Brick.gltf" id="3_6b6dy"]
+
+[node name="WallLeftModel" type="Node3D" unique_id=1968699329]
+
+[node name="Roof_Wooden_2x1_Middle2" parent="." unique_id=987997742 instance=ExtResource("1_w3rpu")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.07, 0)
+
+[node name="Wall_Plaster_Straight_Base2" parent="." unique_id=71890825 instance=ExtResource("2_rbskf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.902)
+
+[node name="Wall_Plaster_Straight_Base3" parent="." unique_id=1607686665 instance=ExtResource("2_rbskf")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, -0.902)
+
+[node name="Wall_Plaster_Straight_Base4" parent="." unique_id=779705991 instance=ExtResource("2_rbskf")]
+transform = Transform3D(1.1924881e-08, 0, -1, 0, 1, 0, 1, 0, 1.1924881e-08, -0.902, 0, 0)
+
+[node name="Corner_ExteriorWide_Brick2" parent="." unique_id=579266947 instance=ExtResource("3_6b6dy")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -1, 0, 1)
+
+[node name="Corner_ExteriorWide_Brick3" parent="." unique_id=520272315 instance=ExtResource("3_6b6dy")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -1, 0, -1)
