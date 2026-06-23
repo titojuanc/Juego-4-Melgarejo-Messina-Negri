@@ -4,14 +4,14 @@ importer="wavefront_obj"
 importer_version=1
 type="Mesh"
 uid="uid://dwdwahiifmifj"
-path="res://.godot/imported/Overhang_UnevenBrick_Corner_Front.obj-843d5a1df5db4dc86a63950e6f53e4b2.mesh"
+path="res://.godot/imported/Overhang_UnevenBrick_Corner_Front.obj-91a79c69c6d82f8478ba99e1beaec303.mesh"
 
 [deps]
 
-files=["res://.godot/imported/Overhang_UnevenBrick_Corner_Front.obj-843d5a1df5db4dc86a63950e6f53e4b2.mesh"]
+files=["res://.godot/imported/Overhang_UnevenBrick_Corner_Front.obj-91a79c69c6d82f8478ba99e1beaec303.mesh"]
 
-source_file="res://assets/posibles-assets 1(1)/posibles-assets/Medieval Village MegaKit[Standard]/OBJ/Overhang_UnevenBrick_Corner_Front.obj"
-dest_files=["res://.godot/imported/Overhang_UnevenBrick_Corner_Front.obj-843d5a1df5db4dc86a63950e6f53e4b2.mesh", "res://.godot/imported/Overhang_UnevenBrick_Corner_Front.obj-843d5a1df5db4dc86a63950e6f53e4b2.mesh"]
+source_file="res://assets/Medieval Village MegaKit[Standard]/OBJ/Overhang_UnevenBrick_Corner_Front.obj"
+dest_files=["res://.godot/imported/Overhang_UnevenBrick_Corner_Front.obj-91a79c69c6d82f8478ba99e1beaec303.mesh", "res://.godot/imported/Overhang_UnevenBrick_Corner_Front.obj-91a79c69c6d82f8478ba99e1beaec303.mesh"]
 
 [params]
 

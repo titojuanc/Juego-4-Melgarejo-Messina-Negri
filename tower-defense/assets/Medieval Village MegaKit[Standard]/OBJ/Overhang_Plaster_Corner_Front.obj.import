@@ -4,14 +4,14 @@ importer="wavefront_obj"
 importer_version=1
 type="Mesh"
 uid="uid://bwkn23nqr7xch"
-path="res://.godot/imported/Overhang_Plaster_Corner_Front.obj-ea3bca0121f1c974784651acf4c69093.mesh"
+path="res://.godot/imported/Overhang_Plaster_Corner_Front.obj-6fde8783dd9adca59d9b2b81d038185c.mesh"
 
 [deps]
 
-files=["res://.godot/imported/Overhang_Plaster_Corner_Front.obj-ea3bca0121f1c974784651acf4c69093.mesh"]
+files=["res://.godot/imported/Overhang_Plaster_Corner_Front.obj-6fde8783dd9adca59d9b2b81d038185c.mesh"]
 
-source_file="res://assets/posibles-assets 1(1)/posibles-assets/Medieval Village MegaKit[Standard]/OBJ/Overhang_Plaster_Corner_Front.obj"
-dest_files=["res://.godot/imported/Overhang_Plaster_Corner_Front.obj-ea3bca0121f1c974784651acf4c69093.mesh", "res://.godot/imported/Overhang_Plaster_Corner_Front.obj-ea3bca0121f1c974784651acf4c69093.mesh"]
+source_file="res://assets/Medieval Village MegaKit[Standard]/OBJ/Overhang_Plaster_Corner_Front.obj"
+dest_files=["res://.godot/imported/Overhang_Plaster_Corner_Front.obj-6fde8783dd9adca59d9b2b81d038185c.mesh", "res://.godot/imported/Overhang_Plaster_Corner_Front.obj-6fde8783dd9adca59d9b2b81d038185c.mesh"]
 
 [params]
 

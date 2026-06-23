@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://dg2dabapapv2o"
-path="res://.godot/imported/Window_Roof_Thin.gltf-9148f03a33c4cf6040854e0eb6b7a143.scn"
+path="res://.godot/imported/Window_Roof_Thin.gltf-96582b1667bd382d45cdee76be8611cb.scn"
 
 [deps]
 
-source_file="res://assets/posibles-assets 1(1)/posibles-assets/Medieval Village MegaKit[Standard]/glTF/Window_Roof_Thin.gltf"
-dest_files=["res://.godot/imported/Window_Roof_Thin.gltf-9148f03a33c4cf6040854e0eb6b7a143.scn"]
+source_file="res://assets/Medieval Village MegaKit[Standard]/glTF/Window_Roof_Thin.gltf"
+dest_files=["res://.godot/imported/Window_Roof_Thin.gltf-96582b1667bd382d45cdee76be8611cb.scn"]
 
 [params]
 

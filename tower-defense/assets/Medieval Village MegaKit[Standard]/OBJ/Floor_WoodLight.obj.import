@@ -4,14 +4,14 @@ importer="wavefront_obj"
 importer_version=1
 type="Mesh"
 uid="uid://m2py8oggep2p"
-path="res://.godot/imported/Floor_WoodLight.obj-463804fdf905d8a31c483c4d96ed8c3e.mesh"
+path="res://.godot/imported/Floor_WoodLight.obj-8881ad3052493f12ea75bf846aed5a3c.mesh"
 
 [deps]
 
-files=["res://.godot/imported/Floor_WoodLight.obj-463804fdf905d8a31c483c4d96ed8c3e.mesh"]
+files=["res://.godot/imported/Floor_WoodLight.obj-8881ad3052493f12ea75bf846aed5a3c.mesh"]
 
-source_file="res://assets/posibles-assets 1(1)/posibles-assets/Medieval Village MegaKit[Standard]/OBJ/Floor_WoodLight.obj"
-dest_files=["res://.godot/imported/Floor_WoodLight.obj-463804fdf905d8a31c483c4d96ed8c3e.mesh", "res://.godot/imported/Floor_WoodLight.obj-463804fdf905d8a31c483c4d96ed8c3e.mesh"]
+source_file="res://assets/Medieval Village MegaKit[Standard]/OBJ/Floor_WoodLight.obj"
+dest_files=["res://.godot/imported/Floor_WoodLight.obj-8881ad3052493f12ea75bf846aed5a3c.mesh", "res://.godot/imported/Floor_WoodLight.obj-8881ad3052493f12ea75bf846aed5a3c.mesh"]
 
 [params]
 

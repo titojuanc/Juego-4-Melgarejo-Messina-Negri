@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://n6jlm0vbom7d"
-path="res://.godot/imported/Prop_ExteriorBorder_Straight1.fbx-601728be2e641349bd91511ff87de65e.scn"
+path="res://.godot/imported/Prop_ExteriorBorder_Straight1.fbx-52b1bad34cfa95900e1d172c6479fe90.scn"
 
 [deps]
 
-source_file="res://assets/posibles-assets 1(1)/posibles-assets/Medieval Village MegaKit[Standard]/FBX/Prop_ExteriorBorder_Straight1.fbx"
-dest_files=["res://.godot/imported/Prop_ExteriorBorder_Straight1.fbx-601728be2e641349bd91511ff87de65e.scn"]
+source_file="res://assets/Medieval Village MegaKit[Standard]/FBX/Prop_ExteriorBorder_Straight1.fbx"
+dest_files=["res://.godot/imported/Prop_ExteriorBorder_Straight1.fbx-52b1bad34cfa95900e1d172c6479fe90.scn"]
 
 [params]
 

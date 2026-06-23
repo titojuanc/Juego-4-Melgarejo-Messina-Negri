@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://d0piy23sujjqh"
-path="res://.godot/imported/HoleCover_90Angle.fbx-3c0bca7158ab1a70dd849e54a24b93d4.scn"
+path="res://.godot/imported/HoleCover_90Angle.fbx-1e05e0c99bf93191899096b6472aabed.scn"
 
 [deps]
 
-source_file="res://assets/posibles-assets 1(1)/posibles-assets/Medieval Village MegaKit[Standard]/FBX/HoleCover_90Angle.fbx"
-dest_files=["res://.godot/imported/HoleCover_90Angle.fbx-3c0bca7158ab1a70dd849e54a24b93d4.scn"]
+source_file="res://assets/Medieval Village MegaKit[Standard]/FBX/HoleCover_90Angle.fbx"
+dest_files=["res://.godot/imported/HoleCover_90Angle.fbx-1e05e0c99bf93191899096b6472aabed.scn"]
 
 [params]
 

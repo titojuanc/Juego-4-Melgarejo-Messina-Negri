@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bvve8koumfr6f"
-path="res://.godot/imported/T_WoodTrim_Normal.png-3f0947646d49d3b2de2e8d4015224111.ctex"
+path="res://.godot/imported/T_WoodTrim_Normal.png-661fe3c27e00e8c6c7a192d422875c81.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/posibles-assets 1(1)/posibles-assets/Medieval Village MegaKit[Standard]/Textures/Normals Godot-Unity/T_WoodTrim_Normal.png"
-dest_files=["res://.godot/imported/T_WoodTrim_Normal.png-3f0947646d49d3b2de2e8d4015224111.ctex"]
+source_file="res://assets/Medieval Village MegaKit[Standard]/Textures/Normals Godot-Unity/T_WoodTrim_Normal.png"
+dest_files=["res://.godot/imported/T_WoodTrim_Normal.png-661fe3c27e00e8c6c7a192d422875c81.ctex"]
 
 [params]
 

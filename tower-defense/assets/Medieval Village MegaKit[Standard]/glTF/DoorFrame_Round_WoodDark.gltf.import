@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://c4ftoknhrj8k6"
-path="res://.godot/imported/DoorFrame_Round_WoodDark.gltf-e2f3474121b604813952cce168dbbba4.scn"
+path="res://.godot/imported/DoorFrame_Round_WoodDark.gltf-15b4ba8237dd16a7c5b9761c3d023610.scn"
 
 [deps]
 
-source_file="res://assets/posibles-assets 1(1)/posibles-assets/Medieval Village MegaKit[Standard]/glTF/DoorFrame_Round_WoodDark.gltf"
-dest_files=["res://.godot/imported/DoorFrame_Round_WoodDark.gltf-e2f3474121b604813952cce168dbbba4.scn"]
+source_file="res://assets/Medieval Village MegaKit[Standard]/glTF/DoorFrame_Round_WoodDark.gltf"
+dest_files=["res://.godot/imported/DoorFrame_Round_WoodDark.gltf-15b4ba8237dd16a7c5b9761c3d023610.scn"]
 
 [params]
 

@@ -5,7 +5,7 @@
 [ext_resource type="Script" uid="uid://d33wijxslsx4q" path="res://scripts/grid_visual.gd" id="2_k5l73"]
 [ext_resource type="Script" uid="uid://turnukjch2p7" path="res://scripts/building_manager.gd" id="2_kl8jp"]
 [ext_resource type="Script" uid="uid://clsfnmgtkjhfy" path="res://scripts/input_handler.gd" id="3_input"]
-[ext_resource type="Script" uid="uid://c5053hek1xmr6" path="res://scripts/building_menu.gd" id="4_menu"]
+[ext_resource type="Script" path="res://scripts/building_menu.gd" id="4_menu"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_kl8jp"]
 shading_mode = 0
@@ -24,11 +24,9 @@ transparency = 1
 shading_mode = 0
 albedo_color = Color(1, 0, 0, 0.3)
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_kgt2y"]
-size = Vector3(20.079376, 0.36444092, 19.982544)
-
 [node name="GridManager" type="Node3D" unique_id=1835741100]
 script = ExtResource("1_asofv")
+cell_size = 8.0
 
 [node name="GridVisual" type="Node3D" parent="." unique_id=622096962]
 script = ExtResource("2_k5l73")
@@ -41,7 +39,7 @@ mesh = SubResource("ArrayMesh_asofv")
 material_override = SubResource("StandardMaterial3D_k5l73")
 mesh = SubResource("PlaneMesh_xbg4y")
 
-[node name="DragOverlay" type="MeshInstance3D" parent="GridVisual" unique_id=136554688]
+[node name="DragOverlay" type="MeshInstance3D" parent="GridVisual"]
 visible = false
 material_override = SubResource("StandardMaterial3D_drag")
 
@@ -58,11 +56,10 @@ script = ExtResource("2_kl8jp")
 [node name="InputHandler" type="Node" parent="." unique_id=234978631]
 script = ExtResource("3_input")
 
-[node name="BuildingUI" type="CanvasLayer" parent="." unique_id=365319588]
+[node name="BuildingUI" type="CanvasLayer" parent="."]
 visible = false
 
-[node name="BuildingMenu" type="Control" parent="BuildingUI" unique_id=2081478780]
-layout_mode = 3
+[node name="BuildingMenu" type="Control" parent="BuildingUI"]
 anchors_preset = 1
 anchor_left = 1.0
 anchor_right = 1.0
@@ -71,14 +68,7 @@ offset_bottom = 300.0
 grow_horizontal = 0
 script = ExtResource("4_menu")
 
-[node name="VBoxContainer" type="VBoxContainer" parent="BuildingUI/BuildingMenu" unique_id=1715319174]
-layout_mode = 0
+[node name="VBoxContainer" type="VBoxContainer" parent="BuildingUI/BuildingMenu"]
 offset_right = 140.0
 offset_bottom = 300.0
 size_flags_horizontal = 4
-
-[node name="Area3D" type="Area3D" parent="." unique_id=1515010425]
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D" unique_id=718705615]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.023575, 0.080718994, 5.9971313)
-shape = SubResource("BoxShape3D_kgt2y")

@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://b75uce2rcitn8"
-path="res://.godot/imported/Wall_UnevenBrick_Door_Round.gltf-0eb597aab856fe26e7f03da2a48ef49d.scn"
+path="res://.godot/imported/Wall_UnevenBrick_Door_Round.gltf-dc8ef1c0e1e807013b3920e900261965.scn"
 
 [deps]
 
-source_file="res://assets/posibles-assets 1(1)/posibles-assets/Medieval Village MegaKit[Standard]/glTF/Wall_UnevenBrick_Door_Round.gltf"
-dest_files=["res://.godot/imported/Wall_UnevenBrick_Door_Round.gltf-0eb597aab856fe26e7f03da2a48ef49d.scn"]
+source_file="res://assets/Medieval Village MegaKit[Standard]/glTF/Wall_UnevenBrick_Door_Round.gltf"
+dest_files=["res://.godot/imported/Wall_UnevenBrick_Door_Round.gltf-dc8ef1c0e1e807013b3920e900261965.scn"]
 
 [params]
 

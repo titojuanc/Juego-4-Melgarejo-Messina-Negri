@@ -4,14 +4,14 @@ importer="wavefront_obj"
 importer_version=1
 type="Mesh"
 uid="uid://c53rb2ih6n4yh"
-path="res://.godot/imported/Corner_Exterior_TopOnly.obj-622ecff218510e1d2cbb1d0dc15fcb2d.mesh"
+path="res://.godot/imported/Corner_Exterior_TopOnly.obj-a19411b526ff75d9c9217e36d7b7d742.mesh"
 
 [deps]
 
-files=["res://.godot/imported/Corner_Exterior_TopOnly.obj-622ecff218510e1d2cbb1d0dc15fcb2d.mesh"]
+files=["res://.godot/imported/Corner_Exterior_TopOnly.obj-a19411b526ff75d9c9217e36d7b7d742.mesh"]
 
-source_file="res://assets/posibles-assets 1(1)/posibles-assets/Medieval Village MegaKit[Standard]/OBJ/Corner_Exterior_TopOnly.obj"
-dest_files=["res://.godot/imported/Corner_Exterior_TopOnly.obj-622ecff218510e1d2cbb1d0dc15fcb2d.mesh", "res://.godot/imported/Corner_Exterior_TopOnly.obj-622ecff218510e1d2cbb1d0dc15fcb2d.mesh"]
+source_file="res://assets/Medieval Village MegaKit[Standard]/OBJ/Corner_Exterior_TopOnly.obj"
+dest_files=["res://.godot/imported/Corner_Exterior_TopOnly.obj-a19411b526ff75d9c9217e36d7b7d742.mesh", "res://.godot/imported/Corner_Exterior_TopOnly.obj-a19411b526ff75d9c9217e36d7b7d742.mesh"]
 
 [params]
 

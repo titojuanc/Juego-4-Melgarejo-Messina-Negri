@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://kr8l2ao0u0tr"
-path="res://.godot/imported/Corner_Interior_Big.gltf-094e5c5f6dfd42b2c3e6e1f974344ba2.scn"
+path="res://.godot/imported/Corner_Interior_Big.gltf-cabc06b7e5105633360fe979c6bab297.scn"
 
 [deps]
 
-source_file="res://assets/posibles-assets 1(1)/posibles-assets/Medieval Village MegaKit[Standard]/glTF/Corner_Interior_Big.gltf"
-dest_files=["res://.godot/imported/Corner_Interior_Big.gltf-094e5c5f6dfd42b2c3e6e1f974344ba2.scn"]
+source_file="res://assets/Medieval Village MegaKit[Standard]/glTF/Corner_Interior_Big.gltf"
+dest_files=["res://.godot/imported/Corner_Interior_Big.gltf-cabc06b7e5105633360fe979c6bab297.scn"]
 
 [params]
 

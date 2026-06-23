@@ -4,14 +4,14 @@ importer="wavefront_obj"
 importer_version=1
 type="Mesh"
 uid="uid://biacp7v8xovmn"
-path="res://.godot/imported/Stairs_Exterior_Platform.obj-73fa90dbc958e1543b715c05a2005ff6.mesh"
+path="res://.godot/imported/Stairs_Exterior_Platform.obj-ac5c25e6cc1be065bc39091b40f59f34.mesh"
 
 [deps]
 
-files=["res://.godot/imported/Stairs_Exterior_Platform.obj-73fa90dbc958e1543b715c05a2005ff6.mesh"]
+files=["res://.godot/imported/Stairs_Exterior_Platform.obj-ac5c25e6cc1be065bc39091b40f59f34.mesh"]
 
-source_file="res://assets/posibles-assets 1(1)/posibles-assets/Medieval Village MegaKit[Standard]/OBJ/Stairs_Exterior_Platform.obj"
-dest_files=["res://.godot/imported/Stairs_Exterior_Platform.obj-73fa90dbc958e1543b715c05a2005ff6.mesh", "res://.godot/imported/Stairs_Exterior_Platform.obj-73fa90dbc958e1543b715c05a2005ff6.mesh"]
+source_file="res://assets/Medieval Village MegaKit[Standard]/OBJ/Stairs_Exterior_Platform.obj"
+dest_files=["res://.godot/imported/Stairs_Exterior_Platform.obj-ac5c25e6cc1be065bc39091b40f59f34.mesh", "res://.godot/imported/Stairs_Exterior_Platform.obj-ac5c25e6cc1be065bc39091b40f59f34.mesh"]
 
 [params]
 

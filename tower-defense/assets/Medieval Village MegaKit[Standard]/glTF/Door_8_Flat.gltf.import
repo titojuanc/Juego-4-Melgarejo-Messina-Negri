@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://c5u5bviaylob3"
-path="res://.godot/imported/Door_8_Flat.gltf-944fd9612d95da6f9e4f9d8638001145.scn"
+path="res://.godot/imported/Door_8_Flat.gltf-094d0eae56dc20c7f6995c4f8fe6eeeb.scn"
 
 [deps]
 
-source_file="res://assets/posibles-assets 1(1)/posibles-assets/Medieval Village MegaKit[Standard]/glTF/Door_8_Flat.gltf"
-dest_files=["res://.godot/imported/Door_8_Flat.gltf-944fd9612d95da6f9e4f9d8638001145.scn"]
+source_file="res://assets/Medieval Village MegaKit[Standard]/glTF/Door_8_Flat.gltf"
+dest_files=["res://.godot/imported/Door_8_Flat.gltf-094d0eae56dc20c7f6995c4f8fe6eeeb.scn"]
 
 [params]
 

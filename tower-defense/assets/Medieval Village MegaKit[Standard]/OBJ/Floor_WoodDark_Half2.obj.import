@@ -4,14 +4,14 @@ importer="wavefront_obj"
 importer_version=1
 type="Mesh"
 uid="uid://c3k3n1pynx3lk"
-path="res://.godot/imported/Floor_WoodDark_Half2.obj-6889cf173e5be0217d665954839a0690.mesh"
+path="res://.godot/imported/Floor_WoodDark_Half2.obj-3fbe5272d06abc58198cfe32eafd329e.mesh"
 
 [deps]
 
-files=["res://.godot/imported/Floor_WoodDark_Half2.obj-6889cf173e5be0217d665954839a0690.mesh"]
+files=["res://.godot/imported/Floor_WoodDark_Half2.obj-3fbe5272d06abc58198cfe32eafd329e.mesh"]
 
-source_file="res://assets/posibles-assets 1(1)/posibles-assets/Medieval Village MegaKit[Standard]/OBJ/Floor_WoodDark_Half2.obj"
-dest_files=["res://.godot/imported/Floor_WoodDark_Half2.obj-6889cf173e5be0217d665954839a0690.mesh", "res://.godot/imported/Floor_WoodDark_Half2.obj-6889cf173e5be0217d665954839a0690.mesh"]
+source_file="res://assets/Medieval Village MegaKit[Standard]/OBJ/Floor_WoodDark_Half2.obj"
+dest_files=["res://.godot/imported/Floor_WoodDark_Half2.obj-3fbe5272d06abc58198cfe32eafd329e.mesh", "res://.godot/imported/Floor_WoodDark_Half2.obj-3fbe5272d06abc58198cfe32eafd329e.mesh"]
 
 [params]
 

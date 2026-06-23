@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://bi2oilsx4eqqh"
-path="res://.godot/imported/DoorFrame_Round_WoodDark.fbx-21f980d0661de8dc81eec8aa0131ff36.scn"
+path="res://.godot/imported/DoorFrame_Round_WoodDark.fbx-eef0bfdd00ce9e5a2d17e05aa5ec11ba.scn"
 
 [deps]
 
-source_file="res://assets/posibles-assets 1(1)/posibles-assets/Medieval Village MegaKit[Standard]/FBX/DoorFrame_Round_WoodDark.fbx"
-dest_files=["res://.godot/imported/DoorFrame_Round_WoodDark.fbx-21f980d0661de8dc81eec8aa0131ff36.scn"]
+source_file="res://assets/Medieval Village MegaKit[Standard]/FBX/DoorFrame_Round_WoodDark.fbx"
+dest_files=["res://.godot/imported/DoorFrame_Round_WoodDark.fbx-eef0bfdd00ce9e5a2d17e05aa5ec11ba.scn"]
 
 [params]
 

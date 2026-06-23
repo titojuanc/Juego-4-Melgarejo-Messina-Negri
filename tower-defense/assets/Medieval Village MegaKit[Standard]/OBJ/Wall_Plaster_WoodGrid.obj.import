@@ -4,14 +4,14 @@ importer="wavefront_obj"
 importer_version=1
 type="Mesh"
 uid="uid://cfrsu1a66gaw8"
-path="res://.godot/imported/Wall_Plaster_WoodGrid.obj-0e0677e71b8ef1eec81428ae974450d3.mesh"
+path="res://.godot/imported/Wall_Plaster_WoodGrid.obj-c02452f6a81dd46b42a102054677dea3.mesh"
 
 [deps]
 
-files=["res://.godot/imported/Wall_Plaster_WoodGrid.obj-0e0677e71b8ef1eec81428ae974450d3.mesh"]
+files=["res://.godot/imported/Wall_Plaster_WoodGrid.obj-c02452f6a81dd46b42a102054677dea3.mesh"]
 
-source_file="res://assets/posibles-assets 1(1)/posibles-assets/Medieval Village MegaKit[Standard]/OBJ/Wall_Plaster_WoodGrid.obj"
-dest_files=["res://.godot/imported/Wall_Plaster_WoodGrid.obj-0e0677e71b8ef1eec81428ae974450d3.mesh", "res://.godot/imported/Wall_Plaster_WoodGrid.obj-0e0677e71b8ef1eec81428ae974450d3.mesh"]
+source_file="res://assets/Medieval Village MegaKit[Standard]/OBJ/Wall_Plaster_WoodGrid.obj"
+dest_files=["res://.godot/imported/Wall_Plaster_WoodGrid.obj-c02452f6a81dd46b42a102054677dea3.mesh", "res://.godot/imported/Wall_Plaster_WoodGrid.obj-c02452f6a81dd46b42a102054677dea3.mesh"]
 
 [params]
 

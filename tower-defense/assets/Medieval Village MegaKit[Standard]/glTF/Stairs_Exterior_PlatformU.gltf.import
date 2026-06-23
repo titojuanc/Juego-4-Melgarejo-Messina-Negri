@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://cvkqoy83nks0m"
-path="res://.godot/imported/Stairs_Exterior_PlatformU.gltf-9853666357d6171f3442eaa5746cdd18.scn"
+path="res://.godot/imported/Stairs_Exterior_PlatformU.gltf-6d0e9a01b068c38cb5d540a3c1089c1f.scn"
 
 [deps]
 
-source_file="res://assets/posibles-assets 1(1)/posibles-assets/Medieval Village MegaKit[Standard]/glTF/Stairs_Exterior_PlatformU.gltf"
-dest_files=["res://.godot/imported/Stairs_Exterior_PlatformU.gltf-9853666357d6171f3442eaa5746cdd18.scn"]
+source_file="res://assets/Medieval Village MegaKit[Standard]/glTF/Stairs_Exterior_PlatformU.gltf"
+dest_files=["res://.godot/imported/Stairs_Exterior_PlatformU.gltf-6d0e9a01b068c38cb5d540a3c1089c1f.scn"]
 
 [params]
 

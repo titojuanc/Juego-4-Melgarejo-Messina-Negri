@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://63nd4qpmy4gt"
-path="res://.godot/imported/Roof_Wooden_2x1.fbx-965f2dc2280b330ca5203caa51706f1e.scn"
+path="res://.godot/imported/Roof_Wooden_2x1.fbx-558d5a10f8023c4aa116854c7dcf67ac.scn"
 
 [deps]
 
-source_file="res://assets/posibles-assets 1(1)/posibles-assets/Medieval Village MegaKit[Standard]/FBX/Roof_Wooden_2x1.fbx"
-dest_files=["res://.godot/imported/Roof_Wooden_2x1.fbx-965f2dc2280b330ca5203caa51706f1e.scn"]
+source_file="res://assets/Medieval Village MegaKit[Standard]/FBX/Roof_Wooden_2x1.fbx"
+dest_files=["res://.godot/imported/Roof_Wooden_2x1.fbx-558d5a10f8023c4aa116854c7dcf67ac.scn"]
 
 [params]
 

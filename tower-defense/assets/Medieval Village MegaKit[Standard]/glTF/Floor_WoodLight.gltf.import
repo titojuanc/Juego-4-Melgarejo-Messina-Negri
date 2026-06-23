@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://ck25av4t18lv2"
-path="res://.godot/imported/Floor_WoodLight.gltf-0974218eb262bb4c4dd85ef9d080b4c8.scn"
+path="res://.godot/imported/Floor_WoodLight.gltf-59395afbea9e80d23e61c77804e5e39d.scn"
 
 [deps]
 
-source_file="res://assets/posibles-assets 1(1)/posibles-assets/Medieval Village MegaKit[Standard]/glTF/Floor_WoodLight.gltf"
-dest_files=["res://.godot/imported/Floor_WoodLight.gltf-0974218eb262bb4c4dd85ef9d080b4c8.scn"]
+source_file="res://assets/Medieval Village MegaKit[Standard]/glTF/Floor_WoodLight.gltf"
+dest_files=["res://.godot/imported/Floor_WoodLight.gltf-59395afbea9e80d23e61c77804e5e39d.scn"]
 
 [params]
 

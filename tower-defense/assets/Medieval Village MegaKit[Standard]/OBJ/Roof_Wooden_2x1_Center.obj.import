@@ -4,14 +4,14 @@ importer="wavefront_obj"
 importer_version=1
 type="Mesh"
 uid="uid://rvq5tluyppko"
-path="res://.godot/imported/Roof_Wooden_2x1_Center.obj-19c3615e65540a86a59835a233bd0fad.mesh"
+path="res://.godot/imported/Roof_Wooden_2x1_Center.obj-988d8e2b3c8987e0f86bf23f21109c54.mesh"
 
 [deps]
 
-files=["res://.godot/imported/Roof_Wooden_2x1_Center.obj-19c3615e65540a86a59835a233bd0fad.mesh"]
+files=["res://.godot/imported/Roof_Wooden_2x1_Center.obj-988d8e2b3c8987e0f86bf23f21109c54.mesh"]
 
-source_file="res://assets/posibles-assets 1(1)/posibles-assets/Medieval Village MegaKit[Standard]/OBJ/Roof_Wooden_2x1_Center.obj"
-dest_files=["res://.godot/imported/Roof_Wooden_2x1_Center.obj-19c3615e65540a86a59835a233bd0fad.mesh", "res://.godot/imported/Roof_Wooden_2x1_Center.obj-19c3615e65540a86a59835a233bd0fad.mesh"]
+source_file="res://assets/Medieval Village MegaKit[Standard]/OBJ/Roof_Wooden_2x1_Center.obj"
+dest_files=["res://.godot/imported/Roof_Wooden_2x1_Center.obj-988d8e2b3c8987e0f86bf23f21109c54.mesh", "res://.godot/imported/Roof_Wooden_2x1_Center.obj-988d8e2b3c8987e0f86bf23f21109c54.mesh"]
 
 [params]
 

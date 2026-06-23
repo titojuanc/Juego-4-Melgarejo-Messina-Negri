@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://g48m5cw7ptdr"
-path="res://.godot/imported/Wall_Arch.fbx-629cc80ac4f07249ad338fda4d744139.scn"
+path="res://.godot/imported/Wall_Arch.fbx-95db110b00ca49c87d81243ac0c1f190.scn"
 
 [deps]
 
-source_file="res://assets/posibles-assets 1(1)/posibles-assets/Medieval Village MegaKit[Standard]/FBX/Wall_Arch.fbx"
-dest_files=["res://.godot/imported/Wall_Arch.fbx-629cc80ac4f07249ad338fda4d744139.scn"]
+source_file="res://assets/Medieval Village MegaKit[Standard]/FBX/Wall_Arch.fbx"
+dest_files=["res://.godot/imported/Wall_Arch.fbx-95db110b00ca49c87d81243ac0c1f190.scn"]
 
 [params]
 

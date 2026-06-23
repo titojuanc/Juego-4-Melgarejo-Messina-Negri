@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://cndw5oxl0lb18"
-path="res://.godot/imported/Overhang_Side_Plaster_Short_R.gltf-dc3ef6cdebb00724d5173e1c5fac87ba.scn"
+path="res://.godot/imported/Overhang_Side_Plaster_Short_R.gltf-fd9f72b698ed2693198a391f93d4724d.scn"
 
 [deps]
 
-source_file="res://assets/posibles-assets 1(1)/posibles-assets/Medieval Village MegaKit[Standard]/glTF/Overhang_Side_Plaster_Short_R.gltf"
-dest_files=["res://.godot/imported/Overhang_Side_Plaster_Short_R.gltf-dc3ef6cdebb00724d5173e1c5fac87ba.scn"]
+source_file="res://assets/Medieval Village MegaKit[Standard]/glTF/Overhang_Side_Plaster_Short_R.gltf"
+dest_files=["res://.godot/imported/Overhang_Side_Plaster_Short_R.gltf-fd9f72b698ed2693198a391f93d4724d.scn"]
 
 [params]
 

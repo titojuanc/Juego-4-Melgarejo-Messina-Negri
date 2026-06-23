@@ -4,14 +4,14 @@ importer="wavefront_obj"
 importer_version=1
 type="Mesh"
 uid="uid://daa3r7dfthjmi"
-path="res://.godot/imported/Overhang_UnevenBrick_Short.obj-33678b983d71138a7b0997612313c5f8.mesh"
+path="res://.godot/imported/Overhang_UnevenBrick_Short.obj-7d937d1527ba939d3bc34acbd48734e8.mesh"
 
 [deps]
 
-files=["res://.godot/imported/Overhang_UnevenBrick_Short.obj-33678b983d71138a7b0997612313c5f8.mesh"]
+files=["res://.godot/imported/Overhang_UnevenBrick_Short.obj-7d937d1527ba939d3bc34acbd48734e8.mesh"]
 
-source_file="res://assets/posibles-assets 1(1)/posibles-assets/Medieval Village MegaKit[Standard]/OBJ/Overhang_UnevenBrick_Short.obj"
-dest_files=["res://.godot/imported/Overhang_UnevenBrick_Short.obj-33678b983d71138a7b0997612313c5f8.mesh", "res://.godot/imported/Overhang_UnevenBrick_Short.obj-33678b983d71138a7b0997612313c5f8.mesh"]
+source_file="res://assets/Medieval Village MegaKit[Standard]/OBJ/Overhang_UnevenBrick_Short.obj"
+dest_files=["res://.godot/imported/Overhang_UnevenBrick_Short.obj-7d937d1527ba939d3bc34acbd48734e8.mesh", "res://.godot/imported/Overhang_UnevenBrick_Short.obj-7d937d1527ba939d3bc34acbd48734e8.mesh"]
 
 [params]
 

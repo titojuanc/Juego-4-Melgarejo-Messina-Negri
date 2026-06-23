@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://dr8787wsu4nq5"
-path="res://.godot/imported/Corner_Exterior_TopDown.fbx-39ce3296b44f9d3ff6f2cb7843e0bb9f.scn"
+path="res://.godot/imported/Corner_Exterior_TopDown.fbx-f4cccd44e4f9feb667951ca98d4367cb.scn"
 
 [deps]
 
-source_file="res://assets/posibles-assets 1(1)/posibles-assets/Medieval Village MegaKit[Standard]/FBX/Corner_Exterior_TopDown.fbx"
-dest_files=["res://.godot/imported/Corner_Exterior_TopDown.fbx-39ce3296b44f9d3ff6f2cb7843e0bb9f.scn"]
+source_file="res://assets/Medieval Village MegaKit[Standard]/FBX/Corner_Exterior_TopDown.fbx"
+dest_files=["res://.godot/imported/Corner_Exterior_TopDown.fbx-f4cccd44e4f9feb667951ca98d4367cb.scn"]
 
 [params]
 

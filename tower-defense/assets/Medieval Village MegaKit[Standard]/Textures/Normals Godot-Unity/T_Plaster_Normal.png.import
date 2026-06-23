@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://ca34hk2cheegh"
-path="res://.godot/imported/T_Plaster_Normal.png-1d520cc9cc0ba8ce60fd23f3e49651f7.ctex"
+path="res://.godot/imported/T_Plaster_Normal.png-20c4f1fd6311e9d478d839071a8884ca.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/posibles-assets 1(1)/posibles-assets/Medieval Village MegaKit[Standard]/Textures/Normals Godot-Unity/T_Plaster_Normal.png"
-dest_files=["res://.godot/imported/T_Plaster_Normal.png-1d520cc9cc0ba8ce60fd23f3e49651f7.ctex"]
+source_file="res://assets/Medieval Village MegaKit[Standard]/Textures/Normals Godot-Unity/T_Plaster_Normal.png"
+dest_files=["res://.godot/imported/T_Plaster_Normal.png-20c4f1fd6311e9d478d839071a8884ca.ctex"]
 
 [params]
 

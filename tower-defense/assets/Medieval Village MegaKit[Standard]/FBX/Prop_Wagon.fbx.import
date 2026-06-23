@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://d03srmi11psh4"
-path="res://.godot/imported/Prop_Wagon.fbx-99782d2343ee73327292c00d3d33c969.scn"
+path="res://.godot/imported/Prop_Wagon.fbx-978355f618a59b4efd2fb8fec142bcfd.scn"
 
 [deps]
 
-source_file="res://assets/posibles-assets 1(1)/posibles-assets/Medieval Village MegaKit[Standard]/FBX/Prop_Wagon.fbx"
-dest_files=["res://.godot/imported/Prop_Wagon.fbx-99782d2343ee73327292c00d3d33c969.scn"]
+source_file="res://assets/Medieval Village MegaKit[Standard]/FBX/Prop_Wagon.fbx"
+dest_files=["res://.godot/imported/Prop_Wagon.fbx-978355f618a59b4efd2fb8fec142bcfd.scn"]
 
 [params]
 

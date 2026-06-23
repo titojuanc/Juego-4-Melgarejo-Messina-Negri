@@ -4,14 +4,14 @@ importer="wavefront_obj"
 importer_version=1
 type="Mesh"
 uid="uid://dju1ulmthp2xr"
-path="res://.godot/imported/WindowShutters_Thin_Round_Open.obj-ed3c03870faddd5b3be21b0c37e3aeb7.mesh"
+path="res://.godot/imported/WindowShutters_Thin_Round_Open.obj-6e99e1259eb3d8a18970d4bb2624e97f.mesh"
 
 [deps]
 
-files=["res://.godot/imported/WindowShutters_Thin_Round_Open.obj-ed3c03870faddd5b3be21b0c37e3aeb7.mesh"]
+files=["res://.godot/imported/WindowShutters_Thin_Round_Open.obj-6e99e1259eb3d8a18970d4bb2624e97f.mesh"]
 
-source_file="res://assets/posibles-assets 1(1)/posibles-assets/Medieval Village MegaKit[Standard]/OBJ/WindowShutters_Thin_Round_Open.obj"
-dest_files=["res://.godot/imported/WindowShutters_Thin_Round_Open.obj-ed3c03870faddd5b3be21b0c37e3aeb7.mesh", "res://.godot/imported/WindowShutters_Thin_Round_Open.obj-ed3c03870faddd5b3be21b0c37e3aeb7.mesh"]
+source_file="res://assets/Medieval Village MegaKit[Standard]/OBJ/WindowShutters_Thin_Round_Open.obj"
+dest_files=["res://.godot/imported/WindowShutters_Thin_Round_Open.obj-6e99e1259eb3d8a18970d4bb2624e97f.mesh", "res://.godot/imported/WindowShutters_Thin_Round_Open.obj-6e99e1259eb3d8a18970d4bb2624e97f.mesh"]
 
 [params]
 

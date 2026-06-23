@@ -4,14 +4,14 @@ importer="wavefront_obj"
 importer_version=1
 type="Mesh"
 uid="uid://bj0a64q5o2d6p"
-path="res://.godot/imported/Stair_Interior_SolidExtended.obj-c843bc53d53299624ce5cefb78665270.mesh"
+path="res://.godot/imported/Stair_Interior_SolidExtended.obj-9bf0c7cdf7842f774586a2ff8bbbf83f.mesh"
 
 [deps]
 
-files=["res://.godot/imported/Stair_Interior_SolidExtended.obj-c843bc53d53299624ce5cefb78665270.mesh"]
+files=["res://.godot/imported/Stair_Interior_SolidExtended.obj-9bf0c7cdf7842f774586a2ff8bbbf83f.mesh"]
 
-source_file="res://assets/posibles-assets 1(1)/posibles-assets/Medieval Village MegaKit[Standard]/OBJ/Stair_Interior_SolidExtended.obj"
-dest_files=["res://.godot/imported/Stair_Interior_SolidExtended.obj-c843bc53d53299624ce5cefb78665270.mesh", "res://.godot/imported/Stair_Interior_SolidExtended.obj-c843bc53d53299624ce5cefb78665270.mesh"]
+source_file="res://assets/Medieval Village MegaKit[Standard]/OBJ/Stair_Interior_SolidExtended.obj"
+dest_files=["res://.godot/imported/Stair_Interior_SolidExtended.obj-9bf0c7cdf7842f774586a2ff8bbbf83f.mesh", "res://.godot/imported/Stair_Interior_SolidExtended.obj-9bf0c7cdf7842f774586a2ff8bbbf83f.mesh"]
 
 [params]
 

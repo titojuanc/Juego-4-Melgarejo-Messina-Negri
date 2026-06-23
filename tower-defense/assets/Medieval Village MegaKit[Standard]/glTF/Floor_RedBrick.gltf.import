@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://ccdkvlaa4ec3f"
-path="res://.godot/imported/Floor_RedBrick.gltf-ad0f64e67d60ed7e0387219654922fd5.scn"
+path="res://.godot/imported/Floor_RedBrick.gltf-1847bb29970176bbf36784d3b73ddb08.scn"
 
 [deps]
 
-source_file="res://assets/posibles-assets 1(1)/posibles-assets/Medieval Village MegaKit[Standard]/glTF/Floor_RedBrick.gltf"
-dest_files=["res://.godot/imported/Floor_RedBrick.gltf-ad0f64e67d60ed7e0387219654922fd5.scn"]
+source_file="res://assets/Medieval Village MegaKit[Standard]/glTF/Floor_RedBrick.gltf"
+dest_files=["res://.godot/imported/Floor_RedBrick.gltf-1847bb29970176bbf36784d3b73ddb08.scn"]
 
 [params]
 

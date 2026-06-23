@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://cluxme57oyh1i"
-path="res://.godot/imported/Window_Thin_Round1.gltf-af5a3e2a8b30e22e2610aaee9b1f90e4.scn"
+path="res://.godot/imported/Window_Thin_Round1.gltf-695b21e067c49a5c4d873ef30133f19a.scn"
 
 [deps]
 
-source_file="res://assets/posibles-assets 1(1)/posibles-assets/Medieval Village MegaKit[Standard]/glTF/Window_Thin_Round1.gltf"
-dest_files=["res://.godot/imported/Window_Thin_Round1.gltf-af5a3e2a8b30e22e2610aaee9b1f90e4.scn"]
+source_file="res://assets/Medieval Village MegaKit[Standard]/glTF/Window_Thin_Round1.gltf"
+dest_files=["res://.godot/imported/Window_Thin_Round1.gltf-695b21e067c49a5c4d873ef30133f19a.scn"]
 
 [params]
 

@@ -4,14 +4,14 @@ importer="wavefront_obj"
 importer_version=1
 type="Mesh"
 uid="uid://dl13u8vppsi4g"
-path="res://.godot/imported/Balcony_Cross_Corner.obj-42e0d06b5b4a9cd2f16320b76e2df4d0.mesh"
+path="res://.godot/imported/Balcony_Cross_Corner.obj-e32207082eb06ac29aa7313a08b3a631.mesh"
 
 [deps]
 
-files=["res://.godot/imported/Balcony_Cross_Corner.obj-42e0d06b5b4a9cd2f16320b76e2df4d0.mesh"]
+files=["res://.godot/imported/Balcony_Cross_Corner.obj-e32207082eb06ac29aa7313a08b3a631.mesh"]
 
-source_file="res://assets/posibles-assets 1(1)/posibles-assets/Medieval Village MegaKit[Standard]/OBJ/Balcony_Cross_Corner.obj"
-dest_files=["res://.godot/imported/Balcony_Cross_Corner.obj-42e0d06b5b4a9cd2f16320b76e2df4d0.mesh", "res://.godot/imported/Balcony_Cross_Corner.obj-42e0d06b5b4a9cd2f16320b76e2df4d0.mesh"]
+source_file="res://assets/Medieval Village MegaKit[Standard]/OBJ/Balcony_Cross_Corner.obj"
+dest_files=["res://.godot/imported/Balcony_Cross_Corner.obj-e32207082eb06ac29aa7313a08b3a631.mesh", "res://.godot/imported/Balcony_Cross_Corner.obj-e32207082eb06ac29aa7313a08b3a631.mesh"]
 
 [params]
 

@@ -4,14 +4,14 @@ importer="wavefront_obj"
 importer_version=1
 type="Mesh"
 uid="uid://b1rv6yuo3n00e"
-path="res://.godot/imported/Wall_Plaster_Straight_Base.obj-1a103f3ac616f9964859ee9df32b716f.mesh"
+path="res://.godot/imported/Wall_Plaster_Straight_Base.obj-7f2c2c5621e3d19f43e301c1caa7f791.mesh"
 
 [deps]
 
-files=["res://.godot/imported/Wall_Plaster_Straight_Base.obj-1a103f3ac616f9964859ee9df32b716f.mesh"]
+files=["res://.godot/imported/Wall_Plaster_Straight_Base.obj-7f2c2c5621e3d19f43e301c1caa7f791.mesh"]
 
-source_file="res://assets/posibles-assets 1(1)/posibles-assets/Medieval Village MegaKit[Standard]/OBJ/Wall_Plaster_Straight_Base.obj"
-dest_files=["res://.godot/imported/Wall_Plaster_Straight_Base.obj-1a103f3ac616f9964859ee9df32b716f.mesh", "res://.godot/imported/Wall_Plaster_Straight_Base.obj-1a103f3ac616f9964859ee9df32b716f.mesh"]
+source_file="res://assets/Medieval Village MegaKit[Standard]/OBJ/Wall_Plaster_Straight_Base.obj"
+dest_files=["res://.godot/imported/Wall_Plaster_Straight_Base.obj-7f2c2c5621e3d19f43e301c1caa7f791.mesh", "res://.godot/imported/Wall_Plaster_Straight_Base.obj-7f2c2c5621e3d19f43e301c1caa7f791.mesh"]
 
 [params]
 

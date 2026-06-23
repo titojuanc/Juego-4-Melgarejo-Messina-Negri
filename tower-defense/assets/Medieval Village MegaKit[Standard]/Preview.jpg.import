@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://b5it3vb3nnomt"
-path="res://.godot/imported/Preview.jpg-7315957e291d64ad7391c994bf3aa0d2.ctex"
+path="res://.godot/imported/Preview.jpg-28eeb7ee35dde26cbd1fde29ec4747f5.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/posibles-assets 1(1)/posibles-assets/Medieval Village MegaKit[Standard]/Preview.jpg"
-dest_files=["res://.godot/imported/Preview.jpg-7315957e291d64ad7391c994bf3aa0d2.ctex"]
+source_file="res://assets/Medieval Village MegaKit[Standard]/Preview.jpg"
+dest_files=["res://.godot/imported/Preview.jpg-28eeb7ee35dde26cbd1fde29ec4747f5.ctex"]
 
 [params]
 

@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://c0rl7duari5gb"
-path="res://.godot/imported/HoleCover_Straight.fbx-5d4751debd97b0f220461ede20da05cb.scn"
+path="res://.godot/imported/HoleCover_Straight.fbx-92ec99e74393d08b46d61b42f3ed1009.scn"
 
 [deps]
 
-source_file="res://assets/posibles-assets 1(1)/posibles-assets/Medieval Village MegaKit[Standard]/FBX/HoleCover_Straight.fbx"
-dest_files=["res://.godot/imported/HoleCover_Straight.fbx-5d4751debd97b0f220461ede20da05cb.scn"]
+source_file="res://assets/Medieval Village MegaKit[Standard]/FBX/HoleCover_Straight.fbx"
+dest_files=["res://.godot/imported/HoleCover_Straight.fbx-92ec99e74393d08b46d61b42f3ed1009.scn"]
 
 [params]
 

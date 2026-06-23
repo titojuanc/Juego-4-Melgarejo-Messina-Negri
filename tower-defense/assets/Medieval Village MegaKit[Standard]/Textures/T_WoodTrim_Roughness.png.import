@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://b2oes3olvcgp3"
-path="res://.godot/imported/T_WoodTrim_Roughness.png-0192fa234dac07afd2e10d57a7ff93cb.ctex"
+path="res://.godot/imported/T_WoodTrim_Roughness.png-6d182d72ff140c710a053333fc5c56c2.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/posibles-assets 1(1)/posibles-assets/Medieval Village MegaKit[Standard]/Textures/T_WoodTrim_Roughness.png"
-dest_files=["res://.godot/imported/T_WoodTrim_Roughness.png-0192fa234dac07afd2e10d57a7ff93cb.ctex"]
+source_file="res://assets/Medieval Village MegaKit[Standard]/Textures/T_WoodTrim_Roughness.png"
+dest_files=["res://.godot/imported/T_WoodTrim_Roughness.png-6d182d72ff140c710a053333fc5c56c2.ctex"]
 
 [params]
 

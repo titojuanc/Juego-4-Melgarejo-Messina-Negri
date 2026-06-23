@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://chnmke1a2xkvd"
-path="res://.godot/imported/DoorFrame_Round_Brick.gltf-461fff28cc7572ee9736f39adb8dd3a5.scn"
+path="res://.godot/imported/DoorFrame_Round_Brick.gltf-23156009b98baa854021ea4097687abe.scn"
 
 [deps]
 
-source_file="res://assets/posibles-assets 1(1)/posibles-assets/Medieval Village MegaKit[Standard]/glTF/DoorFrame_Round_Brick.gltf"
-dest_files=["res://.godot/imported/DoorFrame_Round_Brick.gltf-461fff28cc7572ee9736f39adb8dd3a5.scn"]
+source_file="res://assets/Medieval Village MegaKit[Standard]/glTF/DoorFrame_Round_Brick.gltf"
+dest_files=["res://.godot/imported/DoorFrame_Round_Brick.gltf-23156009b98baa854021ea4097687abe.scn"]
 
 [params]
 

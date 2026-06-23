@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bi7ov0e6i7yth"
-path="res://.godot/imported/T_WindowGradient.png-061db8769b4ed679a4c4b6da8c1058e5.ctex"
+path="res://.godot/imported/T_WindowGradient.png-16d5ce25a8b2849bed27ad4e746cfbe7.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/posibles-assets 1(1)/posibles-assets/Medieval Village MegaKit[Standard]/Textures/T_WindowGradient.png"
-dest_files=["res://.godot/imported/T_WindowGradient.png-061db8769b4ed679a4c4b6da8c1058e5.ctex"]
+source_file="res://assets/Medieval Village MegaKit[Standard]/Textures/T_WindowGradient.png"
+dest_files=["res://.godot/imported/T_WindowGradient.png-16d5ce25a8b2849bed27ad4e746cfbe7.ctex"]
 
 [params]
 

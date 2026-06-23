@@ -4,14 +4,14 @@ importer="wavefront_obj"
 importer_version=1
 type="Mesh"
 uid="uid://btxpp1m764r7o"
-path="res://.godot/imported/Door_1_Flat.obj-11d0246734ba97a78a6b177a8a599db0.mesh"
+path="res://.godot/imported/Door_1_Flat.obj-eed53edb684fcf6e27f78ff65199dc60.mesh"
 
 [deps]
 
-files=["res://.godot/imported/Door_1_Flat.obj-11d0246734ba97a78a6b177a8a599db0.mesh"]
+files=["res://.godot/imported/Door_1_Flat.obj-eed53edb684fcf6e27f78ff65199dc60.mesh"]
 
-source_file="res://assets/posibles-assets 1(1)/posibles-assets/Medieval Village MegaKit[Standard]/OBJ/Door_1_Flat.obj"
-dest_files=["res://.godot/imported/Door_1_Flat.obj-11d0246734ba97a78a6b177a8a599db0.mesh", "res://.godot/imported/Door_1_Flat.obj-11d0246734ba97a78a6b177a8a599db0.mesh"]
+source_file="res://assets/Medieval Village MegaKit[Standard]/OBJ/Door_1_Flat.obj"
+dest_files=["res://.godot/imported/Door_1_Flat.obj-eed53edb684fcf6e27f78ff65199dc60.mesh", "res://.godot/imported/Door_1_Flat.obj-eed53edb684fcf6e27f78ff65199dc60.mesh"]
 
 [params]
 

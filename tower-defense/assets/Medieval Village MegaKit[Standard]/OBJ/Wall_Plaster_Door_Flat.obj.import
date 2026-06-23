@@ -4,14 +4,14 @@ importer="wavefront_obj"
 importer_version=1
 type="Mesh"
 uid="uid://ckws5ypaggn3q"
-path="res://.godot/imported/Wall_Plaster_Door_Flat.obj-ea4a9b5e2d05fdd314c60054fa384dd7.mesh"
+path="res://.godot/imported/Wall_Plaster_Door_Flat.obj-d1457d4591422a8a17c30284f4f4f877.mesh"
 
 [deps]
 
-files=["res://.godot/imported/Wall_Plaster_Door_Flat.obj-ea4a9b5e2d05fdd314c60054fa384dd7.mesh"]
+files=["res://.godot/imported/Wall_Plaster_Door_Flat.obj-d1457d4591422a8a17c30284f4f4f877.mesh"]
 
-source_file="res://assets/posibles-assets 1(1)/posibles-assets/Medieval Village MegaKit[Standard]/OBJ/Wall_Plaster_Door_Flat.obj"
-dest_files=["res://.godot/imported/Wall_Plaster_Door_Flat.obj-ea4a9b5e2d05fdd314c60054fa384dd7.mesh", "res://.godot/imported/Wall_Plaster_Door_Flat.obj-ea4a9b5e2d05fdd314c60054fa384dd7.mesh"]
+source_file="res://assets/Medieval Village MegaKit[Standard]/OBJ/Wall_Plaster_Door_Flat.obj"
+dest_files=["res://.godot/imported/Wall_Plaster_Door_Flat.obj-d1457d4591422a8a17c30284f4f4f877.mesh", "res://.godot/imported/Wall_Plaster_Door_Flat.obj-d1457d4591422a8a17c30284f4f4f877.mesh"]
 
 [params]
 

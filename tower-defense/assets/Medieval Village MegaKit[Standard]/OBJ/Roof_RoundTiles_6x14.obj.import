@@ -4,14 +4,14 @@ importer="wavefront_obj"
 importer_version=1
 type="Mesh"
 uid="uid://bfgwdqbberxji"
-path="res://.godot/imported/Roof_RoundTiles_6x14.obj-bf2b1e333caf14dd3d7a40406096ab96.mesh"
+path="res://.godot/imported/Roof_RoundTiles_6x14.obj-8ab98ee1f4b67fd3ffb94b7f98edb0b0.mesh"
 
 [deps]
 
-files=["res://.godot/imported/Roof_RoundTiles_6x14.obj-bf2b1e333caf14dd3d7a40406096ab96.mesh"]
+files=["res://.godot/imported/Roof_RoundTiles_6x14.obj-8ab98ee1f4b67fd3ffb94b7f98edb0b0.mesh"]
 
-source_file="res://assets/posibles-assets 1(1)/posibles-assets/Medieval Village MegaKit[Standard]/OBJ/Roof_RoundTiles_6x14.obj"
-dest_files=["res://.godot/imported/Roof_RoundTiles_6x14.obj-bf2b1e333caf14dd3d7a40406096ab96.mesh", "res://.godot/imported/Roof_RoundTiles_6x14.obj-bf2b1e333caf14dd3d7a40406096ab96.mesh"]
+source_file="res://assets/Medieval Village MegaKit[Standard]/OBJ/Roof_RoundTiles_6x14.obj"
+dest_files=["res://.godot/imported/Roof_RoundTiles_6x14.obj-8ab98ee1f4b67fd3ffb94b7f98edb0b0.mesh", "res://.godot/imported/Roof_RoundTiles_6x14.obj-8ab98ee1f4b67fd3ffb94b7f98edb0b0.mesh"]
 
 [params]
 

@@ -4,14 +4,14 @@ importer="wavefront_obj"
 importer_version=1
 type="Mesh"
 uid="uid://iqpcgjdf3gku"
-path="res://.godot/imported/Prop_Chimney.obj-5db868f436de5ecea7504ecca05f71a3.mesh"
+path="res://.godot/imported/Prop_Chimney.obj-76688d41c7f6de49882fb092c8395cf4.mesh"
 
 [deps]
 
-files=["res://.godot/imported/Prop_Chimney.obj-5db868f436de5ecea7504ecca05f71a3.mesh"]
+files=["res://.godot/imported/Prop_Chimney.obj-76688d41c7f6de49882fb092c8395cf4.mesh"]
 
-source_file="res://assets/posibles-assets 1(1)/posibles-assets/Medieval Village MegaKit[Standard]/OBJ/Prop_Chimney.obj"
-dest_files=["res://.godot/imported/Prop_Chimney.obj-5db868f436de5ecea7504ecca05f71a3.mesh", "res://.godot/imported/Prop_Chimney.obj-5db868f436de5ecea7504ecca05f71a3.mesh"]
+source_file="res://assets/Medieval Village MegaKit[Standard]/OBJ/Prop_Chimney.obj"
+dest_files=["res://.godot/imported/Prop_Chimney.obj-76688d41c7f6de49882fb092c8395cf4.mesh", "res://.godot/imported/Prop_Chimney.obj-76688d41c7f6de49882fb092c8395cf4.mesh"]
 
 [params]
 

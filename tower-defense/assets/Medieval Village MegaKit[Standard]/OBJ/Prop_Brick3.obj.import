@@ -4,14 +4,14 @@ importer="wavefront_obj"
 importer_version=1
 type="Mesh"
 uid="uid://b6pnak8o26cvc"
-path="res://.godot/imported/Prop_Brick3.obj-34942a09930ce2381dec798584ac00a0.mesh"
+path="res://.godot/imported/Prop_Brick3.obj-e9dcd5af7e534c6e3b0bdbc03b217978.mesh"
 
 [deps]
 
-files=["res://.godot/imported/Prop_Brick3.obj-34942a09930ce2381dec798584ac00a0.mesh"]
+files=["res://.godot/imported/Prop_Brick3.obj-e9dcd5af7e534c6e3b0bdbc03b217978.mesh"]
 
-source_file="res://assets/posibles-assets 1(1)/posibles-assets/Medieval Village MegaKit[Standard]/OBJ/Prop_Brick3.obj"
-dest_files=["res://.godot/imported/Prop_Brick3.obj-34942a09930ce2381dec798584ac00a0.mesh", "res://.godot/imported/Prop_Brick3.obj-34942a09930ce2381dec798584ac00a0.mesh"]
+source_file="res://assets/Medieval Village MegaKit[Standard]/OBJ/Prop_Brick3.obj"
+dest_files=["res://.godot/imported/Prop_Brick3.obj-e9dcd5af7e534c6e3b0bdbc03b217978.mesh", "res://.godot/imported/Prop_Brick3.obj-e9dcd5af7e534c6e3b0bdbc03b217978.mesh"]
 
 [params]
 

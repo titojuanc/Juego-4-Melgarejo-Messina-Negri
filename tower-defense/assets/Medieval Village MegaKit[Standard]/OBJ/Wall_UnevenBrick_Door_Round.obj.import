@@ -4,14 +4,14 @@ importer="wavefront_obj"
 importer_version=1
 type="Mesh"
 uid="uid://c7lemo1mk8bw8"
-path="res://.godot/imported/Wall_UnevenBrick_Door_Round.obj-ebbfa6df2d54a93d112b36e573639c74.mesh"
+path="res://.godot/imported/Wall_UnevenBrick_Door_Round.obj-c61623f2d49513fb5d1775939ee9786d.mesh"
 
 [deps]
 
-files=["res://.godot/imported/Wall_UnevenBrick_Door_Round.obj-ebbfa6df2d54a93d112b36e573639c74.mesh"]
+files=["res://.godot/imported/Wall_UnevenBrick_Door_Round.obj-c61623f2d49513fb5d1775939ee9786d.mesh"]
 
-source_file="res://assets/posibles-assets 1(1)/posibles-assets/Medieval Village MegaKit[Standard]/OBJ/Wall_UnevenBrick_Door_Round.obj"
-dest_files=["res://.godot/imported/Wall_UnevenBrick_Door_Round.obj-ebbfa6df2d54a93d112b36e573639c74.mesh", "res://.godot/imported/Wall_UnevenBrick_Door_Round.obj-ebbfa6df2d54a93d112b36e573639c74.mesh"]
+source_file="res://assets/Medieval Village MegaKit[Standard]/OBJ/Wall_UnevenBrick_Door_Round.obj"
+dest_files=["res://.godot/imported/Wall_UnevenBrick_Door_Round.obj-c61623f2d49513fb5d1775939ee9786d.mesh", "res://.godot/imported/Wall_UnevenBrick_Door_Round.obj-c61623f2d49513fb5d1775939ee9786d.mesh"]
 
 [params]
 

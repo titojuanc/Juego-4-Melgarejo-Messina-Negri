@@ -4,14 +4,14 @@ importer="wavefront_obj"
 importer_version=1
 type="Mesh"
 uid="uid://dxou886xu0jmg"
-path="res://.godot/imported/Corner_ExteriorWide_Brick.obj-cff04dd9d55ad69c578514da33ad4554.mesh"
+path="res://.godot/imported/Corner_ExteriorWide_Brick.obj-657219460626435c8d571460d460710d.mesh"
 
 [deps]
 
-files=["res://.godot/imported/Corner_ExteriorWide_Brick.obj-cff04dd9d55ad69c578514da33ad4554.mesh"]
+files=["res://.godot/imported/Corner_ExteriorWide_Brick.obj-657219460626435c8d571460d460710d.mesh"]
 
-source_file="res://assets/posibles-assets 1(1)/posibles-assets/Medieval Village MegaKit[Standard]/OBJ/Corner_ExteriorWide_Brick.obj"
-dest_files=["res://.godot/imported/Corner_ExteriorWide_Brick.obj-cff04dd9d55ad69c578514da33ad4554.mesh", "res://.godot/imported/Corner_ExteriorWide_Brick.obj-cff04dd9d55ad69c578514da33ad4554.mesh"]
+source_file="res://assets/Medieval Village MegaKit[Standard]/OBJ/Corner_ExteriorWide_Brick.obj"
+dest_files=["res://.godot/imported/Corner_ExteriorWide_Brick.obj-657219460626435c8d571460d460710d.mesh", "res://.godot/imported/Corner_ExteriorWide_Brick.obj-657219460626435c8d571460d460710d.mesh"]
 
 [params]
 

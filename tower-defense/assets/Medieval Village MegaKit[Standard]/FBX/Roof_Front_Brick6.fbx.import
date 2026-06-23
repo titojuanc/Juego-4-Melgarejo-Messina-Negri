@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://cnsorwdys0y5m"
-path="res://.godot/imported/Roof_Front_Brick6.fbx-77eb5bffe7e9b7aa4d74b44f123b0681.scn"
+path="res://.godot/imported/Roof_Front_Brick6.fbx-a6b580de8521467bf94f852cf4f9330b.scn"
 
 [deps]
 
-source_file="res://assets/posibles-assets 1(1)/posibles-assets/Medieval Village MegaKit[Standard]/FBX/Roof_Front_Brick6.fbx"
-dest_files=["res://.godot/imported/Roof_Front_Brick6.fbx-77eb5bffe7e9b7aa4d74b44f123b0681.scn"]
+source_file="res://assets/Medieval Village MegaKit[Standard]/FBX/Roof_Front_Brick6.fbx"
+dest_files=["res://.godot/imported/Roof_Front_Brick6.fbx-a6b580de8521467bf94f852cf4f9330b.scn"]
 
 [params]
 

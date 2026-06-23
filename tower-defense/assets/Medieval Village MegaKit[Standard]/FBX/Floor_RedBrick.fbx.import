@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://bxaysdqnmx1tj"
-path="res://.godot/imported/Floor_RedBrick.fbx-35252da01d70cba0f7786cc5e445e33f.scn"
+path="res://.godot/imported/Floor_RedBrick.fbx-9ceede45a10a2198ff3347799b4722d9.scn"
 
 [deps]
 
-source_file="res://assets/posibles-assets 1(1)/posibles-assets/Medieval Village MegaKit[Standard]/FBX/Floor_RedBrick.fbx"
-dest_files=["res://.godot/imported/Floor_RedBrick.fbx-35252da01d70cba0f7786cc5e445e33f.scn"]
+source_file="res://assets/Medieval Village MegaKit[Standard]/FBX/Floor_RedBrick.fbx"
+dest_files=["res://.godot/imported/Floor_RedBrick.fbx-9ceede45a10a2198ff3347799b4722d9.scn"]
 
 [params]
 

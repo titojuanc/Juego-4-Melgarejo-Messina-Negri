@@ -4,14 +4,14 @@ importer="wavefront_obj"
 importer_version=1
 type="Mesh"
 uid="uid://ck8i3drq7di34"
-path="res://.godot/imported/Balcony_Simple_Straight.obj-701610ea4e23be089e5a1fee6cfcd496.mesh"
+path="res://.godot/imported/Balcony_Simple_Straight.obj-5c5e385c171fd246a71443bd69a787d6.mesh"
 
 [deps]
 
-files=["res://.godot/imported/Balcony_Simple_Straight.obj-701610ea4e23be089e5a1fee6cfcd496.mesh"]
+files=["res://.godot/imported/Balcony_Simple_Straight.obj-5c5e385c171fd246a71443bd69a787d6.mesh"]
 
-source_file="res://assets/posibles-assets 1(1)/posibles-assets/Medieval Village MegaKit[Standard]/OBJ/Balcony_Simple_Straight.obj"
-dest_files=["res://.godot/imported/Balcony_Simple_Straight.obj-701610ea4e23be089e5a1fee6cfcd496.mesh", "res://.godot/imported/Balcony_Simple_Straight.obj-701610ea4e23be089e5a1fee6cfcd496.mesh"]
+source_file="res://assets/Medieval Village MegaKit[Standard]/OBJ/Balcony_Simple_Straight.obj"
+dest_files=["res://.godot/imported/Balcony_Simple_Straight.obj-5c5e385c171fd246a71443bd69a787d6.mesh", "res://.godot/imported/Balcony_Simple_Straight.obj-5c5e385c171fd246a71443bd69a787d6.mesh"]
 
 [params]
 

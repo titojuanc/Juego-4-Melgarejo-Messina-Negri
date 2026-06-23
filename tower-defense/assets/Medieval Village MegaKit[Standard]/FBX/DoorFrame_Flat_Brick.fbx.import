@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://i4hm4tf4tdxf"
-path="res://.godot/imported/DoorFrame_Flat_Brick.fbx-ffdfef9cdda4231c82b528b9bee1b846.scn"
+path="res://.godot/imported/DoorFrame_Flat_Brick.fbx-da737ad8e81ed92272c291a3c450d527.scn"
 
 [deps]
 
-source_file="res://assets/posibles-assets 1(1)/posibles-assets/Medieval Village MegaKit[Standard]/FBX/DoorFrame_Flat_Brick.fbx"
-dest_files=["res://.godot/imported/DoorFrame_Flat_Brick.fbx-ffdfef9cdda4231c82b528b9bee1b846.scn"]
+source_file="res://assets/Medieval Village MegaKit[Standard]/FBX/DoorFrame_Flat_Brick.fbx"
+dest_files=["res://.godot/imported/DoorFrame_Flat_Brick.fbx-da737ad8e81ed92272c291a3c450d527.scn"]
 
 [params]
 

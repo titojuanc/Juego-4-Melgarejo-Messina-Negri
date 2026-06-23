@@ -4,14 +4,14 @@ importer="wavefront_obj"
 importer_version=1
 type="Mesh"
 uid="uid://bovs3vfkhgid3"
-path="res://.godot/imported/Wall_Plaster_Straight_R.obj-2ee50d5726e4778ab2774f3cdbd91ced.mesh"
+path="res://.godot/imported/Wall_Plaster_Straight_R.obj-ca16074c6bcd7e941c4b51e98d3e0006.mesh"
 
 [deps]
 
-files=["res://.godot/imported/Wall_Plaster_Straight_R.obj-2ee50d5726e4778ab2774f3cdbd91ced.mesh"]
+files=["res://.godot/imported/Wall_Plaster_Straight_R.obj-ca16074c6bcd7e941c4b51e98d3e0006.mesh"]
 
-source_file="res://assets/posibles-assets 1(1)/posibles-assets/Medieval Village MegaKit[Standard]/OBJ/Wall_Plaster_Straight_R.obj"
-dest_files=["res://.godot/imported/Wall_Plaster_Straight_R.obj-2ee50d5726e4778ab2774f3cdbd91ced.mesh", "res://.godot/imported/Wall_Plaster_Straight_R.obj-2ee50d5726e4778ab2774f3cdbd91ced.mesh"]
+source_file="res://assets/Medieval Village MegaKit[Standard]/OBJ/Wall_Plaster_Straight_R.obj"
+dest_files=["res://.godot/imported/Wall_Plaster_Straight_R.obj-ca16074c6bcd7e941c4b51e98d3e0006.mesh", "res://.godot/imported/Wall_Plaster_Straight_R.obj-ca16074c6bcd7e941c4b51e98d3e0006.mesh"]
 
 [params]
 

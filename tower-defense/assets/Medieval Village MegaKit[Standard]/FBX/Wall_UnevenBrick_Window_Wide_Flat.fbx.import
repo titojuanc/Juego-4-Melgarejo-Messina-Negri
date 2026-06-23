@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://grjvf6npax3r"
-path="res://.godot/imported/Wall_UnevenBrick_Window_Wide_Flat.fbx-f39f70aa543cd27f7b8142f48425df71.scn"
+path="res://.godot/imported/Wall_UnevenBrick_Window_Wide_Flat.fbx-df875dd4e129e1cb6de16dba48c0b373.scn"
 
 [deps]
 
-source_file="res://assets/posibles-assets 1(1)/posibles-assets/Medieval Village MegaKit[Standard]/FBX/Wall_UnevenBrick_Window_Wide_Flat.fbx"
-dest_files=["res://.godot/imported/Wall_UnevenBrick_Window_Wide_Flat.fbx-f39f70aa543cd27f7b8142f48425df71.scn"]
+source_file="res://assets/Medieval Village MegaKit[Standard]/FBX/Wall_UnevenBrick_Window_Wide_Flat.fbx"
+dest_files=["res://.godot/imported/Wall_UnevenBrick_Window_Wide_Flat.fbx-df875dd4e129e1cb6de16dba48c0b373.scn"]
 
 [params]
 

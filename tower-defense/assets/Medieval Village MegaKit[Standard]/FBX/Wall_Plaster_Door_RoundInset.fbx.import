@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://dune3g3pto67f"
-path="res://.godot/imported/Wall_Plaster_Door_RoundInset.fbx-3be5f0bdd4ed3d18a17bbaada0d58b85.scn"
+path="res://.godot/imported/Wall_Plaster_Door_RoundInset.fbx-a0405647759e3e4dbc6a92ea3c3cbe47.scn"
 
 [deps]
 
-source_file="res://assets/posibles-assets 1(1)/posibles-assets/Medieval Village MegaKit[Standard]/FBX/Wall_Plaster_Door_RoundInset.fbx"
-dest_files=["res://.godot/imported/Wall_Plaster_Door_RoundInset.fbx-3be5f0bdd4ed3d18a17bbaada0d58b85.scn"]
+source_file="res://assets/Medieval Village MegaKit[Standard]/FBX/Wall_Plaster_Door_RoundInset.fbx"
+dest_files=["res://.godot/imported/Wall_Plaster_Door_RoundInset.fbx-a0405647759e3e4dbc6a92ea3c3cbe47.scn"]
 
 [params]
 

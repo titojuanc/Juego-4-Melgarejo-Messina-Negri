@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://6jwp6s7563q3"
-path="res://.godot/imported/Stair_Interior_Solid.fbx-abb21df72c82d075827110a913c1e082.scn"
+path="res://.godot/imported/Stair_Interior_Solid.fbx-58f9ee6c21d0ea09d0ba169d7a824591.scn"
 
 [deps]
 
-source_file="res://assets/posibles-assets 1(1)/posibles-assets/Medieval Village MegaKit[Standard]/FBX/Stair_Interior_Solid.fbx"
-dest_files=["res://.godot/imported/Stair_Interior_Solid.fbx-abb21df72c82d075827110a913c1e082.scn"]
+source_file="res://assets/Medieval Village MegaKit[Standard]/FBX/Stair_Interior_Solid.fbx"
+dest_files=["res://.godot/imported/Stair_Interior_Solid.fbx-58f9ee6c21d0ea09d0ba169d7a824591.scn"]
 
 [params]
 

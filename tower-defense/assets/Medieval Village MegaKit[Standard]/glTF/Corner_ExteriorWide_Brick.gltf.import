@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://bbu3nxjtwmsj4"
-path="res://.godot/imported/Corner_ExteriorWide_Brick.gltf-71e64c565a470e8c2ef79f40ead12495.scn"
+path="res://.godot/imported/Corner_ExteriorWide_Brick.gltf-75159f0a2c643b7acda8be4d20d87b41.scn"
 
 [deps]
 
-source_file="res://assets/posibles-assets 1(1)/posibles-assets/Medieval Village MegaKit[Standard]/glTF/Corner_ExteriorWide_Brick.gltf"
-dest_files=["res://.godot/imported/Corner_ExteriorWide_Brick.gltf-71e64c565a470e8c2ef79f40ead12495.scn"]
+source_file="res://assets/Medieval Village MegaKit[Standard]/glTF/Corner_ExteriorWide_Brick.gltf"
+dest_files=["res://.godot/imported/Corner_ExteriorWide_Brick.gltf-75159f0a2c643b7acda8be4d20d87b41.scn"]
 
 [params]
 

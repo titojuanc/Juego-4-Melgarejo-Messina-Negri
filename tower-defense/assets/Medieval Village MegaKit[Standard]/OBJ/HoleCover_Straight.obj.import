@@ -4,14 +4,14 @@ importer="wavefront_obj"
 importer_version=1
 type="Mesh"
 uid="uid://cvss5iurxfnoj"
-path="res://.godot/imported/HoleCover_Straight.obj-dd5f35d91fa073cbe06101ce582b22d4.mesh"
+path="res://.godot/imported/HoleCover_Straight.obj-4f871f9d869c46d7277f80453ce0d6f6.mesh"
 
 [deps]
 
-files=["res://.godot/imported/HoleCover_Straight.obj-dd5f35d91fa073cbe06101ce582b22d4.mesh"]
+files=["res://.godot/imported/HoleCover_Straight.obj-4f871f9d869c46d7277f80453ce0d6f6.mesh"]
 
-source_file="res://assets/posibles-assets 1(1)/posibles-assets/Medieval Village MegaKit[Standard]/OBJ/HoleCover_Straight.obj"
-dest_files=["res://.godot/imported/HoleCover_Straight.obj-dd5f35d91fa073cbe06101ce582b22d4.mesh", "res://.godot/imported/HoleCover_Straight.obj-dd5f35d91fa073cbe06101ce582b22d4.mesh"]
+source_file="res://assets/Medieval Village MegaKit[Standard]/OBJ/HoleCover_Straight.obj"
+dest_files=["res://.godot/imported/HoleCover_Straight.obj-4f871f9d869c46d7277f80453ce0d6f6.mesh", "res://.godot/imported/HoleCover_Straight.obj-4f871f9d869c46d7277f80453ce0d6f6.mesh"]
 
 [params]
 

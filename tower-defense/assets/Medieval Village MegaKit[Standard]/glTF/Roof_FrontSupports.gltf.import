@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://bp3ml8d8yd0nd"
-path="res://.godot/imported/Roof_FrontSupports.gltf-72ba2676556e7e14d49146fa9189afda.scn"
+path="res://.godot/imported/Roof_FrontSupports.gltf-0e1ae1b4fcf822298ca54e980f0a4d14.scn"
 
 [deps]
 
-source_file="res://assets/posibles-assets 1(1)/posibles-assets/Medieval Village MegaKit[Standard]/glTF/Roof_FrontSupports.gltf"
-dest_files=["res://.godot/imported/Roof_FrontSupports.gltf-72ba2676556e7e14d49146fa9189afda.scn"]
+source_file="res://assets/Medieval Village MegaKit[Standard]/glTF/Roof_FrontSupports.gltf"
+dest_files=["res://.godot/imported/Roof_FrontSupports.gltf-0e1ae1b4fcf822298ca54e980f0a4d14.scn"]
 
 [params]
 

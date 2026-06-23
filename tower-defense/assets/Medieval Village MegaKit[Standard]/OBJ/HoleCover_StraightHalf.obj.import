@@ -4,14 +4,14 @@ importer="wavefront_obj"
 importer_version=1
 type="Mesh"
 uid="uid://bkqdev3viabcm"
-path="res://.godot/imported/HoleCover_StraightHalf.obj-d3ecbd5b5821d2deb24b172d738eeed8.mesh"
+path="res://.godot/imported/HoleCover_StraightHalf.obj-dd7d67556c445114f89dd90f67c57d1d.mesh"
 
 [deps]
 
-files=["res://.godot/imported/HoleCover_StraightHalf.obj-d3ecbd5b5821d2deb24b172d738eeed8.mesh"]
+files=["res://.godot/imported/HoleCover_StraightHalf.obj-dd7d67556c445114f89dd90f67c57d1d.mesh"]
 
-source_file="res://assets/posibles-assets 1(1)/posibles-assets/Medieval Village MegaKit[Standard]/OBJ/HoleCover_StraightHalf.obj"
-dest_files=["res://.godot/imported/HoleCover_StraightHalf.obj-d3ecbd5b5821d2deb24b172d738eeed8.mesh", "res://.godot/imported/HoleCover_StraightHalf.obj-d3ecbd5b5821d2deb24b172d738eeed8.mesh"]
+source_file="res://assets/Medieval Village MegaKit[Standard]/OBJ/HoleCover_StraightHalf.obj"
+dest_files=["res://.godot/imported/HoleCover_StraightHalf.obj-dd7d67556c445114f89dd90f67c57d1d.mesh", "res://.godot/imported/HoleCover_StraightHalf.obj-dd7d67556c445114f89dd90f67c57d1d.mesh"]
 
 [params]
 

@@ -4,14 +4,14 @@ importer="wavefront_obj"
 importer_version=1
 type="Mesh"
 uid="uid://cmx4idl8co3hf"
-path="res://.godot/imported/Wall_UnevenBrick_Straight.obj-a83e4560022a3dd6f29330eec1571c3d.mesh"
+path="res://.godot/imported/Wall_UnevenBrick_Straight.obj-60f85f8c53d6c0f3ce898d756a6ea3d0.mesh"
 
 [deps]
 
-files=["res://.godot/imported/Wall_UnevenBrick_Straight.obj-a83e4560022a3dd6f29330eec1571c3d.mesh"]
+files=["res://.godot/imported/Wall_UnevenBrick_Straight.obj-60f85f8c53d6c0f3ce898d756a6ea3d0.mesh"]
 
-source_file="res://assets/posibles-assets 1(1)/posibles-assets/Medieval Village MegaKit[Standard]/OBJ/Wall_UnevenBrick_Straight.obj"
-dest_files=["res://.godot/imported/Wall_UnevenBrick_Straight.obj-a83e4560022a3dd6f29330eec1571c3d.mesh", "res://.godot/imported/Wall_UnevenBrick_Straight.obj-a83e4560022a3dd6f29330eec1571c3d.mesh"]
+source_file="res://assets/Medieval Village MegaKit[Standard]/OBJ/Wall_UnevenBrick_Straight.obj"
+dest_files=["res://.godot/imported/Wall_UnevenBrick_Straight.obj-60f85f8c53d6c0f3ce898d756a6ea3d0.mesh", "res://.godot/imported/Wall_UnevenBrick_Straight.obj-60f85f8c53d6c0f3ce898d756a6ea3d0.mesh"]
 
 [params]
 

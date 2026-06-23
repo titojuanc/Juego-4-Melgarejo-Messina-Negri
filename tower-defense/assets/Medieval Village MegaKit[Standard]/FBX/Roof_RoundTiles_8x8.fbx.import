@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://bp64osl6oiqy0"
-path="res://.godot/imported/Roof_RoundTiles_8x8.fbx-364fe0f1440637a2d8bf49cb7cebf687.scn"
+path="res://.godot/imported/Roof_RoundTiles_8x8.fbx-def847c6e23fce6114efda771933bc42.scn"
 
 [deps]
 
-source_file="res://assets/posibles-assets 1(1)/posibles-assets/Medieval Village MegaKit[Standard]/FBX/Roof_RoundTiles_8x8.fbx"
-dest_files=["res://.godot/imported/Roof_RoundTiles_8x8.fbx-364fe0f1440637a2d8bf49cb7cebf687.scn"]
+source_file="res://assets/Medieval Village MegaKit[Standard]/FBX/Roof_RoundTiles_8x8.fbx"
+dest_files=["res://.godot/imported/Roof_RoundTiles_8x8.fbx-def847c6e23fce6114efda771933bc42.scn"]
 
 [params]
 

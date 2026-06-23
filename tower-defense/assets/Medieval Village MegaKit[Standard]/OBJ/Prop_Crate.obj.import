@@ -4,14 +4,14 @@ importer="wavefront_obj"
 importer_version=1
 type="Mesh"
 uid="uid://6nhbhegony1q"
-path="res://.godot/imported/Prop_Crate.obj-47be2264e576910465c94bc20506c8a2.mesh"
+path="res://.godot/imported/Prop_Crate.obj-7e534fba8e3dd66109f25c55037599eb.mesh"
 
 [deps]
 
-files=["res://.godot/imported/Prop_Crate.obj-47be2264e576910465c94bc20506c8a2.mesh"]
+files=["res://.godot/imported/Prop_Crate.obj-7e534fba8e3dd66109f25c55037599eb.mesh"]
 
-source_file="res://assets/posibles-assets 1(1)/posibles-assets/Medieval Village MegaKit[Standard]/OBJ/Prop_Crate.obj"
-dest_files=["res://.godot/imported/Prop_Crate.obj-47be2264e576910465c94bc20506c8a2.mesh", "res://.godot/imported/Prop_Crate.obj-47be2264e576910465c94bc20506c8a2.mesh"]
+source_file="res://assets/Medieval Village MegaKit[Standard]/OBJ/Prop_Crate.obj"
+dest_files=["res://.godot/imported/Prop_Crate.obj-7e534fba8e3dd66109f25c55037599eb.mesh", "res://.godot/imported/Prop_Crate.obj-7e534fba8e3dd66109f25c55037599eb.mesh"]
 
 [params]
 

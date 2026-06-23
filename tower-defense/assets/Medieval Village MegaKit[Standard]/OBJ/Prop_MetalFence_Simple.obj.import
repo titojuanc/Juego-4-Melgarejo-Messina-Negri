@@ -4,14 +4,14 @@ importer="wavefront_obj"
 importer_version=1
 type="Mesh"
 uid="uid://dkp2n40atulfd"
-path="res://.godot/imported/Prop_MetalFence_Simple.obj-3f1ebf4f94f3a039984cfb12ed4b2e61.mesh"
+path="res://.godot/imported/Prop_MetalFence_Simple.obj-9a27d0d655f885bfe5e2abcc0decfb6d.mesh"
 
 [deps]
 
-files=["res://.godot/imported/Prop_MetalFence_Simple.obj-3f1ebf4f94f3a039984cfb12ed4b2e61.mesh"]
+files=["res://.godot/imported/Prop_MetalFence_Simple.obj-9a27d0d655f885bfe5e2abcc0decfb6d.mesh"]
 
-source_file="res://assets/posibles-assets 1(1)/posibles-assets/Medieval Village MegaKit[Standard]/OBJ/Prop_MetalFence_Simple.obj"
-dest_files=["res://.godot/imported/Prop_MetalFence_Simple.obj-3f1ebf4f94f3a039984cfb12ed4b2e61.mesh", "res://.godot/imported/Prop_MetalFence_Simple.obj-3f1ebf4f94f3a039984cfb12ed4b2e61.mesh"]
+source_file="res://assets/Medieval Village MegaKit[Standard]/OBJ/Prop_MetalFence_Simple.obj"
+dest_files=["res://.godot/imported/Prop_MetalFence_Simple.obj-9a27d0d655f885bfe5e2abcc0decfb6d.mesh", "res://.godot/imported/Prop_MetalFence_Simple.obj-9a27d0d655f885bfe5e2abcc0decfb6d.mesh"]
 
 [params]
 

@@ -4,14 +4,14 @@ importer="wavefront_obj"
 importer_version=1
 type="Mesh"
 uid="uid://he6o3buu8d80"
-path="res://.godot/imported/Window_Wide_Flat1.obj-d5ae12298f7ec6f6083a7da3cf9ffad7.mesh"
+path="res://.godot/imported/Window_Wide_Flat1.obj-2e626fb9f03ef21abaa08a4cc6ecb612.mesh"
 
 [deps]
 
-files=["res://.godot/imported/Window_Wide_Flat1.obj-d5ae12298f7ec6f6083a7da3cf9ffad7.mesh"]
+files=["res://.godot/imported/Window_Wide_Flat1.obj-2e626fb9f03ef21abaa08a4cc6ecb612.mesh"]
 
-source_file="res://assets/posibles-assets 1(1)/posibles-assets/Medieval Village MegaKit[Standard]/OBJ/Window_Wide_Flat1.obj"
-dest_files=["res://.godot/imported/Window_Wide_Flat1.obj-d5ae12298f7ec6f6083a7da3cf9ffad7.mesh", "res://.godot/imported/Window_Wide_Flat1.obj-d5ae12298f7ec6f6083a7da3cf9ffad7.mesh"]
+source_file="res://assets/Medieval Village MegaKit[Standard]/OBJ/Window_Wide_Flat1.obj"
+dest_files=["res://.godot/imported/Window_Wide_Flat1.obj-2e626fb9f03ef21abaa08a4cc6ecb612.mesh", "res://.godot/imported/Window_Wide_Flat1.obj-2e626fb9f03ef21abaa08a4cc6ecb612.mesh"]
 
 [params]
 

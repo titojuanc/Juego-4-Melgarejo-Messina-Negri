@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://ba8m708ket6wc"
-path="res://.godot/imported/DoorFrame_Flat_WoodDark.fbx-b5d97547f0bb970c298d66bf78d8f6b3.scn"
+path="res://.godot/imported/DoorFrame_Flat_WoodDark.fbx-9a410c8a7939e0accf12e1c8f4db34b7.scn"
 
 [deps]
 
-source_file="res://assets/posibles-assets 1(1)/posibles-assets/Medieval Village MegaKit[Standard]/FBX/DoorFrame_Flat_WoodDark.fbx"
-dest_files=["res://.godot/imported/DoorFrame_Flat_WoodDark.fbx-b5d97547f0bb970c298d66bf78d8f6b3.scn"]
+source_file="res://assets/Medieval Village MegaKit[Standard]/FBX/DoorFrame_Flat_WoodDark.fbx"
+dest_files=["res://.godot/imported/DoorFrame_Flat_WoodDark.fbx-9a410c8a7939e0accf12e1c8f4db34b7.scn"]
 
 [params]
 

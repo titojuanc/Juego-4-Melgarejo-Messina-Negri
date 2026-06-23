@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://f3bdaf0urh6e"
-path="res://.godot/imported/T_BrushedNoise.png-891eb9d99ddcfe7584d260fbb6fe226b.ctex"
+path="res://.godot/imported/T_BrushedNoise.png-f8642f9bfb1a255c4b3c595ff2f3e97d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/posibles-assets 1(1)/posibles-assets/Medieval Village MegaKit[Standard]/Textures/T_BrushedNoise.png"
-dest_files=["res://.godot/imported/T_BrushedNoise.png-891eb9d99ddcfe7584d260fbb6fe226b.ctex"]
+source_file="res://assets/Medieval Village MegaKit[Standard]/Textures/T_BrushedNoise.png"
+dest_files=["res://.godot/imported/T_BrushedNoise.png-f8642f9bfb1a255c4b3c595ff2f3e97d.ctex"]
 
 [params]
 

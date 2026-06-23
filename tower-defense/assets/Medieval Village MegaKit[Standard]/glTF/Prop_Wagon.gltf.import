@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://bpuicuelqjdv8"
-path="res://.godot/imported/Prop_Wagon.gltf-cdc1a8f0b58fbadecdfb379bdbc858b5.scn"
+path="res://.godot/imported/Prop_Wagon.gltf-3767e0dade30d0f810efb724abc860f1.scn"
 
 [deps]
 
-source_file="res://assets/posibles-assets 1(1)/posibles-assets/Medieval Village MegaKit[Standard]/glTF/Prop_Wagon.gltf"
-dest_files=["res://.godot/imported/Prop_Wagon.gltf-cdc1a8f0b58fbadecdfb379bdbc858b5.scn"]
+source_file="res://assets/Medieval Village MegaKit[Standard]/glTF/Prop_Wagon.gltf"
+dest_files=["res://.godot/imported/Prop_Wagon.gltf-3767e0dade30d0f810efb724abc860f1.scn"]
 
 [params]
 

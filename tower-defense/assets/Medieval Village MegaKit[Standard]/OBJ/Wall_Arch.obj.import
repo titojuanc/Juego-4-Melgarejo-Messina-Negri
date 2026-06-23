@@ -4,14 +4,14 @@ importer="wavefront_obj"
 importer_version=1
 type="Mesh"
 uid="uid://dvafllanvcwf2"
-path="res://.godot/imported/Wall_Arch.obj-e4c806aa25196c87c8983a4fc8afa7a1.mesh"
+path="res://.godot/imported/Wall_Arch.obj-f4948f7cc802fa0aa8b5db4801e044a0.mesh"
 
 [deps]
 
-files=["res://.godot/imported/Wall_Arch.obj-e4c806aa25196c87c8983a4fc8afa7a1.mesh"]
+files=["res://.godot/imported/Wall_Arch.obj-f4948f7cc802fa0aa8b5db4801e044a0.mesh"]
 
-source_file="res://assets/posibles-assets 1(1)/posibles-assets/Medieval Village MegaKit[Standard]/OBJ/Wall_Arch.obj"
-dest_files=["res://.godot/imported/Wall_Arch.obj-e4c806aa25196c87c8983a4fc8afa7a1.mesh", "res://.godot/imported/Wall_Arch.obj-e4c806aa25196c87c8983a4fc8afa7a1.mesh"]
+source_file="res://assets/Medieval Village MegaKit[Standard]/OBJ/Wall_Arch.obj"
+dest_files=["res://.godot/imported/Wall_Arch.obj-f4948f7cc802fa0aa8b5db4801e044a0.mesh", "res://.godot/imported/Wall_Arch.obj-f4948f7cc802fa0aa8b5db4801e044a0.mesh"]
 
 [params]
 

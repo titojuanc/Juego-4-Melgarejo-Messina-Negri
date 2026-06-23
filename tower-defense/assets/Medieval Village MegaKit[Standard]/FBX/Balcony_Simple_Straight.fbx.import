@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://b3rk2knlvao5g"
-path="res://.godot/imported/Balcony_Simple_Straight.fbx-512fc792635778efaa5dc2146fe8c107.scn"
+path="res://.godot/imported/Balcony_Simple_Straight.fbx-2e07f65fad3e54b5cd692f24dcfe8437.scn"
 
 [deps]
 
-source_file="res://assets/posibles-assets 1(1)/posibles-assets/Medieval Village MegaKit[Standard]/FBX/Balcony_Simple_Straight.fbx"
-dest_files=["res://.godot/imported/Balcony_Simple_Straight.fbx-512fc792635778efaa5dc2146fe8c107.scn"]
+source_file="res://assets/Medieval Village MegaKit[Standard]/FBX/Balcony_Simple_Straight.fbx"
+dest_files=["res://.godot/imported/Balcony_Simple_Straight.fbx-2e07f65fad3e54b5cd692f24dcfe8437.scn"]
 
 [params]
 

@@ -4,14 +4,14 @@ importer="wavefront_obj"
 importer_version=1
 type="Mesh"
 uid="uid://cb0hhs46dcowy"
-path="res://.godot/imported/Prop_Vine2.obj-f8f6cf693aa22758a54fee8de7c041b9.mesh"
+path="res://.godot/imported/Prop_Vine2.obj-3fc9939f457d452d7cc2342b3ed482d7.mesh"
 
 [deps]
 
-files=["res://.godot/imported/Prop_Vine2.obj-f8f6cf693aa22758a54fee8de7c041b9.mesh"]
+files=["res://.godot/imported/Prop_Vine2.obj-3fc9939f457d452d7cc2342b3ed482d7.mesh"]
 
-source_file="res://assets/posibles-assets 1(1)/posibles-assets/Medieval Village MegaKit[Standard]/OBJ/Prop_Vine2.obj"
-dest_files=["res://.godot/imported/Prop_Vine2.obj-f8f6cf693aa22758a54fee8de7c041b9.mesh", "res://.godot/imported/Prop_Vine2.obj-f8f6cf693aa22758a54fee8de7c041b9.mesh"]
+source_file="res://assets/Medieval Village MegaKit[Standard]/OBJ/Prop_Vine2.obj"
+dest_files=["res://.godot/imported/Prop_Vine2.obj-3fc9939f457d452d7cc2342b3ed482d7.mesh", "res://.godot/imported/Prop_Vine2.obj-3fc9939f457d452d7cc2342b3ed482d7.mesh"]
 
 [params]
 

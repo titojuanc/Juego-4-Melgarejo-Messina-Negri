@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://bhw7dodytykwk"
-path="res://.godot/imported/WindowShutters_Thin_Round_Closed.fbx-67375f7a25aa186ea63982c7c9b33557.scn"
+path="res://.godot/imported/WindowShutters_Thin_Round_Closed.fbx-4c8d6ca92eabedaa4735149fd446debc.scn"
 
 [deps]
 
-source_file="res://assets/posibles-assets 1(1)/posibles-assets/Medieval Village MegaKit[Standard]/FBX/WindowShutters_Thin_Round_Closed.fbx"
-dest_files=["res://.godot/imported/WindowShutters_Thin_Round_Closed.fbx-67375f7a25aa186ea63982c7c9b33557.scn"]
+source_file="res://assets/Medieval Village MegaKit[Standard]/FBX/WindowShutters_Thin_Round_Closed.fbx"
+dest_files=["res://.godot/imported/WindowShutters_Thin_Round_Closed.fbx-4c8d6ca92eabedaa4735149fd446debc.scn"]
 
 [params]
 

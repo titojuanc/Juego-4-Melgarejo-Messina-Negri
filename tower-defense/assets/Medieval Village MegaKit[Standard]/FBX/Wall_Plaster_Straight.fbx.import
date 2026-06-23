@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://civjep2x1fblq"
-path="res://.godot/imported/Wall_Plaster_Straight.fbx-a1b45d4fbe6748d02be75fabf7bca80a.scn"
+path="res://.godot/imported/Wall_Plaster_Straight.fbx-3cdbc7861a37e25c294782f35cf79cdd.scn"
 
 [deps]
 
-source_file="res://assets/posibles-assets 1(1)/posibles-assets/Medieval Village MegaKit[Standard]/FBX/Wall_Plaster_Straight.fbx"
-dest_files=["res://.godot/imported/Wall_Plaster_Straight.fbx-a1b45d4fbe6748d02be75fabf7bca80a.scn"]
+source_file="res://assets/Medieval Village MegaKit[Standard]/FBX/Wall_Plaster_Straight.fbx"
+dest_files=["res://.godot/imported/Wall_Plaster_Straight.fbx-3cdbc7861a37e25c294782f35cf79cdd.scn"]
 
 [params]
 

@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://tj4ti8422oa0"
-path="res://.godot/imported/Prop_Brick3.fbx-7acf3a1807015c5390cab403709ec7e1.scn"
+path="res://.godot/imported/Prop_Brick3.fbx-f402252c0633f4ef8d6f940418c80dd0.scn"
 
 [deps]
 
-source_file="res://assets/posibles-assets 1(1)/posibles-assets/Medieval Village MegaKit[Standard]/FBX/Prop_Brick3.fbx"
-dest_files=["res://.godot/imported/Prop_Brick3.fbx-7acf3a1807015c5390cab403709ec7e1.scn"]
+source_file="res://assets/Medieval Village MegaKit[Standard]/FBX/Prop_Brick3.fbx"
+dest_files=["res://.godot/imported/Prop_Brick3.fbx-f402252c0633f4ef8d6f940418c80dd0.scn"]
 
 [params]
 

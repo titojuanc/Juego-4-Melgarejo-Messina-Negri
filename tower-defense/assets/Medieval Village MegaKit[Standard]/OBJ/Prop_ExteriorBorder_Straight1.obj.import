@@ -4,14 +4,14 @@ importer="wavefront_obj"
 importer_version=1
 type="Mesh"
 uid="uid://cgh4l1wcp1y3f"
-path="res://.godot/imported/Prop_ExteriorBorder_Straight1.obj-e62c5627c6bf7745be48a0e39132809d.mesh"
+path="res://.godot/imported/Prop_ExteriorBorder_Straight1.obj-04403356636ef8d15349ec14934c8b12.mesh"
 
 [deps]
 
-files=["res://.godot/imported/Prop_ExteriorBorder_Straight1.obj-e62c5627c6bf7745be48a0e39132809d.mesh"]
+files=["res://.godot/imported/Prop_ExteriorBorder_Straight1.obj-04403356636ef8d15349ec14934c8b12.mesh"]
 
-source_file="res://assets/posibles-assets 1(1)/posibles-assets/Medieval Village MegaKit[Standard]/OBJ/Prop_ExteriorBorder_Straight1.obj"
-dest_files=["res://.godot/imported/Prop_ExteriorBorder_Straight1.obj-e62c5627c6bf7745be48a0e39132809d.mesh", "res://.godot/imported/Prop_ExteriorBorder_Straight1.obj-e62c5627c6bf7745be48a0e39132809d.mesh"]
+source_file="res://assets/Medieval Village MegaKit[Standard]/OBJ/Prop_ExteriorBorder_Straight1.obj"
+dest_files=["res://.godot/imported/Prop_ExteriorBorder_Straight1.obj-04403356636ef8d15349ec14934c8b12.mesh", "res://.godot/imported/Prop_ExteriorBorder_Straight1.obj-04403356636ef8d15349ec14934c8b12.mesh"]
 
 [params]
 

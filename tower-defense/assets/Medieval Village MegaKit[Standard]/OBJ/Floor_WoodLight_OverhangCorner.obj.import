@@ -4,14 +4,14 @@ importer="wavefront_obj"
 importer_version=1
 type="Mesh"
 uid="uid://brvki0ntt3alk"
-path="res://.godot/imported/Floor_WoodLight_OverhangCorner.obj-65cc17a87ed148fbb519b942e73d6f0d.mesh"
+path="res://.godot/imported/Floor_WoodLight_OverhangCorner.obj-39df171c5743b77e7d18079fdaed93f9.mesh"
 
 [deps]
 
-files=["res://.godot/imported/Floor_WoodLight_OverhangCorner.obj-65cc17a87ed148fbb519b942e73d6f0d.mesh"]
+files=["res://.godot/imported/Floor_WoodLight_OverhangCorner.obj-39df171c5743b77e7d18079fdaed93f9.mesh"]
 
-source_file="res://assets/posibles-assets 1(1)/posibles-assets/Medieval Village MegaKit[Standard]/OBJ/Floor_WoodLight_OverhangCorner.obj"
-dest_files=["res://.godot/imported/Floor_WoodLight_OverhangCorner.obj-65cc17a87ed148fbb519b942e73d6f0d.mesh", "res://.godot/imported/Floor_WoodLight_OverhangCorner.obj-65cc17a87ed148fbb519b942e73d6f0d.mesh"]
+source_file="res://assets/Medieval Village MegaKit[Standard]/OBJ/Floor_WoodLight_OverhangCorner.obj"
+dest_files=["res://.godot/imported/Floor_WoodLight_OverhangCorner.obj-39df171c5743b77e7d18079fdaed93f9.mesh", "res://.godot/imported/Floor_WoodLight_OverhangCorner.obj-39df171c5743b77e7d18079fdaed93f9.mesh"]
 
 [params]
 

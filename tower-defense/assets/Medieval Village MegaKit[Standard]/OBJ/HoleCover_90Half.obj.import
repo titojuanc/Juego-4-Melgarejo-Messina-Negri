@@ -4,14 +4,14 @@ importer="wavefront_obj"
 importer_version=1
 type="Mesh"
 uid="uid://bxigym4eexajx"
-path="res://.godot/imported/HoleCover_90Half.obj-e9cc94e5d1892ef32c7259ab3245b5bb.mesh"
+path="res://.godot/imported/HoleCover_90Half.obj-b369bb5e861a668829e86b192b56fa51.mesh"
 
 [deps]
 
-files=["res://.godot/imported/HoleCover_90Half.obj-e9cc94e5d1892ef32c7259ab3245b5bb.mesh"]
+files=["res://.godot/imported/HoleCover_90Half.obj-b369bb5e861a668829e86b192b56fa51.mesh"]
 
-source_file="res://assets/posibles-assets 1(1)/posibles-assets/Medieval Village MegaKit[Standard]/OBJ/HoleCover_90Half.obj"
-dest_files=["res://.godot/imported/HoleCover_90Half.obj-e9cc94e5d1892ef32c7259ab3245b5bb.mesh", "res://.godot/imported/HoleCover_90Half.obj-e9cc94e5d1892ef32c7259ab3245b5bb.mesh"]
+source_file="res://assets/Medieval Village MegaKit[Standard]/OBJ/HoleCover_90Half.obj"
+dest_files=["res://.godot/imported/HoleCover_90Half.obj-b369bb5e861a668829e86b192b56fa51.mesh", "res://.godot/imported/HoleCover_90Half.obj-b369bb5e861a668829e86b192b56fa51.mesh"]
 
 [params]
 

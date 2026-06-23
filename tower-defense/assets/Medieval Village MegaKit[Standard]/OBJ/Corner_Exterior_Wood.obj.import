@@ -4,14 +4,14 @@ importer="wavefront_obj"
 importer_version=1
 type="Mesh"
 uid="uid://dfbatv1u5pid1"
-path="res://.godot/imported/Corner_Exterior_Wood.obj-26590105e6172c1b78437710534c5d4e.mesh"
+path="res://.godot/imported/Corner_Exterior_Wood.obj-ab9515ccf7ded34b70504cef97a429d6.mesh"
 
 [deps]
 
-files=["res://.godot/imported/Corner_Exterior_Wood.obj-26590105e6172c1b78437710534c5d4e.mesh"]
+files=["res://.godot/imported/Corner_Exterior_Wood.obj-ab9515ccf7ded34b70504cef97a429d6.mesh"]
 
-source_file="res://assets/posibles-assets 1(1)/posibles-assets/Medieval Village MegaKit[Standard]/OBJ/Corner_Exterior_Wood.obj"
-dest_files=["res://.godot/imported/Corner_Exterior_Wood.obj-26590105e6172c1b78437710534c5d4e.mesh", "res://.godot/imported/Corner_Exterior_Wood.obj-26590105e6172c1b78437710534c5d4e.mesh"]
+source_file="res://assets/Medieval Village MegaKit[Standard]/OBJ/Corner_Exterior_Wood.obj"
+dest_files=["res://.godot/imported/Corner_Exterior_Wood.obj-ab9515ccf7ded34b70504cef97a429d6.mesh", "res://.godot/imported/Corner_Exterior_Wood.obj-ab9515ccf7ded34b70504cef97a429d6.mesh"]
 
 [params]
 

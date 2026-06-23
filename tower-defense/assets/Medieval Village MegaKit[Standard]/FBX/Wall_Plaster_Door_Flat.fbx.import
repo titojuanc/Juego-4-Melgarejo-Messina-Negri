@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://cqfs21lkg6sd4"
-path="res://.godot/imported/Wall_Plaster_Door_Flat.fbx-db4f3e796bfb13cb1bdc2ad5ee268fc3.scn"
+path="res://.godot/imported/Wall_Plaster_Door_Flat.fbx-6c49dd20c43ffad17f6d0efdf0dad729.scn"
 
 [deps]
 
-source_file="res://assets/posibles-assets 1(1)/posibles-assets/Medieval Village MegaKit[Standard]/FBX/Wall_Plaster_Door_Flat.fbx"
-dest_files=["res://.godot/imported/Wall_Plaster_Door_Flat.fbx-db4f3e796bfb13cb1bdc2ad5ee268fc3.scn"]
+source_file="res://assets/Medieval Village MegaKit[Standard]/FBX/Wall_Plaster_Door_Flat.fbx"
+dest_files=["res://.godot/imported/Wall_Plaster_Door_Flat.fbx-6c49dd20c43ffad17f6d0efdf0dad729.scn"]
 
 [params]
 

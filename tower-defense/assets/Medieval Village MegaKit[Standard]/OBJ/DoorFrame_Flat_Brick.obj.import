@@ -4,14 +4,14 @@ importer="wavefront_obj"
 importer_version=1
 type="Mesh"
 uid="uid://cmi82fcm5wkh1"
-path="res://.godot/imported/DoorFrame_Flat_Brick.obj-4ba225ab413bb2ac7dcd75cd7a621993.mesh"
+path="res://.godot/imported/DoorFrame_Flat_Brick.obj-1a46bb7ab5239f79d2814116d072dcc4.mesh"
 
 [deps]
 
-files=["res://.godot/imported/DoorFrame_Flat_Brick.obj-4ba225ab413bb2ac7dcd75cd7a621993.mesh"]
+files=["res://.godot/imported/DoorFrame_Flat_Brick.obj-1a46bb7ab5239f79d2814116d072dcc4.mesh"]
 
-source_file="res://assets/posibles-assets 1(1)/posibles-assets/Medieval Village MegaKit[Standard]/OBJ/DoorFrame_Flat_Brick.obj"
-dest_files=["res://.godot/imported/DoorFrame_Flat_Brick.obj-4ba225ab413bb2ac7dcd75cd7a621993.mesh", "res://.godot/imported/DoorFrame_Flat_Brick.obj-4ba225ab413bb2ac7dcd75cd7a621993.mesh"]
+source_file="res://assets/Medieval Village MegaKit[Standard]/OBJ/DoorFrame_Flat_Brick.obj"
+dest_files=["res://.godot/imported/DoorFrame_Flat_Brick.obj-1a46bb7ab5239f79d2814116d072dcc4.mesh", "res://.godot/imported/DoorFrame_Flat_Brick.obj-1a46bb7ab5239f79d2814116d072dcc4.mesh"]
 
 [params]
 

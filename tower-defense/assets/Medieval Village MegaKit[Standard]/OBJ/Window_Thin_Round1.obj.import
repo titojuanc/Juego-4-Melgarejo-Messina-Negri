@@ -4,14 +4,14 @@ importer="wavefront_obj"
 importer_version=1
 type="Mesh"
 uid="uid://1ix2ubtoxu05"
-path="res://.godot/imported/Window_Thin_Round1.obj-59499c34f6beb20e6b1651ba1235a4ea.mesh"
+path="res://.godot/imported/Window_Thin_Round1.obj-dca7418969de572f93f10b1613a89dcb.mesh"
 
 [deps]
 
-files=["res://.godot/imported/Window_Thin_Round1.obj-59499c34f6beb20e6b1651ba1235a4ea.mesh"]
+files=["res://.godot/imported/Window_Thin_Round1.obj-dca7418969de572f93f10b1613a89dcb.mesh"]
 
-source_file="res://assets/posibles-assets 1(1)/posibles-assets/Medieval Village MegaKit[Standard]/OBJ/Window_Thin_Round1.obj"
-dest_files=["res://.godot/imported/Window_Thin_Round1.obj-59499c34f6beb20e6b1651ba1235a4ea.mesh", "res://.godot/imported/Window_Thin_Round1.obj-59499c34f6beb20e6b1651ba1235a4ea.mesh"]
+source_file="res://assets/Medieval Village MegaKit[Standard]/OBJ/Window_Thin_Round1.obj"
+dest_files=["res://.godot/imported/Window_Thin_Round1.obj-dca7418969de572f93f10b1613a89dcb.mesh", "res://.godot/imported/Window_Thin_Round1.obj-dca7418969de572f93f10b1613a89dcb.mesh"]
 
 [params]
 

@@ -4,14 +4,14 @@ importer="wavefront_obj"
 importer_version=1
 type="Mesh"
 uid="uid://cql2v634mod3l"
-path="res://.godot/imported/Stairs_Exterior_NoFirstStep.obj-0687d12c1a7d73851165078e0231e9fd.mesh"
+path="res://.godot/imported/Stairs_Exterior_NoFirstStep.obj-652f6e22300cdc83884e55a1a3bdd583.mesh"
 
 [deps]
 
-files=["res://.godot/imported/Stairs_Exterior_NoFirstStep.obj-0687d12c1a7d73851165078e0231e9fd.mesh"]
+files=["res://.godot/imported/Stairs_Exterior_NoFirstStep.obj-652f6e22300cdc83884e55a1a3bdd583.mesh"]
 
-source_file="res://assets/posibles-assets 1(1)/posibles-assets/Medieval Village MegaKit[Standard]/OBJ/Stairs_Exterior_NoFirstStep.obj"
-dest_files=["res://.godot/imported/Stairs_Exterior_NoFirstStep.obj-0687d12c1a7d73851165078e0231e9fd.mesh", "res://.godot/imported/Stairs_Exterior_NoFirstStep.obj-0687d12c1a7d73851165078e0231e9fd.mesh"]
+source_file="res://assets/Medieval Village MegaKit[Standard]/OBJ/Stairs_Exterior_NoFirstStep.obj"
+dest_files=["res://.godot/imported/Stairs_Exterior_NoFirstStep.obj-652f6e22300cdc83884e55a1a3bdd583.mesh", "res://.godot/imported/Stairs_Exterior_NoFirstStep.obj-652f6e22300cdc83884e55a1a3bdd583.mesh"]
 
 [params]
 

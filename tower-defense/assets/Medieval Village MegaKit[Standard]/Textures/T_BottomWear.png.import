@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bilqrdpaobi2h"
-path="res://.godot/imported/T_BottomWear.png-57eb78bd320cfec02364cb7549cb7e0d.ctex"
+path="res://.godot/imported/T_BottomWear.png-52d2e1426fb42f97eb847f6ff3d5d304.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/posibles-assets 1(1)/posibles-assets/Medieval Village MegaKit[Standard]/Textures/T_BottomWear.png"
-dest_files=["res://.godot/imported/T_BottomWear.png-57eb78bd320cfec02364cb7549cb7e0d.ctex"]
+source_file="res://assets/Medieval Village MegaKit[Standard]/Textures/T_BottomWear.png"
+dest_files=["res://.godot/imported/T_BottomWear.png-52d2e1426fb42f97eb847f6ff3d5d304.ctex"]
 
 [params]
 

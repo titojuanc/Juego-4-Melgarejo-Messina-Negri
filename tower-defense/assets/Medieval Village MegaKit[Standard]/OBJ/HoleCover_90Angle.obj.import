@@ -4,14 +4,14 @@ importer="wavefront_obj"
 importer_version=1
 type="Mesh"
 uid="uid://c7jgql4beeo3k"
-path="res://.godot/imported/HoleCover_90Angle.obj-b90020d6728a0bc121148e7e2aaa3071.mesh"
+path="res://.godot/imported/HoleCover_90Angle.obj-58968044a569486a3b409576c7c1e69d.mesh"
 
 [deps]
 
-files=["res://.godot/imported/HoleCover_90Angle.obj-b90020d6728a0bc121148e7e2aaa3071.mesh"]
+files=["res://.godot/imported/HoleCover_90Angle.obj-58968044a569486a3b409576c7c1e69d.mesh"]
 
-source_file="res://assets/posibles-assets 1(1)/posibles-assets/Medieval Village MegaKit[Standard]/OBJ/HoleCover_90Angle.obj"
-dest_files=["res://.godot/imported/HoleCover_90Angle.obj-b90020d6728a0bc121148e7e2aaa3071.mesh", "res://.godot/imported/HoleCover_90Angle.obj-b90020d6728a0bc121148e7e2aaa3071.mesh"]
+source_file="res://assets/Medieval Village MegaKit[Standard]/OBJ/HoleCover_90Angle.obj"
+dest_files=["res://.godot/imported/HoleCover_90Angle.obj-58968044a569486a3b409576c7c1e69d.mesh", "res://.godot/imported/HoleCover_90Angle.obj-58968044a569486a3b409576c7c1e69d.mesh"]
 
 [params]
 

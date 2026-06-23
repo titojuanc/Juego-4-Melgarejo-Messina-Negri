@@ -4,14 +4,14 @@ importer="wavefront_obj"
 importer_version=1
 type="Mesh"
 uid="uid://bwn1xqsfmmwj"
-path="res://.godot/imported/HoleCover_90Stairs.obj-61c8b86de6227743c19d221bc2f18136.mesh"
+path="res://.godot/imported/HoleCover_90Stairs.obj-33a85cbf74e7a5422e40a852f216fcea.mesh"
 
 [deps]
 
-files=["res://.godot/imported/HoleCover_90Stairs.obj-61c8b86de6227743c19d221bc2f18136.mesh"]
+files=["res://.godot/imported/HoleCover_90Stairs.obj-33a85cbf74e7a5422e40a852f216fcea.mesh"]
 
-source_file="res://assets/posibles-assets 1(1)/posibles-assets/Medieval Village MegaKit[Standard]/OBJ/HoleCover_90Stairs.obj"
-dest_files=["res://.godot/imported/HoleCover_90Stairs.obj-61c8b86de6227743c19d221bc2f18136.mesh", "res://.godot/imported/HoleCover_90Stairs.obj-61c8b86de6227743c19d221bc2f18136.mesh"]
+source_file="res://assets/Medieval Village MegaKit[Standard]/OBJ/HoleCover_90Stairs.obj"
+dest_files=["res://.godot/imported/HoleCover_90Stairs.obj-33a85cbf74e7a5422e40a852f216fcea.mesh", "res://.godot/imported/HoleCover_90Stairs.obj-33a85cbf74e7a5422e40a852f216fcea.mesh"]
 
 [params]
 

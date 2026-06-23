@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://ct7k1jahbgeal"
-path="res://.godot/imported/Stairs_Exterior_Platform45.fbx-7124f55319a50d960a08364fd30b0710.scn"
+path="res://.godot/imported/Stairs_Exterior_Platform45.fbx-c1d3397bb51f0a5d5cdea4c001d796d5.scn"
 
 [deps]
 
-source_file="res://assets/posibles-assets 1(1)/posibles-assets/Medieval Village MegaKit[Standard]/FBX/Stairs_Exterior_Platform45.fbx"
-dest_files=["res://.godot/imported/Stairs_Exterior_Platform45.fbx-7124f55319a50d960a08364fd30b0710.scn"]
+source_file="res://assets/Medieval Village MegaKit[Standard]/FBX/Stairs_Exterior_Platform45.fbx"
+dest_files=["res://.godot/imported/Stairs_Exterior_Platform45.fbx-c1d3397bb51f0a5d5cdea4c001d796d5.scn"]
 
 [params]
 

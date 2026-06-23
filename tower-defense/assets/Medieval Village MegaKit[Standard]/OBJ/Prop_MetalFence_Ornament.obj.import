@@ -4,14 +4,14 @@ importer="wavefront_obj"
 importer_version=1
 type="Mesh"
 uid="uid://fvoso2vgwhah"
-path="res://.godot/imported/Prop_MetalFence_Ornament.obj-25bb39ee5a35dfd41782933443613b1e.mesh"
+path="res://.godot/imported/Prop_MetalFence_Ornament.obj-2625b7c89691200a042d709d07841393.mesh"
 
 [deps]
 
-files=["res://.godot/imported/Prop_MetalFence_Ornament.obj-25bb39ee5a35dfd41782933443613b1e.mesh"]
+files=["res://.godot/imported/Prop_MetalFence_Ornament.obj-2625b7c89691200a042d709d07841393.mesh"]
 
-source_file="res://assets/posibles-assets 1(1)/posibles-assets/Medieval Village MegaKit[Standard]/OBJ/Prop_MetalFence_Ornament.obj"
-dest_files=["res://.godot/imported/Prop_MetalFence_Ornament.obj-25bb39ee5a35dfd41782933443613b1e.mesh", "res://.godot/imported/Prop_MetalFence_Ornament.obj-25bb39ee5a35dfd41782933443613b1e.mesh"]
+source_file="res://assets/Medieval Village MegaKit[Standard]/OBJ/Prop_MetalFence_Ornament.obj"
+dest_files=["res://.godot/imported/Prop_MetalFence_Ornament.obj-2625b7c89691200a042d709d07841393.mesh", "res://.godot/imported/Prop_MetalFence_Ornament.obj-2625b7c89691200a042d709d07841393.mesh"]
 
 [params]
 

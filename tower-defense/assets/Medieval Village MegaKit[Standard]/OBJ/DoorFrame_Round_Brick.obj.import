@@ -4,14 +4,14 @@ importer="wavefront_obj"
 importer_version=1
 type="Mesh"
 uid="uid://1ivboa4wbf5o"
-path="res://.godot/imported/DoorFrame_Round_Brick.obj-9beb0621e3e0f679437380091b97ce2c.mesh"
+path="res://.godot/imported/DoorFrame_Round_Brick.obj-2f74f51598322c45b1f5d1470d362ebe.mesh"
 
 [deps]
 
-files=["res://.godot/imported/DoorFrame_Round_Brick.obj-9beb0621e3e0f679437380091b97ce2c.mesh"]
+files=["res://.godot/imported/DoorFrame_Round_Brick.obj-2f74f51598322c45b1f5d1470d362ebe.mesh"]
 
-source_file="res://assets/posibles-assets 1(1)/posibles-assets/Medieval Village MegaKit[Standard]/OBJ/DoorFrame_Round_Brick.obj"
-dest_files=["res://.godot/imported/DoorFrame_Round_Brick.obj-9beb0621e3e0f679437380091b97ce2c.mesh", "res://.godot/imported/DoorFrame_Round_Brick.obj-9beb0621e3e0f679437380091b97ce2c.mesh"]
+source_file="res://assets/Medieval Village MegaKit[Standard]/OBJ/DoorFrame_Round_Brick.obj"
+dest_files=["res://.godot/imported/DoorFrame_Round_Brick.obj-2f74f51598322c45b1f5d1470d362ebe.mesh", "res://.godot/imported/DoorFrame_Round_Brick.obj-2f74f51598322c45b1f5d1470d362ebe.mesh"]
 
 [params]
 

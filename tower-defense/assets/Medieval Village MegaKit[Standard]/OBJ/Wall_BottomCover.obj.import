@@ -4,14 +4,14 @@ importer="wavefront_obj"
 importer_version=1
 type="Mesh"
 uid="uid://dpe3ybfwnq3o8"
-path="res://.godot/imported/Wall_BottomCover.obj-8cdbf39f01da2eca2a2cd641aada904b.mesh"
+path="res://.godot/imported/Wall_BottomCover.obj-c86337a16f565112367be8bb87426247.mesh"
 
 [deps]
 
-files=["res://.godot/imported/Wall_BottomCover.obj-8cdbf39f01da2eca2a2cd641aada904b.mesh"]
+files=["res://.godot/imported/Wall_BottomCover.obj-c86337a16f565112367be8bb87426247.mesh"]
 
-source_file="res://assets/posibles-assets 1(1)/posibles-assets/Medieval Village MegaKit[Standard]/OBJ/Wall_BottomCover.obj"
-dest_files=["res://.godot/imported/Wall_BottomCover.obj-8cdbf39f01da2eca2a2cd641aada904b.mesh", "res://.godot/imported/Wall_BottomCover.obj-8cdbf39f01da2eca2a2cd641aada904b.mesh"]
+source_file="res://assets/Medieval Village MegaKit[Standard]/OBJ/Wall_BottomCover.obj"
+dest_files=["res://.godot/imported/Wall_BottomCover.obj-c86337a16f565112367be8bb87426247.mesh", "res://.godot/imported/Wall_BottomCover.obj-c86337a16f565112367be8bb87426247.mesh"]
 
 [params]
 

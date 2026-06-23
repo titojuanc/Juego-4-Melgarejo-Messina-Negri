@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://dfe71mnjgtjor"
-path="res://.godot/imported/Overhang_Roof_Plaster.fbx-ddd26c345ae2278ca24eafd77678ea2d.scn"
+path="res://.godot/imported/Overhang_Roof_Plaster.fbx-16819541f8fb10ca88f13d5b6684a55f.scn"
 
 [deps]
 
-source_file="res://assets/posibles-assets 1(1)/posibles-assets/Medieval Village MegaKit[Standard]/FBX/Overhang_Roof_Plaster.fbx"
-dest_files=["res://.godot/imported/Overhang_Roof_Plaster.fbx-ddd26c345ae2278ca24eafd77678ea2d.scn"]
+source_file="res://assets/Medieval Village MegaKit[Standard]/FBX/Overhang_Roof_Plaster.fbx"
+dest_files=["res://.godot/imported/Overhang_Roof_Plaster.fbx-16819541f8fb10ca88f13d5b6684a55f.scn"]
 
 [params]
 

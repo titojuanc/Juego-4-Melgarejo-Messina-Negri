@@ -4,14 +4,14 @@ importer="wavefront_obj"
 importer_version=1
 type="Mesh"
 uid="uid://bi645w0xxqd6a"
-path="res://.godot/imported/Wall_UnevenBrick_Window_Thin_Round.obj-f8713924e0cac92bac408135434fb8c6.mesh"
+path="res://.godot/imported/Wall_UnevenBrick_Window_Thin_Round.obj-4fd089fc693e3546acd9016a01aee6b0.mesh"
 
 [deps]
 
-files=["res://.godot/imported/Wall_UnevenBrick_Window_Thin_Round.obj-f8713924e0cac92bac408135434fb8c6.mesh"]
+files=["res://.godot/imported/Wall_UnevenBrick_Window_Thin_Round.obj-4fd089fc693e3546acd9016a01aee6b0.mesh"]
 
-source_file="res://assets/posibles-assets 1(1)/posibles-assets/Medieval Village MegaKit[Standard]/OBJ/Wall_UnevenBrick_Window_Thin_Round.obj"
-dest_files=["res://.godot/imported/Wall_UnevenBrick_Window_Thin_Round.obj-f8713924e0cac92bac408135434fb8c6.mesh", "res://.godot/imported/Wall_UnevenBrick_Window_Thin_Round.obj-f8713924e0cac92bac408135434fb8c6.mesh"]
+source_file="res://assets/Medieval Village MegaKit[Standard]/OBJ/Wall_UnevenBrick_Window_Thin_Round.obj"
+dest_files=["res://.godot/imported/Wall_UnevenBrick_Window_Thin_Round.obj-4fd089fc693e3546acd9016a01aee6b0.mesh", "res://.godot/imported/Wall_UnevenBrick_Window_Thin_Round.obj-4fd089fc693e3546acd9016a01aee6b0.mesh"]
 
 [params]
 

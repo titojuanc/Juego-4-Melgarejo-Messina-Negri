@@ -4,14 +4,14 @@ importer="wavefront_obj"
 importer_version=1
 type="Mesh"
 uid="uid://cuxje7w3cru57"
-path="res://.godot/imported/Overhang_Side_UnevenBrick_Long_R.obj-5e8e2bca906fcc3b14e54ea4482c3bf7.mesh"
+path="res://.godot/imported/Overhang_Side_UnevenBrick_Long_R.obj-b68b281dd1728e5cb3e5a33290fe7d60.mesh"
 
 [deps]
 
-files=["res://.godot/imported/Overhang_Side_UnevenBrick_Long_R.obj-5e8e2bca906fcc3b14e54ea4482c3bf7.mesh"]
+files=["res://.godot/imported/Overhang_Side_UnevenBrick_Long_R.obj-b68b281dd1728e5cb3e5a33290fe7d60.mesh"]
 
-source_file="res://assets/posibles-assets 1(1)/posibles-assets/Medieval Village MegaKit[Standard]/OBJ/Overhang_Side_UnevenBrick_Long_R.obj"
-dest_files=["res://.godot/imported/Overhang_Side_UnevenBrick_Long_R.obj-5e8e2bca906fcc3b14e54ea4482c3bf7.mesh", "res://.godot/imported/Overhang_Side_UnevenBrick_Long_R.obj-5e8e2bca906fcc3b14e54ea4482c3bf7.mesh"]
+source_file="res://assets/Medieval Village MegaKit[Standard]/OBJ/Overhang_Side_UnevenBrick_Long_R.obj"
+dest_files=["res://.godot/imported/Overhang_Side_UnevenBrick_Long_R.obj-b68b281dd1728e5cb3e5a33290fe7d60.mesh", "res://.godot/imported/Overhang_Side_UnevenBrick_Long_R.obj-b68b281dd1728e5cb3e5a33290fe7d60.mesh"]
 
 [params]
 

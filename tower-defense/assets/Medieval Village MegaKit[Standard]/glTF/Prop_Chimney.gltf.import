@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://dprqtg43uew1c"
-path="res://.godot/imported/Prop_Chimney.gltf-d9a64eebb859823232cd28b866ce28ab.scn"
+path="res://.godot/imported/Prop_Chimney.gltf-7348247612410afff52567448412cb76.scn"
 
 [deps]
 
-source_file="res://assets/posibles-assets 1(1)/posibles-assets/Medieval Village MegaKit[Standard]/glTF/Prop_Chimney.gltf"
-dest_files=["res://.godot/imported/Prop_Chimney.gltf-d9a64eebb859823232cd28b866ce28ab.scn"]
+source_file="res://assets/Medieval Village MegaKit[Standard]/glTF/Prop_Chimney.gltf"
+dest_files=["res://.godot/imported/Prop_Chimney.gltf-7348247612410afff52567448412cb76.scn"]
 
 [params]
 

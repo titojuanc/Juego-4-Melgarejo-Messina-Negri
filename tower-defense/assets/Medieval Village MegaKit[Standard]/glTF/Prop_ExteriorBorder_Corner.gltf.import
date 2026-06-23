@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://dfubkhpuc5t33"
-path="res://.godot/imported/Prop_ExteriorBorder_Corner.gltf-38c9371b32a2baee2a8c2ff0b79f0279.scn"
+path="res://.godot/imported/Prop_ExteriorBorder_Corner.gltf-80f6b0beeac5eb14b4348a19e8589da5.scn"
 
 [deps]
 
-source_file="res://assets/posibles-assets 1(1)/posibles-assets/Medieval Village MegaKit[Standard]/glTF/Prop_ExteriorBorder_Corner.gltf"
-dest_files=["res://.godot/imported/Prop_ExteriorBorder_Corner.gltf-38c9371b32a2baee2a8c2ff0b79f0279.scn"]
+source_file="res://assets/Medieval Village MegaKit[Standard]/glTF/Prop_ExteriorBorder_Corner.gltf"
+dest_files=["res://.godot/imported/Prop_ExteriorBorder_Corner.gltf-80f6b0beeac5eb14b4348a19e8589da5.scn"]
 
 [params]
 

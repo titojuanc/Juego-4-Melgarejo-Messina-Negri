@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://dcxtn1djibaep"
-path="res://.godot/imported/Roof_Wooden_2x1_Center_Mirror.gltf-06e8ebf9561762e40a5caef8d910a73d.scn"
+path="res://.godot/imported/Roof_Wooden_2x1_Center_Mirror.gltf-f768d3f570664c9eceab50e2b5752acd.scn"
 
 [deps]
 
-source_file="res://assets/posibles-assets 1(1)/posibles-assets/Medieval Village MegaKit[Standard]/glTF/Roof_Wooden_2x1_Center_Mirror.gltf"
-dest_files=["res://.godot/imported/Roof_Wooden_2x1_Center_Mirror.gltf-06e8ebf9561762e40a5caef8d910a73d.scn"]
+source_file="res://assets/Medieval Village MegaKit[Standard]/glTF/Roof_Wooden_2x1_Center_Mirror.gltf"
+dest_files=["res://.godot/imported/Roof_Wooden_2x1_Center_Mirror.gltf-f768d3f570664c9eceab50e2b5752acd.scn"]
 
 [params]
 

@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cwuf4m7k24q33"
-path.s3tc="res://.godot/imported/T_Brick_Roughness.png-2b47728a41bc6f6050d70d4bffb43a47.s3tc.ctex"
+path.s3tc="res://.godot/imported/T_Brick_Roughness.png-7395e91d174532ae0e33eff6ac5e17e8.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://assets/posibles-assets 1(1)/posibles-assets/Medieval Village MegaKit[Standard]/glTF/T_Brick_Roughness.png"
-dest_files=["res://.godot/imported/T_Brick_Roughness.png-2b47728a41bc6f6050d70d4bffb43a47.s3tc.ctex"]
+source_file="res://assets/Medieval Village MegaKit[Standard]/glTF/T_Brick_Roughness.png"
+dest_files=["res://.godot/imported/T_Brick_Roughness.png-7395e91d174532ae0e33eff6ac5e17e8.s3tc.ctex"]
 
 [params]
 

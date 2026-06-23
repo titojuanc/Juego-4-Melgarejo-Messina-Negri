@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://dirdpre2ivy34"
-path="res://.godot/imported/Window_Roof_Wide.fbx-cecc5ea6f25fb450db91ade108a00a9d.scn"
+path="res://.godot/imported/Window_Roof_Wide.fbx-0c9b9343e8eb49aa91c99bb6bd742b64.scn"
 
 [deps]
 
-source_file="res://assets/posibles-assets 1(1)/posibles-assets/Medieval Village MegaKit[Standard]/FBX/Window_Roof_Wide.fbx"
-dest_files=["res://.godot/imported/Window_Roof_Wide.fbx-cecc5ea6f25fb450db91ade108a00a9d.scn"]
+source_file="res://assets/Medieval Village MegaKit[Standard]/FBX/Window_Roof_Wide.fbx"
+dest_files=["res://.godot/imported/Window_Roof_Wide.fbx-0c9b9343e8eb49aa91c99bb6bd742b64.scn"]
 
 [params]
 

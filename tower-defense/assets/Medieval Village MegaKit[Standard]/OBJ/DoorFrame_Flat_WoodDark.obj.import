@@ -4,14 +4,14 @@ importer="wavefront_obj"
 importer_version=1
 type="Mesh"
 uid="uid://dextoqgfcdsrx"
-path="res://.godot/imported/DoorFrame_Flat_WoodDark.obj-9ad70da8be1b760f9672786b626b235c.mesh"
+path="res://.godot/imported/DoorFrame_Flat_WoodDark.obj-625b6b8fe91cceef80ca61315d02d38e.mesh"
 
 [deps]
 
-files=["res://.godot/imported/DoorFrame_Flat_WoodDark.obj-9ad70da8be1b760f9672786b626b235c.mesh"]
+files=["res://.godot/imported/DoorFrame_Flat_WoodDark.obj-625b6b8fe91cceef80ca61315d02d38e.mesh"]
 
-source_file="res://assets/posibles-assets 1(1)/posibles-assets/Medieval Village MegaKit[Standard]/OBJ/DoorFrame_Flat_WoodDark.obj"
-dest_files=["res://.godot/imported/DoorFrame_Flat_WoodDark.obj-9ad70da8be1b760f9672786b626b235c.mesh", "res://.godot/imported/DoorFrame_Flat_WoodDark.obj-9ad70da8be1b760f9672786b626b235c.mesh"]
+source_file="res://assets/Medieval Village MegaKit[Standard]/OBJ/DoorFrame_Flat_WoodDark.obj"
+dest_files=["res://.godot/imported/DoorFrame_Flat_WoodDark.obj-625b6b8fe91cceef80ca61315d02d38e.mesh", "res://.godot/imported/DoorFrame_Flat_WoodDark.obj-625b6b8fe91cceef80ca61315d02d38e.mesh"]
 
 [params]
 

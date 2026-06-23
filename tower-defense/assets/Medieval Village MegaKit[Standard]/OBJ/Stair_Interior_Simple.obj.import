@@ -4,14 +4,14 @@ importer="wavefront_obj"
 importer_version=1
 type="Mesh"
 uid="uid://c3roeho047n3v"
-path="res://.godot/imported/Stair_Interior_Simple.obj-bb7d993cea7bb7b13f0b6a4c460fb22f.mesh"
+path="res://.godot/imported/Stair_Interior_Simple.obj-086a437d15c4ef9a375ef5f10fda8de9.mesh"
 
 [deps]
 
-files=["res://.godot/imported/Stair_Interior_Simple.obj-bb7d993cea7bb7b13f0b6a4c460fb22f.mesh"]
+files=["res://.godot/imported/Stair_Interior_Simple.obj-086a437d15c4ef9a375ef5f10fda8de9.mesh"]
 
-source_file="res://assets/posibles-assets 1(1)/posibles-assets/Medieval Village MegaKit[Standard]/OBJ/Stair_Interior_Simple.obj"
-dest_files=["res://.godot/imported/Stair_Interior_Simple.obj-bb7d993cea7bb7b13f0b6a4c460fb22f.mesh", "res://.godot/imported/Stair_Interior_Simple.obj-bb7d993cea7bb7b13f0b6a4c460fb22f.mesh"]
+source_file="res://assets/Medieval Village MegaKit[Standard]/OBJ/Stair_Interior_Simple.obj"
+dest_files=["res://.godot/imported/Stair_Interior_Simple.obj-086a437d15c4ef9a375ef5f10fda8de9.mesh", "res://.godot/imported/Stair_Interior_Simple.obj-086a437d15c4ef9a375ef5f10fda8de9.mesh"]
 
 [params]
 

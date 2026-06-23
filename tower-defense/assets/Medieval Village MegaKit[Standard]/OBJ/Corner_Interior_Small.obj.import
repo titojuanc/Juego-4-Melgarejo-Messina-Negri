@@ -4,14 +4,14 @@ importer="wavefront_obj"
 importer_version=1
 type="Mesh"
 uid="uid://imfxke3nua15"
-path="res://.godot/imported/Corner_Interior_Small.obj-088e3f8e87b32c54e834992bd2af6c38.mesh"
+path="res://.godot/imported/Corner_Interior_Small.obj-dc978cb8dcd4ff027aa1e8e3fed8e4a0.mesh"
 
 [deps]
 
-files=["res://.godot/imported/Corner_Interior_Small.obj-088e3f8e87b32c54e834992bd2af6c38.mesh"]
+files=["res://.godot/imported/Corner_Interior_Small.obj-dc978cb8dcd4ff027aa1e8e3fed8e4a0.mesh"]
 
-source_file="res://assets/posibles-assets 1(1)/posibles-assets/Medieval Village MegaKit[Standard]/OBJ/Corner_Interior_Small.obj"
-dest_files=["res://.godot/imported/Corner_Interior_Small.obj-088e3f8e87b32c54e834992bd2af6c38.mesh", "res://.godot/imported/Corner_Interior_Small.obj-088e3f8e87b32c54e834992bd2af6c38.mesh"]
+source_file="res://assets/Medieval Village MegaKit[Standard]/OBJ/Corner_Interior_Small.obj"
+dest_files=["res://.godot/imported/Corner_Interior_Small.obj-dc978cb8dcd4ff027aa1e8e3fed8e4a0.mesh", "res://.godot/imported/Corner_Interior_Small.obj-dc978cb8dcd4ff027aa1e8e3fed8e4a0.mesh"]
 
 [params]
 

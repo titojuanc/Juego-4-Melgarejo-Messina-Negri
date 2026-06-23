@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://q8yv2r4ofcn2"
-path="res://.godot/imported/Prop_Vine5.gltf-b1f10a7006bff0be4dcd60ffdafdc80b.scn"
+path="res://.godot/imported/Prop_Vine5.gltf-957b23ea9926ac935d92e87e875e59bc.scn"
 
 [deps]
 
-source_file="res://assets/posibles-assets 1(1)/posibles-assets/Medieval Village MegaKit[Standard]/glTF/Prop_Vine5.gltf"
-dest_files=["res://.godot/imported/Prop_Vine5.gltf-b1f10a7006bff0be4dcd60ffdafdc80b.scn"]
+source_file="res://assets/Medieval Village MegaKit[Standard]/glTF/Prop_Vine5.gltf"
+dest_files=["res://.godot/imported/Prop_Vine5.gltf-957b23ea9926ac935d92e87e875e59bc.scn"]
 
 [params]
 

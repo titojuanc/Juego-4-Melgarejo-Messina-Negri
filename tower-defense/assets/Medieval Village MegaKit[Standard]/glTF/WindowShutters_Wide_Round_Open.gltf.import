@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://cb1v4n66k8k6d"
-path="res://.godot/imported/WindowShutters_Wide_Round_Open.gltf-8ffd5c541df1cac58a74ec8b0ad80bbb.scn"
+path="res://.godot/imported/WindowShutters_Wide_Round_Open.gltf-56c9ad61eaa2fa514dcf5681cabaf2d9.scn"
 
 [deps]
 
-source_file="res://assets/posibles-assets 1(1)/posibles-assets/Medieval Village MegaKit[Standard]/glTF/WindowShutters_Wide_Round_Open.gltf"
-dest_files=["res://.godot/imported/WindowShutters_Wide_Round_Open.gltf-8ffd5c541df1cac58a74ec8b0ad80bbb.scn"]
+source_file="res://assets/Medieval Village MegaKit[Standard]/glTF/WindowShutters_Wide_Round_Open.gltf"
+dest_files=["res://.godot/imported/WindowShutters_Wide_Round_Open.gltf-56c9ad61eaa2fa514dcf5681cabaf2d9.scn"]
 
 [params]
 

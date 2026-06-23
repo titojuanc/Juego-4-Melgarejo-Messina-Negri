@@ -4,14 +4,14 @@ importer="wavefront_obj"
 importer_version=1
 type="Mesh"
 uid="uid://1xxliayywygg"
-path="res://.godot/imported/Prop_WoodenFence_Extension2.obj-1c2a28d4afae0d990dfd837f17147e65.mesh"
+path="res://.godot/imported/Prop_WoodenFence_Extension2.obj-62cff3a6d3227df1bea3c2c702c98018.mesh"
 
 [deps]
 
-files=["res://.godot/imported/Prop_WoodenFence_Extension2.obj-1c2a28d4afae0d990dfd837f17147e65.mesh"]
+files=["res://.godot/imported/Prop_WoodenFence_Extension2.obj-62cff3a6d3227df1bea3c2c702c98018.mesh"]
 
-source_file="res://assets/posibles-assets 1(1)/posibles-assets/Medieval Village MegaKit[Standard]/OBJ/Prop_WoodenFence_Extension2.obj"
-dest_files=["res://.godot/imported/Prop_WoodenFence_Extension2.obj-1c2a28d4afae0d990dfd837f17147e65.mesh", "res://.godot/imported/Prop_WoodenFence_Extension2.obj-1c2a28d4afae0d990dfd837f17147e65.mesh"]
+source_file="res://assets/Medieval Village MegaKit[Standard]/OBJ/Prop_WoodenFence_Extension2.obj"
+dest_files=["res://.godot/imported/Prop_WoodenFence_Extension2.obj-62cff3a6d3227df1bea3c2c702c98018.mesh", "res://.godot/imported/Prop_WoodenFence_Extension2.obj-62cff3a6d3227df1bea3c2c702c98018.mesh"]
 
 [params]
 

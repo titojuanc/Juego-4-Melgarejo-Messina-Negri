@@ -4,14 +4,14 @@ importer="wavefront_obj"
 importer_version=1
 type="Mesh"
 uid="uid://wow6jrea5gol"
-path="res://.godot/imported/Wall_Plaster_Window_Thin_Round.obj-e5682b5e6b45fce1a6e41dfc0b7d63c4.mesh"
+path="res://.godot/imported/Wall_Plaster_Window_Thin_Round.obj-86b343e7695ababde8aafa8e0545b3c1.mesh"
 
 [deps]
 
-files=["res://.godot/imported/Wall_Plaster_Window_Thin_Round.obj-e5682b5e6b45fce1a6e41dfc0b7d63c4.mesh"]
+files=["res://.godot/imported/Wall_Plaster_Window_Thin_Round.obj-86b343e7695ababde8aafa8e0545b3c1.mesh"]
 
-source_file="res://assets/posibles-assets 1(1)/posibles-assets/Medieval Village MegaKit[Standard]/OBJ/Wall_Plaster_Window_Thin_Round.obj"
-dest_files=["res://.godot/imported/Wall_Plaster_Window_Thin_Round.obj-e5682b5e6b45fce1a6e41dfc0b7d63c4.mesh", "res://.godot/imported/Wall_Plaster_Window_Thin_Round.obj-e5682b5e6b45fce1a6e41dfc0b7d63c4.mesh"]
+source_file="res://assets/Medieval Village MegaKit[Standard]/OBJ/Wall_Plaster_Window_Thin_Round.obj"
+dest_files=["res://.godot/imported/Wall_Plaster_Window_Thin_Round.obj-86b343e7695ababde8aafa8e0545b3c1.mesh", "res://.godot/imported/Wall_Plaster_Window_Thin_Round.obj-86b343e7695ababde8aafa8e0545b3c1.mesh"]
 
 [params]
 

@@ -4,14 +4,14 @@ importer="wavefront_obj"
 importer_version=1
 type="Mesh"
 uid="uid://ctbwvjdk50s0r"
-path="res://.godot/imported/Roof_Front_Brick4_Half_L.obj-379f2b2e864eeca1882875fa2a0c85c5.mesh"
+path="res://.godot/imported/Roof_Front_Brick4_Half_L.obj-af6cc6442eadaa0a812ca51405bae5be.mesh"
 
 [deps]
 
-files=["res://.godot/imported/Roof_Front_Brick4_Half_L.obj-379f2b2e864eeca1882875fa2a0c85c5.mesh"]
+files=["res://.godot/imported/Roof_Front_Brick4_Half_L.obj-af6cc6442eadaa0a812ca51405bae5be.mesh"]
 
-source_file="res://assets/posibles-assets 1(1)/posibles-assets/Medieval Village MegaKit[Standard]/OBJ/Roof_Front_Brick4_Half_L.obj"
-dest_files=["res://.godot/imported/Roof_Front_Brick4_Half_L.obj-379f2b2e864eeca1882875fa2a0c85c5.mesh", "res://.godot/imported/Roof_Front_Brick4_Half_L.obj-379f2b2e864eeca1882875fa2a0c85c5.mesh"]
+source_file="res://assets/Medieval Village MegaKit[Standard]/OBJ/Roof_Front_Brick4_Half_L.obj"
+dest_files=["res://.godot/imported/Roof_Front_Brick4_Half_L.obj-af6cc6442eadaa0a812ca51405bae5be.mesh", "res://.godot/imported/Roof_Front_Brick4_Half_L.obj-af6cc6442eadaa0a812ca51405bae5be.mesh"]
 
 [params]
 

@@ -4,14 +4,14 @@ importer="wavefront_obj"
 importer_version=1
 type="Mesh"
 uid="uid://bhvuqkuah670y"
-path="res://.godot/imported/Overhang_Side_Plaster_Long_R.obj-8adea14cd2747000651be9d4be09461c.mesh"
+path="res://.godot/imported/Overhang_Side_Plaster_Long_R.obj-7f9a8d26d8d4d237e8e9dd8273edc4c2.mesh"
 
 [deps]
 
-files=["res://.godot/imported/Overhang_Side_Plaster_Long_R.obj-8adea14cd2747000651be9d4be09461c.mesh"]
+files=["res://.godot/imported/Overhang_Side_Plaster_Long_R.obj-7f9a8d26d8d4d237e8e9dd8273edc4c2.mesh"]
 
-source_file="res://assets/posibles-assets 1(1)/posibles-assets/Medieval Village MegaKit[Standard]/OBJ/Overhang_Side_Plaster_Long_R.obj"
-dest_files=["res://.godot/imported/Overhang_Side_Plaster_Long_R.obj-8adea14cd2747000651be9d4be09461c.mesh", "res://.godot/imported/Overhang_Side_Plaster_Long_R.obj-8adea14cd2747000651be9d4be09461c.mesh"]
+source_file="res://assets/Medieval Village MegaKit[Standard]/OBJ/Overhang_Side_Plaster_Long_R.obj"
+dest_files=["res://.godot/imported/Overhang_Side_Plaster_Long_R.obj-7f9a8d26d8d4d237e8e9dd8273edc4c2.mesh", "res://.godot/imported/Overhang_Side_Plaster_Long_R.obj-7f9a8d26d8d4d237e8e9dd8273edc4c2.mesh"]
 
 [params]
 

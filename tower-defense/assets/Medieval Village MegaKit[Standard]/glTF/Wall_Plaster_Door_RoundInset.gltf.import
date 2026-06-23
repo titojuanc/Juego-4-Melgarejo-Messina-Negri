@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://dryi3bi5sad2o"
-path="res://.godot/imported/Wall_Plaster_Door_RoundInset.gltf-796168277495efffe697d4179f19a796.scn"
+path="res://.godot/imported/Wall_Plaster_Door_RoundInset.gltf-d2b2cf2d49057725d8e4da912fafc5ca.scn"
 
 [deps]
 
-source_file="res://assets/posibles-assets 1(1)/posibles-assets/Medieval Village MegaKit[Standard]/glTF/Wall_Plaster_Door_RoundInset.gltf"
-dest_files=["res://.godot/imported/Wall_Plaster_Door_RoundInset.gltf-796168277495efffe697d4179f19a796.scn"]
+source_file="res://assets/Medieval Village MegaKit[Standard]/glTF/Wall_Plaster_Door_RoundInset.gltf"
+dest_files=["res://.godot/imported/Wall_Plaster_Door_RoundInset.gltf-d2b2cf2d49057725d8e4da912fafc5ca.scn"]
 
 [params]
 

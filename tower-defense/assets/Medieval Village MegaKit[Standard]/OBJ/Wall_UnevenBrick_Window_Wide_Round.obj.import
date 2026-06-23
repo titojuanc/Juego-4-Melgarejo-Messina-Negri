@@ -4,14 +4,14 @@ importer="wavefront_obj"
 importer_version=1
 type="Mesh"
 uid="uid://byptd6vt7p3f4"
-path="res://.godot/imported/Wall_UnevenBrick_Window_Wide_Round.obj-233203d6019e4e4e1603c41e280e5907.mesh"
+path="res://.godot/imported/Wall_UnevenBrick_Window_Wide_Round.obj-361d9acb59e4db2f4d7adc13a3585dfc.mesh"
 
 [deps]
 
-files=["res://.godot/imported/Wall_UnevenBrick_Window_Wide_Round.obj-233203d6019e4e4e1603c41e280e5907.mesh"]
+files=["res://.godot/imported/Wall_UnevenBrick_Window_Wide_Round.obj-361d9acb59e4db2f4d7adc13a3585dfc.mesh"]
 
-source_file="res://assets/posibles-assets 1(1)/posibles-assets/Medieval Village MegaKit[Standard]/OBJ/Wall_UnevenBrick_Window_Wide_Round.obj"
-dest_files=["res://.godot/imported/Wall_UnevenBrick_Window_Wide_Round.obj-233203d6019e4e4e1603c41e280e5907.mesh", "res://.godot/imported/Wall_UnevenBrick_Window_Wide_Round.obj-233203d6019e4e4e1603c41e280e5907.mesh"]
+source_file="res://assets/Medieval Village MegaKit[Standard]/OBJ/Wall_UnevenBrick_Window_Wide_Round.obj"
+dest_files=["res://.godot/imported/Wall_UnevenBrick_Window_Wide_Round.obj-361d9acb59e4db2f4d7adc13a3585dfc.mesh", "res://.godot/imported/Wall_UnevenBrick_Window_Wide_Round.obj-361d9acb59e4db2f4d7adc13a3585dfc.mesh"]
 
 [params]
 

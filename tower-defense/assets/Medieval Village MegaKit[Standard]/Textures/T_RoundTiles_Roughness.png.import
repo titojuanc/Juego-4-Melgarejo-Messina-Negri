@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://datkfw15074jw"
-path="res://.godot/imported/T_RoundTiles_Roughness.png-589a0c12a400262eaf57937d887a5035.ctex"
+path="res://.godot/imported/T_RoundTiles_Roughness.png-224473acd369affad67c61a13ea7bbab.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/posibles-assets 1(1)/posibles-assets/Medieval Village MegaKit[Standard]/Textures/T_RoundTiles_Roughness.png"
-dest_files=["res://.godot/imported/T_RoundTiles_Roughness.png-589a0c12a400262eaf57937d887a5035.ctex"]
+source_file="res://assets/Medieval Village MegaKit[Standard]/Textures/T_RoundTiles_Roughness.png"
+dest_files=["res://.godot/imported/T_RoundTiles_Roughness.png-224473acd369affad67c61a13ea7bbab.ctex"]
 
 [params]
 

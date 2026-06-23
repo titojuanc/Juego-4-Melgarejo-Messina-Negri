@@ -4,14 +4,14 @@ importer="wavefront_obj"
 importer_version=1
 type="Mesh"
 uid="uid://b3kfyk0078nbh"
-path="res://.godot/imported/Roof_Front_Brick4.obj-1fdcf40722d3c648f4717f49cbda70ab.mesh"
+path="res://.godot/imported/Roof_Front_Brick4.obj-24a1dc190393bcfcda28a4ea01b2caa4.mesh"
 
 [deps]
 
-files=["res://.godot/imported/Roof_Front_Brick4.obj-1fdcf40722d3c648f4717f49cbda70ab.mesh"]
+files=["res://.godot/imported/Roof_Front_Brick4.obj-24a1dc190393bcfcda28a4ea01b2caa4.mesh"]
 
-source_file="res://assets/posibles-assets 1(1)/posibles-assets/Medieval Village MegaKit[Standard]/OBJ/Roof_Front_Brick4.obj"
-dest_files=["res://.godot/imported/Roof_Front_Brick4.obj-1fdcf40722d3c648f4717f49cbda70ab.mesh", "res://.godot/imported/Roof_Front_Brick4.obj-1fdcf40722d3c648f4717f49cbda70ab.mesh"]
+source_file="res://assets/Medieval Village MegaKit[Standard]/OBJ/Roof_Front_Brick4.obj"
+dest_files=["res://.godot/imported/Roof_Front_Brick4.obj-24a1dc190393bcfcda28a4ea01b2caa4.mesh", "res://.godot/imported/Roof_Front_Brick4.obj-24a1dc190393bcfcda28a4ea01b2caa4.mesh"]
 
 [params]
 

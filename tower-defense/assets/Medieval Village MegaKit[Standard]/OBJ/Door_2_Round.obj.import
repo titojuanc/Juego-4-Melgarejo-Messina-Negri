@@ -4,14 +4,14 @@ importer="wavefront_obj"
 importer_version=1
 type="Mesh"
 uid="uid://cm6jhmk6fdmgd"
-path="res://.godot/imported/Door_2_Round.obj-1b4d703b2d8852aff075e21962469cc1.mesh"
+path="res://.godot/imported/Door_2_Round.obj-6b5ee2eb68e2d0884657cc33cb9dfb85.mesh"
 
 [deps]
 
-files=["res://.godot/imported/Door_2_Round.obj-1b4d703b2d8852aff075e21962469cc1.mesh"]
+files=["res://.godot/imported/Door_2_Round.obj-6b5ee2eb68e2d0884657cc33cb9dfb85.mesh"]
 
-source_file="res://assets/posibles-assets 1(1)/posibles-assets/Medieval Village MegaKit[Standard]/OBJ/Door_2_Round.obj"
-dest_files=["res://.godot/imported/Door_2_Round.obj-1b4d703b2d8852aff075e21962469cc1.mesh", "res://.godot/imported/Door_2_Round.obj-1b4d703b2d8852aff075e21962469cc1.mesh"]
+source_file="res://assets/Medieval Village MegaKit[Standard]/OBJ/Door_2_Round.obj"
+dest_files=["res://.godot/imported/Door_2_Round.obj-6b5ee2eb68e2d0884657cc33cb9dfb85.mesh", "res://.godot/imported/Door_2_Round.obj-6b5ee2eb68e2d0884657cc33cb9dfb85.mesh"]
 
 [params]
 
