@@ -13,6 +13,7 @@
 [ext_resource type="PackedScene" uid="uid://cipd07h2jyefp" path="res://assets/Medieval Village MegaKit[Standard]/glTF/Roof_Log.gltf" id="11_2noej"]
 
 [node name="BaseModel" type="Node3D" unique_id=848008230]
+transform = Transform3D(1.788732e-08, 0, -1.5, 0, 1.5, 0, 1.5, 0, 1.788732e-08, 0, 0, 0)
 
 [node name="paredIzquierda" type="Node3D" parent="." unique_id=1569667203]
 
@@ -119,9 +120,6 @@ transform = Transform3D(1, 0, 0, 0, 0.98061466, -0.19594614, 0, 0.19594614, 0.98
 [node name="Roof_Wooden_2x1_Center10" parent="techo/izquierda" unique_id=1225025867 instance=ExtResource("8_42h3b")]
 transform = Transform3D(1, 0, 0, 0, 0.98061466, -0.19594614, 0, 0.19594614, 0.98061466, -2, 6.076, 1.027)
 
-[node name="Roof_Wooden_2x1_Center11" parent="techo/izquierda" unique_id=478164543 instance=ExtResource("8_42h3b")]
-transform = Transform3D(1, 0, 0, 0, 0.98061466, -0.19594614, 0, 0.19594614, 0.98061466, 0, 0, 2.09)
-
 [node name="Roof_Wooden_2x1_Center13" parent="techo/izquierda" unique_id=370588428 instance=ExtResource("8_42h3b")]
 transform = Transform3D(1, 0, 0, 0, 0.98061466, -0.19594614, 0, 0.19594614, 0.98061466, -2, 4.746, 2.09)
 
@@ -190,9 +188,6 @@ transform = Transform3D(1, 0, 0, 0, 0.98061466, -0.19594614, 0, 0.19594614, 0.98
 
 [node name="Roof_Wooden_2x1_Center10" parent="techo/derecha" unique_id=1368036175 instance=ExtResource("8_42h3b")]
 transform = Transform3D(1, 0, 0, 0, 0.98061466, -0.19594614, 0, 0.19594614, 0.98061466, -2, 6.076, 1.027)
-
-[node name="Roof_Wooden_2x1_Center11" parent="techo/derecha" unique_id=976325350 instance=ExtResource("8_42h3b")]
-transform = Transform3D(1, 0, 0, 0, 0.98061466, -0.19594614, 0, 0.19594614, 0.98061466, 0, 0, 2.09)
 
 [node name="Roof_Wooden_2x1_Center13" parent="techo/derecha" unique_id=1589754427 instance=ExtResource("8_42h3b")]
 transform = Transform3D(1, 0, 0, 0, 0.98061466, -0.19594614, 0, 0.19594614, 0.98061466, -2, 4.746, 2.09)

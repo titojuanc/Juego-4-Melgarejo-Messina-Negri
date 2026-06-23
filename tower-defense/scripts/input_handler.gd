@@ -77,15 +77,32 @@ func _confirm_drag()->void:
 	var max_x=maxi(_drag_start.x,current_cell.x)
 	var min_y=mini(_drag_start.y,current_cell.y)
 	var max_y=maxi(_drag_start.y,current_cell.y)
-	for x in range(min_x,max_x+1):
-		for y in range(min_y,max_y+1):
-			var cell=Vector2i(x,y)
-			if not _is_valid_cell(cell):
-				continue
-			if _building_manager.is_removing:
-				_building_manager.remove_at(cell)
-			elif _building_manager.is_placing:
-				_building_manager.confirm_placement(cell)
+	if _building_manager.is_placing and _building_manager.current_type==BuildingDB.BuildingType.WALL:
+		var cells:Array[Vector2i]=[]
+		var is_vertical:bool=(max_y-min_y)>(max_x-min_x)
+		if is_vertical:
+			for y in range(min_y,max_y+1):
+				for x in range(min_x,max_x+1):
+					var cell=Vector2i(x,y)
+					if _is_valid_cell(cell):
+						cells.append(cell)
+		else:
+			for x in range(min_x,max_x+1):
+				for y in range(min_y,max_y+1):
+					var cell=Vector2i(x,y)
+					if _is_valid_cell(cell):
+						cells.append(cell)
+		_building_manager.confirm_wall_line(cells,is_vertical)
+	else:
+		for x in range(min_x,max_x+1):
+			for y in range(min_y,max_y+1):
+				var cell=Vector2i(x,y)
+				if not _is_valid_cell(cell):
+					continue
+				if _building_manager.is_removing:
+					_building_manager.remove_at(cell)
+				elif _building_manager.is_placing:
+					_building_manager.confirm_placement(cell)
 	if _building_manager.is_placing and _is_valid_cell(current_cell):
 		_grid_visual.set_hover_color(_building_manager.can_place_at(current_cell))
 

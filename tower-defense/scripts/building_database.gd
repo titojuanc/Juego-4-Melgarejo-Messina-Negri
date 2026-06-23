@@ -10,6 +10,7 @@ var buildings:Dictionary={
 		"cost":{ResourceType.WOOD:30,ResourceType.STONE:50,ResourceType.METAL:20},
 		"build_time":8.0,
 		"max_npcs":2,
+		"model_scene":preload("res://scenes/buildings/madera/tower_model.tscn"),
 	},
 	BuildingType.WALL:{
 		"name":"Wall",
@@ -17,6 +18,12 @@ var buildings:Dictionary={
 		"cost":{ResourceType.WOOD:10,ResourceType.STONE:30,ResourceType.METAL:0},
 		"build_time":3.0,
 		"max_npcs":0,
+		"wall_models":{
+			"solo":preload("res://scenes/buildings/madera/wall_model.tscn"),
+			"left":preload("res://scenes/buildings/madera/wall_left_model.tscn"),
+			"middle":preload("res://scenes/buildings/madera/wall_transition_model.tscn"),
+			"right":preload("res://scenes/buildings/madera/wall_right_model.tscn"),
+		},
 	},
 	BuildingType.BASE:{
 		"name":"Base",
@@ -24,6 +31,7 @@ var buildings:Dictionary={
 		"cost":{ResourceType.WOOD:100,ResourceType.STONE:80,ResourceType.METAL:50},
 		"build_time":15.0,
 		"max_npcs":0,
+		"model_scene":preload("res://scenes/buildings/madera/base_model.tscn"),
 	},
 }
 

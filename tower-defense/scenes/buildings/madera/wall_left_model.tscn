@@ -5,21 +5,40 @@
 [ext_resource type="PackedScene" uid="uid://bbu3nxjtwmsj4" path="res://assets/Medieval Village MegaKit[Standard]/glTF/Corner_ExteriorWide_Brick.gltf" id="3_6b6dy"]
 
 [node name="WallLeftModel" type="Node3D" unique_id=1968699329]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 0, 0, 0)
 
 [node name="Roof_Wooden_2x1_Middle2" parent="." unique_id=987997742 instance=ExtResource("1_w3rpu")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.07, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.4389505, 2.0942812, -0.017676672)
+
+[node name="Roof_Wooden_2x1_Middle3" parent="." unique_id=209586099 instance=ExtResource("1_w3rpu")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5610497, 2.0942812, -0.017676672)
 
 [node name="Wall_Plaster_Straight_Base2" parent="." unique_id=71890825 instance=ExtResource("2_rbskf")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.902)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.4389505, 0.024280867, 0.8843235)
 
 [node name="Wall_Plaster_Straight_Base3" parent="." unique_id=1607686665 instance=ExtResource("2_rbskf")]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, -0.902)
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -1.4389505, 0.024280867, -0.9196768)
+
+[node name="Wall_Plaster_Straight_Base5" parent="." unique_id=1577012569 instance=ExtResource("2_rbskf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5610497, 0.024280867, 0.8843235)
+
+[node name="Wall_Plaster_Straight_Base6" parent="." unique_id=116748665 instance=ExtResource("2_rbskf")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0.5610497, 0.024280867, -0.9196768)
+
+[node name="Roof_Wooden_2x1_Middle4" parent="." unique_id=267207793 instance=ExtResource("1_w3rpu")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.656, 2.094, -0.02)
+
+[node name="Wall_Plaster_Straight_Base7" parent="." unique_id=1527182718 instance=ExtResource("2_rbskf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.656, 0.024, 0.885)
+
+[node name="Wall_Plaster_Straight_Base8" parent="." unique_id=624581128 instance=ExtResource("2_rbskf")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 1.656, 0.024, -0.921)
 
 [node name="Wall_Plaster_Straight_Base4" parent="." unique_id=779705991 instance=ExtResource("2_rbskf")]
-transform = Transform3D(1.1924881e-08, 0, -1, 0, 1, 0, 1, 0, 1.1924881e-08, -0.902, 0, 0)
+transform = Transform3D(1.1924881e-08, 0, -1, 0, 1, 0, 1, 0, 1.1924881e-08, -2.3409507, 0.024280867, -0.017676672)
 
 [node name="Corner_ExteriorWide_Brick2" parent="." unique_id=579266947 instance=ExtResource("3_6b6dy")]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -1, 0, 1)
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -2.4389508, 0.024280867, 0.98232335)
 
 [node name="Corner_ExteriorWide_Brick3" parent="." unique_id=520272315 instance=ExtResource("3_6b6dy")]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -1, 0, -1)
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -2.4389508, 0.024280867, -1.0176767)

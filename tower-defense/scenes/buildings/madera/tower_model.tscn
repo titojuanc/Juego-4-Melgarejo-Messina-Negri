@@ -13,6 +13,7 @@
 [ext_resource type="PackedScene" uid="uid://c6t33atxyx7ht" path="res://assets/Medieval Village MegaKit[Standard]/FBX/Roof_Wooden_2x1_Middle.fbx" id="10_jb76s"]
 
 [node name="TowerModel" type="Node3D" unique_id=1182952349]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 0, 0, 0)
 
 [node name="abajo" type="Node3D" parent="." unique_id=965003207]
 

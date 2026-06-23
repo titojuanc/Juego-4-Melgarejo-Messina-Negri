@@ -68,6 +68,44 @@ func confirm_placement(cell:Vector2i)->void:
 	building.start_construction()
 	_occupy_cells(cell,gs,building)
 
+func confirm_wall_line(cells:Array[Vector2i],is_vertical:bool=false)->void:
+	if not is_placing or current_type!=BuildingDB.BuildingType.WALL:
+		return
+	var valid_cells:Array[Vector2i]=[]
+	var gs=BuildingDB.get_grid_size(current_type)
+	for c in cells:
+		if _can_place(c,gs):
+			valid_cells.append(c)
+	var count=valid_cells.size()
+	if count==0:
+		return
+	for i in count:
+		var variant:String
+		if count==1:
+			variant="solo"
+		elif count==2:
+			if i==0:
+				variant="left"
+			else:
+				variant="right"
+		else:
+			if i==0:
+				variant="left"
+			elif i==count-1:
+				variant="right"
+			else:
+				variant="middle"
+		var cell=valid_cells[i]
+		var building=BUILDING_SCENE.instantiate()
+		_placed_buildings.add_child(building)
+		building.setup(current_type,grid_manager.cell_size)
+		building.wall_variant=variant
+		building.position=cell_to_world(cell,gs)
+		if is_vertical:
+			building.rotation.y=deg_to_rad(-90)
+		building.start_construction()
+		_occupy_cells(cell,gs,building)
+
 func cancel_placement()->void:
 	is_placing=false
 	current_type=-1

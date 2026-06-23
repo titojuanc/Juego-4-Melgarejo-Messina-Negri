@@ -9,6 +9,7 @@ var build_time:float=0.0
 var current_npcs:Array=[]
 var max_npcs:int=0
 var grid_cells:Array=[]
+var wall_variant:String="solo"
 
 @onready var model=$Model
 @onready var npc_spawn_point=$NPCSpawnPoint
@@ -42,6 +43,19 @@ func _process(delta:float)->void:
 func _on_construction_complete()->void:
 	if max_npcs>0:
 		npc_detect_area.monitoring=true
+	var data=BuildingDB.get_data(building_type)
+	var scene_to_use:PackedScene=null
+	if data.has("wall_models"):
+		scene_to_use=data["wall_models"][wall_variant]
+	elif data.has("model_scene") and data["model_scene"]!=null:
+		scene_to_use=data["model_scene"]
+	if scene_to_use:
+		var placeholder=model.get_node_or_null("Placeholder")
+		if placeholder:
+			placeholder.queue_free()
+		model.scale=Vector3.ONE
+		var m=scene_to_use.instantiate()
+		model.add_child(m)
 
 func can_spawn_npc()->bool:
 	return state==State.ACTIVE and current_npcs.size()<max_npcs
