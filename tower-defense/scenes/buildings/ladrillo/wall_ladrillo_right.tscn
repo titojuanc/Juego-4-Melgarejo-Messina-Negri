@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://cpnwhiv7od3g4"]
+
+[ext_resource type="PackedScene" uid="uid://b7y2c1gm1e45p" path="res://assets/Medieval Village MegaKit[Standard]/glTF/Wall_UnevenBrick_Straight.gltf" id="1_ndu4p"]
+[ext_resource type="PackedScene" uid="uid://cktadvkuwy0bi" path="res://assets/Medieval Village MegaKit[Standard]/glTF/Roof_Wooden_2x1_Middle.gltf" id="2_0uogv"]
+[ext_resource type="PackedScene" uid="uid://tx6cuq3175lo" path="res://assets/Medieval Village MegaKit[Standard]/glTF/Corner_Exterior_Brick.gltf" id="3_j3oki"]
+
+[node name="WallLadrilloRight" type="Node3D" unique_id=63540126]
+
+[node name="Wall_UnevenBrick_Straight2" parent="." unique_id=573086468 instance=ExtResource("1_ndu4p")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0.902, 0, 0)
+
+[node name="Wall_UnevenBrick_Straight4" parent="." unique_id=1317908411 instance=ExtResource("1_ndu4p")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.902)
+
+[node name="Wall_UnevenBrick_Straight5" parent="." unique_id=989580303 instance=ExtResource("1_ndu4p")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, -0.902)
+
+[node name="Roof_Wooden_2x1_Middle2" parent="." unique_id=987997742 instance=ExtResource("2_0uogv")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.07, 0)
+
+[node name="Corner_Exterior_Brick2" parent="." unique_id=55408018 instance=ExtResource("3_j3oki")]
+transform = Transform3D(1.1924881e-08, 0, -1, 0, 1, 0, 1, 0, 1.1924881e-08, 1, 0, 1)
+
+[node name="Corner_Exterior_Brick3" parent="." unique_id=766197189 instance=ExtResource("3_j3oki")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, -1)

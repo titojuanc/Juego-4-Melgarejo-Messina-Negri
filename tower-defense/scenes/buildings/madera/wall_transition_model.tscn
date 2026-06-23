@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://b1svo6ag43met"]
+
+[ext_resource type="PackedScene" uid="uid://c1qam3alugqpi" path="res://assets/Medieval Village MegaKit[Standard]/glTF/Wall_Plaster_Straight_Base.gltf" id="1_dn7uj"]
+[ext_resource type="PackedScene" uid="uid://cktadvkuwy0bi" path="res://assets/Medieval Village MegaKit[Standard]/glTF/Roof_Wooden_2x1_Middle.gltf" id="2_uh2sv"]
+
+[node name="WallTransitionModel" type="Node3D" unique_id=824719501]
+
+[node name="Wall_Plaster_Straight_Base2" parent="." unique_id=71890825 instance=ExtResource("1_dn7uj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.902)
+
+[node name="Wall_Plaster_Straight_Base3" parent="." unique_id=462055357 instance=ExtResource("1_dn7uj")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, -0.902)
+
+[node name="Roof_Wooden_2x1_Middle2" parent="." unique_id=987997742 instance=ExtResource("2_uh2sv")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.07, 0)
