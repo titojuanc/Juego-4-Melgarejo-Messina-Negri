@@ -2,7 +2,7 @@ extends Node
 
 var _camera:Camera3D
 var _grid_visual:Node3D
-var _building_manager:Node
+var _building_manager:Node3D
 var _cell_data:Node
 var _gm:Node3D
 var current_cell:Vector2i=Vector2i(-1,-1)
@@ -60,6 +60,7 @@ func _is_drag_mode()->bool:
 func _click_action(cell:Vector2i)->void:
 	if _building_manager.is_placing:
 		_building_manager.confirm_placement(cell)
+		_grid_visual.set_hover_color(_building_manager.can_place_at(cell))
 
 func _update_drag_preview()->void:
 	if not _is_valid_cell(current_cell):
@@ -85,6 +86,8 @@ func _confirm_drag()->void:
 				_building_manager.remove_at(cell)
 			elif _building_manager.is_placing:
 				_building_manager.confirm_placement(cell)
+	if _building_manager.is_placing and _is_valid_cell(current_cell):
+		_grid_visual.set_hover_color(_building_manager.can_place_at(current_cell))
 
 func _get_cell_under_mouse()->Vector2i:
 	var mouse_pos:Vector2=get_viewport().get_mouse_position()
@@ -103,11 +106,17 @@ func _get_cell_under_mouse()->Vector2i:
 	return cell
 
 func _is_valid_cell(cell:Vector2i)->bool:
+	if not _cell_data.cell_map.has(cell):
+		return false
 	return cell.x>=0 and cell.x<_gm.grid_width and cell.y>=0 and cell.y<_gm.grid_height
 
 func _on_cell_hovered(cell:Vector2i)->void:
-	if _is_valid_cell(cell):
+	if not _is_valid_cell(cell):
+		return
+	if _building_manager.is_placing:
+		var gs=BuildingDB.get_grid_size(_building_manager.current_type)
+		_grid_visual.move_hover_cell(cell,_gm.cell_size,gs)
+		_grid_visual.set_hover_color(_building_manager.can_place_at(cell))
+		_building_manager.move_ghost(cell)
+	else:
 		_grid_visual.move_hover_cell(cell,_gm.cell_size)
-		if _building_manager.is_placing:
-			_grid_visual.set_hover_color(not _cell_data.is_occupied(cell))
-			_building_manager.move_ghost(cell)

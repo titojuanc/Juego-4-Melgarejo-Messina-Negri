@@ -30,9 +30,12 @@ func draw_grid(width:int,height:int,cell_size:float)->void:
 	hover_mesh.size=Vector2(cell_size*0.95,cell_size*0.95)
 	hover_cell.mesh=hover_mesh
 
-func move_hover_cell(cell:Vector2i,cell_size:float)->void:
-	var half=cell_size*0.5
-	hover_cell.position=Vector3(cell.x*cell_size+half,0.01,cell.y*cell_size+half)
+func move_hover_cell(cell:Vector2i,cell_size:float,gs:Vector2i=Vector2i(1,1))->void:
+	var plane=hover_cell.mesh as PlaneMesh
+	plane.size=Vector2(gs.x*cell_size*0.95,gs.y*cell_size*0.95)
+	var cx=cell.x*cell_size+gs.x*cell_size*0.5
+	var cz=cell.y*cell_size+gs.y*cell_size*0.5
+	hover_cell.position=Vector3(cx,0.01,cz)
 
 func set_hover_color(can_place:bool)->void:
 	var mat=hover_cell.material_override as StandardMaterial3D

@@ -1,4 +1,4 @@
-extends Node
+extends Node3D
 
 const BUILDING_SCENE=preload("res://scenes/buildings/Building.tscn")
 
@@ -25,6 +25,30 @@ func start_placement(type:int)->void:
 func move_ghost(cell:Vector2i)->void:
 	var gs=BuildingDB.get_grid_size(current_type)
 	_ghost_building.position=cell_to_world(cell,gs)
+	var valid=_can_place(cell,gs)
+	_update_ghost_color(valid)
+
+func _update_ghost_color(can_place:bool)->void:
+	var preview=_ghost_building.get_child(0) if _ghost_building.get_child_count()>0 else null
+	if not preview:
+		return
+	var mesh_inst=preview.get_node_or_null("Model/Placeholder")
+	if not mesh_inst:
+		return
+	var mat=mesh_inst.material_override as StandardMaterial3D
+	if not mat:
+		return
+	if can_place:
+		mat.albedo_color=Color(0.2,0.8,0.2,0.5)
+	else:
+		mat.albedo_color=Color(0.8,0.2,0.2,0.5)
+	mat.transparency=1
+
+func can_place_at(cell:Vector2i)->bool:
+	if not is_placing or current_type==-1:
+		return false
+	var gs=BuildingDB.get_grid_size(current_type)
+	return _can_place(cell,gs)
 
 func confirm_placement(cell:Vector2i)->void:
 	if not is_placing:

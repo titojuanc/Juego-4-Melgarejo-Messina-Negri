@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://qvtvlrt7j4cy"
+path="res://.godot/imported/Prop_ExteriorBorder_Corner.obj-5054bd0c3ffd6b34ee719e3f9cd11147.mesh"
+
+[deps]
+
+files=["res://.godot/imported/Prop_ExteriorBorder_Corner.obj-5054bd0c3ffd6b34ee719e3f9cd11147.mesh"]
+
+source_file="res://assets/posibles-assets 1(1)/posibles-assets/Medieval Village MegaKit[Standard]/OBJ/Prop_ExteriorBorder_Corner.obj"
+dest_files=["res://.godot/imported/Prop_ExteriorBorder_Corner.obj-5054bd0c3ffd6b34ee719e3f9cd11147.mesh", "res://.godot/imported/Prop_ExteriorBorder_Corner.obj-5054bd0c3ffd6b34ee719e3f9cd11147.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false

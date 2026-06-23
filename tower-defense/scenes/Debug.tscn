@@ -34,7 +34,7 @@ transform = Transform3D(1, 0, 0, 0, 0.97602326, 0.21766628, 0, -0.21766628, 0.97
 nombre_npc = "Sofia"
 
 [node name="GridManager" parent="." unique_id=1081772389 instance=ExtResource("5_grid")]
-world_gridmap_path = NodePath("../GridMap")
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -64, 0, -32)
 
 [node name="BuildModeController" type="Node" parent="." unique_id=1438876136]
 script = ExtResource("6_bmc")
