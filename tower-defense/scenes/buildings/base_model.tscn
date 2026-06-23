@@ -8,8 +8,9 @@
 [ext_resource type="PackedScene" uid="uid://bbu3nxjtwmsj4" path="res://assets/Medieval Village MegaKit[Standard]/glTF/Corner_ExteriorWide_Brick.gltf" id="5_kghw1"]
 [ext_resource type="PackedScene" uid="uid://dv2iglxpdwnq8" path="res://assets/Medieval Village MegaKit[Standard]/FBX/Roof_Front_Brick8.fbx" id="7_4etwy"]
 [ext_resource type="PackedScene" uid="uid://c00opo7ndjrv5" path="res://assets/Medieval Village MegaKit[Standard]/FBX/Roof_Log.fbx" id="8_gs1pg"]
+[ext_resource type="PackedScene" uid="uid://bp64osl6oiqy0" path="res://assets/Medieval Village MegaKit[Standard]/FBX/Roof_RoundTiles_8x8.fbx" id="9_4etwy"]
 
-[node name="TowerModel" type="Node3D" unique_id=848008230]
+[node name="BaseModel" type="Node3D" unique_id=848008230]
 
 [node name="paredIzquierda" type="Node3D" parent="." unique_id=1569667203]
 
@@ -91,5 +92,10 @@ transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -4, 
 [node name="Roof_Front_Brick8" parent="paredAtras" unique_id=378063480 instance=ExtResource("7_4etwy")]
 transform = Transform3D(1.1924881e-08, 0, -1, 0, 1, 0, 1, 0, 1.1924881e-08, -3.901, 2.984, 0)
 
-[node name="Roof_Log" parent="." unique_id=1038578356 instance=ExtResource("8_gs1pg")]
+[node name="techo" type="Node3D" parent="." unique_id=1768041375]
+
+[node name="Roof_Log" parent="techo" unique_id=1038578356 instance=ExtResource("8_gs1pg")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0, 3.6036434, 0)
+
+[node name="Roof_RoundTiles_8x8" parent="techo" unique_id=798226082 instance=ExtResource("9_4etwy")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0, 2.704751, 0)
