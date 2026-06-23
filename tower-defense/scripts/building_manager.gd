@@ -3,13 +3,18 @@ extends Node3D
 const BUILDING_SCENE=preload("res://scenes/buildings/Building.tscn")
 
 @onready var grid_manager=get_parent()
-@onready var _cell_data=grid_manager.get_node("CellData")
+@onready var _cell_data=$"../CellData"
 @onready var _ghost_building=$GhostBuilding
 @onready var _placed_buildings=$PlacedBuildings
 
 var current_type:int=-1
 var is_placing:bool=false
 var is_removing:bool=false
+var _player:CharacterBody3D
+
+func _ready()->void:
+	await get_tree().process_frame
+	_player=get_tree().get_first_node_in_group("Jugador")
 
 func start_placement(type:int)->void:
 	cancel_remove()
@@ -105,7 +110,32 @@ func _can_place(cell:Vector2i,gs:Vector2i)->bool:
 				return false
 			if _cell_data.is_occupied(c):
 				return false
+			if _is_player_in_cell(c):
+				return false
+			if _is_resource_in_cell(c):
+				return false
 	return true
+
+func _is_player_in_cell(cell:Vector2i)->bool:
+	if not _player:
+		return false
+	var s=grid_manager.cell_size
+	var gm_pos=grid_manager.global_position
+	var px=_player.global_position.x-gm_pos.x
+	var pz=_player.global_position.z-gm_pos.z
+	var player_cell=Vector2i(int(floor(px/s)),int(floor(pz/s)))
+	return player_cell==cell
+
+func _is_resource_in_cell(cell:Vector2i)->bool:
+	var s=grid_manager.cell_size
+	var gm_pos=grid_manager.global_position
+	for node in get_tree().get_nodes_in_group("RecursoDestruible"):
+		var rx=node.global_position.x-gm_pos.x
+		var rz=node.global_position.z-gm_pos.z
+		var rc=Vector2i(int(floor(rx/s)),int(floor(rz/s)))
+		if rc==cell:
+			return true
+	return false
 
 func _occupy_cells(cell:Vector2i,gs:Vector2i,building:Node3D)->void:
 	for x in gs.x:

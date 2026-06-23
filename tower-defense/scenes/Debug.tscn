@@ -36,6 +36,7 @@ nombre_npc = "Sofia"
 
 [node name="GridManager" parent="." unique_id=1081772389 instance=ExtResource("5_grid")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -64, 0, -32)
+grid_y_offset = 6.0
 
 [node name="BuildModeController" type="Node" parent="." unique_id=1438876136]
 script = ExtResource("6_bmc")
