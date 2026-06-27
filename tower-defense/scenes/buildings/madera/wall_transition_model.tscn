@@ -1,0 +1,34 @@
+[gd_scene format=3 uid="uid://b1svo6ag43met"]
+
+[ext_resource type="PackedScene" uid="uid://c1qam3alugqpi" path="res://assets/Medieval Village MegaKit[Standard]/glTF/Wall_Plaster_Straight_Base.gltf" id="1_dn7uj"]
+[ext_resource type="PackedScene" uid="uid://cktadvkuwy0bi" path="res://assets/Medieval Village MegaKit[Standard]/glTF/Roof_Wooden_2x1_Middle.gltf" id="2_uh2sv"]
+
+[node name="WallTransitionModel" type="Node3D" unique_id=824719501]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 0, 0, 0)
+
+[node name="Wall_Plaster_Straight_Base2" parent="." unique_id=71890825 instance=ExtResource("1_dn7uj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.33870253, 0, 0.9020001)
+
+[node name="Wall_Plaster_Straight_Base3" parent="." unique_id=462055357 instance=ExtResource("1_dn7uj")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -0.33870253, 0, -0.9020001)
+
+[node name="Roof_Wooden_2x1_Middle2" parent="." unique_id=987997742 instance=ExtResource("2_uh2sv")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.33870253, 2.0700002, 0)
+
+[node name="Wall_Plaster_Straight_Base4" parent="." unique_id=951739605 instance=ExtResource("1_dn7uj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.6612976, 0, 0.9020001)
+
+[node name="Wall_Plaster_Straight_Base5" parent="." unique_id=312050708 instance=ExtResource("1_dn7uj")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 1.6612976, 0, -0.9020001)
+
+[node name="Roof_Wooden_2x1_Middle3" parent="." unique_id=1903106987 instance=ExtResource("2_uh2sv")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.6612976, 2.0700002, 0)
+
+[node name="Wall_Plaster_Straight_Base6" parent="." unique_id=1807774473 instance=ExtResource("1_dn7uj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.659, 0, 0.903)
+
+[node name="Wall_Plaster_Straight_Base7" parent="." unique_id=444990270 instance=ExtResource("1_dn7uj")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -1.659, 0, -0.903)
+
+[node name="Roof_Wooden_2x1_Middle4" parent="." unique_id=605017880 instance=ExtResource("2_uh2sv")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.6586231, 2.0700002, 0)

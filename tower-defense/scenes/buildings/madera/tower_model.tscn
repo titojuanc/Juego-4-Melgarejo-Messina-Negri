@@ -1,0 +1,166 @@
+[gd_scene format=3 uid="uid://c1gs406eyy3ys"]
+
+[ext_resource type="PackedScene" uid="uid://b0fm8ehuv0i5e" path="res://assets/Medieval Village MegaKit[Standard]/FBX/Wall_Plaster_Straight_Base.fbx" id="1_31iop"]
+[ext_resource type="PackedScene" uid="uid://cqfs21lkg6sd4" path="res://assets/Medieval Village MegaKit[Standard]/FBX/Wall_Plaster_Door_Flat.fbx" id="2_onj4r"]
+[ext_resource type="PackedScene" uid="uid://ba8m708ket6wc" path="res://assets/Medieval Village MegaKit[Standard]/FBX/DoorFrame_Flat_WoodDark.fbx" id="3_dcejm"]
+[ext_resource type="PackedScene" uid="uid://dx8gbotkjjb3s" path="res://assets/Medieval Village MegaKit[Standard]/FBX/Door_8_Flat.fbx" id="4_oddh8"]
+[ext_resource type="PackedScene" uid="uid://b8emlujdjwi2v" path="res://assets/Medieval Village MegaKit[Standard]/FBX/Corner_Exterior_Brick.fbx" id="5_5v1vp"]
+[ext_resource type="PackedScene" uid="uid://detqvfn22y7ao" path="res://assets/Medieval Village MegaKit[Standard]/FBX/Floor_WoodDark.fbx" id="6_jrc1s"]
+[ext_resource type="PackedScene" uid="uid://wdbysfewp2oj" path="res://assets/Medieval Village MegaKit[Standard]/FBX/Roof_Wooden_2x1_Corner.fbx" id="6_qwxcm"]
+[ext_resource type="PackedScene" uid="uid://neumrsvr5in5" path="res://assets/Medieval Village MegaKit[Standard]/FBX/Roof_Wooden_2x1_L.fbx" id="7_1je6k"]
+[ext_resource type="PackedScene" uid="uid://dkr2a5q2cu0xc" path="res://assets/Medieval Village MegaKit[Standard]/glTF/Corner_Interior_Small.gltf" id="8_jxne4"]
+[ext_resource type="PackedScene" uid="uid://k8ud01u57d4n" path="res://assets/Medieval Village MegaKit[Standard]/glTF/Prop_WoodenFence_Single.gltf" id="9_ctnfe"]
+[ext_resource type="PackedScene" uid="uid://c6t33atxyx7ht" path="res://assets/Medieval Village MegaKit[Standard]/FBX/Roof_Wooden_2x1_Middle.fbx" id="10_jb76s"]
+
+[node name="TowerModel" type="Node3D" unique_id=1182952349]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 0, 0, 0)
+
+[node name="abajo" type="Node3D" parent="." unique_id=965003207]
+
+[node name="paredConPuerta" type="Node3D" parent="abajo" unique_id=1153190181]
+
+[node name="Wall_Plaster_Straight_Base" parent="abajo/paredConPuerta" unique_id=882641698 instance=ExtResource("1_31iop")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 1.902)
+
+[node name="Wall_Plaster_Door_Flat" parent="abajo/paredConPuerta" unique_id=1958530587 instance=ExtResource("2_onj4r")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0, 1.902)
+
+[node name="DoorFrame_Flat_WoodDark" parent="abajo/paredConPuerta" unique_id=1920414701 instance=ExtResource("3_dcejm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0, 1.902)
+
+[node name="Door_8_Flat" parent="abajo/paredConPuerta" unique_id=1194765816 instance=ExtResource("4_oddh8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.5, 0, 1.902)
+
+[node name="Corner_Exterior_Brick" parent="abajo/paredConPuerta" unique_id=957724820 instance=ExtResource("5_5v1vp")]
+transform = Transform3D(1.1924881e-08, 0, -1, 0, 1, 0, 1, 0, 1.1924881e-08, 2, 0, 2)
+
+[node name="Corner_Exterior_Brick2" parent="abajo/paredConPuerta" unique_id=366974650 instance=ExtResource("5_5v1vp")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -2, 0, 2)
+
+[node name="paredDerecha" type="Node3D" parent="abajo" unique_id=1397277203]
+
+[node name="Wall_Plaster_Straight_Base" parent="abajo/paredDerecha" unique_id=129937289 instance=ExtResource("1_31iop")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 1.902, 0, -1)
+
+[node name="Wall_Plaster_Straight_Base2" parent="abajo/paredDerecha" unique_id=688724482 instance=ExtResource("1_31iop")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 1.9023193, 0, 1)
+
+[node name="paredAtras" type="Node3D" parent="abajo" unique_id=349641861]
+
+[node name="Wall_Plaster_Straight_Base" parent="abajo/paredAtras" unique_id=1286862697 instance=ExtResource("1_31iop")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -1, 0, -1.902)
+
+[node name="Wall_Plaster_Straight_Base2" parent="abajo/paredAtras" unique_id=162872557 instance=ExtResource("1_31iop")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 1, 0, -1.902)
+
+[node name="Corner_Exterior_Brick" parent="abajo/paredAtras" unique_id=1025193987 instance=ExtResource("5_5v1vp")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -2, 0, -2)
+
+[node name="Corner_Exterior_Brick2" parent="abajo/paredAtras" unique_id=836880411 instance=ExtResource("5_5v1vp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, -2)
+
+[node name="paredIzquierda" type="Node3D" parent="abajo" unique_id=764583815]
+
+[node name="Wall_Plaster_Straight_Base" parent="abajo/paredIzquierda" unique_id=1226215112 instance=ExtResource("1_31iop")]
+transform = Transform3D(1.1924881e-08, 0, -1, 0, 1, 0, 1, 0, 1.1924881e-08, -1.902, 0, 1)
+
+[node name="Wall_Plaster_Straight_Base2" parent="abajo/paredIzquierda" unique_id=343457279 instance=ExtResource("1_31iop")]
+transform = Transform3D(1.1924881e-08, 0, -1, 0, 1, 0, 1, 0, 1.1924881e-08, -1.902, 0, -1)
+
+[node name="arriba" type="Node3D" parent="." unique_id=543357271]
+
+[node name="paredAtras2" type="Node3D" parent="arriba" unique_id=891799182]
+
+[node name="Roof_Wooden_2x1_Corner2" parent="arriba/paredAtras2" unique_id=497174142 instance=ExtResource("6_qwxcm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.847, 5.122, -1.769)
+
+[node name="Roof_Wooden_2x1_Corner4" parent="arriba/paredAtras2" unique_id=367996250 instance=ExtResource("6_qwxcm")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -1.847, 5.122, -1.769)
+
+[node name="Roof_Wooden_2x1_L7" parent="arriba/paredAtras2" unique_id=141496585 instance=ExtResource("7_1je6k")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -0.8, 5.083, -1.818)
+
+[node name="Roof_Wooden_2x1_L8" parent="arriba/paredAtras2" unique_id=407631529 instance=ExtResource("7_1je6k")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0.8, 5.083, -1.818)
+
+[node name="Corner_Interior_Small3" parent="arriba/paredAtras2" unique_id=1184725257 instance=ExtResource("8_jxne4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.4676963, 3.1, -1.4620265)
+
+[node name="Corner_Interior_Small4" parent="arriba/paredAtras2" unique_id=196771496 instance=ExtResource("8_jxne4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.072577, 3.1, -1.4780233)
+
+[node name="Prop_WoodenFence_Single4" parent="arriba/paredAtras2" unique_id=2046071067 instance=ExtResource("9_ctnfe")]
+transform = Transform3D(-1.8, 0, -8.742278e-08, 0, 1, 0, 1.57361e-07, 0, -1, 0, 3.1, -1.8)
+
+[node name="techo" type="Node3D" parent="arriba" unique_id=58436807]
+
+[node name="Roof_Wooden_2x1_Middle" parent="arriba/techo" unique_id=316080172 instance=ExtResource("10_jb76s")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.8, 5.087, 0.8)
+
+[node name="Roof_Wooden_2x1_Middle2" parent="arriba/techo" unique_id=1254193374 instance=ExtResource("10_jb76s")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.8, 5.087, 0.8)
+
+[node name="Roof_Wooden_2x1_Middle3" parent="arriba/techo" unique_id=1500051795 instance=ExtResource("10_jb76s")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.8, 5.086, -0.8)
+
+[node name="Roof_Wooden_2x1_Middle4" parent="arriba/techo" unique_id=392077755 instance=ExtResource("10_jb76s")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.8, 5.086, -0.8)
+
+[node name="paredConPuerta2" type="Node3D" parent="arriba" unique_id=925732675]
+
+[node name="Prop_WoodenFence_Single2" parent="arriba/paredConPuerta2" unique_id=806378765 instance=ExtResource("9_ctnfe")]
+transform = Transform3D(1.8, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.1, 1.8)
+
+[node name="Corner_Interior_Small2" parent="arriba/paredConPuerta2" unique_id=1066457775 instance=ExtResource("8_jxne4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.066275, 3.1, 2.0416076)
+
+[node name="Corner_Interior_Small5" parent="arriba/paredConPuerta2" unique_id=1534348279 instance=ExtResource("8_jxne4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.4562291, 3.1, 2.0376463)
+
+[node name="Roof_Wooden_2x1_L" parent="arriba/paredConPuerta2" unique_id=1284303259 instance=ExtResource("7_1je6k")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.8, 5.083, 1.818)
+
+[node name="Roof_Wooden_2x1_L2" parent="arriba/paredConPuerta2" unique_id=1732689551 instance=ExtResource("7_1je6k")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.8, 5.083, 1.818)
+
+[node name="Roof_Wooden_2x1_Corner" parent="arriba/paredConPuerta2" unique_id=532114906 instance=ExtResource("6_qwxcm")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 1.8469744, 5.1223564, 1.7690423)
+
+[node name="Roof_Wooden_2x1_Corner3" parent="arriba/paredConPuerta2" unique_id=789705321 instance=ExtResource("6_qwxcm")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -1.847, 5.122, 1.769)
+
+[node name="paredIzquierda2" type="Node3D" parent="arriba" unique_id=1499098975]
+
+[node name="Prop_WoodenFence_Single5" parent="arriba/paredIzquierda2" unique_id=17022353 instance=ExtResource("9_ctnfe")]
+transform = Transform3D(2.1464784e-08, 0, -1, 0, 1, 0, 1.8, 0, 1.1924881e-08, -1.8, 3.1, 0)
+
+[node name="Roof_Wooden_2x1_L5" parent="arriba/paredIzquierda2" unique_id=26519947 instance=ExtResource("7_1je6k")]
+transform = Transform3D(1.1924881e-08, 0, -1, 0, 1, 0, 1, 0, 1.1924881e-08, -1.818, 5.083, 0.8)
+
+[node name="Roof_Wooden_2x1_L6" parent="arriba/paredIzquierda2" unique_id=252174060 instance=ExtResource("7_1je6k")]
+transform = Transform3D(1.1924881e-08, 0, -1, 0, 1, 0, 1, 0, 1.1924881e-08, -1.818, 5.083, -0.8)
+
+[node name="paredDerecha2" type="Node3D" parent="arriba" unique_id=1822010595]
+
+[node name="Prop_WoodenFence_Single3" parent="arriba/paredDerecha2" unique_id=474870837 instance=ExtResource("9_ctnfe")]
+transform = Transform3D(-7.86805e-08, 0, 1, 0, 1, 0, -1.8, 0, -4.371139e-08, 1.8, 3.1, 0)
+
+[node name="Roof_Wooden_2x1_L3" parent="arriba/paredDerecha2" unique_id=2047328409 instance=ExtResource("7_1je6k")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 1.818, 5.083, 0.8)
+
+[node name="Roof_Wooden_2x1_L4" parent="arriba/paredDerecha2" unique_id=1838444539 instance=ExtResource("7_1je6k")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 1.818, 5.083, -0.8)
+
+[node name="piso" type="Node3D" parent="arriba" unique_id=2132410349]
+
+[node name="Floor_WoodDark" parent="arriba/piso" unique_id=1138021078 instance=ExtResource("6_jrc1s")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 3.1, -1)
+
+[node name="Floor_WoodDark2" parent="arriba/piso" unique_id=1790322963 instance=ExtResource("6_jrc1s")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 3.1, -1)
+
+[node name="Floor_WoodDark3" parent="arriba/piso" unique_id=1501799197 instance=ExtResource("6_jrc1s")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 3.1, 1)
+
+[node name="Floor_WoodDark4" parent="arriba/piso" unique_id=486826157 instance=ExtResource("6_jrc1s")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 3.1, 1)

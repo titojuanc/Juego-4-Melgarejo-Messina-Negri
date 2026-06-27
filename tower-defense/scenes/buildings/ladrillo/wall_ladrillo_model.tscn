@@ -1,0 +1,34 @@
+[gd_scene format=3 uid="uid://djm4mpu4v6sv8"]
+
+[ext_resource type="PackedScene" uid="uid://b7y2c1gm1e45p" path="res://assets/Medieval Village MegaKit[Standard]/glTF/Wall_UnevenBrick_Straight.gltf" id="1_5v7gn"]
+[ext_resource type="PackedScene" uid="uid://cktadvkuwy0bi" path="res://assets/Medieval Village MegaKit[Standard]/glTF/Roof_Wooden_2x1_Middle.gltf" id="2_dehe4"]
+[ext_resource type="PackedScene" uid="uid://tx6cuq3175lo" path="res://assets/Medieval Village MegaKit[Standard]/glTF/Corner_Exterior_Brick.gltf" id="3_wl7uh"]
+
+[node name="WallLadrilloModel" type="Node3D" unique_id=1636848810]
+
+[node name="Wall_UnevenBrick_Straight2" parent="." unique_id=573086468 instance=ExtResource("1_5v7gn")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0.902, 0, 0)
+
+[node name="Wall_UnevenBrick_Straight3" parent="." unique_id=425821949 instance=ExtResource("1_5v7gn")]
+transform = Transform3D(1.1924881e-08, 0, -1, 0, 1, 0, 1, 0, 1.1924881e-08, -0.902, 0, 0)
+
+[node name="Wall_UnevenBrick_Straight4" parent="." unique_id=764763426 instance=ExtResource("1_5v7gn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.902)
+
+[node name="Wall_UnevenBrick_Straight5" parent="." unique_id=2004029999 instance=ExtResource("1_5v7gn")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, -0.902)
+
+[node name="Roof_Wooden_2x1_Middle2" parent="." unique_id=987997742 instance=ExtResource("2_dehe4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.07, 0)
+
+[node name="Corner_Exterior_Brick2" parent="." unique_id=55408018 instance=ExtResource("3_wl7uh")]
+transform = Transform3D(1.1924881e-08, 0, -1, 0, 1, 0, 1, 0, 1.1924881e-08, 1, 0, 1)
+
+[node name="Corner_Exterior_Brick3" parent="." unique_id=1466267107 instance=ExtResource("3_wl7uh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, -1)
+
+[node name="Corner_Exterior_Brick4" parent="." unique_id=714147344 instance=ExtResource("3_wl7uh")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -1, 0, 1)
+
+[node name="Corner_Exterior_Brick5" parent="." unique_id=1557573455 instance=ExtResource("3_wl7uh")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -1, 0, -1)
