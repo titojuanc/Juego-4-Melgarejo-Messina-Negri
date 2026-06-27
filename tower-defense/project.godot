@@ -83,6 +83,7 @@ la_B={
 3d_physics/layer_6="RadarAreaZombie"
 3d_physics/layer_7="LineaApuntadoJugador"
 3d_physics/layer_8="RecursosDestruibles"
+3d_physics/layer_9="Edificios"
 
 [physics]
 

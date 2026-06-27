@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://cbpmye4v0dp8e" path="res://assets/jugador/Fighter sprites/Dash/fighter_dash_0033.png" id="1_old7g"]
 [ext_resource type="Script" uid="uid://dxaij2qx0qrek" path="res://scripts/jugador.gd" id="1_qo7ab"]
-[ext_resource type="PackedScene" path="res://scenes/Bala.tscn" id="2_2vo2l"]
+[ext_resource type="PackedScene" uid="uid://tpqfl8rhkuih" path="res://scenes/Bala.tscn" id="2_2vo2l"]
 [ext_resource type="Texture2D" uid="uid://3e5yjckfrnfr" path="res://assets/jugador/Fighter sprites/Dash/fighter_dash_0034.png" id="2_qo7ab"]
 [ext_resource type="Texture2D" uid="uid://dwhlk5l2bloob" path="res://assets/jugador/Fighter sprites/Dash/fighter_dash_0035.png" id="3_2vo2l"]
 [ext_resource type="Texture2D" uid="uid://b6ivmxcblj7ul" path="res://assets/jugador/Fighter sprites/Dash/fighter_dash_0036.png" id="4_u74oq"]
@@ -806,7 +806,7 @@ size = Vector3(0.05, 0.05, 7)
 albedo_color = Color(1, 1, 1, 0.39215687)
 
 [node name="Jugador" type="CharacterBody3D" unique_id=1729901145 groups=["Jugador"]]
-collision_mask = 140
+collision_mask = 396
 script = ExtResource("1_qo7ab")
 bala_scene = ExtResource("2_2vo2l")
 
