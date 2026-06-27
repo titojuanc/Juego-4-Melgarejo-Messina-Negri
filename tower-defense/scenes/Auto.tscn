@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://c5edntrju1nqy"]
+
+[ext_resource type="Script" uid="uid://cslbbqmm3ctug" path="res://scripts/auto_random_mesh.gd" id="1_2x1x8"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_3prdn"]
+size = Vector3(3.4827118, 2.399414, 4.5033264)
+
+[node name="Auto" type="Node3D" unique_id=227839435]
+script = ExtResource("1_2x1x8")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1290514520]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=1405769437 groups=["RecursoDestruible"]]
+collision_layer = 128
+collision_mask = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=2087078546]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.038459778, 0.69970703, 0.292099)
+shape = SubResource("BoxShape3D_3prdn")

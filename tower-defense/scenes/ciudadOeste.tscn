@@ -13,6 +13,18 @@
 [ext_resource type="PackedScene" uid="uid://2cylx7via7xg" path="res://assets/ciudad/kaykit/edificios/building_D.gltf" id="11_hld4q"]
 [ext_resource type="PackedScene" uid="uid://cth45nse6ukdg" path="res://assets/ciudad/kaykit/props/streetlight.gltf" id="12_25k87"]
 [ext_resource type="PackedScene" uid="uid://dyns2y5t0ti7f" path="res://assets/ciudad/kaykit/props/dumpster.gltf" id="13_g3g8b"]
+[ext_resource type="Texture2D" uid="uid://dj6ovcjor37d1" path="res://assets/texturaUltraDetalladaParaEdificios.png" id="14_g3g8b"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_hl64c"]
+albedo_texture = ExtResource("14_g3g8b")
+albedo_texture_force_srgb = true
+
+[sub_resource type="BoxMesh" id="BoxMesh_1k4cv"]
+material = SubResource("StandardMaterial3D_hl64c")
+size = Vector3(10, 10, 10)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_r3bqf"]
+size = Vector3(90.61029, 4.1552734, 59.112793)
 
 [node name="CiudadOeste" type="Node3D" unique_id=1336979999]
 
@@ -80,3 +92,25 @@ transform = Transform3D(6.910843, 0, -7.2277417, 0, 10, 0, 7.2277417, 0, 6.91084
 
 [node name="dumpster2" parent="." unique_id=632544112 instance=ExtResource("13_g3g8b")]
 transform = Transform3D(0.15812053, 0, 9.99875, 0, 10, 0, -9.99875, 0, 0.15812053, -128.034, 0, -50.02538)
+
+[node name="BestEdificioEver" type="MeshInstance3D" parent="." unique_id=1804965764]
+transform = Transform3D(0.76560676, 0, -0.6433089, 0, 1, 0, 0.6433089, 0, 0.76560676, -51.54548, 5.200696, -50.333767)
+mesh = SubResource("BoxMesh_1k4cv")
+
+[node name="BestEdificioEver2" type="MeshInstance3D" parent="." unique_id=1632424733]
+transform = Transform3D(0.76560676, 0, -0.6433089, 0, 1, 0, 0.6433089, 0, 0.76560676, -152.6601, 4.787094, -84.379105)
+mesh = SubResource("BoxMesh_1k4cv")
+
+[node name="BloqueDeEdificios1" type="StaticBody3D" parent="." unique_id=1723443968]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -54.13571, 1.2584171, -70.297485)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="BloqueDeEdificios1" unique_id=1358487604]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.1547241, 1.5776367, -0.17016602)
+shape = SubResource("BoxShape3D_r3bqf")
+
+[node name="BloquedeEdificios2" type="StaticBody3D" parent="." unique_id=1039881062]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -159.93896, 1.2584171, -70.297485)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="BloquedeEdificios2" unique_id=401215925]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.9374084, 1.5776367, -0.17016602)
+shape = SubResource("BoxShape3D_r3bqf")
