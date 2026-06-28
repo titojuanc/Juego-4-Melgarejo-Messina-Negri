@@ -11,7 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://cipd07h2jyefp" path="res://assets/Medieval Village MegaKit[Standard]/glTF/Roof_Log.gltf" id="9_vbmxj"]
 [ext_resource type="PackedScene" uid="uid://bhmf20bsuxbr5" path="res://assets/Medieval Village MegaKit[Standard]/glTF/Roof_RoundTiles_8x8.gltf" id="10_c3m75"]
 
-[node name="BaseLadrilloModel" type="Node3D" unique_id=1492710876]
+[node name="BaseLadrilloModel" type="Node3D" unique_id=1492710876 groups=["Base"]]
 
 [node name="paredIzquierda" type="Node3D" parent="." unique_id=401932421]
 
@@ -106,3 +106,5 @@ transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0, 4
 
 [node name="Roof_RoundTiles_8x82" parent="techo" unique_id=1112307106 instance=ExtResource("10_c3m75")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0, 2.895609, 0)
+
+[node name="Marker3D" type="Marker3D" parent="." unique_id=1300923042]

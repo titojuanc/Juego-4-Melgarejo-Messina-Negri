@@ -18,10 +18,10 @@ layout_mode = 2
 layout_mode = 2
 text = "Hola, Test"
 
-[node name="OpcionesLabel" type="Label" parent="Panel/VBoxContainer" unique_id=237352559]
-layout_mode = 2
-
 [node name="DialogoLabel" type="Label" parent="Panel/VBoxContainer" unique_id=1353112923]
 custom_minimum_size = Vector2(200, 50)
 layout_mode = 2
 autowrap_mode = 2
+
+[node name="OpcionesLabel" type="Label" parent="Panel/VBoxContainer" unique_id=237352559]
+layout_mode = 2

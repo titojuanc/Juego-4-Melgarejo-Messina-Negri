@@ -379,11 +379,13 @@ height = 1.7202148
 [sub_resource type="SphereShape3D" id="SphereShape3D_6xvi5"]
 radius = 3.947818
 
+[sub_resource type="SphereShape3D" id="SphereShape3D_ktgr7"]
+radius = 5.0
+
 [node name="Npc" type="CharacterBody3D" unique_id=617007490]
 collision_layer = 128
 collision_mask = 4
 script = ExtResource("1_6xvi5")
-nombre_npc = null
 
 [node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="." unique_id=21176124]
 transform = Transform3D(7, 0, 0, 0, 7, 0, 0, 0, 7, 0, 0, 0)
@@ -397,9 +399,19 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0007324219, 0)
 shape = SubResource("CapsuleShape3D_mhefn")
 
 [node name="InteractionArea" type="Area3D" parent="." unique_id=2027491373]
+collision_layer = 1024
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="InteractionArea" unique_id=2141422248]
 shape = SubResource("SphereShape3D_6xvi5")
 
+[node name="DeteccionEnemigos" type="Area3D" parent="." unique_id=542299894]
+collision_layer = 512
+collision_mask = 8
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="DeteccionEnemigos" unique_id=276181270]
+shape = SubResource("SphereShape3D_ktgr7")
+
 [connection signal="body_entered" from="InteractionArea" to="." method="_on_interaction_area_body_entered"]
 [connection signal="body_exited" from="InteractionArea" to="." method="_on_interaction_area_body_exited"]
+[connection signal="body_entered" from="DeteccionEnemigos" to="." method="_on_deteccion_enemigos_body_entered"]
+[connection signal="body_exited" from="DeteccionEnemigos" to="." method="_on_deteccion_enemigos_body_exited"]

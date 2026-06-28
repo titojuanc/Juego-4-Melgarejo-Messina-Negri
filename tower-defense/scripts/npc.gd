@@ -6,9 +6,19 @@ var mision_piedra = 20
 var esperando_respuesta_mision = false
 #
 
+@onready var deteccion_enemigos = $DeteccionEnemigos
 @onready var interaccion_area = $InteractionArea
+
 var menu_scene = preload("res://scenes/HUD_npc.tscn")
 var menu_instancia: CanvasLayer = null
+
+#Ataque
+var enemigo_objetivo: Node3D = null
+var enemigos_cercanos = []
+var cooldown_ataque = 0.0
+var tiempo_entre_ataques = 1.5
+@export var danio_npc = 10
+#
 
 @export var nombre_npc = "Sofia"
 
@@ -31,24 +41,38 @@ var jugador: Node3D = null
 var velocidad = 4.0
 var en_dialogo = false
 
-
+#Recoleccion
+var inv_madera: int = 0
+var inv_piedra: int = 0
+var inv_metal: int = 0
+var recurso_objetivo: Node3D = null
+var cooldown_recoleccion = 0.0
+var tiempo_entre_golpes = 1.0
+@export var radio_recoleccion: float = 100.0
+var centro_base: Node3D = null
+#
 
 func _ready() -> void:
 	jugador = get_tree().get_first_node_in_group("Jugador")
+	centro_base = get_tree().get_first_node_in_group("CentroBase")
 
 func _physics_process(delta: float) -> void:
 	if menu_abierto and menu_instancia:
 		actualizar_posicion_menu()
+	cooldown_ataque -= delta
+	if menu_abierto:
+		return
 	match estado:
 		Estado.ACOMPAÑANDO:
-			if jugador:
-				var dir = (jugador.global_position - global_position)
-				dir.y = 0
-				if dir.length() > 1.5:
-					velocity = dir.normalized() * velocidad
-				else:
-					velocity = Vector3.ZERO
-				move_and_slide()
+			if enemigos_cercanos.size() > 0:
+				enemigo_objetivo = enemigos_cercanos[0]
+				atacar_enemigo(delta)
+			else:
+				enemigo_objetivo = null
+				seguir_jugador()
+		Estado.RECOLECTANDO:
+			cooldown_recoleccion -= delta
+			recolectar()
 	
 func actualizar_posicion_menu() -> void:
 	var camara = get_viewport().get_camera_3d()
@@ -81,7 +105,7 @@ func abrir_menu() -> void:
 	menu_abierto = true
 	menu_instancia = menu_scene.instantiate()
 	get_tree().root.add_child(menu_instancia)
-	
+	menu_instancia.dialogo_label.visible = false
 	menu_instancia.set_titulo(nombre_npc)
 	opciones = get_opciones_segun_estado()
 	opcion_seleccionada = 0
@@ -117,8 +141,14 @@ func confirmar_opcion() -> void:
 		"Ver misión":
 			ver_mision()
 		"Reclutar":
-			cambiar_estado(Estado.ACOMPAÑANDO)
-			cerrar_menu()
+			if hay_base():
+				cambiar_estado(Estado.ACOMPAÑANDO)
+				cerrar_menu()
+			else:
+				en_dialogo = true
+				menu_instancia.mostrar_dialogo("Necesitás construir una base primero.")
+				if !menu_instancia.dialogo_terminado.is_connected(_on_dialogo_terminado):
+					menu_instancia.dialogo_terminado.connect(_on_dialogo_terminado)
 		"Acompañarme":
 			cambiar_estado(Estado.ACOMPAÑANDO)
 			cerrar_menu()
@@ -147,6 +177,8 @@ func confirmar_opcion() -> void:
 		"Rechazar":
 			esperando_respuesta_mision = false
 			cerrar_menu()
+		"Ver inventario":
+			ver_inventario()
 		_:
 			print("Opción no manejada: ", opcion)
 			cerrar_menu()
@@ -160,11 +192,11 @@ func get_opciones_segun_estado() -> Array:
 		Estado.RECLUTABLE:
 			return ["Reclutar"]
 		Estado.ACOMPAÑANDO:
-			return ["Ir a la base", "Cancelar"]
+			return ["Ir a la base", "Cancelar", "Ver inventario"]
 		Estado.EN_BASE_IDLE:
-			return ["Acompañarme", "Recolectar recursos", "Defender base", "Asignar a torre"]
+			return ["Acompañarme", "Recolectar recursos", "Defender base", "Asignar a torre", "Ver inventario"]
 		Estado.RECOLECTANDO, Estado.DEFENDIENDO, Estado.EN_TORRE:
-			return ["Cancelar orden"]
+			return ["Ver inventario", "Cancelar orden"]
 	return []
 	
 func cambiar_estado(nuevo_estado: Estado) -> void:
@@ -215,6 +247,8 @@ func _on_dialogo_terminado() -> void:
 	en_dialogo = false
 	if esperando_respuesta_mision:
 		opciones = ["Aceptar", "Rechazar"]
+	elif estado == Estado.RECOLECTANDO:
+		opciones = ["Recoger recursos", "Cancelar orden"]
 	else:
 		opciones = get_opciones_segun_estado()
 	opcion_seleccionada = 0
@@ -228,3 +262,104 @@ func get_texto_opciones() -> String:
 		else:
 			texto += "  " + opciones[i] + "\n"
 	return texto
+	
+func seguir_jugador() -> void:
+	if jugador:
+		var dir = (jugador.global_position - global_position)
+		dir.y = 0
+		if dir.length() > 1.5:
+			velocity = dir.normalized() * velocidad
+		else:
+			velocity = Vector3.ZERO
+		move_and_slide()
+	
+func atacar_enemigo(delta: float) -> void:
+	if enemigo_objetivo == null:
+		return
+	var dir = (enemigo_objetivo.global_position - global_position)
+	dir.y = 0
+	var distancia = dir.length()
+	if distancia > 1.5:
+		velocity = dir.normalized() * velocidad
+		move_and_slide()
+	else:
+		velocity = Vector3.ZERO
+		move_and_slide()
+		if enemigo_objetivo.is_in_group("Enemigo") and cooldown_ataque <= 0:
+			if is_instance_valid(enemigo_objetivo):
+				cooldown_ataque = tiempo_entre_ataques
+				# anim_player.play("Attack")
+				enemigo_objetivo.recibir_danio(danio_npc) #Esto en el animation player va donde tenga q ir
+				# await anim_player.animation_finished
+			else:
+				enemigos_cercanos.erase(enemigo_objetivo)
+				enemigo_objetivo = null
+	
+func recolectar() -> void:
+	if recurso_objetivo == null or !is_instance_valid(recurso_objetivo):
+		buscar_recurso()
+		return
+		
+	# Verificar que sea un Recurso y no un StaticBody3D
+	if not recurso_objetivo is Recurso:
+		print("recurso_objetivo no es Recurso, es: ", recurso_objetivo.get_class())
+		recurso_objetivo = null
+		return
+		
+	var dir = (recurso_objetivo.global_position - global_position)
+	dir.y = 0
+	var distancia = dir.length()
+	if distancia > 1.5:
+		velocity = dir.normalized() * velocidad
+		move_and_slide()
+	else:
+		velocity = Vector3.ZERO
+		move_and_slide()
+		if cooldown_recoleccion <= 0:
+			cooldown_recoleccion = tiempo_entre_golpes
+			#anim_player.play("Recolectar")
+			recurso_objetivo.recibir_golpe(self) #esto iria el en animplayer
+			#await anim_player.animation_finished
+	
+func buscar_recurso() -> void:
+	print("centro_base: ", centro_base)
+	print("radio_recoleccion: ", radio_recoleccion)
+	var recursos = get_tree().get_nodes_in_group("RecursoDestruible")
+	if recursos.size() == 0:
+		return
+	var mas_cercano = null
+	var distancia_min = INF
+	for r in recursos:
+		print("Nodo: ", r.name, " is Recurso: ", r is Recurso, " script: ", r.get_script())
+		if not r is Recurso:
+			continue
+		if centro_base != null:
+			var dist_base = centro_base.global_position.distance_to(r.global_position)
+			if dist_base > radio_recoleccion:
+				continue
+		var d = global_position.distance_to(r.global_position)
+		if d < distancia_min:
+			distancia_min = d
+			mas_cercano = r
+	recurso_objetivo = mas_cercano
+	print("Recurso objetivo: ", recurso_objetivo, " clase: ", recurso_objetivo.get_class())
+	
+func _on_deteccion_enemigos_body_entered(body: Node3D) -> void:
+	print("DeteccionEnemigos detectó: ", body.name)
+	if body.is_in_group("Enemigo"):
+		enemigos_cercanos.append(body)
+		print("Enemigo agregado, total: ", enemigos_cercanos.size())
+	
+func _on_deteccion_enemigos_body_exited(body: Node3D) -> void:
+	if body.is_in_group("Enemigo"):
+		enemigos_cercanos.erase(body)
+	
+func ver_inventario() -> void:
+	en_dialogo = true
+	var texto = "Inventario de %s:\nMadera: %d\nPiedra: %d\nMetal: %d" % [nombre_npc, inv_madera, inv_piedra, inv_metal]
+	menu_instancia.mostrar_dialogo(texto)
+	if !menu_instancia.dialogo_terminado.is_connected(_on_dialogo_terminado):
+		menu_instancia.dialogo_terminado.connect(_on_dialogo_terminado)
+	
+func hay_base() -> bool:
+	return get_tree().get_first_node_in_group("Base") != null

@@ -92,6 +92,8 @@ func iniciar_ataque():
 	atacando = true
 	anim_atacar()
 	await anim_player.animation_finished
+	if estado == Estado.DEATH:
+		return
 	atacando = false
 
 func apuntar_attack_area():
@@ -106,3 +108,30 @@ func pegar():
 	if jugador != null:
 		jugador.vida -= danio
 		print(jugador.vida)
+	
+func recibir_danio(cantidad: int) -> void:
+	print("recibir_danio llamado, estado: ", estado, " vida: ", vida)
+	if estado == Estado.DEATH:
+		return
+	vida -= cantidad
+	print("Zombie vida: ", vida)
+	if vida <= 0:
+		morir()
+	else:
+		anim_hurt()
+	
+func morir() -> void:
+	estado = Estado.DEATH
+	velocity = Vector3.ZERO
+	$CollisionShape3D.disabled = true
+	attack_area.monitoring = false
+	radar_area.monitoring = false
+	anim_player.stop()
+	anim_muerte()
+	print("Animacion actual: ", anim_sprite.animation)
+	print("Esta jugando: ", anim_sprite.is_playing())
+
+func _on_animated_sprite_3d_animation_finished() -> void:
+	print("animation_finished: ", anim_sprite.animation)
+	if estado == Estado.DEATH:
+		queue_free()

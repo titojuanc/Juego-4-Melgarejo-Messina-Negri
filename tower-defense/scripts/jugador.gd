@@ -180,22 +180,25 @@ func apuntar_con_mouse():
 			linea_area.visible = false
 
 func _on_attack_area_body_entered(body: Node3D) -> void:
+	print("AttackArea detectó: ", body.name, " grupos: ", body.get_groups())
 	if body.is_in_group("Enemigo"):
 		enemigos_en_rango.append(body)
-	if body.is_in_group("RecursoDestruible"):
+	if body.is_in_group("RecursoColision"):
+		print("Recurso en rango agregado: ", body.get_parent().name)
 		recursos_en_rango.append(body.get_parent())
 
 func _on_attack_area_body_exited(body: Node3D) -> void:
 	if body.is_in_group("Enemigo"):
 		enemigos_en_rango.erase(body)
-	if body.is_in_group("RecursoDestruible"):
+	if body.is_in_group("RecursoColision"):
 		recursos_en_rango.erase(body.get_parent())
 
 func pegar():
+	print("pegar llamado, recursos en rango: ", recursos_en_rango.size())
 	for e in enemigos_en_rango:
-		e.vida -= danio
-		print("Pegué: " , danio, " a: ", e)
+		e.recibir_danio(danio)
 	for r in recursos_en_rango:
+		print("golpeando recurso: ", r.name)
 		r.recibir_golpe()
 
 func disparar():

@@ -18,7 +18,6 @@ func set_titulo(texto: String) -> void:
 
 func set_opciones_texto(texto: String) -> void:
 	opciones_label.text = texto
-	dialogo_label.visible = false
 	opciones_label.visible = true
 
 func actualizar_posicion(pos_pantalla: Vector2) -> void:
@@ -44,4 +43,5 @@ func _physics_process(delta: float) -> void:
 			dialogo_label.text = texto_completo.substr(0, char_index)
 		else:
 			escribiendo = false
+			opciones_label.visible = true
 			dialogo_terminado.emit()
