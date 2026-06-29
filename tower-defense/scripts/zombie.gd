@@ -1,6 +1,5 @@
 extends CharacterBody3D
 
-var anim_sprite = null
 var anim_player = null
 var attack_area = null
 var radar_area = null
@@ -18,40 +17,31 @@ var estado = Estado.IDLE
 const GRAVEDAD = 9.8
 
 func _ready() -> void:
-	anim_sprite = get_node_or_null("AnimatedSprite3D")
 	anim_player = get_node_or_null("AnimationPlayer")
 	attack_area = get_node_or_null("AttackArea")
 	radar_area  = get_node_or_null("RadarArea")
 	
 func anim_caminar():
-	if anim_sprite == null:
-		return
-	if anim_sprite.sprite_frames.has_animation("Walk"):
-		anim_sprite.play("Walk")
+	if anim_player != null and anim_player.has_animation("Walk"):
+		if anim_player.current_animation != "Walk":
+			anim_player.play("Walk")
 	
 func anim_idle():
-	if anim_sprite == null:
-		return
-	if anim_sprite.sprite_frames.has_animation("Idle"):
-		anim_sprite.play("Idle")
+	if anim_player != null and anim_player.has_animation("Idle"):
+		if anim_player.current_animation != "Idle":
+			anim_player.play("Idle")
 	
 func anim_atacar():
-	if anim_player == null:
-		return
-	if anim_player.has_animation("Attack"):
+	if anim_player != null and anim_player.has_animation("Attack"):
 		anim_player.play("Attack")
 	
 func anim_hurt():
-	if anim_sprite == null:
-		return
-	if anim_sprite.sprite_frames.has_animation("Hurt"):
-		anim_sprite.play("Hurt")
+	if anim_player != null and anim_player.has_animation("Hurt"):
+		anim_player.play("Hurt")
 	
 func anim_muerte():
-	if anim_sprite == null:
-		return
-	if anim_sprite.sprite_frames.has_animation("Death"):
-		anim_sprite.play("Death")
+	if anim_player != null and anim_player.has_animation("Death"):
+		anim_player.play("Death")
 	
 func _physics_process(delta: float) -> void:
 	if not is_on_floor():
@@ -102,11 +92,6 @@ func perseguir():
 	dir = dir.normalized()
 	velocity.x = dir.x * speed
 	velocity.z = dir.z * speed
-	if anim_sprite != null:
-		if dir.x < 0:
-			anim_sprite.flip_h = false
-		elif dir.x > 0:
-			anim_sprite.flip_h = true
 	anim_caminar()
 	
 func iniciar_ataque():
@@ -123,9 +108,7 @@ func apuntar_attack_area():
 		return
 	var dir = (jugador.global_position - global_position)
 	dir.y = 0
-	rotation.y = atan2(dir.x, dir.z) + PI / 2
-	if anim_sprite != null:
-		anim_sprite.global_rotation.y = 0
+	rotation.y = atan2(dir.x, dir.z)
 	
 func pegar():
 	if jugador != null:
@@ -152,13 +135,8 @@ func morir() -> void:
 		attack_area.monitoring = false
 	if radar_area != null:
 		radar_area.monitoring = false
-	if anim_player != null:
-		anim_player.stop()
 	anim_muerte()
-	
-func _on_animated_sprite_3d_animation_finished() -> void:
-	if anim_sprite == null:
-		return
-	print("animation_finished: ", anim_sprite.animation)
-	if estado == Estado.DEATH:
+
+func _on_animation_player_animation_finished(anim_name: StringName) -> void:
+	if anim_name == "Death":
 		queue_free()

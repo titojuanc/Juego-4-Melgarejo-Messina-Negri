@@ -7,6 +7,7 @@ extends CharacterBody3D
 @onready var linea_area = $LineaApuntado
 @onready var linea_mesh = $LineaApuntado/MeshInstance3D
 @export var bala_scene: PackedScene
+@export var controla_camara:bool = true
 
 @export var speed: float = 100
 @export var vida_max: int = 100
@@ -20,7 +21,7 @@ const GRAVEDAD = 9.8
 
 var atacando = false
 var combo_step = 0
-var camara_offset = Vector3(0, 7, 8)
+var camara_offset = Vector3(0, 14, 8)
 var enemigos_en_rango = []
 var recursos_en_rango = []
 var modo
@@ -123,7 +124,8 @@ func _physics_process(delta: float) -> void:
 				
 	
 	move_and_slide()
-	camara.global_position = global_position + camara_offset
+	if controla_camara:
+		camara.global_position = global_position + camara_offset
 	apuntar_con_mouse()
 	
 func atacar():

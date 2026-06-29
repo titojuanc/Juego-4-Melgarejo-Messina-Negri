@@ -814,6 +814,7 @@ bala_scene = ExtResource("2_2vo2l")
 libraries/ = SubResource("AnimationLibrary_u74oq")
 
 [node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="." unique_id=98325589]
+billboard = 1
 sprite_frames = SubResource("SpriteFrames_qqrc4")
 animation = &"Pistol-Shoot"
 frame = 1

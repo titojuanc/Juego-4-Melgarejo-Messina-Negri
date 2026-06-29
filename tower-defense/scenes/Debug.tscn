@@ -1,8 +1,8 @@
-[gd_scene format=3 uid="uid://bubsqm4705cyp"]
+[gd_scene format=3 uid="uid://d35uwtwanutf4"]
 
 [ext_resource type="PackedScene" uid="uid://bqdgv35voj3w" path="res://scenes/Jugador.tscn" id="1_5spvt"]
-[ext_resource type="PackedScene" path="res://scenes/TileMap.tscn" id="2_c2xgb"]
-[ext_resource type="PackedScene" path="res://scenes/Zombie.tscn" id="3_zombie"]
+[ext_resource type="PackedScene" uid="uid://cq112si4fu5fn" path="res://scenes/TileMap.tscn" id="2_c2xgb"]
+[ext_resource type="PackedScene" uid="uid://d10gpmbqw3wc3" path="res://scenes/Zombie.tscn" id="3_zombie"]
 [ext_resource type="PackedScene" uid="uid://dist2nkvwuchk" path="res://scenes/NPC.tscn" id="4_2u27b"]
 [ext_resource type="PackedScene" uid="uid://bgo5y6h868ypc" path="res://scenes/grid_manager.tscn" id="5_grid"]
 [ext_resource type="PackedScene" uid="uid://bk28krl5oo6lc" path="res://scenes/ciudadOeste.tscn" id="5_p2fn5"]
@@ -30,7 +30,7 @@ transform = Transform3D(1, 0, 0, 0, 0.91669786, -0.39958116, 0, 0.39958116, 0.91
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 8.43698, 0)
 
 [node name="Camera3D" type="Camera3D" parent="." unique_id=795778347]
-transform = Transform3D(1, 0, 0, 0, 0.8660254, 0.5, 0, -0.5, 0.8660254, 0, 1.9471371, 12.184032)
+transform = Transform3D(1, 0, 0, 0, 0.70710677, 0.70710677, 0, -0.70710677, 0.70710677, 0, 1.9471371, 12.184032)
 
 [node name="GridMap" parent="." unique_id=1503455355 groups=["GridMap"] instance=ExtResource("2_c2xgb")]
 data = {
