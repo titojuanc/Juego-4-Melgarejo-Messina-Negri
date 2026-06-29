@@ -7,6 +7,7 @@ var golpes_restantes: int = 0
 var aleatorizador = RandomNumberGenerator.new()
 
 func _ready() -> void:
+	add_to_group("RecursoDestruible")
 	for hijo in get_children():
 		if hijo is StaticBody3D:
 			hijo.add_to_group("RecursoColision")

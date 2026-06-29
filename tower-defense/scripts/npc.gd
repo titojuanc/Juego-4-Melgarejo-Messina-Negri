@@ -48,7 +48,7 @@ var inv_metal: int = 0
 var recurso_objetivo: Node3D = null
 var cooldown_recoleccion = 0.0
 var tiempo_entre_golpes = 1.0
-@export var radio_recoleccion: float = 100.0
+@export var radio_recoleccion: float = 20.0
 var centro_base: Node3D = null
 #
 
@@ -57,6 +57,10 @@ func _ready() -> void:
 	centro_base = get_tree().get_first_node_in_group("CentroBase")
 
 func _physics_process(delta: float) -> void:
+	if centro_base == null:
+		centro_base = get_tree().get_first_node_in_group("CentroBase")
+		if centro_base != null:
+			print("CentroBase encontrado: ", centro_base.name)
 	if menu_abierto and menu_instancia:
 		actualizar_posicion_menu()
 	cooldown_ataque -= delta
@@ -322,15 +326,12 @@ func recolectar() -> void:
 			#await anim_player.animation_finished
 	
 func buscar_recurso() -> void:
-	print("centro_base: ", centro_base)
-	print("radio_recoleccion: ", radio_recoleccion)
 	var recursos = get_tree().get_nodes_in_group("RecursoDestruible")
 	if recursos.size() == 0:
 		return
 	var mas_cercano = null
 	var distancia_min = INF
 	for r in recursos:
-		print("Nodo: ", r.name, " is Recurso: ", r is Recurso, " script: ", r.get_script())
 		if not r is Recurso:
 			continue
 		if centro_base != null:
@@ -342,7 +343,6 @@ func buscar_recurso() -> void:
 			distancia_min = d
 			mas_cercano = r
 	recurso_objetivo = mas_cercano
-	print("Recurso objetivo: ", recurso_objetivo, " clase: ", recurso_objetivo.get_class())
 	
 func _on_deteccion_enemigos_body_entered(body: Node3D) -> void:
 	print("DeteccionEnemigos detectó: ", body.name)
