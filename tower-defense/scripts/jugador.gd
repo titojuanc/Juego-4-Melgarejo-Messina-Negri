@@ -8,7 +8,7 @@ extends CharacterBody3D
 @onready var linea_mesh = $LineaApuntado/MeshInstance3D
 @export var bala_scene: PackedScene
 
-@export var speed: float = 10
+@export var speed: float = 100
 @export var vida_max: int = 100
 var vida: int
 @export var danio: int = 30

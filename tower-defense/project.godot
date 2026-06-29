@@ -32,6 +32,7 @@ Bala=""
 Base=""
 CentroBase=""
 RecursoColision=""
+GridMap=""
 
 [input]
 
@@ -89,6 +90,7 @@ la_B={
 3d_physics/layer_9="Edificios"
 3d_physics/layer_10="DeteccionEnemigosNPC"
 3d_physics/layer_11="InteractionAreaNPC"
+3d_physics/layer_12="Bala"
 
 [physics]
 

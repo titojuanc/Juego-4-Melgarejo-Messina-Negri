@@ -1,0 +1,49 @@
+[gd_scene format=3 uid="uid://wpqok3y6qd6w"]
+
+[ext_resource type="Texture2D" uid="uid://dvi3s3nt8lj70" path="res://assets/zombie/ZombieNuevo/OBJ/Zed_4.png" id="1_2yixd"]
+[ext_resource type="Script" uid="uid://bm65gkd72o6fe" path="res://scripts/zombie.gd" id="1_4074b"]
+[ext_resource type="ArrayMesh" uid="uid://bm62ubndwhgbg" path="res://assets/zombie/ZombieNuevo/OBJ/Zed_4.obj" id="2_4074b"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_b02ma"]
+albedo_texture = ExtResource("1_2yixd")
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_nf0kw"]
+size = Vector3(1, 6.4135895, 0.9139404)
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_b02ma"]
+radius = 25.0
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_4074b"]
+size = Vector3(1, 1.2645264, 0.5977783)
+
+[node name="ZombieNuevo4" type="CharacterBody3D" unique_id=258430720 groups=["Enemigo"]]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
+collision_layer = 8
+collision_mask = 2053
+script = ExtResource("1_4074b")
+
+[node name="Zed4" type="MeshInstance3D" parent="." unique_id=2043181633]
+material_override = SubResource("StandardMaterial3D_b02ma")
+mesh = ExtResource("2_4074b")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=267673751]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0016555786, -0.043029785)
+shape = SubResource("BoxShape3D_nf0kw")
+
+[node name="RadarArea" type="Area3D" parent="." unique_id=1371410593]
+collision_layer = 32
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="RadarArea" unique_id=1970969132]
+shape = SubResource("SphereShape3D_b02ma")
+
+[node name="AttackArea" type="Area3D" parent="." unique_id=565680533]
+collision_layer = 16
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="AttackArea" unique_id=2023851479]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.13226318, 0.47603226)
+shape = SubResource("BoxShape3D_4074b")
+
+[connection signal="body_entered" from="RadarArea" to="." method="_on_radar_area_body_entered"]
+[connection signal="body_exited" from="RadarArea" to="." method="_on_radar_area_body_exited"]
+[connection signal="body_entered" from="AttackArea" to="." method="_on_attack_area_body_entered"]
+[connection signal="body_exited" from="AttackArea" to="." method="_on_attack_area_body_exited"]

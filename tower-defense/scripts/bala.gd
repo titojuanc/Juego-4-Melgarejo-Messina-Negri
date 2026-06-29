@@ -17,5 +17,8 @@ func _physics_process(delta: float) -> void:
 		var collision = get_slide_collision(0)
 		var body = collision.get_collider()
 		if body.is_in_group("Enemigo"):
-			body.vida -= danio
+			if body.has_method("recibir_danio"):
+				body.recibir_danio(danio)
+			else:
+				body.vida -= danio
 		queue_free()

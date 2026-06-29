@@ -293,11 +293,11 @@ height = 1.6501465
 size = Vector3(0.6265259, 1.4206543, 1)
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_m83i4"]
-radius = 8.02665
+radius = 10.0
 
 [node name="Zombie" type="CharacterBody3D" unique_id=663786870 groups=["Enemigo"]]
 collision_layer = 8
-collision_mask = 5
+collision_mask = 2053
 script = ExtResource("1_m83i4")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=978366605]

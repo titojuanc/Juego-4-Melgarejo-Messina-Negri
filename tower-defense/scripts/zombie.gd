@@ -1,17 +1,15 @@
 extends CharacterBody3D
 
-@onready var anim_sprite = $AnimatedSprite3D
-@onready var anim_player = $AnimationPlayer
-@onready var attack_area = $AttackArea
-@onready var radar_area = $RadarArea
+var anim_sprite = null
+var anim_player = null
+var attack_area = null
+var radar_area = null
 
 enum Estado {IDLE, CHASE, ATTACK, DEATH}
 
 var atacando = false
 var jugador = null
 var estado = Estado.IDLE
-var persiguiendo = false
-var en_rango_ataque = false
 
 @export var speed: float = 3
 @export var danio: int = 10
@@ -20,42 +18,63 @@ var en_rango_ataque = false
 const GRAVEDAD = 9.8
 
 func _ready() -> void:
-	pass
-
+	anim_sprite = get_node_or_null("AnimatedSprite3D")
+	anim_player = get_node_or_null("AnimationPlayer")
+	attack_area = get_node_or_null("AttackArea")
+	radar_area  = get_node_or_null("RadarArea")
+	
 func anim_caminar():
-	anim_sprite.play("Walk")
+	if anim_sprite == null:
+		return
+	if anim_sprite.sprite_frames.has_animation("Walk"):
+		anim_sprite.play("Walk")
+	
 func anim_idle():
-	anim_sprite.play("Idle")
+	if anim_sprite == null:
+		return
+	if anim_sprite.sprite_frames.has_animation("Idle"):
+		anim_sprite.play("Idle")
+	
 func anim_atacar():
-	anim_player.play("Attack")
+	if anim_player == null:
+		return
+	if anim_player.has_animation("Attack"):
+		anim_player.play("Attack")
+	
 func anim_hurt():
-	anim_sprite.play("Hurt")
+	if anim_sprite == null:
+		return
+	if anim_sprite.sprite_frames.has_animation("Hurt"):
+		anim_sprite.play("Hurt")
+	
 func anim_muerte():
-	anim_sprite.play("Death")
-
+	if anim_sprite == null:
+		return
+	if anim_sprite.sprite_frames.has_animation("Death"):
+		anim_sprite.play("Death")
+	
 func _physics_process(delta: float) -> void:
 	if not is_on_floor():
 		velocity.y -= GRAVEDAD * delta
 	else:
 		velocity.y = 0
-	
 	if jugador == null:
 		jugador = get_tree().get_first_node_in_group("Jugador")
-		if jugador == null:
-			return
-	
+		return
 	if estado == Estado.DEATH:
-		return 
-	
+		return
 	apuntar_attack_area()
 	match estado:
 		Estado.IDLE:
+			velocity.x = 0
+			velocity.z = 0
 			anim_idle()
 		Estado.CHASE:
 			perseguir()
 		Estado.ATTACK:
 			if not atacando:
 				iniciar_ataque()
+	move_and_slide()
 	
 func _on_attack_area_body_entered(body: Node3D) -> void:
 	if body.is_in_group("Jugador"):
@@ -65,9 +84,11 @@ func _on_attack_area_body_exited(body: Node3D) -> void:
 	if body.is_in_group("Jugador"):
 		estado = Estado.CHASE
 		atacando = false
-		anim_player.stop()
+		if anim_player != null:
+			anim_player.stop()
 	
 func _on_radar_area_body_entered(body: Node3D) -> void:
+	print("RADAR DETECTÓ: ", body.name)
 	if body.is_in_group("Jugador"):
 		estado = Estado.CHASE
 	
@@ -81,36 +102,37 @@ func perseguir():
 	dir = dir.normalized()
 	velocity.x = dir.x * speed
 	velocity.z = dir.z * speed
-	if dir.x < 0:
-		anim_sprite.flip_h = false  # derecha
-	elif dir.x > 0:
-		anim_sprite.flip_h = true   # izquierda
+	if anim_sprite != null:
+		if dir.x < 0:
+			anim_sprite.flip_h = false
+		elif dir.x > 0:
+			anim_sprite.flip_h = true
 	anim_caminar()
-	move_and_slide()
-
+	
 func iniciar_ataque():
 	atacando = true
 	anim_atacar()
-	await anim_player.animation_finished
+	if anim_player != null and anim_player.has_animation("Attack"):
+		await anim_player.animation_finished
 	if estado == Estado.DEATH:
 		return
 	atacando = false
-
+	
 func apuntar_attack_area():
 	if jugador == null:
 		return
 	var dir = (jugador.global_position - global_position)
 	dir.y = 0
 	rotation.y = atan2(dir.x, dir.z) + PI / 2
-	anim_sprite.global_rotation.y = 0
-
+	if anim_sprite != null:
+		anim_sprite.global_rotation.y = 0
+	
 func pegar():
 	if jugador != null:
 		jugador.vida -= danio
 		print(jugador.vida)
 	
 func recibir_danio(cantidad: int) -> void:
-	print("recibir_danio llamado, estado: ", estado, " vida: ", vida)
 	if estado == Estado.DEATH:
 		return
 	vida -= cantidad
@@ -123,15 +145,20 @@ func recibir_danio(cantidad: int) -> void:
 func morir() -> void:
 	estado = Estado.DEATH
 	velocity = Vector3.ZERO
-	$CollisionShape3D.disabled = true
-	attack_area.monitoring = false
-	radar_area.monitoring = false
-	anim_player.stop()
+	var col = get_node_or_null("CollisionShape3D")
+	if col != null:
+		col.disabled = true
+	if attack_area != null:
+		attack_area.monitoring = false
+	if radar_area != null:
+		radar_area.monitoring = false
+	if anim_player != null:
+		anim_player.stop()
 	anim_muerte()
-	print("Animacion actual: ", anim_sprite.animation)
-	print("Esta jugando: ", anim_sprite.is_playing())
-
+	
 func _on_animated_sprite_3d_animation_finished() -> void:
+	if anim_sprite == null:
+		return
 	print("animation_finished: ", anim_sprite.animation)
 	if estado == Estado.DEATH:
 		queue_free()
