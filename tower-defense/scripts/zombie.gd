@@ -112,7 +112,7 @@ func apuntar_attack_area():
 	
 func pegar():
 	if jugador != null:
-		jugador.vida -= danio
+		jugador.restar_vida(danio)
 		print(jugador.vida)
 	
 func recibir_danio(cantidad: int) -> void:

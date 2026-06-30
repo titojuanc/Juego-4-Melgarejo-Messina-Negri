@@ -32,6 +32,7 @@ var madera: int = 0
 var piedra: int = 0
 var metal: int = 0
 var movimiento_bloqueado = false
+var muerto = false
 
 #Animaciones del personaje normal
 func anim_normal_idle():
@@ -82,6 +83,8 @@ func _ready() -> void:
 	print("material: ", mat_linea)
 	
 func _physics_process(delta: float) -> void:
+	if muerto:
+		return
 	if movimiento_bloqueado:
 		velocity.x = 0
 		velocity.z = 0
@@ -237,3 +240,25 @@ func _on_linea_apuntado_body_exited(body: Node3D) -> void:
 	print("linea detectó: ", body.name)
 	if body.is_in_group("Enemigo"):
 		enemigo_en_linea = false
+	
+func restar_vida(danio):
+	vida -= danio
+	verificar_muerte()
+	
+func verificar_muerte():
+	if vida <= 0:
+		morir()
+		
+func morir():
+	muerto = true
+	anim_normal_death()
+	
+func _on_animated_sprite_3d_animation_finished() -> void:
+	if anim_sprite.animation == "Normal-Death":
+		queue_free()
+		
+func gastar_madera(cantidad: int) -> bool:
+	if madera < cantidad:
+		return false
+	madera -= cantidad
+	return true

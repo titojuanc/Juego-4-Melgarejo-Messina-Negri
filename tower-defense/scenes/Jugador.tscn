@@ -816,9 +816,7 @@ libraries/ = SubResource("AnimationLibrary_u74oq")
 [node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="." unique_id=98325589]
 billboard = 1
 sprite_frames = SubResource("SpriteFrames_qqrc4")
-animation = &"Pistol-Shoot"
-frame = 1
-frame_progress = 1.0
+animation = &"Normal-Death"
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=2082091482]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.035762787, -0.37557983, 0)
@@ -848,6 +846,7 @@ surface_material_override/0 = SubResource("StandardMaterial3D_qo7ab")
 [node name="Hud" parent="." unique_id=753599168 instance=ExtResource("128_u74oq")]
 
 [connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_animation_player_animation_finished"]
+[connection signal="animation_finished" from="AnimatedSprite3D" to="." method="_on_animated_sprite_3d_animation_finished"]
 [connection signal="body_entered" from="AttackArea" to="." method="_on_attack_area_body_entered"]
 [connection signal="body_exited" from="AttackArea" to="." method="_on_attack_area_body_exited"]
 [connection signal="body_entered" from="LineaApuntado" to="." method="_on_linea_apuntado_body_entered"]
