@@ -11,6 +11,7 @@ extends CanvasLayer
 var jugador
 
 func _ready():
+	process_mode=Node.PROCESS_MODE_ALWAYS
 	jugador = get_tree().get_first_node_in_group("Jugador")
 	barra_vida.max_value = jugador.vida_max
 	

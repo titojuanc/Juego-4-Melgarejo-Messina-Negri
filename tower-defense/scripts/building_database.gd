@@ -7,7 +7,7 @@ var buildings:Dictionary={
 	BuildingType.TOWER:{
 		"name":"Tower",
 		"grid_size":Vector2i(2,2),
-		"cost":{ResourceType.WOOD:30,ResourceType.STONE:50,ResourceType.METAL:20},
+		"cost":{ResourceType.WOOD:0,ResourceType.STONE:0,ResourceType.METAL:0},
 		"build_time":8.0,
 		"max_npcs":2,
 		"model_scene":preload("res://scenes/buildings/madera/tower_model.tscn"),
@@ -15,7 +15,7 @@ var buildings:Dictionary={
 	BuildingType.WALL:{
 		"name":"Wall",
 		"grid_size":Vector2i(1,1),
-		"cost":{ResourceType.WOOD:10,ResourceType.STONE:30,ResourceType.METAL:0},
+		"cost":{ResourceType.WOOD:10,ResourceType.STONE:10,ResourceType.METAL:0},
 		"build_time":3.0,
 		"max_npcs":0,
 		"wall_models":{

@@ -1,5 +1,7 @@
 extends Node3D
 
+signal building_placed
+
 const BUILDING_SCENE=preload("res://scenes/buildings/Building.tscn")
 
 @onready var grid_manager=get_parent()
@@ -15,6 +17,17 @@ var _player:CharacterBody3D
 func _ready()->void:
 	await get_tree().process_frame
 	_player=get_tree().get_first_node_in_group("Jugador")
+
+func place_initial_base()->void:
+	var type=BuildingDB.BuildingType.BASE
+	var gs=BuildingDB.get_grid_size(type)
+	var cell=Vector2i((grid_manager.grid_width-gs.x)/2,(grid_manager.grid_height-gs.y)/2)
+	var building=BUILDING_SCENE.instantiate()
+	_placed_buildings.add_child(building)
+	building.setup(type,grid_manager.cell_size)
+	building.position=cell_to_world(cell,gs)
+	building.place_instantly()
+	_occupy_cells(cell,gs,building)
 
 func start_placement(type:int)->void:
 	cancel_remove()
@@ -61,12 +74,16 @@ func confirm_placement(cell:Vector2i)->void:
 	var gs=BuildingDB.get_grid_size(current_type)
 	if not _can_place(cell,gs):
 		return
+	if not can_afford(current_type):
+		return
 	var building=BUILDING_SCENE.instantiate()
 	_placed_buildings.add_child(building)
 	building.setup(current_type,grid_manager.cell_size)
 	building.position=cell_to_world(cell,gs)
 	building.start_construction()
 	_occupy_cells(cell,gs,building)
+	_spend_resources(current_type)
+	building_placed.emit()
 
 func confirm_wall_line(cells:Array[Vector2i],is_vertical:bool=false)->void:
 	if not is_placing or current_type!=BuildingDB.BuildingType.WALL:
@@ -79,6 +96,12 @@ func confirm_wall_line(cells:Array[Vector2i],is_vertical:bool=false)->void:
 	var count=valid_cells.size()
 	if count==0:
 		return
+	var affordable=_max_placeable(current_type)
+	if affordable==0:
+		return
+	if count>affordable:
+		valid_cells.resize(affordable)
+		count=affordable
 	for i in count:
 		var variant:String
 		if count==1:
@@ -105,6 +128,8 @@ func confirm_wall_line(cells:Array[Vector2i],is_vertical:bool=false)->void:
 			building.rotation.y=deg_to_rad(-90)
 		building.start_construction()
 		_occupy_cells(cell,gs,building)
+	_spend_resources(current_type,count)
+	building_placed.emit()
 
 func cancel_placement()->void:
 	is_placing=false
@@ -128,6 +153,8 @@ func remove_at(cell:Vector2i)->void:
 	if not _cell_data.is_occupied(cell):
 		return
 	var building=_cell_data.cell_map[cell]["building_ref"]
+	if building.building_type==BuildingDB.BuildingType.BASE:
+		return
 	_free_building_cells(building)
 	building.queue_free()
 
@@ -135,6 +162,43 @@ func _free_building_cells(building:Node3D)->void:
 	for key in _cell_data.cell_map.keys():
 		if _cell_data.cell_map[key]["building_ref"]==building:
 			_cell_data.clear_cell(key)
+
+func can_afford(type:int)->bool:
+	if not _player:
+		_player=get_tree().get_first_node_in_group("Jugador")
+	if not _player:
+		return false
+	var cost=BuildingDB.get_cost(type)
+	for res_type in cost.keys():
+		if _get_player_resource(res_type)<cost[res_type]:
+			return false
+	return true
+
+func _max_placeable(type:int)->int:
+	var cost=BuildingDB.get_cost(type)
+	var n:int=9999
+	for res_type in cost.keys():
+		if cost[res_type]>0:
+			n=mini(n,_get_player_resource(res_type)/cost[res_type])
+	return n
+
+func _spend_resources(type:int,times:int=1)->void:
+	var cost=BuildingDB.get_cost(type)
+	for res_type in cost.keys():
+		_subtract_player_resource(res_type,cost[res_type]*times)
+
+func _get_player_resource(res_type:int)->int:
+	match res_type:
+		BuildingDB.ResourceType.WOOD: return _player.madera
+		BuildingDB.ResourceType.STONE: return _player.piedra
+		BuildingDB.ResourceType.METAL: return _player.metal
+	return 0
+
+func _subtract_player_resource(res_type:int,amount:int)->void:
+	match res_type:
+		BuildingDB.ResourceType.WOOD: _player.madera-=amount
+		BuildingDB.ResourceType.STONE: _player.piedra-=amount
+		BuildingDB.ResourceType.METAL: _player.metal-=amount
 
 func cell_to_world(cell:Vector2i,gs:Vector2i)->Vector3:
 	var s=grid_manager.cell_size

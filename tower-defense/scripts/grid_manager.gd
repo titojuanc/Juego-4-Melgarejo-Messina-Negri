@@ -14,3 +14,4 @@ func _ready()->void:
 	global_position.y=grid_y_offset
 	cell_data.initialize(grid_width,grid_height)
 	grid_visual.draw_grid(grid_width,grid_height,cell_size)
+	building_manager.place_initial_base()

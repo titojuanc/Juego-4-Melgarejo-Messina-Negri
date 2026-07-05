@@ -43,6 +43,7 @@ func enter_build_mode()->void:
 	_player.movimiento_bloqueado=true
 	_grid_manager.get_node("GridVisual").visible=true
 	_grid_manager.get_node("BuildingUI").visible=true
+	_grid_manager.get_node("BuildingUI/BuildingMenu").refresh()
 	_grid_manager.get_node("InputHandler").set_process(true)
 	_grid_manager.get_node("InputHandler").set_process_unhandled_input(true)
 	get_tree().paused=true
@@ -61,7 +62,7 @@ func exit_build_mode()->void:
 	_grid_manager.get_node("InputHandler").set_process_unhandled_input(false)
 	_player.movimiento_bloqueado=false
 	_camera.global_position=_player.global_position+_player.camara_offset
-	_camera.rotation.x=-0.5
+	_camera.rotation=Vector3(-PI/4,0,0)
 	get_tree().paused=false
 	build_mode_exited.emit()
 

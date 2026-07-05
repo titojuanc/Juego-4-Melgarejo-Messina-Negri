@@ -205,6 +205,20 @@ func get_opciones_segun_estado() -> Array:
 	
 func cambiar_estado(nuevo_estado: Estado) -> void:
 	estado = nuevo_estado
+	var es_aliado=estado in [Estado.ACOMPAÑANDO,Estado.EN_BASE_IDLE,Estado.RECOLECTANDO,Estado.DEFENDIENDO,Estado.EN_TORRE]
+	if es_aliado:
+		if not is_in_group("Aliado"):
+			add_to_group("Aliado")
+	else:
+		if is_in_group("Aliado"):
+			remove_from_group("Aliado")
+
+func asignar_a_torre(torre:Node)->void:
+	cambiar_estado(Estado.EN_TORRE)
+	global_position=torre.get_spawn_position()
+
+func desasignar_torre()->void:
+	cambiar_estado(Estado.EN_BASE_IDLE)
 	
 func hablar() -> void:
 	en_dialogo = true
