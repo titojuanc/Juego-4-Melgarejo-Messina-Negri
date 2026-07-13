@@ -10,6 +10,7 @@ var esperando_respuesta_mision = false
 @onready var interaccion_area = $InteractionArea
 
 var menu_scene = preload("res://scenes/HUD_npc.tscn")
+var bala_scene = preload("res://scenes/Bala.tscn")
 var menu_instancia: CanvasLayer = null
 
 #Ataque
@@ -50,6 +51,7 @@ var cooldown_recoleccion = 0.0
 var tiempo_entre_golpes = 1.0
 @export var radio_recoleccion: float = 20.0
 var centro_base: Node3D = null
+var _radio_deteccion_original: float = -1.0
 #
 
 func _ready() -> void:
@@ -77,6 +79,12 @@ func _physics_process(delta: float) -> void:
 		Estado.RECOLECTANDO:
 			cooldown_recoleccion -= delta
 			recolectar()
+		Estado.EN_TORRE:
+			if enemigos_cercanos.size() > 0:
+				enemigo_objetivo = enemigos_cercanos[0]
+				atacar_desde_torre(delta)
+			else:
+				enemigo_objetivo = null
 	
 func actualizar_posicion_menu() -> void:
 	var camara = get_viewport().get_camera_3d()
@@ -216,8 +224,19 @@ func cambiar_estado(nuevo_estado: Estado) -> void:
 func asignar_a_torre(torre:Node)->void:
 	cambiar_estado(Estado.EN_TORRE)
 	global_position=torre.get_spawn_position()
+	var col=deteccion_enemigos.get_node("CollisionShape3D")
+	var shape=col.shape.duplicate() as SphereShape3D
+	_radio_deteccion_original=shape.radius
+	shape.radius=30.0
+	col.shape=shape
 
 func desasignar_torre()->void:
+	if _radio_deteccion_original>0.0:
+		var col=deteccion_enemigos.get_node("CollisionShape3D")
+		var shape=col.shape.duplicate() as SphereShape3D
+		shape.radius=_radio_deteccion_original
+		col.shape=shape
+		_radio_deteccion_original=-1.0
 	cambiar_estado(Estado.EN_BASE_IDLE)
 	
 func hablar() -> void:
@@ -313,6 +332,29 @@ func atacar_enemigo(delta: float) -> void:
 				enemigos_cercanos.erase(enemigo_objetivo)
 				enemigo_objetivo = null
 	
+func atacar_desde_torre(delta: float) -> void:
+	if enemigo_objetivo == null:
+		return
+	if not is_instance_valid(enemigo_objetivo):
+		enemigos_cercanos.erase(enemigo_objetivo)
+		enemigo_objetivo = null
+		return
+	velocity = Vector3.ZERO
+	move_and_slide()
+	if enemigo_objetivo.is_in_group("Enemigo") and cooldown_ataque <= 0:
+		cooldown_ataque = tiempo_entre_ataques
+		var bala = bala_scene.instantiate()
+		get_tree().root.add_child(bala)
+		var origen = global_position + Vector3(0, 0.5, 0)
+		bala.global_position = origen
+		bala.danio = 17
+		var distancia = origen.distance_to(enemigo_objetivo.global_position)
+		var velocidad_bala: float = bala.speed
+		var tiempo_estimado = distancia / velocidad_bala
+		var pos_predicha = enemigo_objetivo.global_position + Vector3(enemigo_objetivo.velocity.x, 0, enemigo_objetivo.velocity.z) * tiempo_estimado
+		var dir = (pos_predicha - origen)
+		bala.direccion = dir.normalized()
+
 func recolectar() -> void:
 	if recurso_objetivo == null or !is_instance_valid(recurso_objetivo):
 		buscar_recurso()

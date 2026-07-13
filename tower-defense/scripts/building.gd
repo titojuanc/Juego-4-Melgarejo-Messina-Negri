@@ -13,6 +13,7 @@ var max_npcs:int=0
 var grid_cells:Array=[]
 var wall_variant:String="solo"
 var _npc_menu=null
+var jugadores_en_rango:Array=[]
 
 @onready var model=$Model
 @onready var npc_spawn_point=$NPCSpawnPoint
@@ -36,6 +37,8 @@ func setup(type:int,cell_size:float=8.0)->void:
 		col_d=2*cell_size
 	col_shape.size=Vector3(col_w,cell_size,col_d)
 	col_node.position=Vector3(0,cell_size*0.5,0)
+	if type==BuildingDB.BuildingType.TOWER:
+		npc_spawn_point.position=Vector3(0,cell_size*0.9,0)
 	if max_npcs>0:
 		var npc_col=npc_detect_area.get_node("CollisionShape3D")
 		var npc_shape=npc_col.shape.duplicate() as BoxShape3D
@@ -90,6 +93,9 @@ func unregister_npc(npc:Node)->void:
 	current_npcs.erase(npc)
 
 func _on_npc_entered(body:Node3D)->void:
+	if body.is_in_group("Jugador"):
+		jugadores_en_rango.append(body)
+		return
 	if state!=State.ACTIVE:
 		return
 	if not body is CharacterBody3D:
@@ -100,10 +106,25 @@ func _on_npc_entered(body:Node3D)->void:
 			body.asignar_edificio(self)
 
 func _on_npc_exited(body:Node3D)->void:
+	if body.is_in_group("Jugador"):
+		jugadores_en_rango.erase(body)
+		return
 	if body in current_npcs:
 		unregister_npc(body)
 		if body.has_method("desasignar_edificio"):
 			body.desasignar_edificio()
+
+func _physics_process(_delta:float)->void:
+	if building_type!=BuildingDB.BuildingType.TOWER:
+		return
+	if state!=State.ACTIVE:
+		return
+	if jugadores_en_rango.is_empty():
+		return
+	if _npc_menu and is_instance_valid(_npc_menu):
+		return
+	if Input.is_action_just_pressed("interactuar"):
+		_open_npc_menu()
 
 func _unhandled_input(event:InputEvent)->void:
 	if building_type!=BuildingDB.BuildingType.BASE:

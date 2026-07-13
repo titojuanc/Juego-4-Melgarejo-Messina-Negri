@@ -9,7 +9,7 @@ var buildings:Dictionary={
 		"grid_size":Vector2i(2,2),
 		"cost":{ResourceType.WOOD:0,ResourceType.STONE:0,ResourceType.METAL:0},
 		"build_time":8.0,
-		"max_npcs":2,
+		"max_npcs":1,
 		"model_scene":preload("res://scenes/buildings/madera/tower_model.tscn"),
 	},
 	BuildingType.WALL:{
