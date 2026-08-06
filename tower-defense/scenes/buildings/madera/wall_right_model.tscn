@@ -1,0 +1,44 @@
+[gd_scene format=3 uid="uid://dw1eci7qd2ond"]
+
+[ext_resource type="PackedScene" uid="uid://c1qam3alugqpi" path="res://assets/Medieval Village MegaKit[Standard]/glTF/Wall_Plaster_Straight_Base.gltf" id="1_ejc80"]
+[ext_resource type="PackedScene" uid="uid://tx6cuq3175lo" path="res://assets/Medieval Village MegaKit[Standard]/glTF/Corner_Exterior_Brick.gltf" id="2_6eqbn"]
+[ext_resource type="PackedScene" uid="uid://cktadvkuwy0bi" path="res://assets/Medieval Village MegaKit[Standard]/glTF/Roof_Wooden_2x1_Middle.gltf" id="3_yl5a3"]
+
+[node name="WallRightModel" type="Node3D" unique_id=697783764]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 0, 0, 0)
+
+[node name="Wall_Plaster_Straight_Base2" parent="." unique_id=71890825 instance=ExtResource("1_ejc80")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 1.4908507, 0, -0.9020001)
+
+[node name="Wall_Plaster_Straight_Base3" parent="." unique_id=1351786103 instance=ExtResource("1_ejc80")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.4908507, 0, 0.9020001)
+
+[node name="Wall_Plaster_Straight_Base4" parent="." unique_id=1776937131 instance=ExtResource("1_ejc80")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 2.3928509, 0, 0)
+
+[node name="Corner_Exterior_Brick2" parent="." unique_id=55408018 instance=ExtResource("2_6eqbn")]
+transform = Transform3D(1.1924881e-08, 0, -1, 0, 1, 0, 1, 0, 1.1924881e-08, 2.4908507, 0, 1)
+
+[node name="Corner_Exterior_Brick3" parent="." unique_id=1484513961 instance=ExtResource("2_6eqbn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.4908507, 0, -1)
+
+[node name="Roof_Wooden_2x1_Middle2" parent="." unique_id=987997742 instance=ExtResource("3_yl5a3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.4908507, 2.0704618, 0)
+
+[node name="Wall_Plaster_Straight_Base5" parent="." unique_id=1193740309 instance=ExtResource("1_ejc80")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -0.50914943, 0, -0.9020001)
+
+[node name="Wall_Plaster_Straight_Base6" parent="." unique_id=2037460740 instance=ExtResource("1_ejc80")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.50914943, 0, 0.9020001)
+
+[node name="Roof_Wooden_2x1_Middle3" parent="." unique_id=108423500 instance=ExtResource("3_yl5a3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.50914943, 2.0704618, 0)
+
+[node name="Wall_Plaster_Straight_Base7" parent="." unique_id=1084748665 instance=ExtResource("1_ejc80")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -1.666, 0, -0.903)
+
+[node name="Wall_Plaster_Straight_Base8" parent="." unique_id=1147092857 instance=ExtResource("1_ejc80")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.666, 0, 0.903)
+
+[node name="Roof_Wooden_2x1_Middle4" parent="." unique_id=297203773 instance=ExtResource("3_yl5a3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.6660225, 2.0704618, 0)

@@ -1,0 +1,94 @@
+[gd_scene format=3 uid="uid://cq0e0b77vkqm1"]
+
+[ext_resource type="Texture2D" uid="uid://cqswkae6yjiqs" path="res://assets/zombie/ZombieNuevo/OBJ/Zed_2.png" id="1_1q2uf"]
+[ext_resource type="Script" uid="uid://bm65gkd72o6fe" path="res://scripts/zombie.gd" id="1_8ygoe"]
+[ext_resource type="ArrayMesh" uid="uid://dydyorjc6mkbw" path="res://assets/zombie/ZombieNuevo/OBJ/Zed_2.obj" id="2_8ygoe"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_vsgol"]
+albedo_texture = ExtResource("1_1q2uf")
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_1li0g"]
+size = Vector3(1, 6.4135895, 0.9139404)
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_vsgol"]
+radius = 25.0
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_8ygoe"]
+size = Vector3(1, 1.2645264, 0.5977783)
+
+[sub_resource type="Animation" id="Animation_m83i4"]
+resource_name = "Attack"
+length = 0.625
+tracks/0/type = "method"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimatedSprite3D")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [&"Attack"],
+"method": &"play"
+}]
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.6),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"pegar"
+}]
+}
+
+[sub_resource type="Animation" id="Animation_v58xl"]
+length = 0.001
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_8ygoe"]
+_data = {
+&"Attack": SubResource("Animation_m83i4"),
+&"RESET": SubResource("Animation_v58xl")
+}
+
+[node name="ZombieNuevo2" type="CharacterBody3D" unique_id=1045289265 node_paths=PackedStringArray("mesh") groups=["Enemigo"]]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
+collision_layer = 8
+collision_mask = 2053
+script = ExtResource("1_8ygoe")
+mesh = NodePath("Zed2")
+
+[node name="Zed2" type="MeshInstance3D" parent="." unique_id=1972420567]
+material_override = SubResource("StandardMaterial3D_vsgol")
+mesh = ExtResource("2_8ygoe")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1643875797]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0016555786, -0.043029785)
+shape = SubResource("BoxShape3D_1li0g")
+
+[node name="RadarArea" type="Area3D" parent="." unique_id=992965977]
+collision_layer = 32
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="RadarArea" unique_id=1847422872]
+shape = SubResource("SphereShape3D_vsgol")
+
+[node name="AttackArea" type="Area3D" parent="." unique_id=264759655]
+collision_layer = 16
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="AttackArea" unique_id=376996853]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.13226318, 0.47603226)
+shape = SubResource("BoxShape3D_8ygoe")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=2068894101]
+libraries/ = SubResource("AnimationLibrary_8ygoe")
+
+[connection signal="body_entered" from="RadarArea" to="." method="_on_radar_area_body_entered"]
+[connection signal="body_exited" from="RadarArea" to="." method="_on_radar_area_body_exited"]
+[connection signal="body_entered" from="AttackArea" to="." method="_on_attack_area_body_entered"]
+[connection signal="body_exited" from="AttackArea" to="." method="_on_attack_area_body_exited"]

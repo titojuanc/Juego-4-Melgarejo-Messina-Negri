@@ -1,0 +1,143 @@
+[gd_scene format=3 uid="uid://bka00kwm83sv3"]
+
+[ext_resource type="Script" uid="uid://cgpg2alcimw28" path="res://scripts/character_body_3d.gd" id="1_u44n3"]
+[ext_resource type="Texture2D" uid="uid://d4kprdo2vq36x" path="res://assets/knight 3 idle.png" id="1_xkndl"]
+[ext_resource type="Texture2D" uid="uid://btxmo1eqqm3h" path="res://assets/knight walk animation.png" id="2_u44n3"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_6ubv3"]
+size = Vector3(60, 2, 60)
+
+[sub_resource type="BoxMesh" id="BoxMesh_wbfu4"]
+size = Vector3(60, 2, 60)
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_sb48q"]
+radius = 3.0
+height = 10.0
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_t88pq"]
+atlas = ExtResource("1_xkndl")
+region = Rect2(0, 0, 42, 42)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_r0x5m"]
+atlas = ExtResource("1_xkndl")
+region = Rect2(42, 0, 42, 42)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3mrqo"]
+atlas = ExtResource("1_xkndl")
+region = Rect2(84, 0, 42, 42)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_joorw"]
+atlas = ExtResource("1_xkndl")
+region = Rect2(126, 0, 42, 42)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2vekm"]
+atlas = ExtResource("2_u44n3")
+region = Rect2(0, 0, 42, 42)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yx171"]
+atlas = ExtResource("2_u44n3")
+region = Rect2(42, 0, 42, 42)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yhmtn"]
+atlas = ExtResource("2_u44n3")
+region = Rect2(84, 0, 42, 42)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gwjdr"]
+atlas = ExtResource("2_u44n3")
+region = Rect2(126, 0, 42, 42)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lvtmh"]
+atlas = ExtResource("2_u44n3")
+region = Rect2(168, 0, 42, 42)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yyih5"]
+atlas = ExtResource("2_u44n3")
+region = Rect2(210, 0, 42, 42)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qjyg3"]
+atlas = ExtResource("2_u44n3")
+region = Rect2(252, 0, 42, 42)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_elkpi"]
+atlas = ExtResource("2_u44n3")
+region = Rect2(294, 0, 42, 42)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_0yprl"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_t88pq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_r0x5m")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3mrqo")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_joorw")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2vekm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yx171")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yhmtn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gwjdr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lvtmh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yyih5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qjyg3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_elkpi")
+}],
+"loop": true,
+"name": &"walk",
+"speed": 5.0
+}]
+
+[node name="Node3D" type="Node3D" unique_id=819396283]
+
+[node name="Piso" type="StaticBody3D" parent="." unique_id=240149047]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Piso" unique_id=144920635]
+shape = SubResource("BoxShape3D_6ubv3")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Piso" unique_id=232876176]
+mesh = SubResource("BoxMesh_wbfu4")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1194750592]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4, 0)
+shadow_enabled = true
+
+[node name="CharacterBody3D" type="CharacterBody3D" parent="." unique_id=277920391]
+script = ExtResource("1_u44n3")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="CharacterBody3D" unique_id=1576256038]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 7, 0)
+shape = SubResource("CapsuleShape3D_sb48q")
+
+[node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="CharacterBody3D" unique_id=338495748]
+transform = Transform3D(30, 0, 0, 0, 30, 0, 0, 0, 30, 0, 7, 0)
+billboard = 2
+sprite_frames = SubResource("SpriteFrames_0yprl")
+autoplay = "default"
+
+[node name="Camera3D" type="Camera3D" parent="." unique_id=381916262]
+transform = Transform3D(1, 1.0587912e-22, -1.5893256e-08, 1.123823e-08, 0.70710677, 0.7071068, 1.1238229e-08, -0.7071068, 0.70710677, -1, 22, 35)

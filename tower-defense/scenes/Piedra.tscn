@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://xh6eayoff8ta"]
+
+[ext_resource type="Script" uid="uid://drns6uu0osunu" path="res://scripts/piedra_random_mesh.gd" id="1_k8npk"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_fe68r"]
+
+[node name="Piedra" type="Node3D" unique_id=740681810 groups=["RecursoDestruible"]]
+script = ExtResource("1_k8npk")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=491340149]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=802548152 groups=["RecursoColision"]]
+transform = Transform3D(3.012699, 0, 0, 0, 1.6672355, 0, 0, 0, 2.7074296, 0, 1.1110039, 0.6460247)
+collision_layer = 128
+collision_mask = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=1992470253]
+shape = SubResource("BoxShape3D_fe68r")

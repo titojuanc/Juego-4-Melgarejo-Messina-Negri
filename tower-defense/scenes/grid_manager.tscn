@@ -1,0 +1,74 @@
+[gd_scene format=3 uid="uid://bgo5y6h868ypc"]
+
+[ext_resource type="Script" uid="uid://cd8eabnwtac7n" path="res://scripts/grid_manager.gd" id="1_asofv"]
+[ext_resource type="Script" uid="uid://36y8filjtjg4" path="res://scripts/cell_data.gd" id="1_l7jj3"]
+[ext_resource type="Script" uid="uid://d33wijxslsx4q" path="res://scripts/grid_visual.gd" id="2_k5l73"]
+[ext_resource type="Script" uid="uid://turnukjch2p7" path="res://scripts/building_manager.gd" id="2_kl8jp"]
+[ext_resource type="Script" uid="uid://clsfnmgtkjhfy" path="res://scripts/input_handler.gd" id="3_input"]
+[ext_resource type="Script" path="res://scripts/building_menu.gd" id="4_menu"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_kl8jp"]
+shading_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_asofv"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_k5l73"]
+transparency = 1
+shading_mode = 0
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_xbg4y"]
+size = Vector2(0.95, 0.95)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_drag"]
+transparency = 1
+shading_mode = 0
+albedo_color = Color(1, 0, 0, 0.3)
+
+[node name="GridManager" type="Node3D" unique_id=1835741100]
+script = ExtResource("1_asofv")
+cell_size = 8.0
+
+[node name="GridVisual" type="Node3D" parent="." unique_id=622096962]
+script = ExtResource("2_k5l73")
+
+[node name="GridLines" type="MeshInstance3D" parent="GridVisual" unique_id=1069298908]
+material_override = SubResource("StandardMaterial3D_kl8jp")
+mesh = SubResource("ArrayMesh_asofv")
+
+[node name="HoverCell" type="MeshInstance3D" parent="GridVisual" unique_id=1762371833]
+material_override = SubResource("StandardMaterial3D_k5l73")
+mesh = SubResource("PlaneMesh_xbg4y")
+
+[node name="DragOverlay" type="MeshInstance3D" parent="GridVisual"]
+visible = false
+material_override = SubResource("StandardMaterial3D_drag")
+
+[node name="CellData" type="Node" parent="." unique_id=885045950]
+script = ExtResource("1_l7jj3")
+
+[node name="BuildingManager" type="Node3D" parent="." unique_id=161528161]
+script = ExtResource("2_kl8jp")
+
+[node name="GhostBuilding" type="Node3D" parent="BuildingManager" unique_id=1375513368]
+
+[node name="PlacedBuildings" type="Node3D" parent="BuildingManager" unique_id=733583169]
+
+[node name="InputHandler" type="Node" parent="." unique_id=234978631]
+script = ExtResource("3_input")
+
+[node name="BuildingUI" type="CanvasLayer" parent="."]
+visible = false
+
+[node name="BuildingMenu" type="Control" parent="BuildingUI"]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -140.0
+offset_bottom = 300.0
+grow_horizontal = 0
+script = ExtResource("4_menu")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="BuildingUI/BuildingMenu"]
+offset_right = 140.0
+offset_bottom = 300.0
+size_flags_horizontal = 4

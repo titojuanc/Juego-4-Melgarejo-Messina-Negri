@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://c3wlyedes1lgp"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ueafy"]
+albedo_color = Color(0.17478639, 0.24088329, 0.9517887, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_qy12f"]
+material = SubResource("StandardMaterial3D_ueafy")
+size = Vector3(32, 2, 32)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_d2acd"]
+size = Vector3(32, 4.4500732, 32)
+
+[node name="TileAgua" type="MeshInstance3D" unique_id=1356794740]
+mesh = SubResource("BoxMesh_qy12f")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=52632318]
+collision_layer = 4
+collision_mask = 9
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=1446431061]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.2250366, 0)
+shape = SubResource("BoxShape3D_d2acd")
