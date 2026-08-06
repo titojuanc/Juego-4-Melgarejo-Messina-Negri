@@ -2,22 +2,27 @@
 
 [ext_resource type="Script" uid="uid://dyi8g7y7e4v3g" path="res://scripts/mazmorra.gd" id="1_pu7ub"]
 [ext_resource type="MeshLibrary" uid="uid://cg13x4y33ejhl" path="res://resources/tileMap.tres" id="2_0puqh"]
+[ext_resource type="Script" uid="uid://cstlkhq438fug" path="res://scripts/camara_mazmorra.gd" id="2_camara"]
 [ext_resource type="PackedScene" uid="uid://bqdgv35voj3w" path="res://scenes/Jugador.tscn" id="3_0puqh"]
 
-[node name="Mazmorra" type="Node3D" unique_id=1885487498 node_paths=PackedStringArray("grilla")]
+[node name="Mazmorra" type="Node3D" unique_id=1885487498 node_paths=PackedStringArray("grilla", "jugador")]
 script = ExtResource("1_pu7ub")
 grilla = NodePath("GridMap")
+jugador = NodePath("Jugador")
 
 [node name="Camera3D" type="Camera3D" parent="." unique_id=573897121]
 transform = Transform3D(1, 0, 0, 0, 0.7269343, 0.686707, 0, -0.686707, 0.7269343, 63.8181, 51.153614, 138.23007)
 fov = 84.37499
+script = ExtResource("2_camara")
+duracion_transicion = 0.2
+fov_objetivo = 20.0
 
 [node name="GridMap" type="GridMap" parent="." unique_id=1248700980]
 mesh_library = ExtResource("2_0puqh")
 cell_size = Vector3(32, 2, 32)
-data = {
-"cells": PackedInt32Array(1, 1, 1441793, 1, 0, 1441793, 2, 0, 1441793, 2, 1, 1441793, 0, 1, 1441793, 0, 0, 1441793)
-}
+collision_layer = 4
+collision_mask = 9
 
 [node name="Jugador" parent="." unique_id=1729901145 instance=ExtResource("3_0puqh")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 52.108585, 28.478588, 13.58507)
+controla_camara = false

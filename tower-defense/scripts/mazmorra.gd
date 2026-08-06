@@ -1,11 +1,15 @@
 extends Node3D
 
+signal jugador_cambio_tile(centro_mundo: Vector3)
+
 @export var grilla: GridMap
+@export var jugador: Node3D
 @export var id_tile_piso: int = 0
 @export var tamanio_grilla: int = 4
 
 var rng = RandomNumberGenerator.new()
 var mapa: Array = []
+var _celda_anterior: Vector3i = Vector3i(-9999, -9999, -9999)
 
 
 func _ready() -> void:
@@ -41,6 +45,17 @@ func _tallar_camino(desde: Vector2i, hasta: Vector2i) -> void:
 		mapa[actual.y][actual.x] = true
 
 	mapa[hasta.y][hasta.x] = true
+
+
+func _process(_delta: float) -> void:
+	if jugador == null:
+		return
+	var celda_actual = grilla.local_to_map(grilla.to_local(jugador.global_position))
+	celda_actual.y = 0  # ignorar variación vertical
+	if celda_actual != _celda_anterior:
+		_celda_anterior = celda_actual
+		var centro = grilla.to_global(grilla.map_to_local(celda_actual))
+		emit_signal("jugador_cambio_tile", centro)
 
 
 func _pintar() -> void:
