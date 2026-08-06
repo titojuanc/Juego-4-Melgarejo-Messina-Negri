@@ -1,0 +1,143 @@
+[gd_scene format=3 uid="uid://bbdeld20wg1vg"]
+
+[ext_resource type="PackedScene" uid="uid://bqdgv35voj3w" path="res://scenes/Jugador.tscn" id="1_jug"]
+[ext_resource type="Script" uid="uid://bqcultmtel65x" path="res://scripts/opciones.gd" id="2_opc"]
+[ext_resource type="PackedScene" uid="uid://csvjjvnt65t3w" path="res://scenes/BotonJugar.tscn" id="3_btn"]
+[ext_resource type="PackedScene" uid="uid://cq112si4fu5fn" path="res://scenes/TileMap.tscn" id="4_tile"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_w1"]
+size = Vector3(0, 6, 32)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_w2"]
+size = Vector3(32, 6, 1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_w3"]
+size = Vector3(1, 6, 32)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_w4"]
+size = Vector3(32, 6, 1)
+
+[sub_resource type="Environment" id="Environment_opc"]
+background_mode = 1
+background_color = Color(0.45, 0.72, 1, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_opc"]
+albedo_color = Color(0, 0.49803922, 0, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_opc"]
+material = SubResource("StandardMaterial3D_opc")
+size = Vector3(32, 50, 32)
+
+[node name="Opciones" type="Node3D" unique_id=100000001]
+script = ExtResource("2_opc")
+
+[node name="Camera3D" type="Camera3D" parent="." unique_id=100000002]
+transform = Transform3D(1, 0, 0, 0, 0.6427876, 0.7660444, 0, -0.7660444, 0.6427876, -16, 18, 5)
+fov = 60.0
+
+[node name="Jugador" parent="." unique_id=100000003 instance=ExtResource("1_jug")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -20, 3.27, -1)
+controla_camara = false
+
+[node name="GridMap" parent="." unique_id=100000004 instance=ExtResource("4_tile")]
+data = {
+"cells": PackedInt32Array(65535, 65535, 1)
+}
+script = null
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=100000005]
+collision_layer = 4
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=100000006]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -32, 4, -16)
+shape = SubResource("BoxShape3D_w1")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="StaticBody3D" unique_id=100000007]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16, 4, -32)
+shape = SubResource("BoxShape3D_w2")
+
+[node name="CollisionShape3D3" type="CollisionShape3D" parent="StaticBody3D" unique_id=100000008]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4, -16)
+shape = SubResource("BoxShape3D_w3")
+
+[node name="CollisionShape3D4" type="CollisionShape3D" parent="StaticBody3D" unique_id=100000009]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16, 4, 0)
+shape = SubResource("BoxShape3D_w4")
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=100000010]
+environment = SubResource("Environment_opc")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=100000011]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16, -25, -16)
+mesh = SubResource("BoxMesh_opc")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=100000012]
+transform = Transform3D(1, 0, 0, 0, 0.54954785, 0.8354622, 0, -0.8354622, 0.54954785, -16, 14, 0)
+shadow_enabled = true
+shadow_blur = 2.0
+
+[node name="BotonVolver" parent="." unique_id=100000020 instance=ExtResource("3_btn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.3316073, 2, -2.5129442)
+texto = "< Volver"
+
+[node name="TituloVolumen" type="Label3D" parent="." unique_id=100000030]
+transform = Transform3D(1, 0, 0, 0, 1.1924881e-08, 1, 0, -1, 1.1924881e-08, -22.382797, 2.1, -7)
+pixel_size = 0.04
+text = "VOLUMEN"
+font_size = 30
+
+[node name="BotonVolMenos" parent="." unique_id=100000021 instance=ExtResource("3_btn")]
+transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, -28.382797, 2, -9)
+texto = "  -  "
+
+[node name="LabelVolumen" type="Label3D" parent="." unique_id=100000031]
+transform = Transform3D(1, 0, 0, 0, 1.1924881e-08, 1, 0, -1, 1.1924881e-08, -22.382797, 2.1, -9)
+pixel_size = 0.04
+text = "100%"
+font_size = 30
+
+[node name="BotonVolMas" parent="." unique_id=100000022 instance=ExtResource("3_btn")]
+transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, -16.382797, 2, -9)
+texto = "  +  "
+
+[node name="TituloResolucion" type="Label3D" parent="." unique_id=100000032]
+transform = Transform3D(1, 0, 0, 0, 1.1924881e-08, 1, 0, -1, 1.1924881e-08, -22.382797, 2.1, -11)
+pixel_size = 0.04
+text = "RESOLUCION"
+font_size = 30
+
+[node name="BotonResMenos" parent="." unique_id=100000023 instance=ExtResource("3_btn")]
+transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, -28.382797, 2, -13)
+texto = "  -  "
+
+[node name="LabelResolucion" type="Label3D" parent="." unique_id=100000033]
+transform = Transform3D(1, 0, 0, 0, 1.1924881e-08, 1, 0, -1, 1.1924881e-08, -22.382797, 2.1, -13)
+pixel_size = 0.04
+text = "1280x720"
+font_size = 30
+
+[node name="BotonResMas" parent="." unique_id=100000024 instance=ExtResource("3_btn")]
+transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, -16.382797, 2, -13)
+texto = "  +  "
+
+[node name="TituloControles" type="Label3D" parent="." unique_id=100000034]
+transform = Transform3D(1, 0, 0, 0, 1.1924881e-08, 1, 0, -1, 1.1924881e-08, -6, 2.1, -14.787369)
+pixel_size = 0.04
+text = "CONTROLES"
+font_size = 30
+
+[node name="LabelControles" type="Label3D" parent="." unique_id=100000035]
+transform = Transform3D(1, 0, 0, 0, 1.1924881e-08, 1, 0, -1, 1.1924881e-08, -6, 2.1, -9.526398)
+pixel_size = 0.04
+text = "W / A / S / D   Mover
+E                    Interactuar
+Clic Izq           Accion
+Clic Der           Cancelar
+B                    Construccion"
+font_size = 22
+
+[connection signal="boton_activado" from="BotonVolver" to="." method="_on_boton_volver_boton_activado"]
+[connection signal="boton_activado" from="BotonVolMenos" to="." method="_on_boton_vol_menos_boton_activado"]
+[connection signal="boton_activado" from="BotonVolMas" to="." method="_on_boton_vol_mas_boton_activado"]
+[connection signal="boton_activado" from="BotonResMenos" to="." method="_on_boton_res_menos_boton_activado"]
+[connection signal="boton_activado" from="BotonResMas" to="." method="_on_boton_res_mas_boton_activado"]

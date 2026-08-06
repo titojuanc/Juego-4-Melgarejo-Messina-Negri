@@ -4,6 +4,8 @@
 [ext_resource type="Script" uid="uid://fqjt88wy16sc" path="res://scripts/menu.gd" id="1_o0tnf"]
 [ext_resource type="PackedScene" uid="uid://csvjjvnt65t3w" path="res://scenes/BotonJugar.tscn" id="2_o0tnf"]
 [ext_resource type="PackedScene" uid="uid://cq112si4fu5fn" path="res://scenes/TileMap.tscn" id="3_jmdev"]
+[ext_resource type="PackedScene" uid="uid://bfo7w4fv26fl1" path="res://scenes/Arbol.tscn" id="4_arbol"]
+[ext_resource type="PackedScene" uid="uid://xh6eayoff8ta" path="res://scenes/Piedra.tscn" id="5_piedra"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_o0tnf"]
 size = Vector3(0, 6, 32)
@@ -17,18 +19,33 @@ size = Vector3(1, 6, 32)
 [sub_resource type="BoxShape3D" id="BoxShape3D_aaywf"]
 size = Vector3(32, 6, 1)
 
+[sub_resource type="Environment" id="Environment_b6cxs"]
+background_mode = 1
+background_color = Color(0.45, 0.72, 1, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_o0tnf"]
+albedo_color = Color(0, 0.49803922, 0, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_jmdev"]
+material = SubResource("StandardMaterial3D_o0tnf")
+size = Vector3(32, 50, 32)
+
 [node name="Menu" type="Node3D" unique_id=915407463]
 script = ExtResource("1_o0tnf")
-
-[node name="Camera3D" type="Camera3D" parent="." unique_id=212373319]
-transform = Transform3D(1, 0, 0, 0, 0.70710677, 0.70710677, 0, -0.70710677, 0.70710677, -16, 14, 8)
 
 [node name="Jugador" parent="." unique_id=1729901145 instance=ExtResource("1_11y2r")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -30.008677, 3.27669, -4.69672)
 controla_camara = false
 
 [node name="BotonJugar" parent="." unique_id=1518603186 instance=ExtResource("2_o0tnf")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -26.752716, 2, -11.960056)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -24.00578, 2, -11.960056)
+
+[node name="BotonOpciones" parent="." unique_id=200000001 instance=ExtResource("2_o0tnf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -24.00578, 2, -6)
+texto = "Opciones"
+
+[node name="Label3D" parent="BotonOpciones" index="2"]
+text = "Opciones"
 
 [node name="GridMap" parent="." unique_id=1503455355 instance=ExtResource("3_jmdev")]
 data = {
@@ -55,4 +72,60 @@ shape = SubResource("BoxShape3D_b6cxs")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16, 4, 0)
 shape = SubResource("BoxShape3D_aaywf")
 
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=78341636]
+environment = SubResource("Environment_b6cxs")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=2113136666]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16, -25, -16)
+mesh = SubResource("BoxMesh_jmdev")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=111111101]
+transform = Transform3D(1, 0, 0, 0, 0.54954785, 0.8354622, 0, -0.8354622, 0.54954785, -16, 14, 0)
+shadow_enabled = true
+shadow_blur = 2.0
+
+[node name="Arbol1" parent="." unique_id=111111102 instance=ExtResource("4_arbol")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 2, -23.545547)
+
+[node name="Arbol2" parent="." unique_id=111111103 instance=ExtResource("4_arbol")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10, 2, -15.329372)
+
+[node name="Arbol3" parent="." unique_id=111111104 instance=ExtResource("4_arbol")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.07822, 2, -26.14111)
+
+[node name="Arbol4" parent="." unique_id=111111105 instance=ExtResource("4_arbol")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 2, -24.004414)
+
+[node name="Piedra1" parent="." unique_id=111111108 instance=ExtResource("5_piedra")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 2, -15.319098)
+
+[node name="Piedra2" parent="." unique_id=111111109 instance=ExtResource("5_piedra")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.619774, 2, -23.893679)
+
+[node name="Piedra3" parent="." unique_id=111111110 instance=ExtResource("5_piedra")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.746654, 2, -14.612966)
+
+[node name="Arbol5" parent="." unique_id=1512533366 instance=ExtResource("4_arbol")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -27.706133, 2, -25.827354)
+
+[node name="Arbol6" parent="." unique_id=1497858547 instance=ExtResource("4_arbol")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -20.166365, 2, -21.556614)
+
+[node name="Arbol7" parent="." unique_id=780456108 instance=ExtResource("4_arbol")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -29.919697, 2, -22.336258)
+
+[node name="Piedra4" parent="." unique_id=740681810 instance=ExtResource("5_piedra")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -28.927975, 2, -16.787289)
+
+[node name="Piedra5" parent="." unique_id=1122828891 instance=ExtResource("5_piedra")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -22.597618, 2, -18.11525)
+
+[node name="Piedra6" parent="." unique_id=1670715872 instance=ExtResource("5_piedra")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -23.184174, 2, -23.300362)
+
+[node name="Camera3D" type="Camera3D" parent="." unique_id=1681452612]
+transform = Transform3D(1, 0, 0, 0, 0.6427876, 0.7660444, 0, -0.7660444, 0.6427876, -16, 18, 5)
+fov = 60.0
+
 [connection signal="boton_activado" from="BotonJugar" to="." method="_on_boton_jugar_boton_activado"]
+[connection signal="boton_activado" from="BotonOpciones" to="." method="_on_boton_opciones_boton_activado"]

@@ -2,8 +2,10 @@ extends Area3D
 
 @export var tiempo_activacion: float  = 2.0
 @export var barra_offset_x: float = -3.0
+@export var texto: String = "Jugar"
 
 @onready var barra = $BarraProgreso
+@onready var label = $Label3D
 
 var progreso = 0.0
 var jugador_dentro = false
@@ -15,6 +17,7 @@ signal boton_activado
 func _ready() -> void:
 	barra_ancho_original = (barra.mesh as BoxMesh).size.x
 	barra.scale.x = 0
+	label.text = texto
 
 func _physics_process(delta: float) -> void:
 	if jugador_dentro:
