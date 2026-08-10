@@ -15,7 +15,7 @@ transform = Transform3D(1, 0, 0, 0, 0.7269343, 0.686707, 0, -0.686707, 0.7269343
 fov = 84.37499
 script = ExtResource("2_camara")
 duracion_transicion = 0.2
-fov_objetivo = 20.0
+fov_objetivo = 30.0
 
 [node name="GridMap" type="GridMap" parent="." unique_id=1248700980]
 mesh_library = ExtResource("2_0puqh")
@@ -24,5 +24,5 @@ collision_layer = 4
 collision_mask = 9
 
 [node name="Jugador" parent="." unique_id=1729901145 instance=ExtResource("3_0puqh")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 52.108585, 28.478588, 13.58507)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 52.108585, 12.559807, 13.58507)
 controla_camara = false

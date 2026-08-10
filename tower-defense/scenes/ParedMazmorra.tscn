@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://cufr8vwkfs5ra"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_50mis"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_0mf7k"]
+
+[node name="ParedMazmorra" type="Node3D" unique_id=220473979]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1021784372]
+transform = Transform3D(-0.9391601, 0, 0, 0, 8.420238, 0, 0, 0, 32.048534, 0, 0, 0)
+mesh = SubResource("BoxMesh_50mis")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="MeshInstance3D" unique_id=2094963111]
+collision_layer = 4
+collision_mask = 9
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="MeshInstance3D/StaticBody3D" unique_id=945949672]
+shape = SubResource("BoxShape3D_0mf7k")

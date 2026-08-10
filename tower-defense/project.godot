@@ -91,6 +91,7 @@ la_B={
 3d_physics/layer_10="DeteccionEnemigosNPC"
 3d_physics/layer_11="InteractionAreaNPC"
 3d_physics/layer_12="Bala"
+3d_physics/layer_13="BarreraAntiZombies"
 
 [physics]
 

@@ -1,0 +1,65 @@
+[gd_scene format=3 uid="uid://d261w8kju2stg"]
+
+[ext_resource type="PackedScene" uid="uid://cjyi17hir1tib" path="res://assets/jefe/Iron Oath Executioner.fbx" id="1_2yodk"]
+
+[node name="Iron Oath Executioner" unique_id=1578101046 instance=ExtResource("1_2yodk")]
+
+[node name="Skeleton3D" parent="gagiant/Armature_015" parent_id_path=PackedInt32Array(688808091) index="0" unique_id=1706513327]
+bones/0/rotation = Quaternion(0.043639082, -0.13885866, -0.0026288058, 0.98934674)
+bones/1/rotation = Quaternion(0.034105532, 0.43395072, 0.89466417, -0.100496784)
+bones/2/rotation = Quaternion(-0.5975808, -0.039306976, 0.012487174, 0.8007473)
+bones/3/rotation = Quaternion(0.6730241, -0.03786585, -0.070366204, 0.7352913)
+bones/4/rotation = Quaternion(0.22529642, -0.022078471, -0.006856863, 0.97401595)
+bones/6/rotation = Quaternion(-0.0810722, 0.22036466, 0.962245, 0.13766433)
+bones/7/rotation = Quaternion(-0.5970997, 0.048075162, 0.01909075, 0.80049753)
+bones/8/rotation = Quaternion(0.80008036, 0.056917813, 0.12270503, 0.58444446)
+bones/9/rotation = Quaternion(0.23477185, 0.019030267, 0.0045514745, 0.97185355)
+bones/11/rotation = Quaternion(0.23540929, 0.040262166, 0.0009812909, 0.9710616)
+bones/12/position = Vector3(1.3113022e-06, 21.73876, -1.4454125e-06)
+bones/12/rotation = Quaternion(0.03219283, 0.010507718, -0.007825921, 0.9993959)
+bones/13/rotation = Quaternion(0.032129712, 0.011133703, -0.007948851, 0.9993902)
+bones/14/rotation = Quaternion(0.67230487, 0.39078048, -0.396078, 0.48828176)
+bones/15/rotation = Quaternion(0.4262991, -0.1683804, 0.27074888, 0.84652954)
+bones/16/position = Vector3(1.9073486e-06, 41.115, 1.2397766e-05)
+bones/16/rotation = Quaternion(0.0067328024, -0.033307236, 0.36707455, 0.9295706)
+bones/17/rotation = Quaternion(0.08543389, -0.15025282, 0.098462425, 0.98001546)
+bones/18/rotation = Quaternion(0.613429, -0.078069575, -0.00424784, 0.78587025)
+bones/19/rotation = Quaternion(0.39276052, -0.06445592, 0.13491406, 0.9074044)
+bones/20/position = Vector3(1.3445703, 5.1884475, 0.003139019)
+bones/20/rotation = Quaternion(0.67441034, -0.22171551, 0.10959484, 0.6957025)
+bones/22/position = Vector3(-1.9073486e-06, 27.949774, 1.3232231e-05)
+bones/22/rotation = Quaternion(-0.14685176, 0.01262328, 0.018252853, 0.9889096)
+bones/23/rotation = Quaternion(-0.12424761, 0.06420837, -0.036869265, 0.98948497)
+bones/25/rotation = Quaternion(0.6505633, -0.42943, 0.30540836, 0.54688495)
+bones/26/rotation = Quaternion(0.4344707, 0.2714017, -0.28669232, 0.8095578)
+bones/27/rotation = Quaternion(0.0076172724, 0.03911753, -0.4859661, 0.87306863)
+bones/28/rotation = Quaternion(0.041453842, 0.16231313, -0.132931, 0.97686505)
+bones/29/position = Vector3(5.245209e-06, 13.42238, -3.8146973e-06)
+bones/29/rotation = Quaternion(0.2726088, -0.14604758, 0.0039391606, 0.9509675)
+bones/30/rotation = Quaternion(0.82037294, -0.037217163, -0.036866523, 0.56942445)
+bones/31/position = Vector3(1.1732111, 11.728421, 0.3877273)
+bones/31/rotation = Quaternion(0.25366968, -0.053545516, 0.046290163, 0.9646978)
+
+[node name="mixamorig_LeftToe_End_end" parent="gagiant/Armature_015/Skeleton3D" index="0" unique_id=738771825]
+transform = Transform3D(-0.998485, -0.030955998, 0.04549731, 0.047702163, -0.0746676, 0.99606717, -0.027437119, 0.99672794, 0.07603136, 33.421253, 0.26679087, 65.96697)
+bone_idx = 5
+
+[node name="mixamorig_RightToe_End_end" parent="gagiant/Armature_015/Skeleton3D" index="1" unique_id=2078048227]
+transform = Transform3D(-0.77370834, -0.6291154, -0.0747571, -0.042648498, -0.06601075, 0.99690723, -0.6321041, 0.77450395, 0.024242934, -56.803688, 0.32175726, -10.665497)
+bone_idx = 10
+
+[node name="mixamorig_LeftHandIndex4_end" parent="gagiant/Armature_015/Skeleton3D" index="2" unique_id=174114331]
+transform = Transform3D(0.47275725, 0.7638315, 0.4393885, -0.25294882, 0.5952765, -0.762668, -0.8441068, 0.24941404, 0.47463173, -10.700877, 82.97005, 97.668564)
+bone_idx = 21
+
+[node name="mixamorig_HeadTop_End_end" parent="gagiant/Armature_015/Skeleton3D" index="3" unique_id=1800050909]
+transform = Transform3D(0.999852, -0.017203229, -0.0001545027, 0.017013501, 0.9900777, -0.13948499, 0.0025528818, 0.1394619, 0.99022365, -8.68738, 269.55072, 71.606155)
+bone_idx = 24
+
+[node name="Cube" parent="gagiant/Armature_015/Skeleton3D" index="4" unique_id=1023860643]
+transform = Transform3D(0.11892845, 0.8021102, 0.5852134, 0.97905064, -0.19284165, 0.065349355, 0.16527109, 0.5651819, -0.808241, -28.224997, 124.45188, 109.01063)
+bone_idx = 29
+
+[node name="mixamorig_RightHandIndex4_end" parent="gagiant/Armature_015/Skeleton3D" index="5" unique_id=2086156859]
+transform = Transform3D(-0.08084654, -0.23878673, -0.9677005, 0.9963637, 0.0068081804, -0.08492121, 0.026866475, -0.9710477, 0.2373678, -15.277644, 126.38044, 95.36727)
+bone_idx = 32
