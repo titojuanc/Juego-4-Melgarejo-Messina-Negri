@@ -5,6 +5,11 @@
 [ext_resource type="Texture2D" uid="uid://c2eu3ccapyn31" path="res://assets/materiales/Wood_-_Item_-_LEGO_Fortnite.png" id="3_nysna"]
 [ext_resource type="Texture2D" uid="uid://cdeo3quwfx1rm" path="res://assets/materiales/Icon_Stone.png" id="4_f6qnu"]
 [ext_resource type="Texture2D" uid="uid://btoavpoembq70" path="res://assets/materiales/Icon_IBeam.png" id="5_k4w17"]
+[ext_resource type="Texture2D" uid="uid://cg3cchn3itkha" path="res://assets/key/key_32x32_24f.png" id="6_llave"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_llave"]
+atlas = ExtResource("6_llave")
+region = Rect2(0, 0, 32, 32)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nysna"]
 border_width_left = 2
@@ -123,3 +128,18 @@ stretch_mode = 5
 [node name="LabelMetal" type="Label" parent="Panel/VBoxContainer/HBoxContainer2/GridContainer/VBoxContainer3" unique_id=2054985234]
 layout_mode = 2
 text = "18"
+
+[node name="VBoxContainer4" type="VBoxContainer" parent="Panel/VBoxContainer/HBoxContainer2" unique_id=3000000001]
+layout_mode = 2
+visible = false
+
+[node name="TextureRect4" type="TextureRect" parent="Panel/VBoxContainer/HBoxContainer2/VBoxContainer4" unique_id=3000000002]
+custom_minimum_size = Vector2(24, 24)
+layout_mode = 2
+texture = SubResource("AtlasTexture_llave")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="LabelLlaves" type="Label" parent="Panel/VBoxContainer/HBoxContainer2/VBoxContainer4" unique_id=3000000003]
+layout_mode = 2
+text = "x 0"

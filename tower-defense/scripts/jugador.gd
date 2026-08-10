@@ -31,6 +31,8 @@ var cooldown_disparo = false
 var madera: int = 0
 var piedra: int = 0
 var metal: int = 0
+# Inventario de items especiales
+var llaves: int = 0
 var movimiento_bloqueado = false
 var muerto = false
 
@@ -261,4 +263,19 @@ func gastar_madera(cantidad: int) -> bool:
 	if madera < cantidad:
 		return false
 	madera -= cantidad
+	return true
+
+# --- Inventario de items ---
+
+# Llamar este método para darle una llave al jugador
+# (desde la escena Llave, desde la lógica de pesca, o desde un NPC)
+func agregar_llave() -> void:
+	llaves += 1
+
+# Llamar este método cuando un NPC pida la llave para completar su misión
+# Devuelve true si tenía al menos una y la consume, false si no tenía
+func gastar_llave() -> bool:
+	if llaves <= 0:
+		return false
+	llaves -= 1
 	return true

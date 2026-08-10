@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://cq112si4fu5fn" path="res://scenes/TileMap.tscn" id="3_jmdev"]
 [ext_resource type="PackedScene" uid="uid://bfo7w4fv26fl1" path="res://scenes/Arbol.tscn" id="4_arbol"]
 [ext_resource type="PackedScene" uid="uid://xh6eayoff8ta" path="res://scenes/Piedra.tscn" id="5_piedra"]
+[ext_resource type="PackedScene" uid="uid://ba7la636nkw4" path="res://scenes/llave.tscn" id="7_aaywf"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_o0tnf"]
 size = Vector3(0, 6, 32)
@@ -43,9 +44,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -24.00578, 2, -11.960056)
 [node name="BotonOpciones" parent="." unique_id=200000001 instance=ExtResource("2_o0tnf")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -24.00578, 2, -6)
 texto = "Opciones"
-
-[node name="Label3D" parent="BotonOpciones" index="2"]
-text = "Opciones"
 
 [node name="GridMap" parent="." unique_id=1503455355 instance=ExtResource("3_jmdev")]
 data = {
@@ -126,6 +124,9 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -23.184174, 2, -23.300362)
 [node name="Camera3D" type="Camera3D" parent="." unique_id=1681452612]
 transform = Transform3D(1, 0, 0, 0, 0.6427876, 0.7660444, 0, -0.7660444, 0.6427876, -16, 18, 5)
 fov = 60.0
+
+[node name="Llave" parent="." unique_id=908085190 instance=ExtResource("7_aaywf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16, 2.4639778, -10.539499)
 
 [connection signal="boton_activado" from="BotonJugar" to="." method="_on_boton_jugar_boton_activado"]
 [connection signal="boton_activado" from="BotonOpciones" to="." method="_on_boton_opciones_boton_activado"]
