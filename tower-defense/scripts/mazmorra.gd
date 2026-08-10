@@ -6,6 +6,8 @@ signal jugador_cambio_tile(centro_mundo: Vector3)
 @export var jugador: Node3D
 @export var id_tile_piso: int = 0
 @export var tamanio_grilla: int = 4
+@export var escena_zombie: PackedScene = preload("res://scenes/Zombie.tscn")
+@export var zombies_por_tile: int = 1
 
 var rng = RandomNumberGenerator.new()
 var mapa: Array = []
@@ -60,7 +62,32 @@ func _process(_delta: float) -> void:
 
 func _pintar() -> void:
 	grilla.clear()
+	# Eliminar zombies previos
+	for hijo in get_children():
+		if hijo.is_in_group("zombies"):
+			hijo.queue_free()
+
 	for f in range(tamanio_grilla):
 		for c in range(tamanio_grilla):
 			if mapa[f][c]:
-				grilla.set_cell_item(Vector3i(c, 0, f), id_tile_piso)
+				var celda = Vector3i(c, 0, f)
+				grilla.set_cell_item(celda, id_tile_piso)
+				_spawnear_zombies_en_celda(celda)
+
+
+func _spawnear_zombies_en_celda(celda: Vector3i) -> void:
+	if escena_zombie == null:
+		return
+	var centro_mundo = grilla.to_global(grilla.map_to_local(celda))
+	# Superficie de la tile: centro Y + mitad del alto de celda
+	var y_superficie = centro_mundo.y + grilla.cell_size.y / 2.0
+	var mitad_tile_x = grilla.cell_size.x / 2.0 * 0.8
+	var mitad_tile_z = grilla.cell_size.z / 2.0 * 0.8
+	var cantidad = rng.randi_range(2, 5)
+	for _i in range(cantidad):
+		var zombie = escena_zombie.instantiate()
+		add_child(zombie)
+		zombie.add_to_group("zombies")
+		var offset_x = rng.randf_range(-mitad_tile_x, mitad_tile_x)
+		var offset_z = rng.randf_range(-mitad_tile_z, mitad_tile_z)
+		zombie.global_position = Vector3(centro_mundo.x + offset_x, y_superficie, centro_mundo.z + offset_z)
