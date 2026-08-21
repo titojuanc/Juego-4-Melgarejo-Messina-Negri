@@ -36,6 +36,13 @@ var llaves: int = 0
 var movimiento_bloqueado = false
 var muerto = false
 
+@export var gridmap:GridMap
+const PESCA_TILE_ID:=8
+var pesca_pool:Array[String]=["llave","pez","pez","pez","pez"]
+var _pesca_instancia:CanvasLayer=null
+var _pesca_escena:=preload("res://scenes/Pesca.tscn")
+var tiene_caña:bool=false
+
 #Animaciones del personaje normal
 func anim_normal_idle():
 	anim_sprite.play("Normal-Idle")
@@ -86,6 +93,9 @@ func _ready() -> void:
 	
 func _physics_process(delta: float) -> void:
 	if muerto:
+		return
+	if Input.is_action_just_pressed("interactuar") and not movimiento_bloqueado and _pesca_instancia==null and _puede_pescar():
+		_abrir_pesca()
 		return
 	if movimiento_bloqueado:
 		velocity.x = 0
@@ -279,3 +289,27 @@ func gastar_llave() -> bool:
 		return false
 	llaves -= 1
 	return true
+
+func _puede_pescar()->bool:
+	if gridmap==null or pesca_pool.is_empty() or not tiene_caña:
+		return false
+	var pos_local:=gridmap.to_local(global_position)
+	var celda:=gridmap.local_to_map(pos_local)
+	for dy_off in [0,-1]:
+		for offset in [Vector3i(1,0,0),Vector3i(-1,0,0),Vector3i(0,0,1),Vector3i(0,0,-1)]:
+			if gridmap.get_cell_item(Vector3i(celda.x+offset.x,celda.y+dy_off,celda.z+offset.z))==PESCA_TILE_ID:
+				return true
+	return false
+
+func _abrir_pesca()->void:
+	_pesca_instancia=_pesca_escena.instantiate()
+	_pesca_instancia.test_mode=false
+	get_tree().root.add_child(_pesca_instancia)
+	_pesca_instancia.pesca_cerrada.connect(_on_pesca_cerrada)
+	_pesca_instancia.abrir(pesca_pool.duplicate())
+
+func _on_pesca_cerrada(_item:String)->void:
+	if is_instance_valid(_pesca_instancia):
+		pesca_pool=_pesca_instancia.pool_restante.duplicate()
+		_pesca_instancia.queue_free()
+	_pesca_instancia=null

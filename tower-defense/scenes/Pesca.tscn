@@ -1,0 +1,238 @@
+[gd_scene format=3 uid="uid://pesca_popup_001"]
+
+[ext_resource type="Script" uid="uid://pesca_gd_001" path="res://scripts/pesca.gd" id="1_script"]
+[ext_resource type="Shader" uid="uid://pesca_agua_001" path="res://assets/pezca/agua.gdshader" id="2_agua"]
+[ext_resource type="Shader" uid="uid://pesca_turb_001" path="res://assets/pezca/turbulencia.gdshader" id="3_turb"]
+[ext_resource type="Texture2D" uid="uid://dhnnwqxwgwlw1" path="res://assets/pezca/fishing_weight.png" id="4_weight"]
+[ext_resource type="Texture2D" uid="uid://pesca_fish_001" path="res://assets/pezca/fish.png" id="5_fish"]
+[ext_resource type="Texture2D" uid="uid://cg3cchn3itkha" path="res://assets/key/key_32x32_24f.png" id="6_key"]
+
+[sub_resource type="ShaderMaterial" id="SM_agua"]
+shader = ExtResource("2_agua")
+shader_parameter/color_fondo = Color(0.08, 0.18, 0.5, 1)
+shader_parameter/color_ola = Color(0.22, 0.52, 0.88, 1)
+shader_parameter/velocidad = 1.2
+shader_parameter/escala = 6.0
+
+[sub_resource type="ShaderMaterial" id="SM_turb"]
+shader = ExtResource("3_turb")
+shader_parameter/intensidad = 1.0
+
+[sub_resource type="ShaderMaterial" id="SM_turb_grande"]
+shader = ExtResource("3_turb")
+shader_parameter/intensidad = 2.0
+
+[sub_resource type="StyleBoxFlat" id="SBF_panel"]
+bg_color = Color(0.05, 0.07, 0.14, 0.98)
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.28, 0.58, 0.88, 0.7)
+
+[sub_resource type="StyleBoxFlat" id="SBF_fill"]
+bg_color = Color(0.22, 0.85, 0.35, 1)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+
+[sub_resource type="StyleBoxFlat" id="SBF_bg"]
+bg_color = Color(0.08, 0.10, 0.18, 0.9)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+
+[sub_resource type="AtlasTexture" id="AT_llave"]
+atlas = ExtResource("6_key")
+region = Rect2(0, 0, 32, 32)
+
+[node name="Pesca" type="CanvasLayer"]
+layer = 10
+script = ExtResource("1_script")
+tex_fish = ExtResource("5_fish")
+tex_llave = SubResource("AT_llave")
+test_mode = true
+
+[node name="Overlay" type="ColorRect" parent="."]
+color = Color(0, 0, 0, 0.5)
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="PanelPopup" type="Panel" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -270.0
+offset_top = -280.0
+offset_right = 270.0
+offset_bottom = 280.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("SBF_panel")
+
+[node name="FondoAgua" type="ColorRect" parent="PanelPopup"]
+color = Color(1, 1, 1, 1)
+material = SubResource("SM_agua")
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="Fase1" type="Control" parent="PanelPopup"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="BarraPrecision" type="ProgressBar" parent="PanelPopup/Fase1"]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 10.0
+offset_right = 530.0
+offset_bottom = 30.0
+max_value = 1.0
+value = 0.0
+step = 0.001
+show_percentage = false
+theme_override_styles/fill = SubResource("SBF_fill")
+theme_override_styles/background = SubResource("SBF_bg")
+
+[node name="Boya" type="TextureRect" parent="PanelPopup/Fase1"]
+layout_mode = 0
+texture = ExtResource("4_weight")
+offset_left = 256.0
+offset_top = 266.0
+offset_right = 284.0
+offset_bottom = 294.0
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Turbulencia" type="ColorRect" parent="PanelPopup/Fase1"]
+layout_mode = 0
+material = SubResource("SM_turb")
+color = Color(1, 1, 1, 1)
+offset_left = 200.0
+offset_top = 200.0
+offset_right = 280.0
+offset_bottom = 280.0
+
+[node name="HintLabel" type="Label" parent="PanelPopup/Fase1"]
+layout_mode = 0
+offset_left = 0.0
+offset_top = 515.0
+offset_right = 540.0
+offset_bottom = 545.0
+horizontal_alignment = 1
+text = "Mantené [E] para jalar"
+visible = false
+theme_override_colors/font_color = Color(1.0, 0.92, 0.35, 1.0)
+theme_override_font_sizes/font_size = 16
+
+[node name="Fase2" type="Control" parent="PanelPopup"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+visible = false
+
+[node name="TurbulenciaGrande" type="ColorRect" parent="PanelPopup/Fase2"]
+layout_mode = 0
+material = SubResource("SM_turb_grande")
+color = Color(1, 1, 1, 1)
+offset_left = 200.0
+offset_top = 280.0
+offset_right = 340.0
+offset_bottom = 420.0
+
+[node name="LineaPesca" type="Line2D" parent="PanelPopup/Fase2"]
+points = PackedVector2Array(270, 0, 270, 350)
+width = 2.5
+default_color = Color(0.78, 0.68, 0.42, 0.9)
+
+[node name="Carril" type="Control" parent="PanelPopup/Fase2"]
+layout_mode = 0
+offset_left = 450.0
+offset_top = 40.0
+offset_right = 530.0
+offset_bottom = 520.0
+
+[node name="FondoCarril" type="ColorRect" parent="PanelPopup/Fase2/Carril"]
+color = Color(0.04, 0.05, 0.10, 0.88)
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="NotaContainer" type="Control" parent="PanelPopup/Fase2/Carril"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="ZonaHit" type="ColorRect" parent="PanelPopup/Fase2/Carril"]
+layout_mode = 0
+color = Color(0.82, 0.88, 1.0, 0.5)
+offset_left = 0.0
+offset_top = 380.0
+offset_right = 80.0
+offset_bottom = 404.0
+
+[node name="ResultadoLabel" type="Label" parent="PanelPopup/Fase2"]
+layout_mode = 0
+offset_left = 60.0
+offset_top = 215.0
+offset_right = 440.0
+offset_bottom = 275.0
+horizontal_alignment = 1
+vertical_alignment = 1
+visible = false
+theme_override_colors/font_color = Color(1.0, 0.88, 0.25, 1.0)
+theme_override_font_sizes/font_size = 26
+
+[node name="HintRitmo" type="Label" parent="PanelPopup/Fase2"]
+layout_mode = 0
+offset_left = 0.0
+offset_top = 515.0
+offset_right = 440.0
+offset_bottom = 545.0
+horizontal_alignment = 1
+text = "Presioná [E] o [Espacio] para tocar las notas"
+theme_override_colors/font_color = Color(1.0, 0.92, 0.35, 1.0)
+theme_override_font_sizes/font_size = 16
+
+[node name="Reveal" type="Control" parent="PanelPopup"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+visible = false
+
+[node name="FondoReveal" type="ColorRect" parent="PanelPopup/Reveal"]
+color = Color(0.02, 0.04, 0.10, 0.9)
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="Sprite" type="TextureRect" parent="PanelPopup/Reveal"]
+layout_mode = 0
+offset_left = 222.0
+offset_top = 155.0
+offset_right = 318.0
+offset_bottom = 251.0
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Texto" type="Label" parent="PanelPopup/Reveal"]
+layout_mode = 0
+offset_left = 70.0
+offset_top = 270.0
+offset_right = 470.0
+offset_bottom = 340.0
+horizontal_alignment = 1
+theme_override_colors/font_color = Color(0.92, 0.96, 1.0, 1.0)
+theme_override_font_sizes/font_size = 22
+text = ""
+
+[node name="BotonCerrar" type="Button" parent="PanelPopup/Reveal"]
+layout_mode = 0
+offset_left = 185.0
+offset_top = 365.0
+offset_right = 355.0
+offset_bottom = 415.0
+text = "Continuar"

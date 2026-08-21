@@ -10,7 +10,7 @@ size = Vector3(32, 2, 32)
 [sub_resource type="BoxShape3D" id="BoxShape3D_d2acd"]
 size = Vector3(32, 4.4500732, 32)
 
-[node name="TileAgua" type="MeshInstance3D" unique_id=1356794740]
+[node name="TileAgua" type="MeshInstance3D" unique_id=1356794740 groups=["ZonaPesca"]]
 mesh = SubResource("BoxMesh_qy12f")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=52632318]
