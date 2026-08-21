@@ -89,6 +89,16 @@ func _ready() -> void:
 	mat_linea = linea_mesh.get_surface_override_material(0)
 	vida = vida_max
 	balas = balas_max
+	if gridmap == null:
+		var gridmap_grupo = get_tree().get_first_node_in_group("GridMap")
+		if gridmap_grupo is GridMap:
+			gridmap = gridmap_grupo
+		else:
+			var gridmap_nodo = get_parent().get_node_or_null("GridMap")
+			if gridmap_nodo is GridMap:
+				gridmap = gridmap_nodo
+	if Gamestate.has_method("cargar_en_jugador"):
+		Gamestate.cargar_en_jugador(self)
 	print("material: ", mat_linea)
 	
 func _physics_process(delta: float) -> void:
@@ -284,6 +294,8 @@ func agregar_llave() -> void:
 
 func agregar_cania() -> void:
 	tiene_caña = true
+	if Gamestate.has_method("guardar_desde_jugador"):
+		Gamestate.guardar_desde_jugador(self)
 
 # Llamar este método cuando un NPC pida la llave para completar su misión
 # Devuelve true si tenía al menos una y la consume, false si no tenía

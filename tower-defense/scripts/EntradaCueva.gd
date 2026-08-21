@@ -15,6 +15,9 @@ func _process(_delta: float) -> void:
 		return
 	if jugador_en_rango and Input.is_action_just_pressed("interactuar"):
 		cambiando_escena = true
+		var jugador_obj := get_tree().get_first_node_in_group("Jugador")
+		if jugador_obj != null and Gamestate.has_method("guardar_desde_jugador"):
+			Gamestate.guardar_desde_jugador(jugador_obj)
 		var error := get_tree().change_scene_to_file(escena_mazmorra)
 		if error != OK:
 			cambiando_escena = false

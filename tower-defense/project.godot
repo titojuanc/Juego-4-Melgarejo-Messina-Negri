@@ -18,6 +18,7 @@ config/icon="res://icon.svg"
 [autoload]
 
 BuildingDB="*res://scripts/building_database.gd"
+Gamestate="*uid://cxd0ghw0jalu2"
 
 [filesystem]
 
