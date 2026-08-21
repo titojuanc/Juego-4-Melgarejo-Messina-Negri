@@ -41,7 +41,7 @@ const PESCA_TILE_ID:=8
 var pesca_pool:Array[String]=["llave","pez","pez","pez","pez"]
 var _pesca_instancia:CanvasLayer=null
 var _pesca_escena:=preload("res://scenes/Pesca.tscn")
-var tiene_caña:bool=false
+var tiene_caña:bool=true
 
 #Animaciones del personaje normal
 func anim_normal_idle():
