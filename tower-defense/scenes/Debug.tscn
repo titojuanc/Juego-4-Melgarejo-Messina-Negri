@@ -15,6 +15,7 @@
 [ext_resource type="PackedScene" uid="uid://dr8wwbn07rc5s" path="res://scenes/ZombieNuevo5.tscn" id="13_3pun3"]
 [ext_resource type="PackedScene" uid="uid://bdrkaowdiqq3f" path="res://scenes/ZombieNuevo6.tscn" id="14_xn46r"]
 [ext_resource type="PackedScene" uid="uid://c67vlt660hsm2" path="res://scenes/Fogata.tscn" id="15_e6mlf"]
+[ext_resource type="PackedScene" uid="uid://j8ixqsl6now6" path="res://scenes/EntradaMazmorra.tscn" id="16_o0ydb"]
 
 [node name="Mundo" type="Node3D" unique_id=1869897971]
 
@@ -59,3 +60,6 @@ zombie_scenes = Array[PackedScene]([ExtResource("9_adp0r"), ExtResource("10_e6ml
 
 [node name="StaticBody3D" parent="." unique_id=788096577 instance=ExtResource("15_e6mlf")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.402491, 6.179666, 0)
+
+[node name="EntradaMazmorra" parent="." unique_id=1718216127 instance=ExtResource("16_o0ydb")]
+transform = Transform3D(50, 0, 0, 0, 50, 0, 0, 0, 50, -51.29166, 30.021358, -356.46527)
