@@ -1,0 +1,30 @@
+[gd_scene format=3 uid="uid://die5j5gf3jxhi"]
+
+[ext_resource type="Texture2D" uid="uid://d4mvgr5pc0xid" path="res://assets/caña/Captura de pantalla 2026-08-21 022206.png" id="1_f40oj"]
+[ext_resource type="Script" uid="uid://b0sf6fggrdftg" path="res://scripts/CaniaDePescarDrop.gd" id="1_h0n2f"]
+
+[sub_resource type="SphereMesh" id="SphereMesh_eyask"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_7e33g"]
+albedo_texture = ExtResource("1_f40oj")
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_8d3as"]
+radius = 0.6
+height = 1.2
+
+[node name="CaniaDePescarDrop" type="Node3D" unique_id=1951534888]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1095900419]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0142786205, -0.00020724535, 0)
+mesh = SubResource("SphereMesh_eyask")
+surface_material_override/0 = SubResource("StandardMaterial3D_7e33g")
+
+[node name="AreaColeccion" type="Area3D" parent="." unique_id=396967762]
+script = ExtResource("1_h0n2f")
+collision_layer = 4
+collision_mask = 1
+monitoring = true
+monitorable = true
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="AreaColeccion" unique_id=1161514720]
+shape = SubResource("CapsuleShape3D_8d3as")

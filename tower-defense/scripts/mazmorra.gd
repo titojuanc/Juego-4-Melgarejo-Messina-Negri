@@ -9,6 +9,7 @@ signal jugador_cambio_tile(centro_mundo: Vector3)
 @export var escena_zombie: PackedScene = preload("res://scenes/Zombie.tscn")
 @export var zombies_por_tile: int = 1
 @export var escena_jefe: PackedScene = preload("res://scenes/jefe.tscn")
+@export var escena_salida: PackedScene = preload("res://scenes/Salida.tscn")
 
 var rng = RandomNumberGenerator.new()
 var mapa: Array = []
@@ -33,24 +34,32 @@ const _ZOMBIE_SCENES: Array = [
 var _contenedor_paredes: Node3D = null
 var _contenedor_zombies: Node3D = null
 var _contenedor_jefe: Node3D = null
+var _contenedor_salida: Node3D = null
 
 # Estructura por sala: clave = Vector2i(c, f)
 # Valor: { "puertas": [{ "nodo": Node3D, "pos": Vector3, "rot_y": float }], "zombies": [Node3D] }
 var _salas: Dictionary = {}
 var _sala_activa: Vector2i = Vector2i(-1, -1)
-var _sala_final: Vector2i = Vector2i.ZERO
+var _sala_jefe: Vector2i = Vector2i.ZERO
+var _sala_salida: Vector2i = Vector2i.ZERO
 
 
 func _ready() -> void:
 	rng.randomize()
+	if tamanio_grilla < 2:
+		push_warning("tamanio_grilla debe ser al menos 2 para ubicar salida a la derecha del jefe")
+		tamanio_grilla = 2
+	_sala_jefe = Vector2i(tamanio_grilla - 2, tamanio_grilla - 1)
+	_sala_salida = _sala_jefe + Vector2i(1, 0)
 	_inicializar_mapa()
-	_tallar_camino(Vector2i(0, 0), Vector2i(tamanio_grilla - 1, tamanio_grilla - 1))
+	_tallar_camino(Vector2i(0, 0), _sala_jefe)
+	mapa[_sala_salida.y][_sala_salida.x] = true
 	_pintar()
-	_sala_final = Vector2i(tamanio_grilla - 1, tamanio_grilla - 1)
 	_inicializar_salas()
 	_generar_paredes()
 	_spawnear_zombies()
 	_spawnear_jefe()
+	_spawnear_salida()
 
 
 func _inicializar_salas() -> void:
@@ -207,7 +216,7 @@ func _spawnear_zombies() -> void:
 				continue
 
 			var coord := Vector2i(c, f)
-			if coord == _sala_final:
+			if coord == _sala_jefe or coord == _sala_salida:
 				continue
 			var centro_tile: Vector3 = grilla.to_global(grilla.map_to_local(Vector3i(c, 0, f)))
 			var cantidad: int = rng.randi_range(zombies_min_por_tile, zombies_max_por_tile)
@@ -237,14 +246,34 @@ func _spawnear_jefe() -> void:
 	_contenedor_jefe.name = "Jefe"
 	add_child(_contenedor_jefe)
 
-	if not mapa[_sala_final.y][_sala_final.x]:
+	if not mapa[_sala_jefe.y][_sala_jefe.x]:
 		push_warning("La sala final no existe en el mapa actual")
 		return
 
 	var jefe: Node3D = escena_jefe.instantiate()
 	_contenedor_jefe.add_child(jefe)
-	var centro_tile: Vector3 = grilla.to_global(grilla.map_to_local(Vector3i(_sala_final.x, 0, _sala_final.y)))
+	var centro_tile: Vector3 = grilla.to_global(grilla.map_to_local(Vector3i(_sala_jefe.x, 0, _sala_jefe.y)))
 	jefe.global_position = centro_tile + Vector3(0.0, offset_y_zombie, 0.0)
+
+
+func _spawnear_salida() -> void:
+	if escena_salida == null:
+		push_warning("No hay escena de salida asignada en mazmorra.gd")
+		return
+	if _contenedor_salida != null:
+		_contenedor_salida.queue_free()
+	_contenedor_salida = Node3D.new()
+	_contenedor_salida.name = "Salida"
+	add_child(_contenedor_salida)
+
+	if not mapa[_sala_salida.y][_sala_salida.x]:
+		push_warning("La sala de salida no existe en el mapa actual")
+		return
+
+	var salida: Node3D = escena_salida.instantiate()
+	_contenedor_salida.add_child(salida)
+	var centro_tile: Vector3 = grilla.to_global(grilla.map_to_local(Vector3i(_sala_salida.x, 0, _sala_salida.y)))
+	salida.global_position = centro_tile
 
 
 func _on_jugador_entra_sala(coord: Vector2i) -> void:

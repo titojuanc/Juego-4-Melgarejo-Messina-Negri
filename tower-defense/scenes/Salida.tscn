@@ -1,6 +1,6 @@
-[gd_scene format=3 uid="uid://j8ixqsl6now6"]
+[gd_scene format=3 uid="uid://iv2n2pe1jymy"]
 
-[ext_resource type="Script" uid="uid://dngux4ryi65ey" path="res://scripts/EntradaCueva.gd" id="1_1s7gp"]
+[ext_resource type="Script" uid="uid://dngux4ryi65ey" path="res://scripts/EntradaCueva.gd" id="1_gsh6u"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_h2iu7"]
 albedo_color = Color(0.49411765, 0.18431373, 0.011764706, 1)
@@ -28,7 +28,8 @@ collision_mask = 9
 shape = SubResource("BoxShape3D_nryg2")
 
 [node name="Radar_interaccion" type="Node3D" parent="." unique_id=2098568965]
-script = ExtResource("1_1s7gp")
+script = ExtResource("1_gsh6u")
+escena_mazmorra = "res://scenes/Debug.tscn"
 
 [node name="Area3D" type="Area3D" parent="Radar_interaccion" unique_id=211639062]
 

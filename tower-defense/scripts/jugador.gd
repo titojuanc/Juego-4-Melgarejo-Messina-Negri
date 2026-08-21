@@ -41,7 +41,7 @@ const PESCA_TILE_ID:=8
 var pesca_pool:Array[String]=["llave","pez","pez","pez","pez"]
 var _pesca_instancia:CanvasLayer=null
 var _pesca_escena:=preload("res://scenes/Pesca.tscn")
-var tiene_caña:bool=true
+var tiene_caña:bool=false
 
 #Animaciones del personaje normal
 func anim_normal_idle():
@@ -281,6 +281,9 @@ func gastar_madera(cantidad: int) -> bool:
 # (desde la escena Llave, desde la lógica de pesca, o desde un NPC)
 func agregar_llave() -> void:
 	llaves += 1
+
+func agregar_cania() -> void:
+	tiene_caña = true
 
 # Llamar este método cuando un NPC pida la llave para completar su misión
 # Devuelve true si tenía al menos una y la consume, false si no tenía
