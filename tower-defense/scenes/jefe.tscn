@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://o6vbfydac1ho"]
 
 [ext_resource type="PackedScene" uid="uid://bp2egsgkowd5c" path="res://scenes/iron_oath_executioner.tscn" id="1_gjatg"]
+[ext_resource type="Script" path="res://scripts/jefe.gd" id="2_q8t2j"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_gjatg"]
 height = 2.6860352
@@ -11,6 +12,9 @@ height = 2.6860352
 radius = 3.7195303
 
 [node name="Jefe" type="CharacterBody3D" unique_id=57957695]
+collision_layer = 8
+collision_mask = 6149
+script = ExtResource("2_q8t2j")
 
 [node name="Iron Oath Executioner2" parent="." unique_id=709953329 instance=ExtResource("1_gjatg")]
 
@@ -19,11 +23,18 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.1496582, 0)
 shape = SubResource("CapsuleShape3D_gjatg")
 
 [node name="AttackArea" type="Area3D" parent="." unique_id=1602502094]
+collision_layer = 16
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="AttackArea" unique_id=75176818]
 shape = SubResource("BoxShape3D_bqkn6")
 
-[node name="Radar" type="Area3D" parent="." unique_id=1477771534]
+[node name="RadarArea" type="Area3D" parent="." unique_id=1477771534]
+collision_layer = 32
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Radar" unique_id=95253151]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="RadarArea" unique_id=95253151]
 shape = SubResource("SphereShape3D_gjatg")
+
+[connection signal="body_entered" from="AttackArea" to="." method="_on_attack_area_body_entered"]
+[connection signal="body_exited" from="AttackArea" to="." method="_on_attack_area_body_exited"]
+[connection signal="body_entered" from="RadarArea" to="." method="_on_radar_area_body_entered"]
+[connection signal="body_exited" from="RadarArea" to="." method="_on_radar_area_body_exited"]

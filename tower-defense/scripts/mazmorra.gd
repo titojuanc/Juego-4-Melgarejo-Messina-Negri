@@ -8,6 +8,7 @@ signal jugador_cambio_tile(centro_mundo: Vector3)
 @export var tamanio_grilla: int = 4
 @export var escena_zombie: PackedScene = preload("res://scenes/Zombie.tscn")
 @export var zombies_por_tile: int = 1
+@export var escena_jefe: PackedScene = preload("res://scenes/jefe.tscn")
 
 var rng = RandomNumberGenerator.new()
 var mapa: Array = []
@@ -31,11 +32,13 @@ const _ZOMBIE_SCENES: Array = [
 
 var _contenedor_paredes: Node3D = null
 var _contenedor_zombies: Node3D = null
+var _contenedor_jefe: Node3D = null
 
 # Estructura por sala: clave = Vector2i(c, f)
 # Valor: { "puertas": [{ "nodo": Node3D, "pos": Vector3, "rot_y": float }], "zombies": [Node3D] }
 var _salas: Dictionary = {}
 var _sala_activa: Vector2i = Vector2i(-1, -1)
+var _sala_final: Vector2i = Vector2i.ZERO
 
 
 func _ready() -> void:
@@ -43,9 +46,11 @@ func _ready() -> void:
 	_inicializar_mapa()
 	_tallar_camino(Vector2i(0, 0), Vector2i(tamanio_grilla - 1, tamanio_grilla - 1))
 	_pintar()
+	_sala_final = Vector2i(tamanio_grilla - 1, tamanio_grilla - 1)
 	_inicializar_salas()
 	_generar_paredes()
 	_spawnear_zombies()
+	_spawnear_jefe()
 
 
 func _inicializar_salas() -> void:
@@ -202,6 +207,8 @@ func _spawnear_zombies() -> void:
 				continue
 
 			var coord := Vector2i(c, f)
+			if coord == _sala_final:
+				continue
 			var centro_tile: Vector3 = grilla.to_global(grilla.map_to_local(Vector3i(c, 0, f)))
 			var cantidad: int = rng.randi_range(zombies_min_por_tile, zombies_max_por_tile)
 
@@ -218,6 +225,26 @@ func _spawnear_zombies() -> void:
 				if _salas.has(coord):
 					_salas[coord]["zombies"].append(zombie)
 					zombie.tree_exited.connect(_on_zombie_muerto.bind(coord, zombie))
+
+
+func _spawnear_jefe() -> void:
+	if escena_jefe == null:
+		push_warning("No hay escena de jefe asignada en mazmorra.gd")
+		return
+	if _contenedor_jefe != null:
+		_contenedor_jefe.queue_free()
+	_contenedor_jefe = Node3D.new()
+	_contenedor_jefe.name = "Jefe"
+	add_child(_contenedor_jefe)
+
+	if not mapa[_sala_final.y][_sala_final.x]:
+		push_warning("La sala final no existe en el mapa actual")
+		return
+
+	var jefe: Node3D = escena_jefe.instantiate()
+	_contenedor_jefe.add_child(jefe)
+	var centro_tile: Vector3 = grilla.to_global(grilla.map_to_local(Vector3i(_sala_final.x, 0, _sala_final.y)))
+	jefe.global_position = centro_tile + Vector3(0.0, offset_y_zombie, 0.0)
 
 
 func _on_jugador_entra_sala(coord: Vector2i) -> void:

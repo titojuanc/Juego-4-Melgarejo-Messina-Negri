@@ -24,5 +24,5 @@ collision_layer = 4
 collision_mask = 9
 
 [node name="Jugador" parent="." unique_id=1729901145 instance=ExtResource("3_0puqh")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 52.108585, 12.559807, 13.58507)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 52.108585, 33.79809, 13.58507)
 controla_camara = false
