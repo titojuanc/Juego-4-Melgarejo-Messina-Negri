@@ -57,12 +57,11 @@ _data = {
 &"RESET": SubResource("Animation_v58xl")
 }
 
-[node name="ZombieNuevo4" type="CharacterBody3D" unique_id=258430720 node_paths=PackedStringArray("mesh") groups=["Enemigo"]]
+[node name="ZombieNuevo4" type="CharacterBody3D" unique_id=258430720 groups=["Enemigo"]]
 transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
 collision_layer = 8
-collision_mask = 2053
+collision_mask = 6149
 script = ExtResource("1_4074b")
-mesh = NodePath("Zed4")
 
 [node name="Zed4" type="MeshInstance3D" parent="." unique_id=2043181633]
 material_override = SubResource("StandardMaterial3D_b02ma")

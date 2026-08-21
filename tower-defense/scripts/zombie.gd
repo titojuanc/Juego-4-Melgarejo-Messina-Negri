@@ -135,7 +135,10 @@ func morir() -> void:
 		attack_area.monitoring = false
 	if radar_area != null:
 		radar_area.monitoring = false
-	anim_muerte()
+	if anim_player != null and anim_player.has_animation("Death"):
+		anim_muerte()
+	else:
+		queue_free()
 
 func _on_animation_player_animation_finished(anim_name: StringName) -> void:
 	if anim_name == "Death":

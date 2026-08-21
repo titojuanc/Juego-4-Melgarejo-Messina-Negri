@@ -1,0 +1,44 @@
+[gd_scene format=3 uid="uid://7ld62qlcyqm3"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_neuiy"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_neuiy"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_50mis"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_0mf7k"]
+
+[node name="PuertaMazmorra" type="Node3D" unique_id=220473979]
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="." unique_id=2035710252]
+transform = Transform3D(0.9164226, 0, 0, 0, 2.239289, 0, 0, 0, 7.896363, 0.00015807152, 3.0843334, 0)
+mesh = SubResource("BoxMesh_neuiy")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="MeshInstance3D2" unique_id=2111659826]
+collision_layer = 4096
+collision_mask = 8
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="MeshInstance3D2/StaticBody3D" unique_id=2070875856]
+shape = SubResource("BoxShape3D_neuiy")
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="." unique_id=321989395]
+transform = Transform3D(-0.9391601, 0, 0, 0, 8.420238, 0, 0, 0, 12.488965, 0, 0, -9.751219)
+mesh = SubResource("BoxMesh_50mis")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="MeshInstance3D3" unique_id=398828596]
+collision_layer = 4
+collision_mask = 9
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="MeshInstance3D3/StaticBody3D" unique_id=1281547185]
+shape = SubResource("BoxShape3D_0mf7k")
+
+[node name="MeshInstance3D4" type="MeshInstance3D" parent="." unique_id=951200751]
+transform = Transform3D(-0.9391601, 0, 0, 0, 8.420238, 0, 0, 0, 12.488965, 0, 0, 9.765242)
+mesh = SubResource("BoxMesh_50mis")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="MeshInstance3D4" unique_id=498261977]
+collision_layer = 4
+collision_mask = 9
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="MeshInstance3D4/StaticBody3D" unique_id=1792543878]
+shape = SubResource("BoxShape3D_0mf7k")

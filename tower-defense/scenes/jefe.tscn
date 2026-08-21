@@ -5,6 +5,11 @@
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_gjatg"]
 height = 2.6860352
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_bqkn6"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_gjatg"]
+radius = 3.7195303
+
 [node name="Jefe" type="CharacterBody3D" unique_id=57957695]
 
 [node name="Iron Oath Executioner2" parent="." unique_id=709953329 instance=ExtResource("1_gjatg")]
@@ -12,3 +17,13 @@ height = 2.6860352
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=131477516]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.1496582, 0)
 shape = SubResource("CapsuleShape3D_gjatg")
+
+[node name="AttackArea" type="Area3D" parent="." unique_id=1602502094]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="AttackArea" unique_id=75176818]
+shape = SubResource("BoxShape3D_bqkn6")
+
+[node name="Radar" type="Area3D" parent="." unique_id=1477771534]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Radar" unique_id=95253151]
+shape = SubResource("SphereShape3D_gjatg")
